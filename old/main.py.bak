@@ -1,0 +1,99 @@
+#!/usr/bin/env python2
+
+from net import _mlp, _embed
+from tasks import count, shapes
+import util
+
+import numpy as np
+import tensorflow as tf
+
+HIDDEN = (256, 256)
+NONLIN = (tf.nn.relu, tf.nn.relu)
+
+dataset = shapes
+
+class Model(object):
+    def __init__(self, name):
+        with tf.variable_scope(name) as scope:
+            t_image = tf.placeholder(tf.float32, (None,) + dataset.image_shape)
+            t_concept = tf.placeholder(tf.int32, (None,))
+            t_hint = tf.placeholder(tf.int32, (None, None))
+            t_label = tf.placeholder(tf.int32, (None,))
+
+            t_image_rs = tf.reshape(t_image, (-1, reduce(lambda x, y: x*y, dataset.image_shape)))
+            #t_concept_emb = _embed(t_concept, dataset.n_concepts+1, 64)
+            #t_features = tf.concat((t_image_rs, t_concept_emb), axis=1)
+            #t_hidden = _mlp(t_features, HIDDEN, NONLIN)
+            n_weight = HIDDEN[-1] * 2
+            t_hint_emb = _embed(t_hint, dataset.n_vocab, n_weight)
+            t_hint_red = tf.reduce_sum(t_hint_emb, axis=1)
+            t_weight = tf.reshape(t_hint_red, (-1, HIDDEN[-1], 2))
+            t_hidden = _mlp(t_image_rs, HIDDEN, NONLIN)
+            t_pred = tf.einsum("ij,ijk->ik", t_hidden, t_weight)
+            t_loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(
+                    labels=t_label, logits=t_pred))
+
+            params = util.vars_in_scope(scope)
+
+        self.t_image = t_image
+        self.t_concept = t_concept
+        self.t_hint = t_hint
+        self.t_label = t_label
+        self.t_pred = t_pred
+        self.t_loss = t_loss
+        self.params = params
+
+model = Model("tr")
+test_model = Model("test")
+
+optimizer = tf.train.AdamOptimizer(0.001)
+o_train = optimizer.minimize(model.t_loss)
+o_train_test = optimizer.minimize(test_model.t_loss)
+o_assign = [tp.assign(p) for p, tp in zip(model.params, test_model.params)]
+
+session = tf.Session()
+session.run(tf.global_variables_initializer())
+while True:
+    c_loss = 0.
+    c_acc = 0.
+    for _ in range(100):
+        batch = [dataset.sample() for _ in range(100)]
+        images, concepts, labels, hints = zip(*batch)
+        #concept_labels = [concept_index.index(c) for c in concepts]
+        hint_data = np.zeros((len(hints), max(len(h) for h in hints)))
+        for i, hint in enumerate(hints):
+            hint_data[i, :len(hint)] = hints[i]
+        loss, pred, _ = session.run(
+                [model.t_loss, model.t_pred, o_train],
+                {model.t_image: images, model.t_hint: hint_data,
+                    model.t_label: labels})
+        c_loss += loss
+        c_acc += np.mean(np.argmax(pred, axis=1) == labels)
+
+    print "%.3f %.3f" % (c_loss, c_acc)
+
+    session.run([o_assign])
+    examples = [dataset.sample(test=True) for _ in range(100)]
+    test_examples = [dataset.sample(test=True) for _ in range(500)]
+    for _ in range(10):
+        images, concepts, labels, hints = zip(*examples)
+        hint_data = np.zeros((len(hints), max(len(h) for h in hints)))
+        for i, hint in enumerate(hints):
+            hint_data[i, :len(hint)] = hints[i]
+        loss, pred, _ = session.run(
+                [test_model.t_loss, test_model.t_pred, o_train_test],
+                {test_model.t_image: images, test_model.t_hint: hint_data,
+                    test_model.t_label: labels})
+        acc = np.mean(np.argmax(pred, axis=1) == labels)
+
+        images, concepts, labels, hints = zip(*test_examples)
+        hint_data = np.zeros((len(hints), max(len(h) for h in hints)))
+        for i, hint in enumerate(hints):
+            hint_data[i, :len(hint)] = hints[i]
+        pred, = session.run(
+                [test_model.t_pred],
+                {test_model.t_image: images, test_model.t_hint: hint_data,
+                    test_model.t_label: labels})
+        test_acc = np.mean(np.argmax(pred, axis=1) == labels)
+
+        print "    %.3f %.3f [%.3f]" % (loss, acc, test_acc)
