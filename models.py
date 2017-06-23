@@ -9,8 +9,8 @@ N_EMBED = 32
 N_HIDDEN = 512
 N_EX = 5
 
-TRAIN_HYP = True
-USE_HYP = True
+TRAIN_HYP = False
+USE_HYP = False
 N_HYPS = 5
 USE_GOLD = False
 
