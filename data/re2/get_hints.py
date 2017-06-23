@@ -12,6 +12,8 @@ hints = {}
 
 exclude = ["'", '"', "`", ".", "\\"]
 
+template_to_pat = defaultdict(set)
+
 with open("data.json") as data_f:
     data = json.load(data_f)["train"]
 
@@ -49,13 +51,18 @@ for name in os.listdir("turk"):
             template = hint
 
             if special_a:
-                template = re.sub(r"\b%s\b" % special_a, "AFTER", hint)
+                template = re.sub(r"\b%s\b" % special_a, "AFTER", template)
+                template = re.sub(r"\b%s\b" % a_exploded, "AFTER", template)
                 hint = re.sub(r"\b%s\b" % special_a, a_exploded, hint)
             if special_b:
-                template = re.sub(r"\b%s\b" % special_b, "BEFORE", hint)
+                template = re.sub(r"\b%s\b" % special_b, "BEFORE", template)
+                template = re.sub(r"\b%s\b" % b_exploded, "BEFORE", template)
                 hint = re.sub(r"\b%s\b" % special_b, b_exploded, hint)
 
-            templates[pattern_before + "@" + pattern_after].append(template)
+            pattern = pattern_before + "@" + pattern_after
+            templates[pattern].append(template)
+            template_to_pat[template].add(pattern)
+
 
             #print (pattern_before, pattern_after), hint
             assert datum_id not in hints
@@ -64,7 +71,8 @@ for name in os.listdir("turk"):
 with open("hints.json", "w") as hint_f:
     json.dump(hints, hint_f)
 
-print len(hints)
-
 with open("templates.json", "w") as template_f:
     json.dump(templates, template_f)
+
+for template, pats in template_to_pat.items():
+    print len(pats), template, pats
