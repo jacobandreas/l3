@@ -12,7 +12,7 @@ N_EX = 5
 TRAIN_HYP = True
 USE_HYP = True
 N_HYPS = 5
-USE_GOLD = True
+USE_GOLD = False
 
 random = util.next_random()
 
