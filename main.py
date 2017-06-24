@@ -22,3 +22,6 @@ for i_epoch in range(1000):
     print "[loss] %01.4f" % e_loss
     print "[acc]  %01.4f" % e_acc
     print "[tacc] %01.4f" % e_t_acc
+
+    if i_epoch % 10 == 0:
+        model.save()

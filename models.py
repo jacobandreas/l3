@@ -6,11 +6,12 @@ import numpy as np
 import sys
 
 N_EMBED = 32
+N_EMBED_WORD = 128
 N_HIDDEN = 512
 N_EX = 5
 
-TRAIN_HYP = False
-USE_HYP = False
+TRAIN_HYP = True
+USE_HYP = True
 N_HYPS = 5
 USE_GOLD = False
 
@@ -150,7 +151,7 @@ class Model(object):
                 "str_vec", shape=(len(dataset.str_vocab), N_EMBED),
                 initializer=tf.uniform_unit_scaling_initializer())
         t_hint_vecs = tf.get_variable(
-                "hint_vec", shape=(len(dataset.hint_vocab), N_EMBED),
+                "hint_vec", shape=(len(dataset.hint_vocab), N_EMBED_WORD),
                 initializer=tf.uniform_unit_scaling_initializer())
 
         t_enc_ex_all = _encode(
@@ -183,8 +184,13 @@ class Model(object):
         optimizer = tf.train.AdamOptimizer(0.001)
         self.o_train = optimizer.minimize(self.t_loss)
 
+        #config = tf.ConfigProto()
+        #config.gpu_options.allow_growth=True
+        #gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.25)
+        #self.session = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
         self.session = tf.Session()
         self.session.run(tf.global_variables_initializer())
+        self.saver = tf.train.Saver()
 
     def feed(self, batch, input_examples=False):
         sep = self.dataset.str_vocab[self.dataset.SEP]
@@ -302,3 +308,7 @@ class Model(object):
             gold = gold[:gold.index(self.dataset.str_vocab[self.dataset.STOP])+1]
             accs.append(pred == gold)
         return np.mean(accs)
+
+    def save(self):
+        self.saver.save(self.session, "model")
+

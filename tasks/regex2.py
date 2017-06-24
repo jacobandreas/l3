@@ -41,10 +41,12 @@ for fold in ["train", "val", "test"]:
         if fold == "train":
             t_before = example["before"]
             t_before = t_before.replace("[aeiou]", "V").replace("[^aeiou]", "C")
+            hint_before = t_before
             letters_before = t_before.split(")(")[1].replace(".", "").replace("V", "").replace("C", "")
             letters_before = " ".join(letters_before)
             t_before = re.sub("[a-z]+", "l", t_before)
             t_after = example["after"][2:-2]
+            hint_after = t_after
             letters_after = t_after.replace("\\2", "")
             letters_after = " ".join(letters_after)
             t_after = re.sub("[a-z]+", "l", t_after)
@@ -63,6 +65,7 @@ for fold in ["train", "val", "test"]:
             for template in templates[template_key]:
                 hint = template.replace("BEFORE", letters_before).replace("AFTER", letters_after)
                 hint = [START] + hint.split() + [STOP]
+                #hint = START + hint_before + SEP + hint_after + STOP
                 hints.append(hint)
 
 
