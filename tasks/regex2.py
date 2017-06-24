@@ -122,7 +122,7 @@ def sample_test():
 
         #datum = datum._replace(hint=[])
         hint = datum.hints_[0]
-        datum = datum._replace(hint=hint, hints_=None)
+        datum = datum._replace(hint=hint) #, hints_=None)
 
         batch.append(datum)
     return batch

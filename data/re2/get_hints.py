@@ -59,6 +59,9 @@ for name in os.listdir("turk"):
                 template = re.sub(r"\b%s\b" % b_exploded, "BEFORE", template)
                 hint = re.sub(r"\b%s\b" % special_b, b_exploded, hint)
 
+            if re.search(r"\b[b-r,t-z]\b", template):
+                continue
+
             pattern = pattern_before + "@" + pattern_after
             templates[pattern].append(template)
             template_to_pat[template].add(pattern)
@@ -74,5 +77,5 @@ with open("hints.json", "w") as hint_f:
 with open("templates.json", "w") as template_f:
     json.dump(templates, template_f)
 
-for template, pats in template_to_pat.items():
-    print len(pats), template, pats
+#for template, pats in template_to_pat.items():
+#    print len(pats), template, pats
