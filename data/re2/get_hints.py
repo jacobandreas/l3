@@ -15,7 +15,7 @@ exclude = ["'", '"', "`", ".", "\\"]
 template_to_pat = defaultdict(set)
 
 with open("data.json") as data_f:
-    data = json.load(data_f)["train"]
+    data = json.load(data_f)
 
 for name in os.listdir("turk"):
     path = os.path.join("turk", name)
@@ -59,17 +59,18 @@ for name in os.listdir("turk"):
                 template = re.sub(r"\b%s\b" % b_exploded, "BEFORE", template)
                 hint = re.sub(r"\b%s\b" % special_b, b_exploded, hint)
 
+            assert datum_id not in hints
+            hints[datum_id] = hint
+
             if re.search(r"\b[b-r,t-z]\b", template):
+                # bad template
                 continue
 
             pattern = pattern_before + "@" + pattern_after
             templates[pattern].append(template)
             template_to_pat[template].add(pattern)
 
-
             #print (pattern_before, pattern_after), hint
-            assert datum_id not in hints
-            hints[datum_id] = hint
 
 with open("hints.json", "w") as hint_f:
     json.dump(hints, hint_f)

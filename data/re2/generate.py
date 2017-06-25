@@ -110,15 +110,17 @@ while len(data) < 5000:
 
 random.shuffle(data)
 
-train_data = data[:-(N_VAL+N_TEST)]
-val_data = data[-(N_VAL+N_TEST):-N_TEST]
-test_data = data[-N_TEST:]
+#train_data = data[:-(N_VAL+N_TEST)]
+#val_data = data[-(N_VAL+N_TEST):-N_TEST]
+#test_data = data[-N_TEST:]
+#
+#dataset = {
+#    "train": train_data,
+#    "val": val_data,
+#    "test": test_data
+#}
 
-dataset = {
-    "train": train_data,
-    "val": val_data,
-    "test": test_data
-}
+dataset = data
 
 with open("data.json", "w") as data_f:
     json.dump(dataset, data_f)

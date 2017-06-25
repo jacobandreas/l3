@@ -1,21 +1,24 @@
 from net import _mlp, _embed_dict, _linear
 import util
 
-import tensorflow as tf
+import gflags
 import numpy as np
 import sys
+import tensorflow as tf
+
+FLAGS = gflags.FLAGS
+gflags.DEFINE_boolean("predict_hyp", False, "train to predict hypotheses")
+gflags.DEFINE_boolean("infer_hyp", False, "use hypotheses at test time")
+gflags.DEFINE_integer("n_sample_hyps", 5, "number of hypotheses to sample")
+gflags.DEFINE_float("learning_rate", 0.001, "learning rate")
 
 N_EMBED = 32
 N_EMBED_WORD = 128
 N_HIDDEN = 512
 N_EX = 5
 
-TRAIN_HYP = False
-USE_HYP = False
-N_HYPS = 5
-USE_GOLD = False
-
 random = util.next_random()
+tf.set_random_seed(0)
 
 def _encode(name, t_input, t_len, t_vecs, t_init=None):
     multi = len(t_input.get_shape()) == 3
@@ -127,9 +130,9 @@ class Decoder(object):
             last = next_out
         return out
 
-class Model(object):
-    def __init__(self, dataset):
-        self.dataset = dataset
+class TransducerModel(object):
+    def __init__(self, task):
+        self.task = task
 
         self.t_hint = tf.placeholder(tf.int32, (None, None), "hint")
         self.t_hint_len = tf.placeholder(tf.int32, (None,), "hint_len")
@@ -148,10 +151,10 @@ class Model(object):
         self.t_last_hyp_hidden = tf.placeholder(tf.float32, (None, N_HIDDEN), "last_hyp_hidden")
 
         t_str_vecs = tf.get_variable(
-                "str_vec", shape=(len(dataset.str_vocab), N_EMBED),
+                "str_vec", shape=(len(task.str_vocab), N_EMBED),
                 initializer=tf.uniform_unit_scaling_initializer())
         t_hint_vecs = tf.get_variable(
-                "hint_vec", shape=(len(dataset.hint_vocab), N_EMBED_WORD),
+                "hint_vec", shape=(len(task.hint_vocab), N_EMBED_WORD),
                 initializer=tf.uniform_unit_scaling_initializer())
 
         t_enc_ex_all = _encode(
@@ -160,7 +163,7 @@ class Model(object):
                 "encode_hint", self.t_hint, self.t_hint_len, t_hint_vecs)
         t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
 
-        if USE_HYP:
+        if FLAGS.infer_hyp:
             t_concept = t_enc_hint
         else:
             t_concept = t_enc_ex
@@ -176,29 +179,27 @@ class Model(object):
                 "decode_out", t_enc_input, self.t_output, self.t_last_out,
                 self.t_last_out_hidden, t_str_vecs)
 
-        if TRAIN_HYP:
+        if FLAGS.predict_hyp:
             self.t_loss = self.out_decoder.t_loss + self.hyp_decoder.t_loss
         else:
             self.t_loss = self.out_decoder.t_loss
 
-        optimizer = tf.train.AdamOptimizer(0.001)
+        optimizer = tf.train.AdamOptimizer(FLAGS.learning_rate)
         self.o_train = optimizer.minimize(self.t_loss)
 
-        #config = tf.ConfigProto()
-        #config.gpu_options.allow_growth=True
-        #gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.25)
-        #self.session = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
         self.session = tf.Session()
         self.session.run(tf.global_variables_initializer())
         self.saver = tf.train.Saver()
 
     def feed(self, batch, input_examples=False):
-        sep = self.dataset.str_vocab[self.dataset.SEP]
-        assert sep is not None
         max_hint_len = max(len(d.hint) for d in batch)
-        max_inp_len = max(len(i) for d in batch for i in d.inputs)
-        max_out_len = max(len(o) for d in batch for o in d.outputs)
-        max_ex_len = max_inp_len + 1 + max_out_len
+        max_einp_len = max(len(e) for d in batch for e in d.ex_inputs)
+        max_eout_len = max(len(e) for d in batch for e in d.ex_outputs)
+        max_inp_len = max(len(d.input) for d in batch)
+        max_inp_len = max(max_inp_len, max_einp_len)
+        max_out_len = max(len(d.output) for d in batch)
+        max_out_len = max(max_out_len, max_eout_len)
+        max_ex_len = max_einp_len + max_eout_len + 1
 
         hint = np.zeros((len(batch), max_hint_len), dtype=np.int32)
         hint_len = np.zeros((len(batch),), dtype=np.int32)
@@ -212,9 +213,9 @@ class Model(object):
         inp_len = np.zeros((len(batch), n_input), dtype=np.int32)
         out = np.zeros((len(batch), n_input, max_out_len), dtype=np.int32)
         for i, datum in enumerate(batch):
-            examples = list(zip(datum.inputs, datum.outputs))
-            examples = examples[:N_EX+1]
-            target_inp, target_out = examples.pop()
+            examples = zip(datum.ex_inputs, datum.ex_outputs)
+            target_inp = datum.input
+            target_out = datum.output
             if input_examples:
                 for j, (e_inp, e_out) in enumerate(examples):
                     inp[i, j, :len(e_inp)] = e_inp
@@ -228,7 +229,7 @@ class Model(object):
             hint[i, :len(datum.hint)] = datum.hint
             hint_len[i] = len(datum.hint)
             for j, (e_inp, e_out) in enumerate(examples):
-                exp = e_inp + [sep] + e_out
+                exp = e_inp + [self.task.str_vocab[self.task.SEP]] + e_out
                 example[i, j, :len(exp)] = exp
                 example_len[i, j] = len(exp)
 
@@ -248,23 +249,23 @@ class Model(object):
         return loss
 
     def hypothesize(self, batch):
-        hyp_init = [self.dataset.hint_vocab[self.dataset.START] for _ in batch]
-        hyp_stop = self.dataset.hint_vocab[self.dataset.STOP]
+        hyp_init = [self.task.hint_vocab[self.task.START] for _ in batch]
+        hyp_stop = self.task.hint_vocab[self.task.STOP]
         feed = self.feed(batch)
 
         best_score = [-1] * len(batch)
         best_hyps = [None] * len(batch)
         worst_score = [6] * len(batch)
 
-        for i in range(N_HYPS):
+        for i in range(FLAGS.n_sample_hyps):
             hyps = self.hyp_decoder.decode(
                     hyp_init, hyp_stop, feed, self.session,
                     temp=None if i == 0 else 1)
             hyp_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
             hyp_feed = self.feed(hyp_batch, input_examples=True)
 
-            init = self.dataset.str_vocab[self.dataset.START] * np.ones(hyp_feed[self.t_ex_len].shape, dtype=np.int32)
-            stop = self.dataset.str_vocab[self.dataset.STOP]
+            init = self.task.str_vocab[self.task.START] * np.ones(hyp_feed[self.t_ex_len].shape, dtype=np.int32)
+            stop = self.task.str_vocab[self.task.STOP]
             preds = self.out_decoder.decode(init, stop, hyp_feed, self.session)
 
             for j in range(len(batch)):
@@ -283,21 +284,21 @@ class Model(object):
         print >>sys.stderr, best_score
         #print >>sys.stderr, worst_score
 
-        print >>sys.stderr, "\n".join(" ".join(self.dataset.hint_vocab.get(c) for c in hyp) for hyp in hyps[:3])
-        print >>sys.stderr, "\n".join(" ".join(self.dataset.hint_vocab.get(c) for c in hyp if c) for hyp in feed[self.t_hint][:3])
+        print >>sys.stderr, "\n".join(" ".join(self.task.hint_vocab.get(c) for c in hyp) for hyp in hyps[:3])
+        print >>sys.stderr, "\n".join(" ".join(self.task.hint_vocab.get(c) for c in hyp if c) for hyp in feed[self.t_hint][:3])
         print >>sys.stderr
 
         return hyps
 
     def predict(self, batch):
-        if USE_HYP and not USE_GOLD:
+        if FLAGS.infer_hyp:
             hyps = self.hypothesize(batch)
             pred_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
         else:
             pred_batch = batch
 
-        init = [[self.dataset.str_vocab[self.dataset.START]] for _ in batch]
-        stop = self.dataset.str_vocab[self.dataset.STOP]
+        init = [[self.task.str_vocab[self.task.START]] for _ in batch]
+        stop = self.task.str_vocab[self.task.STOP]
 
         pred_feed = self.feed(pred_batch)
         preds = self.out_decoder.decode(init, stop, pred_feed, self.session)
@@ -305,7 +306,7 @@ class Model(object):
         for i, (pred, gold) in enumerate(zip(preds, pred_feed[self.t_output])):
             pred = pred[0]
             gold = gold[0].tolist()
-            gold = gold[:gold.index(self.dataset.str_vocab[self.dataset.STOP])+1]
+            gold = gold[:gold.index(self.task.str_vocab[self.task.STOP])+1]
             accs.append(pred == gold)
         return np.mean(accs)
 
