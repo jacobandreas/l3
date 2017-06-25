@@ -44,7 +44,7 @@ class RegexTask():
                     hints = [hint]
                 elif FLAGS.hint_type == "nl":
                     hints = []
-                    for hint in example["hints"]:
+                    for hint in example["hints_aug"]:
                         hint = [self.hint_vocab.index(w) for w in hint]
                         hints.append(hint)
                 elif FLAGS.hint_type == "none":
