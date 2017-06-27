@@ -40,7 +40,7 @@ class RegexTask():
             for example in corpus[fold]:
                 if FLAGS.hint_type == "re":
                     hint = example["re"]
-                    hint = [self.hint_vocab.index(c) for c in re]
+                    hint = [self.hint_vocab.index(c) for c in hint]
                     hints = [hint]
                 elif FLAGS.hint_type == "nl":
                     hints = []

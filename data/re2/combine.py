@@ -53,7 +53,7 @@ for i, example in enumerate(data):
         hint = ""
     hint = [START] + hint.split() + [STOP]
 
-    re_hint = START + re_before + SEP + re_after
+    re_hint = START + re_before + SEP + re_after + STOP
 
     ex = []
     for inp, out in example["examples"]:
