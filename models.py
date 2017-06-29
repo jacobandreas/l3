@@ -5,6 +5,7 @@ import gflags
 import numpy as np
 import sys
 import tensorflow as tf
+import os
 
 FLAGS = gflags.FLAGS
 gflags.DEFINE_boolean("predict_hyp", False, "train to predict hypotheses")
@@ -13,6 +14,7 @@ gflags.DEFINE_boolean("infer_by_likelihood", False, "use likelihood (rather than
 gflags.DEFINE_boolean("use_true_hyp", False, "predict using ground-truth description")
 gflags.DEFINE_integer("n_sample_hyps", 5, "number of hypotheses to sample")
 gflags.DEFINE_float("learning_rate", 0.001, "learning rate")
+gflags.DEFINE_string("restore", None, "model to restore")
 
 N_EMBED = 32
 N_EMBED_WORD = 128
@@ -230,6 +232,8 @@ class ConvModel(object):
         self.session = tf.Session()
         self.session.run(tf.global_variables_initializer())
         self.saver = tf.train.Saver()
+        if FLAGS.restore is not None:
+            self.restore(FLAGS.restore)
 
     def feed(self, batch, input_examples=False):
         width, height, channels = self.task.width, self.task.height, self.task.channels
@@ -323,7 +327,10 @@ class ConvModel(object):
         return np.mean(accs)
 
     def save(self):
-        self.saver.save(self.session, "model")
+        self.saver.save(self.session, "model.chk")
+
+    def restore(self, path):
+        self.saver.restore(self.session, path)
 
 class TransducerModel(object):
     def __init__(self, task):
@@ -385,6 +392,8 @@ class TransducerModel(object):
         self.session = tf.Session()
         self.session.run(tf.global_variables_initializer())
         self.saver = tf.train.Saver()
+        if FLAGS.restore is not None:
+            self.restore(FLAGS.restore)
 
     def feed(self, batch, input_examples=False):
         max_hint_len = max(len(d.hint) for d in batch)
@@ -506,5 +515,11 @@ class TransducerModel(object):
         return np.mean(accs)
 
     def save(self):
-        self.saver.save(self.session, "model")
+        self.saver.save(self.session, "model.chk")
+
+    def restore(self, path):
+        from tensorflow.python.training import checkpoint_utils as ckpt
+        print(ckpt.list_variables("../pbd_hint"))
+        exit()
+        self.saver.restore(self.session, path)
 
