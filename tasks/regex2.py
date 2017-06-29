@@ -15,10 +15,10 @@ START = "<"
 STOP = ">"
 N_EX = 5
 
-random = util.next_random()
-
 FullDatum = namedtuple("FullDatum", ["hints", "pairs"])
 Datum = namedtuple("Datum", ["hint", "ex_inputs", "ex_outputs", "input", "output"])
+
+random = util.next_random()
 
 class RegexTask():
     def __init__(self):

@@ -13,7 +13,7 @@ train_data = data["train"]
 #label_data = train_data[:1000]
 label_data = train_data
 
-with open("turk_data_2.csv", "w") as turk_f:
+with open("turk_data_3.csv", "w") as turk_f:
     header_labels = ["id"]
     header_labels += ["before_%d" % i for i in range(N_EX)]
     header_labels += ["after_%d" % i for i in range(N_EX)]
@@ -22,7 +22,7 @@ with open("turk_data_2.csv", "w") as turk_f:
     print >>turk_f, ",".join(header_labels)
 
     #for i, datum in enumerate(label_data):
-    for i in range(1000, 2000):
+    for i in range(2000, 3000):
         datum = label_data[i]
         ref_before, ref_after = zip(*datum["examples"][:N_EX])
         test_before, test_after = datum["examples"][N_EX]

@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 
-from models import TransducerModel
-from tasks import regex2
+from models import ConvModel
+from tasks import shapes
 
 import gflags
 import os
@@ -14,8 +14,8 @@ gflags.DEFINE_integer("n_epochs", 0, "number of epochs to run for")
 gflags.DEFINE_integer("n_batch", 100, "batch size")
 
 def main():
-    task = regex2.RegexTask()
-    model = TransducerModel(task)
+    task = shapes.ShapeworldTask()
+    model = ConvModel(task)
 
     if FLAGS.train:
         for i_epoch in range(FLAGS.n_epochs):
