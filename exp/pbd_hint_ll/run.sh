@@ -5,9 +5,9 @@ python -u ../../pbd.py \
   --predict_hyp=true \
   --infer_hyp=true \
   --infer_by_likelihood=true \
-  --n_sample_hyps=10 \
+  --n_sample_hyps=100 \
   --restore="../pbd_hint/model" \
   --test \
-  #> train.out \
-  #2> train.err
+  > train.out \
+  2> train.err
 

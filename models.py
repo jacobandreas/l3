@@ -105,9 +105,9 @@ class Decoder(object):
             t_target = tf.reshape(t_target, (t_n_batch*t_n_multi, t_n_toks))
 
             t_shape = tf.shape(t_last)
-            t_n_batch, t_n_multi = t_shape[0], t_shape[1]
-            t_last = tf.reshape(t_last, (t_n_batch*t_n_multi,))
-            t_last_hidden = tf.reshape(t_last_hidden, (t_n_batch*t_n_multi, N_HIDDEN))
+            t_n_batch_d, t_n_multi_d = t_shape[0], t_shape[1]
+            t_last = tf.reshape(t_last, (t_n_batch_d*t_n_multi_d,))
+            t_last_hidden = tf.reshape(t_last_hidden, (t_n_batch_d*t_n_multi_d, N_HIDDEN))
 
         t_emb_target = _embed_dict(t_target, t_vecs)
         t_emb_last = _embed_dict(t_last, t_vecs)
@@ -127,6 +127,7 @@ class Decoder(object):
             t_dec_err = tf.nn.sparse_softmax_cross_entropy_with_logits(
                     labels=t_target[:, 1:], logits=t_pred[:, :-1])
             t_dec_loss = tf.reduce_mean(tf.reduce_sum(t_dec_err, axis=1))
+            t_scores = -tf.reduce_sum(t_dec_err, axis=1)
 
             scope.reuse_variables()
 
@@ -134,13 +135,19 @@ class Decoder(object):
             t_next_pred = tf.einsum("ij,jk->ik", t_next_hidden, v_proj) + b_proj
 
         if multi:
-            t_next_hidden = tf.reshape(t_next_hidden, (t_n_batch, t_n_multi, N_HIDDEN))
-            t_next_pred = tf.reshape(t_next_pred, (t_n_batch, t_n_multi, n_vocab))
+            t_next_hidden = tf.reshape(t_next_hidden, (t_n_batch_d, t_n_multi_d, N_HIDDEN))
+            t_next_pred = tf.reshape(t_next_pred, (t_n_batch_d, t_n_multi_d, n_vocab))
+            t_scores = tf.reshape(t_scores, (t_n_batch, t_n_multi))
 
+        self.t_scores = t_scores
         self.t_loss = t_dec_loss
         self.t_next_hidden = t_next_hidden
         self.t_next_pred = t_next_pred
         self.multi = multi
+
+    def score(self, init, feed, session):
+        scores, = session.run([self.t_scores], feed)
+        return scores
 
     def decode(self, init, stop, feed, session, temp=None):
         last_hidden, = session.run([self.t_init], feed)
@@ -288,8 +295,6 @@ class ConvModel(object):
             hyp_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
             hyp_feed = self.feed(hyp_batch, input_examples=True)
             scores, = self.session.run([self.t_score], hyp_feed)
-            print(scores)
-            exit()
             preds = scores > 0
 
             for j in range(len(batch)):
@@ -457,9 +462,9 @@ class TransducerModel(object):
         hyp_stop = self.task.hint_vocab[self.task.STOP]
         feed = self.feed(batch)
 
-        best_score = [-1] * len(batch)
+        best_score = [-np.inf] * len(batch)
         best_hyps = [None] * len(batch)
-        worst_score = [6] * len(batch)
+        worst_score = [np.inf] * len(batch)
 
         for i in range(FLAGS.n_sample_hyps):
             hyps = self.hyp_decoder.decode(
@@ -471,13 +476,18 @@ class TransducerModel(object):
             init = self.task.str_vocab[self.task.START] * np.ones(hyp_feed[self.t_ex_len].shape, dtype=np.int32)
             stop = self.task.str_vocab[self.task.STOP]
             preds = self.out_decoder.decode(init, stop, hyp_feed, self.session)
+            scores = self.out_decoder.score(init, hyp_feed, self.session)
 
             for j in range(len(batch)):
-                ex_here = hyp_feed[self.t_output][j, ...]
-                score = 0
-                for ex, pred in zip(ex_here, preds[j]):
-                    if np.all(ex[:len(pred)] == pred):
-                        score += 1
+                if FLAGS.infer_by_likelihood:
+                    score = scores[j, :].sum()
+                else:
+                    ex_here = hyp_feed[self.t_output][j, ...]
+                    score = 0
+                    for ex, pred in zip(ex_here, preds[j]):
+                        if np.all(ex[:len(pred)] == pred):
+                            score += 1
+
                 if score > best_score[j]:
                     best_score[j] = score
                     best_hyps[j] = hyps[j]
@@ -518,8 +528,5 @@ class TransducerModel(object):
         self.saver.save(self.session, "model.chk")
 
     def restore(self, path):
-        from tensorflow.python.training import checkpoint_utils as ckpt
-        print(ckpt.list_variables("../pbd_hint"))
-        exit()
         self.saver.restore(self.session, path)
 
