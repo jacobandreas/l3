@@ -1,0 +1,53 @@
+ERROR:tensorflow:==================================
+Object was never used (type <class 'tensorflow.python.framework.ops.Operation'>):
+<tf.Operation 'assert_equal/Assert/Assert' type=Assert>
+If you want to mark it as used call its "mark_used()" method.
+It was originally created here:
+['File "../../cls.py", line 67, in <module>\n    main()', 'File "../../cls.py", line 18, in main\n    model = ConvModel(task)', 'File "/home/jda/concepts/models.py", line 294, in __init__\n    t_enc_ex_all = _convolve("encode_ex", self.t_ex, params_tiled)', 'File "/home/jda/concepts/models.py", line 133, in _convolve\n    t_conv1 = _conv_layer(t_input, w1, b1)', 'File "/home/jda/concepts/models.py", line 108, in _conv_layer\n    tf.assert_equal(t_n_batch, 1)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/check_ops.py", line 318, in assert_equal\n    return control_flow_ops.Assert(condition, data, summarize=summarize)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]']
+==================================
+ERROR:tensorflow:==================================
+Object was never used (type <class 'tensorflow.python.framework.ops.Operation'>):
+<tf.Operation 'assert_equal_1/Assert/Assert' type=Assert>
+If you want to mark it as used call its "mark_used()" method.
+It was originally created here:
+['File "../../cls.py", line 67, in <module>\n    main()', 'File "../../cls.py", line 18, in main\n    model = ConvModel(task)', 'File "/home/jda/concepts/models.py", line 294, in __init__\n    t_enc_ex_all = _convolve("encode_ex", self.t_ex, params_tiled)', 'File "/home/jda/concepts/models.py", line 135, in _convolve\n    t_conv2 = _conv_layer(t_pool1, w2, b2)', 'File "/home/jda/concepts/models.py", line 108, in _conv_layer\n    tf.assert_equal(t_n_batch, 1)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/check_ops.py", line 318, in assert_equal\n    return control_flow_ops.Assert(condition, data, summarize=summarize)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]']
+==================================
+ERROR:tensorflow:==================================
+Object was never used (type <class 'tensorflow.python.framework.ops.Operation'>):
+<tf.Operation 'assert_equal_2/Assert/Assert' type=Assert>
+If you want to mark it as used call its "mark_used()" method.
+It was originally created here:
+['File "../../cls.py", line 67, in <module>\n    main()', 'File "../../cls.py", line 18, in main\n    model = ConvModel(task)', 'File "/home/jda/concepts/models.py", line 294, in __init__\n    t_enc_ex_all = _convolve("encode_ex", self.t_ex, params_tiled)', 'File "/home/jda/concepts/models.py", line 137, in _convolve\n    t_conv3 = _conv_layer(t_pool2, w3, b3)', 'File "/home/jda/concepts/models.py", line 108, in _conv_layer\n    tf.assert_equal(t_n_batch, 1)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/check_ops.py", line 318, in assert_equal\n    return control_flow_ops.Assert(condition, data, summarize=summarize)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]']
+==================================
+ERROR:tensorflow:==================================
+Object was never used (type <class 'tensorflow.python.framework.ops.Operation'>):
+<tf.Operation 'assert_equal_3/Assert/Assert' type=Assert>
+If you want to mark it as used call its "mark_used()" method.
+It was originally created here:
+['File "../../cls.py", line 67, in <module>\n    main()', 'File "../../cls.py", line 18, in main\n    model = ConvModel(task)', 'File "/home/jda/concepts/models.py", line 319, in __init__\n    t_enc_input = _convolve("encode_input", self.t_input, params_stepped)', 'File "/home/jda/concepts/models.py", line 133, in _convolve\n    t_conv1 = _conv_layer(t_input, w1, b1)', 'File "/home/jda/concepts/models.py", line 108, in _conv_layer\n    tf.assert_equal(t_n_batch, 1)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/check_ops.py", line 318, in assert_equal\n    return control_flow_ops.Assert(condition, data, summarize=summarize)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]']
+==================================
+ERROR:tensorflow:==================================
+Object was never used (type <class 'tensorflow.python.framework.ops.Operation'>):
+<tf.Operation 'assert_equal_4/Assert/Assert' type=Assert>
+If you want to mark it as used call its "mark_used()" method.
+It was originally created here:
+['File "../../cls.py", line 67, in <module>\n    main()', 'File "../../cls.py", line 18, in main\n    model = ConvModel(task)', 'File "/home/jda/concepts/models.py", line 319, in __init__\n    t_enc_input = _convolve("encode_input", self.t_input, params_stepped)', 'File "/home/jda/concepts/models.py", line 135, in _convolve\n    t_conv2 = _conv_layer(t_pool1, w2, b2)', 'File "/home/jda/concepts/models.py", line 108, in _conv_layer\n    tf.assert_equal(t_n_batch, 1)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/check_ops.py", line 318, in assert_equal\n    return control_flow_ops.Assert(condition, data, summarize=summarize)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]']
+==================================
+ERROR:tensorflow:==================================
+Object was never used (type <class 'tensorflow.python.framework.ops.Operation'>):
+<tf.Operation 'assert_equal_5/Assert/Assert' type=Assert>
+If you want to mark it as used call its "mark_used()" method.
+It was originally created here:
+['File "../../cls.py", line 67, in <module>\n    main()', 'File "../../cls.py", line 18, in main\n    model = ConvModel(task)', 'File "/home/jda/concepts/models.py", line 319, in __init__\n    t_enc_input = _convolve("encode_input", self.t_input, params_stepped)', 'File "/home/jda/concepts/models.py", line 137, in _convolve\n    t_conv3 = _conv_layer(t_pool2, w3, b3)', 'File "/home/jda/concepts/models.py", line 108, in _conv_layer\n    tf.assert_equal(t_n_batch, 1)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/check_ops.py", line 318, in assert_equal\n    return control_flow_ops.Assert(condition, data, summarize=summarize)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)', 'File "/home/jda/anaconda3/lib/python3.6/site-packages/tensorflow/python/util/tf_should_use.py", line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]']
+==================================
+2017-07-08 17:16:08.073342: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:04:00.0
+Total memory: 11.90GiB
+Free memory: 11.76GiB
+2017-07-08 17:16:08.073430: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2017-07-08 17:16:08.073443: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2017-07-08 17:16:08.073466: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:04:00.0)
+2017-07-08 17:16:15.308143: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 5043 get requests, put_count=5031 evicted_count=1000 eviction_rate=0.198768 and unsatisfied allocation rate=0.220504
+2017-07-08 17:16:15.308260: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
