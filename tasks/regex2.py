@@ -34,6 +34,9 @@ class RegexTask():
         self.START = START
         self.STOP = STOP
 
+        max_inp_len = 0
+        max_out_len = 0
+
         data = {}
         for fold in ["train", "val", "test"]:
             data[fold] = []
@@ -54,10 +57,15 @@ class RegexTask():
                 for inp, out in example["examples"]:
                     inp = [self.str_vocab.index(c) for c in inp]
                     out = [self.str_vocab.index(c) for c in out]
+                    max_inp_len = max(max_inp_len, len(inp))
+                    max_out_len = max(max_out_len, len(out))
                     pairs.append((inp, out))
 
                 datum = FullDatum(hints, pairs)
                 data[fold].append(datum)
+
+        self.max_input_len = max_inp_len
+        self.max_output_len = max_out_len
 
         self.train_data = data["train"]
         self.val_data = data["val"]
@@ -84,17 +92,19 @@ class RegexTask():
         for full_datum in self.val_data:
             pairs = list(full_datum.pairs)
             inp, out = pairs.pop()
+            hint = full_datum.hints[0] if full_datum.hints else []
             ex_inputs, ex_outputs = zip(*pairs)
             assert len(ex_inputs) == N_EX
-            batch.append(Datum([], ex_inputs, ex_outputs, inp, out))
+            batch.append(Datum(hint, ex_inputs, ex_outputs, inp, out))
         return batch
 
     def sample_test(self):
         batch = []
         for full_datum in self.test_data:
             pairs = list(full_datum.pairs)
+            hint = full_datum.hints[0] if full_datum.hints else []
             inp, out = pairs.pop()
             ex_inputs, ex_outputs = zip(*pairs)
             assert len(ex_inputs) == N_EX
-            batch.append(Datum([], ex_inputs, ex_outputs, inp, out))
+            batch.append(Datum(hint, ex_inputs, ex_outputs, inp, out))
         return batch
