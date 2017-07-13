@@ -1,0 +1,36 @@
+[loss]    662.6936
+[trn_acc] 0.5500
+[val_acc] 0.6160
+
+[loss]    445.7260
+[trn_acc] 0.6000
+[val_acc] 0.6100
+
+[loss]    393.5740
+[trn_acc] 0.6200
+[val_acc] 0.6320
+
+[loss]    353.5691
+[trn_acc] 0.7300
+[val_acc] 0.6310
+
+[loss]    315.7518
+[trn_acc] 0.7600
+[val_acc] 0.6440
+
+[loss]    297.3861
+[trn_acc] 0.7300
+[val_acc] 0.6410
+
+[loss]    285.1991
+[trn_acc] 0.7800
+[val_acc] 0.6430
+
+[loss]    274.6978
+[trn_acc] 0.7800
+[val_acc] 0.6340
+
+[loss]    263.4517
+[trn_acc] 0.8300
+[val_acc] 0.6290
+

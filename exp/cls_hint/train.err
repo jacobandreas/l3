@@ -1,0 +1,14 @@
+2017-07-12 11:54:19.934544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:04:00.0
+Total memory: 11.90GiB
+Free memory: 11.76GiB
+2017-07-12 11:54:19.934658: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2017-07-12 11:54:19.934672: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2017-07-12 11:54:19.934699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:04:00.0)
+2017-07-12 11:54:57.224117: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 2997 get requests, put_count=2943 evicted_count=1000 eviction_rate=0.339789 and unsatisfied allocation rate=0.385052
+2017-07-12 11:54:57.224283: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+2017-07-12 11:59:25.117651: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 10507 get requests, put_count=10561 evicted_count=1000 eviction_rate=0.094688 and unsatisfied allocation rate=0.0922242
+2017-07-12 11:59:25.137702: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 256 to 281
+Terminated

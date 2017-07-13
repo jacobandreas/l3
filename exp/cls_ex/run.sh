@@ -3,11 +3,12 @@
 export PYTHONPATH=".:../../../shapeworld"
 
 python -u ../../cls.py \
-  --predict_hyp=true \
-  --infer_hyp=true \
+  --predict_hyp=false \
+  --infer_hyp=false \
   --learning_rate 0.001 \
-  --n_sample_hyps=10 \
   --train \
-  --n_epochs=10 \
-  --test
+  --n_epochs=100 \
+  --test \
+  > train.out \
+  2> train.err
 

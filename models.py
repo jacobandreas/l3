@@ -20,7 +20,7 @@ N_EMBED = 32
 N_EMBED_WORD = 128
 N_HIDDEN = 512
 N_PBD_EX = 5
-N_CLS_EX = 3
+N_CLS_EX = 8
 
 N_CONV1_SIZE = 5
 N_CONV1_FILTS = 16
@@ -52,6 +52,18 @@ def _encode(name, t_input, t_len, t_vecs, t_init=None):
         t_encode = tf.reshape(t_encode, (t_n_batch, t_n_multi, N_HIDDEN))
     return t_encode
 
+def _conv_layer(t_input, n_filts, n_size, i_layer):
+    n_channels = t_input.get_shape()[3].value
+    weight = tf.get_variable("conv_w_%d" % i_layer, (n_size,
+    n_size, n_channels, n_filts),
+            initializer=tf.contrib.layers.xavier_initializer_conv2d())
+    bias = tf.get_variable("conv_b_%d" % i_layer, (n_filts),
+            initializer=tf.constant_initializer(0))
+    t_mul = tf.nn.conv2d(t_input, weight, (1, 1, 1, 1), "SAME")
+    t_trans = t_mul + bias
+    t_out = tf.nn.relu(t_trans)
+    return t_out
+
 def _convolve(name, t_input):
     multi = len(t_input.get_shape()) == 5
     assert multi or len(t_input.get_shape()) == 4
@@ -62,21 +74,12 @@ def _convolve(name, t_input):
         t_input = tf.reshape(t_input, (t_n_batch * t_n_multi, t_w.value, t_h.value, t_c.value))
 
     with tf.variable_scope(name) as scope:
-        t_conv1 = tf.layers.conv2d(
-                t_input, N_CONV1_FILTS, (N_CONV1_SIZE, N_CONV1_SIZE), 
-                activation=tf.nn.relu, padding="same")
-        t_pool1 = tf.layers.max_pooling2d(
-                t_conv1, 2, 2)
-        t_conv2 = tf.layers.conv2d(
-                t_pool1, N_CONV2_FILTS, (N_CONV2_SIZE, N_CONV2_SIZE),
-                activation=tf.nn.relu, padding="same")
-        t_pool2 = tf.layers.max_pooling2d(
-                t_conv2, 2, 2)
-        t_conv3 = tf.layers.conv2d(
-                t_pool2, N_CONV3_FILTS, (N_CONV3_SIZE, N_CONV3_SIZE),
-                activation=tf.nn.relu, padding="same")
-        t_pool3 = tf.layers.average_pooling2d(
-                t_conv3, 2, 2)
+        t_conv1 = _conv_layer(t_input, N_CONV1_FILTS, N_CONV1_SIZE, 1)
+        t_pool1 = tf.layers.max_pooling2d(t_conv1, 2, 2)
+        t_conv2 = _conv_layer(t_pool1, N_CONV2_FILTS, N_CONV2_SIZE, 2)
+        t_pool2 = tf.layers.max_pooling2d(t_conv2, 2, 2)
+        t_conv3 = _conv_layer(t_pool2, N_CONV3_FILTS, N_CONV3_SIZE, 3)
+        t_pool3 = tf.layers.average_pooling2d(t_conv3, 4, 4)
         final_w, final_h = t_pool3.get_shape()[1:3]
         final_feats = final_w.value * final_h.value * N_CONV3_FILTS
 
@@ -215,6 +218,11 @@ class ConvModel(object):
             t_concept = t_enc_hint
         else:
             t_concept = t_enc_ex
+        #print(t_enc_ex.get_shape())
+        #t_concept = tf.get_variable("dummy", shape=(1, N_HIDDEN),
+        #        initializer=tf.constant_initializer(0))
+        #print(t_concept.get_shape())
+        #exit()
 
         t_enc_input = _convolve("encode_input", self.t_input)
         self.hyp_decoder = Decoder(
@@ -284,9 +292,9 @@ class ConvModel(object):
         hyp_stop = self.task.hint_vocab[self.task.STOP]
         feed = self.feed(batch)
 
-        best_score = [-1] * len(batch)
+        best_score = [-np.inf] * len(batch)
         best_hyps = [None] * len(batch)
-        worst_score = [6] * len(batch)
+        worst_score = [np.inf] * len(batch)
 
         for i in range(FLAGS.n_sample_hyps):
             hyps = self.hyp_decoder.decode(
@@ -294,12 +302,16 @@ class ConvModel(object):
                     temp=None if i == 0 else 1)
             hyp_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
             hyp_feed = self.feed(hyp_batch, input_examples=True)
+
             scores, = self.session.run([self.t_score], hyp_feed)
             preds = scores > 0
 
             for j in range(len(batch)):
+                if FLAGS.infer_by_likelihood:
+                    score = scores[j, :].sum()
+                else:
+                    score = preds[j, :].sum()
                 ex_here = hyp_feed[self.t_output][j, ...]
-                score = np.sum(preds[j, :])
                 if score > best_score[j]:
                     best_score[j] = score
                     best_hyps[j] = hyps[j]
@@ -323,7 +335,6 @@ class ConvModel(object):
         else:
             pred_batch = batch
 
-        pred_batch = batch
         pred_feed = self.feed(pred_batch)
         scores, = self.session.run([self.t_score], pred_feed)
         preds = scores.ravel() > 0
