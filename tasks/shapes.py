@@ -20,46 +20,23 @@ random = util.next_random()
 class ShapeworldTask():
     def __init__(self):
         self.hint_vocab = util.Index()
+        self.feature_index = util.Index()
         self.START = START
         self.STOP = STOP
 
-        #data = {}
-        #for fold in ("train", "val", "test"):
-        #    images = []
-        #    for i_image in range(100):
-        #        image = Image.open(os.path.join(sw_path, fold, "world-%d.bmp" % i_image))
-        #        im_data = np.asarray(image)
-        #        images.append(im_data)
-        #    hints = []
-        #    with open(os.path.join(sw_path, fold, "caption.txt")) as caption_f:
-        #        for line in caption_f:
-        #            hint = line.strip().split()
-        #            hint = [self.hint_vocab.index(w) for w in line]
-        #            hints.append(tuple(hint))
-        #    labels = []
-        #    with open(os.path.join(sw_path, fold, "agreement.txt")) as label_f:
-        #        for line in label_f:
-        #            label = int(float(line))
-        #            labels.append(label)
-
-        #    fold_data = []
-        #    for image, hint, label in zip(images, hints, labels):
-        #        fold_data.append(Datum(hint, [image], image, label))
-
-        #    data[fold] = fold_data
-
-
-        #data = self.dataset.generate(1, mode="train")
-        #_, self.width, self.height, self.channels = data["world"].shape
-
-        #self.sample_batch("train", 100)
-        #exit()
+        with open(os.path.join(sw_path, "train", "examples.struct.json")) as feature_f:
+            feature_data = json.load(feature_f)
+            for datum in feature_data:
+                for example in datum:
+                    for feature in example:
+                        self.feature_index.index(tuple(feature))
 
         data = {}
         for fold in ("train", "validation", "test"):
             examples = np.load(os.path.join(sw_path, fold, "examples.npy"))
             inputs = np.load(os.path.join(sw_path, fold, "inputs.npy"))
             labels = np.load(os.path.join(sw_path, fold, "labels.npy"))
+
             with open(os.path.join(sw_path, fold, "hints.json")) as hint_f:
                 hints = json.load(hint_f)
             indexed_hints = []
@@ -68,17 +45,40 @@ class ShapeworldTask():
                 indexed_hint = [self.hint_vocab.index(w) for w in hint]
                 indexed_hints.append(indexed_hint)
             hints = indexed_hints
+
+            ex_features = np.zeros((examples.shape[0], examples.shape[1], len(self.feature_index)))
+            inp_features = np.zeros((examples.shape[0], len(self.feature_index)))
+            with open(os.path.join(sw_path, fold, "examples.struct.json")) as ex_struct_f:
+                examples_struct = json.load(ex_struct_f)
+                for i_datum, examples in enumerate(examples_struct):
+                    for i_ex, example in enumerate(examples):
+                        for feature in example:
+                            i_feat = self.feature_index[tuple(feature)]
+                            if i_feat:
+                                ex_features[i_datum, i_ex, i_feat] = 1
+            with open(os.path.join(sw_path, fold, "inputs.struct.json")) as in_struct_f:
+                inputs_struct = json.load(in_struct_f)
+                for i_datum, example in enumerate(inputs_struct):
+                    for feature in example:
+                        i_feat = self.feature_index[tuple(feature)]
+                        if i_feat is not None:
+                            inp_features[i_datum, i_feat] = 1
+
             fold_data = []
+
             for i in range(len(hints)):
+                #fold_data.append(Datum(
+                #    hints[i], examples[i, ...], inputs[i, ...], labels[i]))
                 fold_data.append(Datum(
-                    hints[i], examples[i, ...], inputs[i, ...], labels[i]))
+                    hints[i], ex_features[i, ...], inp_features[i, ...], labels[i]))
             data[fold] = fold_data
 
         self.train_data = data["train"]
         self.val_data = data["validation"]
         self.test_data = data["test"]
 
-        self.width, self.height, self.channels = self.train_data[0].input.shape
+        #self.width, self.height, self.channels = self.train_data[0].input.shape
+        self.n_features = len(self.feature_index)
 
     def sample_train(self, n_batch):
         batch = []

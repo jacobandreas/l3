@@ -3,17 +3,21 @@ import tensorflow as tf
 INIT_SCALE = 1.43
 
 def _linear(t_in, n_out):
-    assert len(t_in.get_shape()) == 2
     v_w = tf.get_variable(
             "w",
-            shape=(t_in.get_shape()[1], n_out),
+            shape=(t_in.get_shape()[-1], n_out),
             initializer=tf.uniform_unit_scaling_initializer(
                 factor=INIT_SCALE))
     v_b = tf.get_variable(
             "b",
             shape=n_out,
             initializer=tf.constant_initializer(0))
-    return tf.einsum("ij,jk->ik", t_in, v_w) + v_b
+    if len(t_in.get_shape()) == 2:
+        return tf.einsum("ij,jk->ik", t_in, v_w) + v_b
+    elif len(t_in.get_shape()) == 3:
+        return tf.einsum("ijk,kl->ijl", t_in, v_w) + v_b
+    else:
+        assert False
 
 def _embed(t_in, n_embeddings, n_out):
     v = tf.get_variable(
