@@ -16,12 +16,14 @@ gflags.DEFINE_integer("n_sample_hyps", 5, "number of hypotheses to sample")
 gflags.DEFINE_float("learning_rate", 0.001, "learning rate")
 gflags.DEFINE_string("restore", None, "model to restore")
 
+USE_IMAGES = True
+
 N_EMBED = 32
 N_EMBED_WORD = 128
 #N_HIDDEN = 512
-N_HIDDEN = 100
+N_HIDDEN = 256
 N_PBD_EX = 5
-N_CLS_EX = 8
+N_CLS_EX = 4
 
 N_CONV1_SIZE = 5
 N_CONV1_FILTS = 16
@@ -196,15 +198,17 @@ class ConvModel(object):
         self.t_hint = tf.placeholder(tf.int32, (None, None), "hint")
         self.t_hint_len = tf.placeholder(tf.int32, (None,), "hint_len")
 
-        #self.t_ex = tf.placeholder(
-        #        tf.float32, (None, None, task.width, task.height, task.channels))
+        if USE_IMAGES:
+            self.t_ex = tf.placeholder(
+                    tf.float32, (None, None, task.width, task.height, task.channels))
 
-        #self.t_input = tf.placeholder(
-        #        tf.float32, (None, None, task.width, task.height, task.channels))
-        self.t_ex = tf.placeholder(
-                tf.float32, (None, None, task.n_features))
-        self.t_input = tf.placeholder(
-                tf.float32, (None, None, task.n_features))
+            self.t_input = tf.placeholder(
+                    tf.float32, (None, None, task.width, task.height, task.channels))
+        else:
+            self.t_ex = tf.placeholder(
+                    tf.float32, (None, None, task.n_features))
+            self.t_input = tf.placeholder(
+                    tf.float32, (None, None, task.n_features))
         self.t_output = tf.placeholder(tf.float32, (None, None))
 
         self.t_last_hyp = tf.placeholder(tf.int32, (None,), "last_hyp")
@@ -214,26 +218,27 @@ class ConvModel(object):
                 "hint_vec", shape=(len(task.hint_vocab), N_EMBED_WORD),
                 initializer=tf.uniform_unit_scaling_initializer())
 
-        #t_enc_ex_all = _convolve("encode_ex", self.t_ex)
-        with tf.variable_scope("encode_ex"):
-            t_enc_ex_all = _linear(self.t_ex, N_HIDDEN)
+        if USE_IMAGES:
+            t_enc_ex_all = _convolve("encode_ex", self.t_ex)
+        else:
+            with tf.variable_scope("encode_ex"):
+                t_enc_ex_all = _linear(self.t_ex, N_HIDDEN)
+        t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
+
         t_enc_hint = _encode(
                 "encode_hint", self.t_hint, self.t_hint_len, t_hint_vecs)
-        t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
 
         if FLAGS.infer_hyp:
             t_concept = t_enc_hint
         else:
             t_concept = t_enc_ex
-        #print(t_enc_ex.get_shape())
-        #t_concept = tf.get_variable("dummy", shape=(1, N_HIDDEN),
-        #        initializer=tf.constant_initializer(0))
-        #print(t_concept.get_shape())
-        #exit()
 
-        with tf.variable_scope("encode_input"):
-        #t_enc_input = _convolve("encode_input", self.t_input)
-            t_enc_input = _linear(self.t_input, N_HIDDEN)
+        if USE_IMAGES:
+            t_enc_input = _convolve("encode_input", self.t_input)
+        else:
+            with tf.variable_scope("encode_input"):
+                t_enc_input = _linear(self.t_input, N_HIDDEN)
+
         self.hyp_decoder = Decoder(
                 "decode_hyp", t_enc_ex, self.t_hint, self.t_last_hyp,
                 self.t_last_hyp_hidden, t_hint_vecs)
@@ -260,19 +265,23 @@ class ConvModel(object):
             self.restore(FLAGS.restore)
 
     def feed(self, batch, input_examples=False):
-        #width, height, channels = self.task.width, self.task.height, self.task.channels
-        n_features = self.task.n_features
-        max_hint_len = max(len(d.hint) for d in batch)
-        hint = np.zeros((len(batch), max_hint_len), dtype=np.int32)
-        hint_len = np.zeros((len(batch),), dtype=np.int32)
-        #example = np.zeros((len(batch), N_CLS_EX, width, height, channels))
-        example = np.zeros((len(batch), N_CLS_EX, n_features))
         if input_examples:
             n_input = N_CLS_EX
         else:
             n_input = 1
-        #inp = np.zeros((len(batch), n_input, width, height, channels))
-        inp = np.zeros((len(batch), n_input, n_features))
+
+        if USE_IMAGES:
+            width, height, channels = self.task.width, self.task.height, self.task.channels
+            example = np.zeros((len(batch), N_CLS_EX, width, height, channels))
+            inp = np.zeros((len(batch), n_input, width, height, channels))
+        else:
+            n_features = self.task.n_features
+            example = np.zeros((len(batch), N_CLS_EX, n_features))
+            inp = np.zeros((len(batch), n_input, n_features))
+
+        max_hint_len = max(len(d.hint) for d in batch)
+        hint = np.zeros((len(batch), max_hint_len), dtype=np.int32)
+        hint_len = np.zeros((len(batch),), dtype=np.int32)
         out = np.zeros((len(batch), n_input))
 
         for i, datum in enumerate(batch):
@@ -519,7 +528,6 @@ class TransducerModel(object):
 
         hyps = best_hyps
         print >>sys.stderr, best_score
-        #print >>sys.stderr, worst_score
 
         print >>sys.stderr, "\n".join(" ".join(self.task.hint_vocab.get(c) for c in hyp) for hyp in hyps[:3])
         print >>sys.stderr, "\n".join(" ".join(self.task.hint_vocab.get(c) for c in hyp if c) for hyp in feed[self.t_hint][:3])
