@@ -10,7 +10,7 @@ HUMAN_TEST_MAPS = {
     'global': [20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,60,61,62,63,64,65,66,67,68,69,110,111,112,113,114,115,116,117,118,119]
 }
 
-BASE_PATH = 'data/nav'
+BASE_PATH = os.path.join(sys.path[0], 'data/nav')
 
 def load(mode, data, num_train, num_test):
     turk_path = os.path.join(BASE_PATH, mode)
