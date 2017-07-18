@@ -7,6 +7,8 @@ from PIL import Image
 import sys
 import json
 
+USE_IMAGES = True
+
 sw_path = os.path.join(sys.path[0], "data/shapeworld")
 
 Fold = namedtuple("Fold", ["hints", "examples", "inputs", "labels"])
@@ -50,8 +52,8 @@ class ShapeworldTask():
             inp_features = np.zeros((examples.shape[0], len(self.feature_index)))
             with open(os.path.join(sw_path, fold, "examples.struct.json")) as ex_struct_f:
                 examples_struct = json.load(ex_struct_f)
-                for i_datum, examples in enumerate(examples_struct):
-                    for i_ex, example in enumerate(examples):
+                for i_datum, expls in enumerate(examples_struct):
+                    for i_ex, example in enumerate(expls):
                         for feature in example:
                             i_feat = self.feature_index[tuple(feature)]
                             if i_feat:
@@ -67,29 +69,47 @@ class ShapeworldTask():
             fold_data = []
 
             for i in range(len(hints)):
-                #fold_data.append(Datum(
-                #    hints[i], examples[i, ...], inputs[i, ...], labels[i]))
-                fold_data.append(Datum(
-                    hints[i], ex_features[i, ...], inp_features[i, ...], labels[i]))
+                if USE_IMAGES:
+                    fold_data.append(Datum(
+                        hints[i], examples[i, ...], inputs[i, ...], labels[i]))
+                else:
+                    fold_data.append(Datum(
+                        hints[i], ex_features[i, ...], inp_features[i, ...], labels[i]))
             data[fold] = fold_data
 
         self.train_data = data["train"]
         self.val_data = data["validation"]
         self.test_data = data["test"]
 
-        #self.width, self.height, self.channels = self.train_data[0].input.shape
-        self.n_features = len(self.feature_index)
+        if USE_IMAGES:
+            self.width, self.height, self.channels = self.train_data[0].input.shape
+        else:
+            self.n_features = len(self.feature_index)
 
     def sample_train(self, n_batch):
         batch = []
         n_train = len(self.train_data)
         for _ in range(n_batch):
             datum = self.train_data[random.randint(n_train)]
+            in_examples = datum.ex_inputs
+            out_examples = []
+            for i_ex in range(4):
+                out_examples.append(
+                        in_examples[random.randint(in_examples.shape[0]), ...])
+            datum = datum._replace(ex_inputs=out_examples)
             batch.append(datum)
         return batch
 
     def sample_val(self):
-        return self.val_data
+        batch = []
+        for datum in self.val_data:
+            datum = datum._replace(ex_inputs=datum.ex_inputs[:4, ...])
+            batch.append(datum)
+        return batch
 
     def sample_test(self):
-        return self.test_data
+        batch = []
+        for datum in self.test_data:
+            datum = datum._replace(ex_inputs=datum.ex_inputs[:4, ...])
+            batch.append(datum)
+        return batch

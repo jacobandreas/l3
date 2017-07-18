@@ -9,9 +9,9 @@ python -u ../../cls.py \
   --infer_by_likelihood \
   --n_sample_hyps=10 \
   --train \
-  --n_epochs=100 \
+  --n_epochs=500 \
   --test \
-  > train2.out \
-  2> train2.err
+  > train.out \
+  2> train.err
 
   #--use_true_hyp=true \
