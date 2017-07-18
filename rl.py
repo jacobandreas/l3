@@ -45,7 +45,7 @@ def do_rollout(task, policy):
         for i_state in range(N_PAR):
             if done[i_state]:
                 continue
-            state_, reward, stop = states[i_state].step(action)
+            state_, reward, stop = states[i_state].step(actions[i_state])
             bufs[i].append((state, action, state_, reward))
             states[i_state] = state_
             if stop:
