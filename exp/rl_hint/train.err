@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "../../rl.py", line 4, in <module>
+    from tasks import nav
+  File "/Users/jda/Code/concepts/tasks/nav/__init__.py", line 4, in <module>
+    train_local, test_local = loading.load("local", "human", 20, 20)
+  File "/Users/jda/Code/concepts/tasks/nav/loading.py", line 17, in load
+    states, _ = initialize_states(turk_path)
+  File "/Users/jda/Code/concepts/tasks/nav/loading.py", line 181, in initialize_states
+    info = pickle.load( open(path, 'r') )
+IOError: [Errno 2] No such file or directory: 'data/nav/local/0.p'
