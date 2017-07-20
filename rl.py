@@ -22,34 +22,53 @@ def main():
 
     if FLAGS.train:
         for i_epoch in range(FLAGS.n_epochs):
-            buf = []
             total_rew = 0
+            total_err = 0
             n_rollouts = 0
-            while len(buf) < FLAGS.n_batch:
-                rollouts, rews = do_rollout(task, policy)
-                for rollout, rew in zip(rollouts, rews):
-                    buf.extend(rollout)
-                    total_rew += rew
-                    n_rollouts += 1
+            for i in range(10):
+                buf = []
+                while len(buf) < FLAGS.n_batch:
+                    states = [task.sample_train() for _ in range(N_PAR)]
+                    rollouts, rews = do_rollout(task, policy, states)
+                    for rollout, rew in zip(rollouts, rews):
+                        buf.extend(rollout)
+                        total_rew += rew
+                        n_rollouts += 1
+                total_err += policy.train(buf)
+
+            test_states = [task.sample_test() for _ in range(100)]
+            _, test_rews = do_rollout(task, policy, test_states, vis=False)
+            total_test_rew = sum(test_rews)
+
+            print total_err / 10
             print total_rew / n_rollouts, n_rollouts
-            print policy.train(buf)
+            print total_test_rew / len(test_rews)
             print
 
-def do_rollout(task, policy):
+def do_rollout(task, policy, states, vis=False):
     #state = task.sample_train()
-    states = [task.sample_train() for _ in range(N_PAR)]
-    bufs = [[] for _ in range(N_PAR)]
-    done = [False for _ in range(N_PAR)]
-    for _ in range(FLAGS.max_steps):
+    #states = [task.sample_train() for _ in range(N_PAR)]
+    states = list(states)
+    bufs = [[] for _ in states]
+    done = [False for _ in states]
+    for t in range(FLAGS.max_steps):
         actions = policy.act(states)
-        for i_state in range(N_PAR):
+        for i_state in range(len(states)):
             if done[i_state]:
                 continue
-            state_, reward, stop = states[i_state].step(actions[i_state])
-            bufs[i].append((state, action, state_, reward))
+            state = states[i_state]
+            if i_state == 0 and vis:
+                print state.render()
+                print state.features[:, :, 0]
+            action = actions[i_state]
+            state_, reward, stop = state.step(action)
+            bufs[i_state].append((state, action, state_, reward))
             states[i_state] = state_
             if stop:
-                done[i] = True
+                done[i_state] = True
+                if i_state == 0 and vis:
+                    print state_.render()
+                    print state.features[:, :, 0]
         if all(done):
             break
 
@@ -58,6 +77,7 @@ def do_rollout(task, policy):
     for buf in bufs:
         forward_r = 0
         total_r = 0
+        discounted_buf = []
         for s, a, s_, r in reversed(buf):
             forward_r *= FLAGS.discount
             r_ = r + forward_r
@@ -65,7 +85,7 @@ def do_rollout(task, policy):
             forward_r += r
         if discounted_buf[0][3] > 0:
             total_r += 1.
-        discounted_bufs.append(buf)
+        discounted_bufs.append(discounted_buf)
         total_rs.append(total_r)
     return discounted_bufs, total_rs
 
