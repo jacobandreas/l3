@@ -1,6 +1,7 @@
 #!/usr/bin/env python2
 
 from rl_models import Policy
+#from tasks import minicraft2
 from tasks import nav
 
 import sys
@@ -17,6 +18,8 @@ gflags.DEFINE_integer("max_steps", 100, "max rollout length")
 N_PAR = 10
 
 def main():
+    #task = minicraft.CraftTask()
+    #task = minicraft2.Minicraft2World()
     task = nav.NavTask()
     policy = Policy(task)
 

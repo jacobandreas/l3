@@ -3,9 +3,12 @@ import util
 import numpy as np
 import loading
 
+from skimage.measure import block_reduce
+
 ROWS = 10
 COLS = 10
 OBJS = 11
+WINDOW_SIZE = 5
 ACTS = 4
 
 START = "<s>"
@@ -46,6 +49,10 @@ class NavState(object):
         assert 0 <= sr < 2 * ROWS - 1
         assert 0 <= sc < 2 * COLS - 1
         padded[sr:sr+ROWS, sc:sc+COLS, :] = raw
+        padded_red = block_reduce(padded, (WINDOW_SIZE, WINDOW_SIZE, 1), func=np.max)
+        print padded.shape
+        print padded_red.shape
+        exit()
         return padded
 
     def step(self, action):
