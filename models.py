@@ -16,21 +16,21 @@ gflags.DEFINE_integer("n_sample_hyps", 5, "number of hypotheses to sample")
 gflags.DEFINE_float("learning_rate", 0.001, "learning rate")
 gflags.DEFINE_string("restore", None, "model to restore")
 
-USE_IMAGES = True
+USE_IMAGES = False
 
 N_EMBED = 32
 N_EMBED_WORD = 128
-#N_HIDDEN = 512
-N_HIDDEN = 256
+N_HIDDEN = 512
+#N_HIDDEN = 100
 N_PBD_EX = 5
-N_CLS_EX = 4
+N_CLS_EX = 6
 
 N_CONV1_SIZE = 5
 N_CONV1_FILTS = 16
 N_CONV2_SIZE = 3
 N_CONV2_FILTS = 32
 N_CONV3_SIZE = 3
-N_CONV3_FILTS = 64
+N_CONV3_FILTS = 32
 
 random = util.next_random()
 tf.set_random_seed(0)
@@ -48,6 +48,7 @@ def _encode(name, t_input, t_len, t_vecs, t_init=None):
             t_init = tf.tile(tf.expand_dims(t_init, 1), (1, t_n_multi, 1))
             t_init = tf.reshape(t_init, (t_n_batch*t_n_multi, N_HIDDEN))
     t_embed = _embed_dict(t_input, t_vecs)
+    ### return _linear(tf.reduce_mean(t_embed, axis=1), N_HIDDEN)
     with tf.variable_scope(name):
         _, t_encode = tf.nn.dynamic_rnn(
                 cell, t_embed, t_len, dtype=tf.float32, initial_state=t_init)
@@ -67,8 +68,9 @@ def _conv_layer(t_input, n_filts, n_size, i_layer):
     t_out = tf.nn.relu(t_trans)
     return t_out
 
-def _convolve(name, t_input):
+def _convolve(name, t_input, t_dropout):
     multi = len(t_input.get_shape()) == 5
+    t_keep = 1 - t_dropout
     assert multi or len(t_input.get_shape()) == 4
     if multi:
         t_shape = tf.shape(t_input)
@@ -78,16 +80,22 @@ def _convolve(name, t_input):
 
     with tf.variable_scope(name) as scope:
         t_conv1 = _conv_layer(t_input, N_CONV1_FILTS, N_CONV1_SIZE, 1)
-        t_pool1 = tf.layers.max_pooling2d(t_conv1, 2, 2)
+        t_pool1 = tf.layers.max_pooling2d(t_conv1, 4, 4)
         t_conv2 = _conv_layer(t_pool1, N_CONV2_FILTS, N_CONV2_SIZE, 2)
-        t_pool2 = tf.layers.max_pooling2d(t_conv2, 2, 2)
+        t_pool2 = tf.layers.max_pooling2d(t_conv2, 4, 4)
         t_conv3 = _conv_layer(t_pool2, N_CONV3_FILTS, N_CONV3_SIZE, 3)
         t_pool3 = tf.layers.average_pooling2d(t_conv3, 4, 4)
         final_w, final_h = t_pool3.get_shape()[1:3]
         final_feats = final_w.value * final_h.value * N_CONV3_FILTS
 
+        #print(t_pool2.get_shape())
+        #print(final_w, final_h)
+        #exit()
+
         t_flat = tf.reshape(t_pool3, (t_n_batch * t_n_multi, final_feats))
+        #t_flat = tf.nn.dropout(t_flat, keep_prob=t_keep)
         t_repr = _linear(t_flat, N_HIDDEN)
+        t_repr = tf.nn.dropout(t_repr, keep_prob=t_keep)
 
     if multi:
         t_repr = tf.reshape(t_repr, (t_n_batch, t_n_multi, N_HIDDEN))
@@ -213,17 +221,29 @@ class ConvModel(object):
 
         self.t_last_hyp = tf.placeholder(tf.int32, (None,), "last_hyp")
         self.t_last_hyp_hidden = tf.placeholder(tf.float32, (None, N_HIDDEN), "last_hyp_hidden")
+        self.t_dropout = tf.constant(0.2)
+        #self.t_dropout = tf.constant(0)
 
         t_hint_vecs = tf.get_variable(
                 "hint_vec", shape=(len(task.hint_vocab), N_EMBED_WORD),
                 initializer=tf.uniform_unit_scaling_initializer())
 
         if USE_IMAGES:
-            t_enc_ex_all = _convolve("encode_ex", self.t_ex)
+            t_enc_ex_all = _convolve("encode_ex", self.t_ex, self.t_dropout)
         else:
             with tf.variable_scope("encode_ex"):
-                t_enc_ex_all = _linear(self.t_ex, N_HIDDEN)
-        t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
+                t_enc_ex_all = self.t_ex
+                #t_enc_ex_all = _linear(self.t_ex, N_HIDDEN)
+                #t_enc_ex_all = _mlp(
+                #        self.t_ex, (N_HIDDEN,), (tf.nn.relu,))
+        with tf.variable_scope("reduce_ex"):
+            reduce_cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
+            _, t_enc_ex = tf.nn.dynamic_rnn(reduce_cell, t_enc_ex_all,
+                    dtype=tf.float32)
+            #t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
+            #t_enc_ex = _mlp(t_enc_ex, (N_HIDDEN, N_HIDDEN), (tf.nn.relu,
+            #    tf.nn.relu))
+
 
         t_enc_hint = _encode(
                 "encode_hint", self.t_hint, self.t_hint_len, t_hint_vecs)
@@ -234,7 +254,7 @@ class ConvModel(object):
             t_concept = t_enc_ex
 
         if USE_IMAGES:
-            t_enc_input = _convolve("encode_input", self.t_input)
+            t_enc_input = _convolve("encode_input", self.t_input, self.t_dropout)
         else:
             with tf.variable_scope("encode_input"):
                 t_enc_input = _linear(self.t_input, N_HIDDEN)
@@ -256,6 +276,7 @@ class ConvModel(object):
             self.t_loss = t_pred_loss
 
         optimizer = tf.train.AdamOptimizer(FLAGS.learning_rate)
+        #optimizer = tf.train.GradientDescentOptimizer(FLAGS.learning_rate)
         self.o_train = optimizer.minimize(self.t_loss)
 
         self.session = tf.Session()
@@ -264,7 +285,7 @@ class ConvModel(object):
         if FLAGS.restore is not None:
             self.restore(FLAGS.restore)
 
-    def feed(self, batch, input_examples=False):
+    def feed(self, batch, input_examples=False, dropout=True):
         if input_examples:
             n_input = N_CLS_EX
         else:
@@ -295,13 +316,16 @@ class ConvModel(object):
                 inp[i, 0, ...] = datum.input
                 out[i, 0] = datum.label
 
-        return {
+        feed_dict = {
             self.t_hint: hint,
             self.t_hint_len: hint_len,
             self.t_ex: example,
             self.t_input: inp,
             self.t_output: out
         }
+        if not dropout:
+            feed_dict[self.t_dropout] = 0
+        return feed_dict
 
     def train(self, batch):
         feed = self.feed(batch)
@@ -340,12 +364,19 @@ class ConvModel(object):
                     worst_score[j] = score
 
         hyps = best_hyps
-        #print >>sys.stderr, best_score
-        ##print >>sys.stderr, worst_score
 
-        print("\n".join(" ".join(self.task.hint_vocab.get(c) for c in hyp) for hyp in hyps[:3]))
-        print("\n".join(" ".join(self.task.hint_vocab.get(c) for c in hyp if c) for hyp in feed[self.t_hint][:3]))
-        print()
+        print "pred, gold"
+        for i in range(3):
+            print " ".join(self.task.hint_vocab.get(c) for c in hyps[i]),
+            print " ".join(self.task.hint_vocab.get(c) for c in feed[self.t_hint][i])
+
+        agree = 0
+        for i in range(len(batch)):
+            h = hyps[i]
+            g = [c for c in feed[self.t_hint][i].tolist() if c]
+            agree += (1 if h == g else 0)
+        print 1. * agree / len(batch)
+        print
 
         return hyps
 
@@ -356,7 +387,7 @@ class ConvModel(object):
         else:
             pred_batch = batch
 
-        pred_feed = self.feed(pred_batch)
+        pred_feed = self.feed(pred_batch, dropout=False)
         scores, = self.session.run([self.t_score], pred_feed)
         preds = scores.ravel() > 0
         labels = [d.label for d in batch]

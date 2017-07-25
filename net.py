@@ -39,7 +39,7 @@ def _embed_dict(t_in, emb_dict):
     return t_embed
 
 def _mlp(t_in, widths, activations):
-    assert len(t_in.get_shape()) == 2
+    assert len(t_in.get_shape()) in (2, 3)
     assert len(widths) == len(activations)
     prev_width = t_in.get_shape()[1]
     prev_layer = t_in

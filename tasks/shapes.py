@@ -7,7 +7,8 @@ from PIL import Image
 import sys
 import json
 
-USE_IMAGES = True
+USE_IMAGES = False
+N_EX = 6
 
 sw_path = os.path.join(sys.path[0], "data/shapeworld")
 
@@ -48,23 +49,25 @@ class ShapeworldTask():
                 indexed_hints.append(indexed_hint)
             hints = indexed_hints
 
-            ex_features = np.zeros((examples.shape[0], examples.shape[1], len(self.feature_index)))
-            inp_features = np.zeros((examples.shape[0], len(self.feature_index)))
-            with open(os.path.join(sw_path, fold, "examples.struct.json")) as ex_struct_f:
-                examples_struct = json.load(ex_struct_f)
-                for i_datum, expls in enumerate(examples_struct):
-                    for i_ex, example in enumerate(expls):
-                        for feature in example:
-                            i_feat = self.feature_index[tuple(feature)]
-                            if i_feat:
-                                ex_features[i_datum, i_ex, i_feat] = 1
-            with open(os.path.join(sw_path, fold, "inputs.struct.json")) as in_struct_f:
-                inputs_struct = json.load(in_struct_f)
-                for i_datum, example in enumerate(inputs_struct):
-                    for feature in example:
-                        i_feat = self.feature_index[tuple(feature)]
-                        if i_feat is not None:
-                            inp_features[i_datum, i_feat] = 1
+            #ex_features = np.zeros((examples.shape[0], examples.shape[1], len(self.feature_index)))
+            #inp_features = np.zeros((examples.shape[0], len(self.feature_index)))
+            #with open(os.path.join(sw_path, fold, "examples.struct.json")) as ex_struct_f:
+            #    examples_struct = json.load(ex_struct_f)
+            #    for i_datum, expls in enumerate(examples_struct):
+            #        for i_ex, example in enumerate(expls):
+            #            for feature in example:
+            #                i_feat = self.feature_index[tuple(feature)]
+            #                if i_feat:
+            #                    ex_features[i_datum, i_ex, i_feat] = 1
+            #with open(os.path.join(sw_path, fold, "inputs.struct.json")) as in_struct_f:
+            #    inputs_struct = json.load(in_struct_f)
+            #    for i_datum, example in enumerate(inputs_struct):
+            #        for feature in example:
+            #            i_feat = self.feature_index[tuple(feature)]
+            #            if i_feat is not None:
+            #                inp_features[i_datum, i_feat] = 1
+            ex_features = np.load(os.path.join(sw_path, fold, "examples.feats.npy"))
+            inp_features = np.load(os.path.join(sw_path, fold, "inputs.feats.npy"))
 
             fold_data = []
 
@@ -84,7 +87,8 @@ class ShapeworldTask():
         if USE_IMAGES:
             self.width, self.height, self.channels = self.train_data[0].input.shape
         else:
-            self.n_features = len(self.feature_index)
+            #self.n_features = len(self.feature_index)
+            self.n_features = inp_features.shape[1]
 
     def sample_train(self, n_batch):
         batch = []
@@ -93,23 +97,28 @@ class ShapeworldTask():
             datum = self.train_data[random.randint(n_train)]
             in_examples = datum.ex_inputs
             out_examples = []
-            for i_ex in range(4):
-                out_examples.append(
-                        in_examples[random.randint(in_examples.shape[0]), ...])
-            datum = datum._replace(ex_inputs=out_examples)
+            #for i_ex in range(N_EX):
+            #    out_examples.append(
+            #            in_examples[random.randint(in_examples.shape[0]), ...])
+            indices = list(range(in_examples.shape[0]))
+            random.shuffle(indices)
+            indices = indices[:N_EX]
+            out_examples = [in_examples[i, ...] for i in indices]
+            #out_examples = in_examples[:N_EX, ...]
+            datum = datum._replace(ex_inputs=np.asarray(out_examples))
             batch.append(datum)
         return batch
 
     def sample_val(self):
         batch = []
         for datum in self.val_data:
-            datum = datum._replace(ex_inputs=datum.ex_inputs[:4, ...])
+            datum = datum._replace(ex_inputs=datum.ex_inputs[:N_EX, ...])
             batch.append(datum)
         return batch
 
     def sample_test(self):
         batch = []
         for datum in self.test_data:
-            datum = datum._replace(ex_inputs=datum.ex_inputs[:4, ...])
+            datum = datum._replace(ex_inputs=datum.ex_inputs[:N_EX, ...])
             batch.append(datum)
         return batch
