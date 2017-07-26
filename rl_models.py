@@ -1,6 +1,6 @@
 from models import _encode
 from net import _mlp, _linear, _embed_dict
-import util
+from misc import util
 
 import numpy as np
 import tensorflow as tf
@@ -24,9 +24,9 @@ class Policy(object):
         t_hint_vecs = tf.get_variable(
                 "hint_vec", (len(task.vocab), N_EMBED),
                 initializer=tf.uniform_unit_scaling_initializer())
-        t_hint_repr = _encode(
-                "hint_repr", self.t_hint, self.t_hint_len, t_hint_vecs)
-        #t_hint_repr = tf.reduce_mean(_embed_dict(self.t_hint, t_hint_vecs), axis=1)
+        #t_hint_repr = _encode(
+        #        "hint_repr", self.t_hint, self.t_hint_len, t_hint_vecs)
+        t_hint_repr = tf.reduce_mean(_embed_dict(self.t_hint, t_hint_vecs), axis=1)
 
         with tf.variable_scope("features"):
             t_features = _mlp(self.t_state, (N_HIDDEN, N_HIDDEN), (tf.nn.tanh, tf.nn.tanh))

@@ -1,4 +1,4 @@
-import util
+from misc import util
 
 from collections import namedtuple
 import gflags

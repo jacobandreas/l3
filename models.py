@@ -1,5 +1,5 @@
 from net import _mlp, _embed_dict, _linear
-import util
+from misc import util
 
 import gflags
 import numpy as np
