@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 
-from models import ConvModel
+from models import ClsModel
 from tasks import shapes
 
 import gflags
@@ -15,7 +15,7 @@ gflags.DEFINE_integer("n_batch", 100, "batch size")
 
 def main():
     task = shapes.ShapeworldTask()
-    model = ConvModel(task)
+    model = ClsModel(task)
 
     if FLAGS.train:
         for i_epoch in range(FLAGS.n_epochs):
