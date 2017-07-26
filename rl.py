@@ -3,6 +3,7 @@
 from rl_models import Policy
 #from tasks import minicraft2
 from tasks import nav
+import util
 
 import sys
 import gflags
@@ -16,6 +17,8 @@ gflags.DEFINE_float("discount", 0.95, "discount factor")
 gflags.DEFINE_integer("max_steps", 100, "max rollout length")
 
 N_PAR = 10
+
+random = util.next_random()
 
 def main():
     #task = minicraft.CraftTask()
@@ -32,11 +35,13 @@ def main():
                 buf = []
                 while len(buf) < FLAGS.n_batch:
                     states = [task.sample_train() for _ in range(N_PAR)]
-                    rollouts, rews = do_rollout(task, policy, states)
+                    rollouts, rews = do_rollout(task, policy, states,
+                            expert=False) #random.randint(2))
                     for rollout, rew in zip(rollouts, rews):
                         buf.extend(rollout)
                         total_rew += rew
                         n_rollouts += 1
+                #total_err += policy.train_dagger(buf)
                 total_err += policy.train(buf)
 
             test_states = [task.sample_test() for _ in range(100)]
@@ -48,9 +53,7 @@ def main():
             print total_test_rew / len(test_rews)
             print
 
-def do_rollout(task, policy, states, vis=False):
-    #state = task.sample_train()
-    #states = [task.sample_train() for _ in range(N_PAR)]
+def do_rollout(task, policy, states, vis=False, expert=False):
     states = list(states)
     bufs = [[] for _ in states]
     done = [False for _ in states]
@@ -63,7 +66,7 @@ def do_rollout(task, policy, states, vis=False):
             if i_state == 0 and vis:
                 print state.render()
                 print state.features[:, :, 0]
-            action = actions[i_state]
+            action = state.expert_a if expert else actions[i_state]
             state_, reward, stop = state.step(action)
             bufs[i_state].append((state, action, state_, reward))
             states[i_state] = state_
@@ -84,9 +87,13 @@ def do_rollout(task, policy, states, vis=False):
         for s, a, s_, r in reversed(buf):
             forward_r *= FLAGS.discount
             r_ = r + forward_r
+            #r_ = v
+            #r_ = -1
             discounted_buf.append((s, a, s_, r_))
             forward_r += r
-        if discounted_buf[0][3] > 0:
+        #if discounted_buf[0][3] > 0:
+        #if r > 0:
+        if buf[-1][3] > 0:
             total_r += 1.
         discounted_bufs.append(discounted_buf)
         total_rs.append(total_r)

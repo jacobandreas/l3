@@ -18,11 +18,12 @@ UNK = "UNK"
 random = util.next_random()
 
 class NavDatum(object):
-    def __init__(self, features, reward, terminal, instructions, task):
+    def __init__(self, features, reward, terminal, instructions, values, task):
         self.features = features
         self.reward = reward
         self.terminal = terminal
         self.instructions = instructions
+        self.values = values
         self.task = task
 
     def init(self):
@@ -40,6 +41,36 @@ class NavState(object):
         self.instruction = instruction
         self.datum = datum
         self.features = self._make_features(datum.features)
+        self.expert_a = self._make_expert()
+
+    def _make_expert(self):
+        best_action = -1
+        best_value = -np.inf
+        for action in range(ACTS):
+            r, c = self.position
+            if action == 0:
+                r -= 1
+            elif action == 1:
+                c -= 1
+            elif action == 2:
+                r += 1
+            elif action == 3:
+                c += 1
+            else:
+                assert False
+
+            if r < 0 or r > ROWS-1:
+                continue
+            if c < 0 or c > COLS-1:
+                continue
+
+            value = self.datum.values[r, c]
+            if value > best_value:
+                best_action = action
+                best_value = value
+
+        assert best_action >= 0
+        return best_action
 
     def _make_features(self, raw):
         r, c = self.position
@@ -49,14 +80,23 @@ class NavState(object):
         assert 0 <= sr < 2 * ROWS - 1
         assert 0 <= sc < 2 * COLS - 1
         padded[sr:sr+ROWS, sc:sc+COLS, :] = raw
-        padded_red = block_reduce(padded, (WINDOW_SIZE, WINDOW_SIZE, 1), func=np.max)
-        print padded.shape
-        print padded_red.shape
-        exit()
-        return padded
+        padded_red = block_reduce(padded, (4, 4, 1), func=np.max)
+        assert padded.shape[0] == padded.shape[1]
+        mid = padded.shape[0] / 2
+        padded_slice = padded[mid-2:mid+3, mid-2:mid+3, :]
+        return np.concatenate((
+            padded_red.ravel(),
+            padded_slice.ravel()
+        ))
+        #print padded.shape
+        #print padded_red.shape
+        #print padded_slice.shape
+        #exit()
+        #return padded
 
     def step(self, action):
         assert action < ACTS
+        pr, pc = self.position
         r, c = self.position
         if action == 0:
             r -= 1
@@ -74,10 +114,15 @@ class NavState(object):
         if rew > 0:
             assert term
 
+        #rew = self.datum.values[r, c] - self.datum.values[pr, pc]
+        #val = self.datum.values[r, c] - self.datum.values[pr, pc]
+
         if rew > 0:
             rew = 1
         elif rew < 0:
             rew = -.1
+        #print self.datum.values
+        #exit()
 
         #term = False
         #rew = min(self.datum.reward[r, c], 0)
@@ -121,7 +166,7 @@ class NavTask(object):
         for fold in ("train", "test"):
             for mode in ("local", "global"):
                 insts = loaded_splits[fold, mode]
-                terrains, objects, rewards, terminals, instructions, _, _ = insts
+                terrains, objects, rewards, terminals, instructions, values, goals = insts
                 data = []
                 for i in range(terrains.shape[0]):
                     terr = terrains[i, 0, :, :].astype(int)
@@ -152,7 +197,7 @@ class NavTask(object):
                             toks = [self.vocab[w] or self.vocab[UNK] for w in p_instruction]
                         indexed_instr.append(toks)
 
-                    datum = NavDatum(features, rew, term, indexed_instr, self)
+                    datum = NavDatum(features, rew, term, indexed_instr, values[i, ...], self)
                     data.append(datum)
                 splits[fold, mode] = data
 
@@ -167,8 +212,8 @@ class NavTask(object):
         self.test = self.test_local
 
         samp = self.sample_train()
-        #self.n_features = samp.features.size
-        self.feature_shape = samp.features.shape
+        self.n_features = samp.features.size
+        #self.feature_shape = samp.features.shape
         self.n_actions = ACTS
 
     def sample_train(self):
