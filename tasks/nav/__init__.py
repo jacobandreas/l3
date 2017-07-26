@@ -167,13 +167,15 @@ class NavTask(object):
             for mode in ("local", "global"):
                 insts = loaded_splits[fold, mode]
                 terrains, objects, rewards, terminals, instructions, values, goals = insts
+                print instructions[0]
                 data = []
                 for i in range(terrains.shape[0]):
                     terr = terrains[i, 0, :, :].astype(int)
                     obj = objects[i, 0, :, :].astype(int)
                     rew = rewards[i, 0, :, :]
                     term = terminals[i, 0, :, :].astype(int)
-                    instr = instructions[i]
+                    instr = [instructions[i]]
+                    goal = goals[i]
 
                     features = np.zeros((ROWS, COLS, OBJS+3))
                     for r in range(ROWS):
@@ -189,7 +191,7 @@ class NavTask(object):
                             features[r, c, OBJS+2] = 1. * c / COLS
 
                     indexed_instr = []
-                    for instruction in instructions:
+                    for instruction in instr:
                         p_instruction = [START] + instruction.split() + [STOP]
                         if fold == "train":
                             toks = [self.vocab.index(w) for w in p_instruction]
