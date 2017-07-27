@@ -3,15 +3,15 @@
 export PYTHONPATH=".:../../../shapeworld"
 
 python -u ../../cls.py \
+  --learning_rate 0.003 \
   --predict_hyp=true \
   --infer_hyp=true \
-  --learning_rate 0.001 \
-  --infer_by_likelihood \
-  --n_sample_hyps=10 \
   --train \
-  --n_epochs=500 \
+  --n_epochs=50 \
   --test \
+  --use_true_hyp=false \
+  --infer_by_likelihood=true \
+  --n_sample_hyps=5 \
   > train.out \
   2> train.err
 
-  #--use_true_hyp=true \

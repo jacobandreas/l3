@@ -217,7 +217,7 @@ class ClsModel(object):
         self.t_dropout = tf.constant(0.2)
 
         t_hint_vecs = tf.get_variable(
-                "hint_vec", shape=(len(task.hint_vocab), N_EMBED_WORD),
+                "hint_vec", shape=(len(task.hint_vocab), N_HIDDEN),
                 initializer=tf.uniform_unit_scaling_initializer())
 
         if USE_IMAGES:
@@ -234,6 +234,7 @@ class ClsModel(object):
 
         t_enc_hint = _encode(
                 "encode_hint", self.t_hint, self.t_hint_len, t_hint_vecs)
+        #t_enc_hint = tf.reduce_mean(_embed_dict(self.t_hint, t_hint_vecs), axis=1)
 
         if FLAGS.infer_hyp:
             t_concept = t_enc_hint
