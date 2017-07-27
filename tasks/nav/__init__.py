@@ -1,4 +1,4 @@
-import util
+from misc import util
 
 import numpy as np
 import loading
@@ -88,11 +88,6 @@ class NavState(object):
             padded_red.ravel(),
             padded_slice.ravel()
         ))
-        #print padded.shape
-        #print padded_red.shape
-        #print padded_slice.shape
-        #exit()
-        #return padded
 
     def step(self, action):
         assert action < ACTS

@@ -3,7 +3,7 @@
 from rl_models import Policy
 #from tasks import minicraft2
 from tasks import nav
-import util
+from misc import util
 
 import sys
 import gflags
@@ -12,7 +12,7 @@ FLAGS = gflags.FLAGS
 gflags.DEFINE_boolean("train", False, "do a training run")
 gflags.DEFINE_boolean("test", False, "do a testing run")
 gflags.DEFINE_integer("n_epochs", 0, "number of epochs to run for")
-gflags.DEFINE_integer("n_batch", 5000, "batch size")
+gflags.DEFINE_integer("n_batch", 100, "batch size")
 gflags.DEFINE_float("discount", 0.95, "discount factor")
 gflags.DEFINE_integer("max_steps", 100, "max rollout length")
 
@@ -36,13 +36,13 @@ def main():
                 while len(buf) < FLAGS.n_batch:
                     states = [task.sample_train() for _ in range(N_PAR)]
                     rollouts, rews = do_rollout(task, policy, states,
-                            expert=False) #random.randint(2))
+                            expert=random.randint(2))
                     for rollout, rew in zip(rollouts, rews):
                         buf.extend(rollout)
                         total_rew += rew
                         n_rollouts += 1
-                #total_err += policy.train_dagger(buf)
-                total_err += policy.train(buf)
+                total_err += policy.train_dagger(buf)
+                #total_err += policy.train(buf)
 
             test_states = [task.sample_test() for _ in range(100)]
             _, test_rews = do_rollout(task, policy, test_states, vis=False)
@@ -87,8 +87,6 @@ def do_rollout(task, policy, states, vis=False, expert=False):
         for s, a, s_, r in reversed(buf):
             forward_r *= FLAGS.discount
             r_ = r + forward_r
-            #r_ = v
-            #r_ = -1
             discounted_buf.append((s, a, s_, r_))
             forward_r += r
         #if discounted_buf[0][3] > 0:

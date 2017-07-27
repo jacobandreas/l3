@@ -1,6 +1,6 @@
 from models import _encode
 from net import _mlp, _linear, _embed_dict
-import util
+from misc import util
 
 import numpy as np
 import tensorflow as tf

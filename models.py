@@ -1,5 +1,5 @@
 from net import _mlp, _embed_dict, _linear
-import util
+from misc import util
 
 import gflags
 import numpy as np
@@ -21,7 +21,6 @@ USE_IMAGES = False
 N_EMBED = 32
 N_EMBED_WORD = 128
 N_HIDDEN = 512
-#N_HIDDEN = 100
 N_PBD_EX = 5
 N_CLS_EX = 6
 
@@ -48,7 +47,6 @@ def _encode(name, t_input, t_len, t_vecs, t_init=None):
             t_init = tf.tile(tf.expand_dims(t_init, 1), (1, t_n_multi, 1))
             t_init = tf.reshape(t_init, (t_n_batch*t_n_multi, N_HIDDEN))
     t_embed = _embed_dict(t_input, t_vecs)
-    ### return _linear(tf.reduce_mean(t_embed, axis=1), N_HIDDEN)
     with tf.variable_scope(name):
         _, t_encode = tf.nn.dynamic_rnn(
                 cell, t_embed, t_len, dtype=tf.float32, initial_state=t_init)
@@ -88,12 +86,7 @@ def _convolve(name, t_input, t_dropout):
         final_w, final_h = t_pool3.get_shape()[1:3]
         final_feats = final_w.value * final_h.value * N_CONV3_FILTS
 
-        #print(t_pool2.get_shape())
-        #print(final_w, final_h)
-        #exit()
-
         t_flat = tf.reshape(t_pool3, (t_n_batch * t_n_multi, final_feats))
-        #t_flat = tf.nn.dropout(t_flat, keep_prob=t_keep)
         t_repr = _linear(t_flat, N_HIDDEN)
         t_repr = tf.nn.dropout(t_repr, keep_prob=t_keep)
 
@@ -199,7 +192,7 @@ class Decoder(object):
             last = next_out
         return out
 
-class ConvModel(object):
+class ClsModel(object):
     def __init__(self, task):
         self.task = task
 
@@ -222,7 +215,6 @@ class ConvModel(object):
         self.t_last_hyp = tf.placeholder(tf.int32, (None,), "last_hyp")
         self.t_last_hyp_hidden = tf.placeholder(tf.float32, (None, N_HIDDEN), "last_hyp_hidden")
         self.t_dropout = tf.constant(0.2)
-        #self.t_dropout = tf.constant(0)
 
         t_hint_vecs = tf.get_variable(
                 "hint_vec", shape=(len(task.hint_vocab), N_EMBED_WORD),
@@ -234,16 +226,11 @@ class ConvModel(object):
             with tf.variable_scope("encode_ex"):
                 t_enc_ex_all = self.t_ex
                 #t_enc_ex_all = _linear(self.t_ex, N_HIDDEN)
-                #t_enc_ex_all = _mlp(
-                #        self.t_ex, (N_HIDDEN,), (tf.nn.relu,))
         with tf.variable_scope("reduce_ex"):
             reduce_cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
             _, t_enc_ex = tf.nn.dynamic_rnn(reduce_cell, t_enc_ex_all,
                     dtype=tf.float32)
             #t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
-            #t_enc_ex = _mlp(t_enc_ex, (N_HIDDEN, N_HIDDEN), (tf.nn.relu,
-            #    tf.nn.relu))
-
 
         t_enc_hint = _encode(
                 "encode_hint", self.t_hint, self.t_hint_len, t_hint_vecs)
@@ -276,7 +263,6 @@ class ConvModel(object):
             self.t_loss = t_pred_loss
 
         optimizer = tf.train.AdamOptimizer(FLAGS.learning_rate)
-        #optimizer = tf.train.GradientDescentOptimizer(FLAGS.learning_rate)
         self.o_train = optimizer.minimize(self.t_loss)
 
         self.session = tf.Session()
