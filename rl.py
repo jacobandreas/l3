@@ -65,7 +65,7 @@ def do_rollout(task, policy, states, vis=False, expert=False):
             state = states[i_state]
             if i_state == 0 and vis:
                 print state.render()
-                print state.features[:, :, 0]
+                #print state.features[:, :, 0]
             action = state.expert_a if expert else actions[i_state]
             state_, reward, stop = state.step(action)
             bufs[i_state].append((state, action, state_, reward))
@@ -74,7 +74,7 @@ def do_rollout(task, policy, states, vis=False, expert=False):
                 done[i_state] = True
                 if i_state == 0 and vis:
                     print state_.render()
-                    print state.features[:, :, 0]
+                    #print state.features[:, :, 0]
         if all(done):
             break
 
