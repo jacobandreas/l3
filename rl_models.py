@@ -1,9 +1,13 @@
-from models import _encode
+from models import _encode, Decoder
+from models import N_HIDDEN as N_DEC_HIDDEN
 from net import _mlp, _linear, _embed_dict
 from misc import util
 
+import gflags
 import numpy as np
 import tensorflow as tf
+
+FLAGS = gflags.FLAGS
 
 N_EMBED = 64
 #N_HIDDEN = 256
@@ -21,12 +25,24 @@ class Policy(object):
         self.t_hint = tf.placeholder(tf.int32, (None, None))
         self.t_hint_len = tf.placeholder(tf.int32, (None,))
 
+        self.t_last_hyp = tf.placeholder(tf.int32, (None,), "last_hyp")
+        self.t_last_hyp_hidden = tf.placeholder(tf.float32, (None, N_DEC_HIDDEN),
+                "last_hyp_hidden")
+        t_hyp_init = tf.get_variable("hyp_init", shape=(1, N_DEC_HIDDEN),
+                initializer=tf.uniform_unit_scaling_initializer())
+        self.t_n_batch = tf.shape(self.t_state)[0]
+        #self.t_n_batch = tf.placeholder(tf.int32, ())
+        t_hyp_tile = tf.tile(t_hyp_init, (self.t_n_batch, 1))
+
         t_hint_vecs = tf.get_variable(
                 "hint_vec", (len(task.vocab), N_EMBED),
                 initializer=tf.uniform_unit_scaling_initializer())
         #t_hint_repr = _encode(
         #        "hint_repr", self.t_hint, self.t_hint_len, t_hint_vecs)
         t_hint_repr = tf.reduce_mean(_embed_dict(self.t_hint, t_hint_vecs), axis=1)
+        self.hyp_decoder = Decoder(
+                "decode_hyp", t_hyp_tile, self.t_hint, self.t_last_hyp,
+                self.t_last_hyp_hidden, t_hint_vecs)
 
         with tf.variable_scope("features"):
             t_features = _mlp(self.t_state, (N_HIDDEN, N_HIDDEN), (tf.nn.tanh, tf.nn.tanh))
@@ -49,8 +65,11 @@ class Policy(object):
         t_baseline_err = tf.reduce_mean((t_baseline - self.t_reward) ** 2)
 
         self.t_loss = t_loss_surrogate + t_baseline_err - 0.001 * t_entropy
-
         self.t_dagger_loss = -tf.reduce_mean(t_chosen_logprob)
+
+        if FLAGS.predict_hyp:
+            self.t_loss = self.t_loss + self.hyp_decoder.t_loss
+            self.t_dagger_loss = self.t_dagger_loss + self.hyp_decoder.t_loss
 
         optimizer = tf.train.AdamOptimizer(0.001)
         self.o_train = optimizer.minimize(self.t_loss)
@@ -110,3 +129,14 @@ class Policy(object):
         }
         loss, _ = self.session.run([self.t_dagger_loss, self.o_dagger_train], feed_dict)
         return loss
+
+    def sample(self):
+        init = [self.task.vocab[self.task.START] for _ in range(100)]
+        hyps = self.hyp_decoder.decode(
+                init,
+                self.task.vocab[self.task.STOP], 
+                {self.t_n_batch: len(init)},
+                self.session,
+                temp=1)
+        words = [" ".join(self.task.vocab.get(w) for w in hyp) for hyp in hyps]
+        return words
