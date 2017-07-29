@@ -1,36 +1,864 @@
-[loss]    662.6936
-[trn_acc] 0.5500
-[val_acc] 0.6160
+pred, gold
+<s> there is a magenta shape . </s> <s> there is a pentagon . </s> *invalid*
+<s> there is a magenta cross . </s> <s> there is a blue cross . </s>
+<s> there is a magenta semicircle . </s> <s> there is a cyan semicircle . </s>
+0.13
 
-[loss]    445.7260
-[trn_acc] 0.6000
-[val_acc] 0.6100
+pred, gold
+<s> there is a cyan triangle . </s> <s> there is a yellow shape . </s>
+<s> there is a cyan ellipse . </s> <s> there is a red semicircle . </s>
+<s> there is a magenta shape . </s> <s> there is a cyan shape . </s>
+0.0
 
-[loss]    393.5740
-[trn_acc] 0.6200
-[val_acc] 0.6320
+[iter]    0
+[loss]    556.6638
+[trn_acc] 0.6900
+[val_acc] 0.6300
 
-[loss]    353.5691
-[trn_acc] 0.7300
-[val_acc] 0.6310
+pred, gold
+<s> there is a cross . </s> <s> there is a cross . </s> *invalid*
+<s> there is a yellow semicircle . </s> <s> there is a pentagon . </s> *invalid*
+<s> there is a red circle . </s> <s> there is a red circle . </s>
+0.39
 
-[loss]    315.7518
+pred, gold
+<s> there is a yellow pentagon . </s> <s> there is a yellow shape . </s>
+<s> there is a yellow pentagon . </s> <s> there is a red semicircle . </s>
+<s> there is a yellow cross . </s> <s> there is a cyan shape . </s>
+0.014
+
+[iter]    1
+[loss]    288.1082
 [trn_acc] 0.7600
-[val_acc] 0.6440
+[val_acc] 0.6660
 
-[loss]    297.3861
-[trn_acc] 0.7300
-[val_acc] 0.6410
+pred, gold
+<s> there is a white square . </s> <s> there is a white rectangle . </s>
+<s> there is a red shape . </s> <s> there is a red shape . </s>
+<s> there is a red cross . </s> <s> there is a white cross . </s>
+0.45
 
-[loss]    285.1991
-[trn_acc] 0.7800
-[val_acc] 0.6430
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.028
 
-[loss]    274.6978
-[trn_acc] 0.7800
-[val_acc] 0.6340
+[iter]    2
+[loss]    188.6964
+[trn_acc] 0.8200
+[val_acc] 0.6580
 
-[loss]    263.4517
+pred, gold
+<s> there is a magenta circle . </s> <s> there is a magenta circle . </s>
+<s> there is a red pentagon . </s> <s> there is a red pentagon . </s>
+<s> there is a white circle . </s> <s> there is a white circle . </s>
+0.49
+
+pred, gold
+<s> there is a yellow ellipse . </s> <s> there is a yellow shape . </s>
+<s> there is a red ellipse . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.024
+
+[iter]    3
+[loss]    147.6657
+[trn_acc] 0.7500
+[val_acc] 0.6980
+
+pred, gold
+<s> there is a cyan triangle . </s> <s> there is a cyan triangle . </s>
+<s> there is an ellipse . </s> <s> there is a blue cross . </s>
+<s> there is a yellow ellipse . </s> <s> there is a yellow rectangle . </s>
+0.57
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red ellipse . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.012
+
+[iter]    4
+[loss]    128.2384
+[trn_acc] 0.8900
+[val_acc] 0.7360
+
+pred, gold
+<s> there is a green semicircle . </s> <s> there is a green semicircle . </s>
+<s> there is a cyan cross . </s> <s> there is a white cross . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan semicircle . </s>
+0.57
+
+pred, gold
+<s> there is a yellow pentagon . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan ellipse . </s> <s> there is a cyan shape . </s>
+0.024
+
+[iter]    5
+[loss]    115.3358
+[trn_acc] 0.8500
+[val_acc] 0.6720
+
+pred, gold
+<s> there is a blue circle . </s> <s> there is a blue circle . </s>
+<s> there is a yellow triangle . </s> <s> there is a green shape . </s>
+<s> there is a red cross . </s> <s> there is a red cross . </s>
+0.58
+
+pred, gold
+<s> there is a yellow pentagon . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a yellow semicircle . </s> <s> there is a cyan shape . </s>
+0.034
+
+[iter]    6
+[loss]    101.0134
+[trn_acc] 0.8400
+[val_acc] 0.6900
+
+pred, gold
+<s> there is a circle . </s> <s> there is a red circle . </s>
+<s> there is a white cross . </s> <s> there is a white cross . </s>
+<s> there is a blue cross . </s> <s> there is a cross . </s> *invalid*
+0.67
+
+pred, gold
+<s> there is a yellow semicircle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.024
+
+[iter]    7
+[loss]    92.5093
 [trn_acc] 0.8300
-[val_acc] 0.6290
+[val_acc] 0.7220
 
+pred, gold
+<s> there is a cyan pentagon . </s> <s> there is a cyan pentagon . </s>
+<s> there is a cyan pentagon . </s> <s> there is a cyan pentagon . </s>
+<s> there is a yellow square . </s> <s> there is a yellow square . </s>
+0.63
+
+pred, gold
+<s> there is a yellow semicircle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.022
+
+[iter]    8
+[loss]    83.4031
+[trn_acc] 0.8500
+[val_acc] 0.6920
+
+pred, gold
+<s> there is a magenta circle . </s> <s> there is a magenta circle . </s>
+<s> there is a blue shape . </s> <s> there is a blue shape . </s>
+<s> there is a rectangle . </s> <s> there is a rectangle . </s> *invalid*
+0.75
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.014
+
+[iter]    9
+[loss]    86.5228
+[trn_acc] 0.9400
+[val_acc] 0.7280
+
+pred, gold
+<s> there is a magenta square . </s> <s> there is a magenta square . </s>
+<s> there is a yellow semicircle . </s> <s> there is a yellow semicircle . </s>
+<s> there is a cyan triangle . </s> <s> there is a cyan triangle . </s>
+0.67
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.036
+
+[iter]    10
+[loss]    72.5185
+[trn_acc] 0.9000
+[val_acc] 0.7180
+
+pred, gold
+<s> there is an ellipse . </s> <s> there is a cyan semicircle . </s>
+<s> there is a yellow rectangle . </s> <s> there is a yellow rectangle . </s>
+<s> there is a red ellipse . </s> <s> there is a red ellipse . </s>
+0.79
+
+pred, gold
+<s> there is a yellow ellipse . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan ellipse . </s> <s> there is a cyan shape . </s>
+0.018
+
+[iter]    11
+[loss]    67.8479
+[trn_acc] 0.9500
+[val_acc] 0.7280
+
+pred, gold
+<s> there is a white cross . </s> <s> there is a white cross . </s>
+<s> there is a red rectangle . </s> <s> there is a rectangle . </s> *invalid*
+<s> there is a white square . </s> <s> there is a white square . </s>
+0.78
+
+pred, gold
+<s> there is a yellow ellipse . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.024
+
+[iter]    12
+[loss]    60.2718
+[trn_acc] 0.8600
+[val_acc] 0.7020
+
+pred, gold
+<s> there is a magenta rectangle . </s> <s> there is a magenta rectangle . </s>
+<s> there is a white cross . </s> <s> there is a white cross . </s>
+<s> there is a pentagon . </s> <s> there is a cyan pentagon . </s>
+0.81
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.016
+
+[iter]    13
+[loss]    51.8531
+[trn_acc] 0.9200
+[val_acc] 0.7300
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow square . </s>
+<s> there is a red pentagon . </s> <s> there is a red pentagon . </s>
+<s> there is a blue pentagon . </s> <s> there is a blue shape . </s>
+0.77
+
+pred, gold
+<s> there is a yellow pentagon . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan pentagon . </s> <s> there is a cyan shape . </s>
+0.02
+
+[iter]    14
+[loss]    49.4441
+[trn_acc] 0.8600
+[val_acc] 0.6880
+
+pred, gold
+<s> there is a cyan ellipse . </s> <s> there is a cyan ellipse . </s>
+<s> there is a red circle . </s> <s> there is a red circle . </s>
+<s> there is a rectangle . </s> <s> there is a blue rectangle . </s>
+0.8
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.034
+
+[iter]    15
+[loss]    48.5480
+[trn_acc] 0.9700
+[val_acc] 0.7180
+
+pred, gold
+<s> there is a magenta triangle . </s> <s> there is a magenta triangle . </s>
+<s> there is a cross . </s> <s> there is a blue shape . </s>
+<s> there is an ellipse . </s> <s> there is an ellipse . </s> *invalid*
+0.88
+
+pred, gold
+<s> there is a yellow pentagon . </s> <s> there is a yellow shape . </s>
+<s> there is a red ellipse . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.022
+
+[iter]    16
+[loss]    48.7538
+[trn_acc] 0.9000
+[val_acc] 0.7240
+
+pred, gold
+<s> there is a blue shape . </s> <s> there is a blue shape . </s>
+<s> there is a cyan triangle . </s> <s> there is a cyan triangle . </s>
+<s> there is a red pentagon . </s> <s> there is a red pentagon . </s>
+0.9
+
+pred, gold
+<s> there is a yellow cross . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.042
+
+[iter]    17
+[loss]    46.0451
+[trn_acc] 0.9700
+[val_acc] 0.7120
+
+pred, gold
+<s> there is a yellow semicircle . </s> <s> there is a yellow semicircle . </s>
+<s> there is an ellipse . </s> <s> there is an ellipse . </s> *invalid*
+<s> there is a magenta shape . </s> <s> there is a magenta pentagon . </s>
+0.79
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.022
+
+[iter]    18
+[loss]    41.9629
+[trn_acc] 0.9300
+[val_acc] 0.7380
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow square . </s>
+<s> there is a blue ellipse . </s> <s> there is a blue ellipse . </s>
+<s> there is a red rectangle . </s> <s> there is a red rectangle . </s>
+0.8
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.03
+
+[iter]    19
+[loss]    37.6163
+[trn_acc] 0.9000
+[val_acc] 0.7460
+
+pred, gold
+<s> there is a white semicircle . </s> <s> there is a white semicircle . </s>
+<s> there is a white rectangle . </s> <s> there is a white rectangle . </s>
+<s> there is a red pentagon . </s> <s> there is a red pentagon . </s>
+0.92
+
+pred, gold
+<s> there is a yellow pentagon . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.018
+
+[iter]    20
+[loss]    38.7115
+[trn_acc] 0.9700
+[val_acc] 0.7180
+
+pred, gold
+<s> there is a cyan triangle . </s> <s> there is a cyan triangle . </s>
+<s> there is a blue rectangle . </s> <s> there is a yellow rectangle . </s>
+<s> there is a green rectangle . </s> <s> there is a green rectangle . </s>
+0.79
+
+pred, gold
+<s> there is a yellow ellipse . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.036
+
+[iter]    21
+[loss]    36.1987
+[trn_acc] 0.9400
+[val_acc] 0.7540
+
+pred, gold
+<s> there is a red cross . </s> <s> there is a red cross . </s>
+<s> there is a red cross . </s> <s> there is a red cross . </s>
+<s> there is a blue pentagon . </s> <s> there is a blue pentagon . </s>
+0.82
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan pentagon . </s> <s> there is a cyan shape . </s>
+0.052
+
+[iter]    22
+[loss]    33.4846
+[trn_acc] 0.9500
+[val_acc] 0.7120
+
+pred, gold
+<s> there is a green circle . </s> <s> there is a green circle . </s>
+<s> there is a green circle . </s> <s> there is a green circle . </s>
+<s> there is a white circle . </s> <s> there is a white circle . </s>
+0.85
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.038
+
+[iter]    23
+[loss]    35.6319
+[trn_acc] 0.9200
+[val_acc] 0.7280
+
+pred, gold
+<s> there is an ellipse . </s> <s> there is a blue cross . </s>
+<s> there is a magenta pentagon . </s> <s> there is a magenta pentagon . </s>
+<s> there is a red shape . </s> <s> there is a red shape . </s>
+0.91
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.024
+
+[iter]    24
+[loss]    36.2147
+[trn_acc] 0.9400
+[val_acc] 0.7380
+
+pred, gold
+<s> there is a green semicircle . </s> <s> there is a green semicircle . </s>
+<s> there is a magenta semicircle . </s> <s> there is a magenta semicircle . </s>
+<s> there is a white circle . </s> <s> there is a white circle . </s>
+0.88
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.028
+
+[iter]    25
+[loss]    29.5532
+[trn_acc] 0.9700
+[val_acc] 0.7180
+
+pred, gold
+<s> there is a cyan cross . </s> <s> there is a cyan cross . </s>
+<s> there is a green semicircle . </s> <s> there is a green semicircle . </s>
+<s> there is a cyan ellipse . </s> <s> there is a cyan ellipse . </s>
+0.91
+
+pred, gold
+<s> there is a yellow ellipse . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.024
+
+[iter]    26
+[loss]    31.0434
+[trn_acc] 0.9500
+[val_acc] 0.7060
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow square . </s>
+<s> there is a yellow ellipse . </s> <s> there is a yellow ellipse . </s>
+<s> there is a red cross . </s> <s> there is a red cross . </s>
+0.82
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.004
+
+[iter]    27
+[loss]    32.5835
+[trn_acc] 0.9100
+[val_acc] 0.6920
+
+pred, gold
+<s> there is an ellipse . </s> <s> there is a cyan ellipse . </s>
+<s> there is a circle . </s> <s> there is a circle . </s> *invalid*
+<s> there is a cyan pentagon . </s> <s> there is a cyan pentagon . </s>
+0.88
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.012
+
+[iter]    28
+[loss]    26.6944
+[trn_acc] 0.9700
+[val_acc] 0.7360
+
+pred, gold
+<s> there is a green circle . </s> <s> there is a green circle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan semicircle . </s>
+<s> there is a pentagon . </s> <s> there is a pentagon . </s> *invalid*
+0.86
+
+pred, gold
+<s> there is a yellow ellipse . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a white semicircle . </s> <s> there is a cyan shape . </s>
+0.012
+
+[iter]    29
+[loss]    25.1978
+[trn_acc] 0.9800
+[val_acc] 0.7360
+
+pred, gold
+<s> there is a magenta pentagon . </s> <s> there is a magenta pentagon . </s>
+<s> there is a white circle . </s> <s> there is a white circle . </s>
+<s> there is a magenta circle . </s> <s> there is a magenta circle . </s>
+0.96
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red ellipse . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan pentagon . </s> <s> there is a cyan shape . </s>
+0.016
+
+[iter]    30
+[loss]    22.6273
+[trn_acc] 1.0000
+[val_acc] 0.7040
+
+pred, gold
+<s> there is a circle . </s> <s> there is a circle . </s> *invalid*
+<s> there is a red shape . </s> <s> there is a red shape . </s>
+<s> there is a cyan pentagon . </s> <s> there is a cyan pentagon . </s>
+0.83
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan triangle . </s> <s> there is a cyan shape . </s>
+0.018
+
+[iter]    31
+[loss]    24.1296
+[trn_acc] 0.9400
+[val_acc] 0.7260
+
+pred, gold
+<s> there is a red circle . </s> <s> there is a red circle . </s>
+<s> there is a white rectangle . </s> <s> there is a white rectangle . </s>
+<s> there is a green square . </s> <s> there is a green square . </s>
+0.89
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.052
+
+[iter]    32
+[loss]    26.1425
+[trn_acc] 0.9600
+[val_acc] 0.7080
+
+pred, gold
+<s> there is a circle . </s> <s> there is a circle . </s> *invalid*
+<s> there is a square . </s> <s> there is a square . </s> *invalid*
+<s> there is a white square . </s> <s> there is a white square . </s>
+0.89
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.038
+
+[iter]    33
+[loss]    27.5461
+[trn_acc] 0.9600
+[val_acc] 0.7120
+
+pred, gold
+<s> there is a white rectangle . </s> <s> there is a white rectangle . </s>
+<s> there is a magenta pentagon . </s> <s> there is a magenta pentagon . </s>
+<s> there is a magenta shape . </s> <s> there is a magenta semicircle . </s>
+0.89
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.022
+
+[iter]    34
+[loss]    22.3564
+[trn_acc] 0.9900
+[val_acc] 0.7260
+
+pred, gold
+<s> there is a square . </s> <s> there is a square . </s> *invalid*
+<s> there is a cyan semicircle . </s> <s> there is a cyan semicircle . </s>
+<s> there is a magenta shape . </s> <s> there is a magenta shape . </s>
+0.94
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.044
+
+[iter]    35
+[loss]    28.7385
+[trn_acc] 0.9600
+[val_acc] 0.6960
+
+pred, gold
+<s> there is a yellow cross . </s> <s> there is a yellow cross . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan semicircle . </s>
+<s> there is a white circle . </s> <s> there is a white circle . </s>
+0.9
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.054
+
+[iter]    36
+[loss]    24.4980
+[trn_acc] 0.9700
+[val_acc] 0.7520
+
+pred, gold
+<s> there is a yellow cross . </s> <s> there is a yellow cross . </s>
+<s> there is a white square . </s> <s> there is a white square . </s>
+<s> there is a circle . </s> <s> there is a white circle . </s>
+0.89
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.042
+
+[iter]    37
+[loss]    21.5973
+[trn_acc] 0.9600
+[val_acc] 0.7480
+
+pred, gold
+<s> there is a yellow pentagon . </s> <s> there is a yellow pentagon . </s>
+<s> there is a yellow square . </s> <s> there is a yellow square . </s>
+<s> there is a green rectangle . </s> <s> there is a green rectangle . </s>
+0.9
+
+pred, gold
+<s> there is a yellow pentagon . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.022
+
+[iter]    38
+[loss]    15.7019
+[trn_acc] 0.9600
+[val_acc] 0.7620
+
+pred, gold
+<s> there is a white cross . </s> <s> there is a white cross . </s>
+<s> there is a blue cross . </s> <s> there is a blue cross . </s>
+<s> there is a cross . </s> <s> there is a white cross . </s>
+0.92
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.03
+
+[iter]    39
+[loss]    16.2186
+[trn_acc] 0.9900
+[val_acc] 0.7200
+
+pred, gold
+<s> there is a blue shape . </s> <s> there is a blue shape . </s>
+<s> there is a magenta cross . </s> <s> there is a magenta cross . </s>
+<s> there is a cyan pentagon . </s> <s> there is a cyan pentagon . </s>
+0.94
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.048
+
+[iter]    40
+[loss]    15.2353
+[trn_acc] 0.9700
+[val_acc] 0.7600
+
+pred, gold
+<s> there is a red circle . </s> <s> there is a red circle . </s>
+<s> there is a magenta pentagon . </s> <s> there is a pentagon . </s> *invalid*
+<s> there is a red pentagon . </s> <s> there is a red pentagon . </s>
+0.93
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red rectangle . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.028
+
+[iter]    41
+[loss]    16.5609
+[trn_acc] 0.9800
+[val_acc] 0.7320
+
+pred, gold
+<s> there is a pentagon . </s> <s> there is a pentagon . </s> *invalid*
+<s> there is a green circle . </s> <s> there is a green circle . </s>
+<s> there is a cyan pentagon . </s> <s> there is a cyan pentagon . </s>
+0.95
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.05
+
+[iter]    42
+[loss]    14.9450
+[trn_acc] 0.9800
+[val_acc] 0.7340
+
+pred, gold
+<s> there is a magenta rectangle . </s> <s> there is a magenta rectangle . </s>
+<s> there is a white cross . </s> <s> there is a white cross . </s>
+<s> there is a white rectangle . </s> <s> there is a white rectangle . </s>
+0.96
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.036
+
+[iter]    43
+[loss]    16.9088
+[trn_acc] 0.9900
+[val_acc] 0.7500
+
+pred, gold
+<s> there is a green circle . </s> <s> there is a green circle . </s>
+<s> there is a magenta square . </s> <s> there is a magenta square . </s>
+<s> there is a magenta shape . </s> <s> there is a magenta pentagon . </s>
+0.93
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.02
+
+[iter]    44
+[loss]    15.7745
+[trn_acc] 0.9700
+[val_acc] 0.7360
+
+pred, gold
+<s> there is a rectangle . </s> <s> there is a rectangle . </s> *invalid*
+<s> there is a magenta pentagon . </s> <s> there is a magenta pentagon . </s>
+<s> there is a red shape . </s> <s> there is a red shape . </s>
+0.91
+
+pred, gold
+<s> there is a yellow triangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.032
+
+[iter]    45
+[loss]    24.8939
+[trn_acc] 0.9000
+[val_acc] 0.7140
+
+pred, gold
+<s> there is a blue circle . </s> <s> there is a blue circle . </s>
+<s> there is a red cross . </s> <s> there is a red cross . </s>
+<s> there is a green semicircle . </s> <s> there is a green semicircle . </s>
+0.93
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.04
+
+[iter]    46
+[loss]    33.5541
+[trn_acc] 0.9500
+[val_acc] 0.7340
+
+pred, gold
+<s> there is a cross . </s> <s> there is a cross . </s> *invalid*
+<s> there is a red circle . </s> <s> there is a red circle . </s>
+<s> there is a yellow triangle . </s> <s> there is a yellow triangle . </s>
+0.88
+
+pred, gold
+<s> there is a yellow ellipse . </s> <s> there is a yellow shape . </s>
+<s> there is a rectangle . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.026
+
+[iter]    47
+[loss]    26.0601
+[trn_acc] 0.9700
+[val_acc] 0.7140
+
+pred, gold
+<s> there is a rectangle . </s> <s> there is a rectangle . </s> *invalid*
+<s> there is a cyan circle . </s> <s> there is a cyan circle . </s>
+<s> there is a green square . </s> <s> there is a green square . </s>
+0.93
+
+pred, gold
+<s> there is a yellow shape . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.086
+
+[iter]    48
+[loss]    19.4362
+[trn_acc] 1.0000
+[val_acc] 0.7260
+
+pred, gold
+<s> there is a magenta shape . </s> <s> there is a magenta shape . </s>
+<s> there is a square . </s> <s> there is a square . </s> *invalid*
+<s> there is a green shape . </s> <s> there is a green rectangle . </s>
+0.88
+
+pred, gold
+<s> there is a yellow square . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.022
+
+[iter]    49
+[loss]    14.5897
+[trn_acc] 0.9700
+[val_acc] 0.7400
+
+pred, gold
+<s> there is a yellow rectangle . </s> <s> there is a yellow shape . </s>
+<s> there is a red shape . </s> <s> there is a red semicircle . </s>
+<s> there is a cyan semicircle . </s> <s> there is a cyan shape . </s>
+0.034
+
+pred, gold
+<s> there is a white cross . </s> <s> there is a white pentagon . </s>
+<s> there is a green shape . </s> <s> there is a green ellipse . </s>
+<s> there is a pentagon . </s> <s> there is a white pentagon . </s>
+0.044
+
+[FINAL val_acc] 0.7420
+[FINAL tst_acc] 0.7300

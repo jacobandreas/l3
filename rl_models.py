@@ -8,9 +8,10 @@ import numpy as np
 import tensorflow as tf
 
 FLAGS = gflags.FLAGS
+# TODO!!!
+gflags.DEFINE_string("rl_restore", None, "model to restore")
 
 N_EMBED = 64
-#N_HIDDEN = 256
 N_HIDDEN = 64
 
 random = util.next_random()
@@ -37,8 +38,6 @@ class Policy(object):
         t_hint_vecs = tf.get_variable(
                 "hint_vec", (len(task.vocab), N_EMBED),
                 initializer=tf.uniform_unit_scaling_initializer())
-        #t_hint_repr = _encode(
-        #        "hint_repr", self.t_hint, self.t_hint_len, t_hint_vecs)
         t_hint_repr = tf.reduce_mean(_embed_dict(self.t_hint, t_hint_vecs), axis=1)
         self.hyp_decoder = Decoder(
                 "decode_hyp", t_hyp_tile, self.t_hint, self.t_last_hyp,
@@ -77,6 +76,9 @@ class Policy(object):
 
         self.session = tf.Session()
         self.session.run(tf.global_variables_initializer())
+        self.saver = tf.train.Saver()
+        if FLAGS.rl_restore is not None:
+            self.restore(FLAGS.rl_restore)
 
     def load_hint(self, states):
         max_len = max(len(s.instruction) for s in states)
@@ -140,3 +142,15 @@ class Policy(object):
                 temp=1)
         words = [" ".join(self.task.vocab.get(w) for w in hyp) for hyp in hyps]
         return words
+
+    def adapt(self, transitions):
+        pass
+
+    def hypothesize(self, states):
+        return [() for state in states]
+
+    def save(self):
+        self.saver.save(self.session, "model.chk")
+
+    def restore(self, path):
+        self.saver.restore(self.session, tf.train.latest_checkpoint(path))

@@ -98,13 +98,13 @@ for ingredient in INGREDIENTS:
 
 util.next_random().shuffle(HINTS)
 
-for x in RECIPES.items():
-    print x
+#for x in RECIPES.items():
+#    print x
+#
+#print
 
-print
-
-for x in HINTS:
-    print x
+#for x in HINTS:
+#    print x
 
 #for i, (k, v) in enumerate(HINTS):
 #    print i, k, v
@@ -187,7 +187,7 @@ class Minicraft2World(object):
             self.index.index(k): set(self.index.index(vv) for vv in v)
             for k, v in RECIPES.items()
         }
-        print self.recipes
+        #print self.recipes
         #self.hints = [
         #    (self.index.index(k), tuple(self.vocab.index(vv) for vv in v))
         #    for k, v in HINTS
@@ -261,7 +261,8 @@ class Minicraft2World(object):
 
         init_pos = random_free(grid, self.random)
         init_dir = self.random.randint(4)
-        return Minicraft2State(self, grid, init_pos, init_dir, np.zeros(len(self.index)), task)
+        return Minicraft2State(self, grid, init_pos, init_dir,
+                np.zeros(len(self.index)), task, task.hint)
 
     #def sample_train(self, p=None):
     #    return self.sample_instance(self.random.choice(TRAIN_IDS, p=p))
@@ -303,7 +304,7 @@ class FakeMinicraft2State(object):
         assert False
 
 class Minicraft2State(object):
-    def __init__(self, world, grid, pos, dir, inventory, task):
+    def __init__(self, world, grid, pos, dir, inventory, task, instruction):
         self.world = world
         self.grid = grid
         self.pos = pos
@@ -311,7 +312,7 @@ class Minicraft2State(object):
         self.inventory = inventory
         self.task = task
         self._cached_features = None
-        self.instruction = self.task.hint
+        self.instruction = instruction
         self.features = self._features()
 
     def _features(self):
@@ -398,6 +399,6 @@ class Minicraft2State(object):
             reward = 1
             stop = True
 
-        new_state = Minicraft2State(self.world, new_grid, (n_x, n_y), new_dir, new_inventory, self.task)
+        new_state = Minicraft2State(self.world, new_grid, (n_x, n_y), new_dir, new_inventory, self.task, self.instruction)
         #return reward, new_state, stop
         return new_state, reward, stop
