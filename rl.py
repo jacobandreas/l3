@@ -2,7 +2,7 @@
 
 from rl_models import Policy
 from tasks import minicraft2
-#from tasks import nav
+from tasks import nav
 from misc import util
 
 import sys
@@ -23,8 +23,8 @@ random = util.next_random()
 
 def main():
     #task = minicraft.CraftTask()
-    task = minicraft2.Minicraft2World()
-    #task = nav.NavTask()
+    #task = minicraft2.Minicraft2World()
+    task = nav.NavTask()
     policy = Policy(task)
 
     if FLAGS.train:
@@ -47,14 +47,14 @@ def main():
                 else:
                     total_err += policy.train(buf)
 
-            test_states = [task.sample_test() for _ in range(100)]
-            _, test_rews = do_rollout(task, policy, test_states, vis=False)
-            total_test_rew = sum(test_rews)
+            #test_states = [task.sample_test() for _ in range(100)]
+            #_, test_rews = do_rollout(task, policy, test_states, vis=False)
+            #total_test_rew = sum(test_rews)
 
             print("[iter]    %d" % i_epoch)
             print("[loss]    %01.4f" % (total_err / 10))
             print("[trn_rew] %01.4f" % (total_rew / n_rollouts))
-            print("[tst_rew] %01.4f" % (total_test_rew / len(test_rews)))
+            #print("[tst_rew] %01.4f" % (total_test_rew / len(test_rews)))
             print
 
             if i_epoch % 10 == 0:

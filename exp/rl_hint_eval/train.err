@@ -1,6 +1,8 @@
 Traceback (most recent call last):
-  File "../../pbd.py", line 3, in <module>
-    from models import TransducerModel
+  File "../../rl.py", line 3, in <module>
+    from rl_models import Policy
+  File "/home/jda/concepts/rl_models.py", line 1, in <module>
+    from models import _encode
   File "/home/jda/concepts/models.py", line 1, in <module>
     from net import _mlp, _embed_dict, _linear
   File "/home/jda/concepts/net.py", line 1, in <module>

@@ -83,6 +83,9 @@ class ShapeworldTask():
         self.train_data = data["train"]
         self.val_data = data["validation"]
         self.test_data = data["test"]
+        #self.train_data = data["train"][:1000]
+        #self.val_data = data["train"][1000:2000]
+        #self.test_data = data["train"][2000:3000]
 
         if USE_IMAGES:
             self.width, self.height, self.channels = self.train_data[0].input.shape

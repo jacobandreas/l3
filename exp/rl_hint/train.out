@@ -1,0 +1,1500 @@
+[iter]    0
+[loss]    5.8158
+[trn_rew] 0.1150
+[tst_rew] 0.0700
+
+[iter]    1
+[loss]    4.2433
+[trn_rew] 0.1200
+[tst_rew] 0.0600
+
+[iter]    2
+[loss]    3.6745
+[trn_rew] 0.0678
+[tst_rew] 0.0700
+
+[iter]    3
+[loss]    3.4532
+[trn_rew] 0.1150
+[tst_rew] 0.0900
+
+[iter]    4
+[loss]    3.2937
+[trn_rew] 0.1017
+[tst_rew] 0.0500
+
+[iter]    5
+[loss]    3.2193
+[trn_rew] 0.1233
+[tst_rew] 0.0600
+
+[iter]    6
+[loss]    3.2179
+[trn_rew] 0.1217
+[tst_rew] 0.0800
+
+[iter]    7
+[loss]    3.1953
+[trn_rew] 0.1267
+[tst_rew] 0.0500
+
+[iter]    8
+[loss]    3.0677
+[trn_rew] 0.1267
+[tst_rew] 0.0800
+
+[iter]    9
+[loss]    3.0898
+[trn_rew] 0.1400
+[tst_rew] 0.0400
+
+[iter]    10
+[loss]    3.0470
+[trn_rew] 0.1367
+[tst_rew] 0.0800
+
+[iter]    11
+[loss]    3.0526
+[trn_rew] 0.1733
+[tst_rew] 0.1100
+
+[iter]    12
+[loss]    3.0078
+[trn_rew] 0.1803
+[tst_rew] 0.0900
+
+[iter]    13
+[loss]    3.1057
+[trn_rew] 0.1967
+[tst_rew] 0.0700
+
+[iter]    14
+[loss]    3.0735
+[trn_rew] 0.1721
+[tst_rew] 0.0700
+
+[iter]    15
+[loss]    3.0298
+[trn_rew] 0.1783
+[tst_rew] 0.0900
+
+[iter]    16
+[loss]    3.0435
+[trn_rew] 0.1800
+[tst_rew] 0.0800
+
+[iter]    17
+[loss]    3.0246
+[trn_rew] 0.1817
+[tst_rew] 0.1000
+
+[iter]    18
+[loss]    3.0297
+[trn_rew] 0.1883
+[tst_rew] 0.0500
+
+[iter]    19
+[loss]    3.0644
+[trn_rew] 0.2017
+[tst_rew] 0.0800
+
+[iter]    20
+[loss]    3.0484
+[trn_rew] 0.2115
+[tst_rew] 0.1000
+
+[iter]    21
+[loss]    3.0292
+[trn_rew] 0.2540
+[tst_rew] 0.0700
+
+[iter]    22
+[loss]    3.0292
+[trn_rew] 0.2328
+[tst_rew] 0.1100
+
+[iter]    23
+[loss]    3.0086
+[trn_rew] 0.2452
+[tst_rew] 0.1600
+
+[iter]    24
+[loss]    2.9920
+[trn_rew] 0.2246
+[tst_rew] 0.1100
+
+[iter]    25
+[loss]    3.0150
+[trn_rew] 0.2403
+[tst_rew] 0.0700
+
+[iter]    26
+[loss]    2.9600
+[trn_rew] 0.2328
+[tst_rew] 0.1000
+
+[iter]    27
+[loss]    3.0404
+[trn_rew] 0.2609
+[tst_rew] 0.1200
+
+[iter]    28
+[loss]    3.0680
+[trn_rew] 0.3118
+[tst_rew] 0.0800
+
+[iter]    29
+[loss]    2.9670
+[trn_rew] 0.2857
+[tst_rew] 0.1600
+
+[iter]    30
+[loss]    2.9855
+[trn_rew] 0.3235
+[tst_rew] 0.1400
+
+[iter]    31
+[loss]    2.9665
+[trn_rew] 0.3300
+[tst_rew] 0.1700
+
+[iter]    32
+[loss]    2.9341
+[trn_rew] 0.2882
+[tst_rew] 0.0800
+
+[iter]    33
+[loss]    2.9809
+[trn_rew] 0.3324
+[tst_rew] 0.1600
+
+[iter]    34
+[loss]    2.9505
+[trn_rew] 0.3718
+[tst_rew] 0.1300
+
+[iter]    35
+[loss]    3.0080
+[trn_rew] 0.3104
+[tst_rew] 0.1200
+
+[iter]    36
+[loss]    2.9717
+[trn_rew] 0.3343
+[tst_rew] 0.2400
+
+[iter]    37
+[loss]    2.9351
+[trn_rew] 0.3217
+[tst_rew] 0.1800
+
+[iter]    38
+[loss]    2.9287
+[trn_rew] 0.3557
+[tst_rew] 0.1800
+
+[iter]    39
+[loss]    2.9344
+[trn_rew] 0.3588
+[tst_rew] 0.1700
+
+[iter]    40
+[loss]    2.9472
+[trn_rew] 0.3972
+[tst_rew] 0.1100
+
+[iter]    41
+[loss]    2.9458
+[trn_rew] 0.3464
+[tst_rew] 0.1700
+
+[iter]    42
+[loss]    2.9424
+[trn_rew] 0.4111
+[tst_rew] 0.1700
+
+[iter]    43
+[loss]    2.9420
+[trn_rew] 0.3845
+[tst_rew] 0.2100
+
+[iter]    44
+[loss]    2.9288
+[trn_rew] 0.3917
+[tst_rew] 0.1600
+
+[iter]    45
+[loss]    2.9319
+[trn_rew] 0.4149
+[tst_rew] 0.1500
+
+[iter]    46
+[loss]    2.9190
+[trn_rew] 0.4181
+[tst_rew] 0.2000
+
+[iter]    47
+[loss]    2.9022
+[trn_rew] 0.4147
+[tst_rew] 0.1600
+
+[iter]    48
+[loss]    2.9375
+[trn_rew] 0.4192
+[tst_rew] 0.1500
+
+[iter]    49
+[loss]    2.8988
+[trn_rew] 0.4416
+[tst_rew] 0.1900
+
+[iter]    50
+[loss]    2.8824
+[trn_rew] 0.4176
+[tst_rew] 0.1900
+
+[iter]    51
+[loss]    2.8690
+[trn_rew] 0.4147
+[tst_rew] 0.1800
+
+[iter]    52
+[loss]    2.8662
+[trn_rew] 0.4595
+[tst_rew] 0.1700
+
+[iter]    53
+[loss]    2.8558
+[trn_rew] 0.4276
+[tst_rew] 0.1900
+
+[iter]    54
+[loss]    2.8603
+[trn_rew] 0.4311
+[tst_rew] 0.1700
+
+[iter]    55
+[loss]    2.9004
+[trn_rew] 0.4461
+[tst_rew] 0.2000
+
+[iter]    56
+[loss]    2.8681
+[trn_rew] 0.4308
+[tst_rew] 0.1500
+
+[iter]    57
+[loss]    2.8554
+[trn_rew] 0.4260
+[tst_rew] 0.1600
+
+[iter]    58
+[loss]    2.9075
+[trn_rew] 0.4408
+[tst_rew] 0.1500
+
+[iter]    59
+[loss]    2.8534
+[trn_rew] 0.4280
+[tst_rew] 0.1900
+
+[iter]    60
+[loss]    2.9239
+[trn_rew] 0.4637
+[tst_rew] 0.2200
+
+[iter]    61
+[loss]    2.8693
+[trn_rew] 0.4608
+[tst_rew] 0.1600
+
+[iter]    62
+[loss]    2.8221
+[trn_rew] 0.4500
+[tst_rew] 0.1400
+
+[iter]    63
+[loss]    2.8850
+[trn_rew] 0.4506
+[tst_rew] 0.1400
+
+[iter]    64
+[loss]    2.8694
+[trn_rew] 0.4531
+[tst_rew] 0.1800
+
+[iter]    65
+[loss]    2.8811
+[trn_rew] 0.4447
+[tst_rew] 0.1700
+
+[iter]    66
+[loss]    2.8463
+[trn_rew] 0.4269
+[tst_rew] 0.1900
+
+[iter]    67
+[loss]    2.8761
+[trn_rew] 0.4537
+[tst_rew] 0.1500
+
+[iter]    68
+[loss]    2.8729
+[trn_rew] 0.4716
+[tst_rew] 0.1400
+
+[iter]    69
+[loss]    2.8174
+[trn_rew] 0.4158
+[tst_rew] 0.1600
+
+[iter]    70
+[loss]    2.8492
+[trn_rew] 0.4385
+[tst_rew] 0.1000
+
+[iter]    71
+[loss]    2.8779
+[trn_rew] 0.4620
+[tst_rew] 0.2100
+
+[iter]    72
+[loss]    2.8732
+[trn_rew] 0.4620
+[tst_rew] 0.2500
+
+[iter]    73
+[loss]    2.8689
+[trn_rew] 0.4881
+[tst_rew] 0.1500
+
+[iter]    74
+[loss]    2.8664
+[trn_rew] 0.4763
+[tst_rew] 0.1700
+
+[iter]    75
+[loss]    2.8694
+[trn_rew] 0.4892
+[tst_rew] 0.1400
+
+[iter]    76
+[loss]    2.8655
+[trn_rew] 0.4738
+[tst_rew] 0.1600
+
+[iter]    77
+[loss]    2.8424
+[trn_rew] 0.4620
+[tst_rew] 0.1900
+
+[iter]    78
+[loss]    2.8782
+[trn_rew] 0.4976
+[tst_rew] 0.2000
+
+[iter]    79
+[loss]    2.8230
+[trn_rew] 0.4487
+[tst_rew] 0.2200
+
+[iter]    80
+[loss]    2.8278
+[trn_rew] 0.4593
+[tst_rew] 0.2000
+
+[iter]    81
+[loss]    2.8377
+[trn_rew] 0.4775
+[tst_rew] 0.2000
+
+[iter]    82
+[loss]    2.8271
+[trn_rew] 0.4783
+[tst_rew] 0.1800
+
+[iter]    83
+[loss]    2.8366
+[trn_rew] 0.4732
+[tst_rew] 0.2000
+
+[iter]    84
+[loss]    2.8494
+[trn_rew] 0.4683
+[tst_rew] 0.1700
+
+[iter]    85
+[loss]    2.8229
+[trn_rew] 0.4835
+[tst_rew] 0.1500
+
+[iter]    86
+[loss]    2.8263
+[trn_rew] 0.4833
+[tst_rew] 0.1800
+
+[iter]    87
+[loss]    2.8049
+[trn_rew] 0.4494
+[tst_rew] 0.1700
+
+[iter]    88
+[loss]    2.8518
+[trn_rew] 0.4871
+[tst_rew] 0.1900
+
+[iter]    89
+[loss]    2.8797
+[trn_rew] 0.4881
+[tst_rew] 0.2400
+
+[iter]    90
+[loss]    2.8083
+[trn_rew] 0.4795
+[tst_rew] 0.1700
+
+[iter]    91
+[loss]    2.8768
+[trn_rew] 0.4768
+[tst_rew] 0.1800
+
+[iter]    92
+[loss]    2.8684
+[trn_rew] 0.4904
+[tst_rew] 0.1600
+
+[iter]    93
+[loss]    2.8498
+[trn_rew] 0.5000
+[tst_rew] 0.1500
+
+[iter]    94
+[loss]    2.8248
+[trn_rew] 0.4786
+[tst_rew] 0.2300
+
+[iter]    95
+[loss]    2.8364
+[trn_rew] 0.4843
+[tst_rew] 0.1900
+
+[iter]    96
+[loss]    2.8345
+[trn_rew] 0.4931
+[tst_rew] 0.1600
+
+[iter]    97
+[loss]    2.8578
+[trn_rew] 0.5012
+[tst_rew] 0.2000
+
+[iter]    98
+[loss]    2.8660
+[trn_rew] 0.4831
+[tst_rew] 0.1200
+
+[iter]    99
+[loss]    2.8697
+[trn_rew] 0.4894
+[tst_rew] 0.1900
+
+[iter]    100
+[loss]    2.8000
+[trn_rew] 0.4651
+[tst_rew] 0.1700
+
+[iter]    101
+[loss]    2.8412
+[trn_rew] 0.4976
+[tst_rew] 0.1900
+
+[iter]    102
+[loss]    2.8303
+[trn_rew] 0.5093
+[tst_rew] 0.2400
+
+[iter]    103
+[loss]    2.8420
+[trn_rew] 0.5378
+[tst_rew] 0.1800
+
+[iter]    104
+[loss]    2.8577
+[trn_rew] 0.5253
+[tst_rew] 0.1900
+
+[iter]    105
+[loss]    2.8538
+[trn_rew] 0.5287
+[tst_rew] 0.2400
+
+[iter]    106
+[loss]    2.8137
+[trn_rew] 0.5200
+[tst_rew] 0.2500
+
+[iter]    107
+[loss]    2.8849
+[trn_rew] 0.5034
+[tst_rew] 0.2100
+
+[iter]    108
+[loss]    2.8500
+[trn_rew] 0.5057
+[tst_rew] 0.2400
+
+[iter]    109
+[loss]    2.8532
+[trn_rew] 0.5195
+[tst_rew] 0.2800
+
+[iter]    110
+[loss]    2.9047
+[trn_rew] 0.5371
+[tst_rew] 0.1600
+
+[iter]    111
+[loss]    2.8201
+[trn_rew] 0.5115
+[tst_rew] 0.2600
+
+[iter]    112
+[loss]    2.8527
+[trn_rew] 0.5396
+[tst_rew] 0.2800
+
+[iter]    113
+[loss]    2.8015
+[trn_rew] 0.5138
+[tst_rew] 0.2500
+
+[iter]    114
+[loss]    2.8380
+[trn_rew] 0.5247
+[tst_rew] 0.2200
+
+[iter]    115
+[loss]    2.8006
+[trn_rew] 0.5047
+[tst_rew] 0.2400
+
+[iter]    116
+[loss]    2.8249
+[trn_rew] 0.5216
+[tst_rew] 0.2900
+
+[iter]    117
+[loss]    2.7988
+[trn_rew] 0.5256
+[tst_rew] 0.2500
+
+[iter]    118
+[loss]    2.8540
+[trn_rew] 0.5411
+[tst_rew] 0.2500
+
+[iter]    119
+[loss]    2.8386
+[trn_rew] 0.4909
+[tst_rew] 0.2600
+
+[iter]    120
+[loss]    2.8406
+[trn_rew] 0.5200
+[tst_rew] 0.2600
+
+[iter]    121
+[loss]    2.8645
+[trn_rew] 0.5527
+[tst_rew] 0.3300
+
+[iter]    122
+[loss]    2.8087
+[trn_rew] 0.5341
+[tst_rew] 0.2700
+
+[iter]    123
+[loss]    2.8327
+[trn_rew] 0.5500
+[tst_rew] 0.2800
+
+[iter]    124
+[loss]    2.8086
+[trn_rew] 0.5308
+[tst_rew] 0.3300
+
+[iter]    125
+[loss]    2.8264
+[trn_rew] 0.5543
+[tst_rew] 0.2800
+
+[iter]    126
+[loss]    2.8167
+[trn_rew] 0.5344
+[tst_rew] 0.2900
+
+[iter]    127
+[loss]    2.8616
+[trn_rew] 0.5777
+[tst_rew] 0.2200
+
+[iter]    128
+[loss]    2.8217
+[trn_rew] 0.5500
+[tst_rew] 0.2500
+
+[iter]    129
+[loss]    2.7864
+[trn_rew] 0.5256
+[tst_rew] 0.1500
+
+[iter]    130
+[loss]    2.8277
+[trn_rew] 0.5646
+[tst_rew] 0.2900
+
+[iter]    131
+[loss]    2.8116
+[trn_rew] 0.5352
+[tst_rew] 0.2500
+
+[iter]    132
+[loss]    2.8408
+[trn_rew] 0.5638
+[tst_rew] 0.1400
+
+[iter]    133
+[loss]    2.7997
+[trn_rew] 0.5558
+[tst_rew] 0.2300
+
+[iter]    134
+[loss]    2.8141
+[trn_rew] 0.5722
+[tst_rew] 0.3100
+
+[iter]    135
+[loss]    2.7925
+[trn_rew] 0.5543
+[tst_rew] 0.1500
+
+[iter]    136
+[loss]    2.8203
+[trn_rew] 0.5424
+[tst_rew] 0.2400
+
+[iter]    137
+[loss]    2.7985
+[trn_rew] 0.5531
+[tst_rew] 0.1900
+
+[iter]    138
+[loss]    2.8209
+[trn_rew] 0.5553
+[tst_rew] 0.2400
+
+[iter]    139
+[loss]    2.7965
+[trn_rew] 0.5479
+[tst_rew] 0.2700
+
+[iter]    140
+[loss]    2.8331
+[trn_rew] 0.5776
+[tst_rew] 0.1600
+
+[iter]    141
+[loss]    2.8005
+[trn_rew] 0.5770
+[tst_rew] 0.2700
+
+[iter]    142
+[loss]    2.8288
+[trn_rew] 0.5828
+[tst_rew] 0.2300
+
+[iter]    143
+[loss]    2.8209
+[trn_rew] 0.5876
+[tst_rew] 0.2700
+
+[iter]    144
+[loss]    2.8173
+[trn_rew] 0.5719
+[tst_rew] 0.2900
+
+[iter]    145
+[loss]    2.8354
+[trn_rew] 0.5844
+[tst_rew] 0.3600
+
+[iter]    146
+[loss]    2.8469
+[trn_rew] 0.6262
+[tst_rew] 0.2700
+
+[iter]    147
+[loss]    2.7902
+[trn_rew] 0.5740
+[tst_rew] 0.3300
+
+[iter]    148
+[loss]    2.7973
+[trn_rew] 0.6123
+[tst_rew] 0.2300
+
+[iter]    149
+[loss]    2.7993
+[trn_rew] 0.5771
+[tst_rew] 0.3700
+
+[iter]    150
+[loss]    2.8327
+[trn_rew] 0.6175
+[tst_rew] 0.3400
+
+[iter]    151
+[loss]    2.7983
+[trn_rew] 0.5919
+[tst_rew] 0.2600
+
+[iter]    152
+[loss]    2.8455
+[trn_rew] 0.6264
+[tst_rew] 0.3400
+
+[iter]    153
+[loss]    2.8408
+[trn_rew] 0.6477
+[tst_rew] 0.3200
+
+[iter]    154
+[loss]    2.7899
+[trn_rew] 0.6068
+[tst_rew] 0.3600
+
+[iter]    155
+[loss]    2.8604
+[trn_rew] 0.6163
+[tst_rew] 0.3300
+
+[iter]    156
+[loss]    2.8420
+[trn_rew] 0.6413
+[tst_rew] 0.3100
+
+[iter]    157
+[loss]    2.7915
+[trn_rew] 0.6229
+[tst_rew] 0.2300
+
+[iter]    158
+[loss]    2.8337
+[trn_rew] 0.6518
+[tst_rew] 0.3600
+
+[iter]    159
+[loss]    2.8467
+[trn_rew] 0.6381
+[tst_rew] 0.3100
+
+[iter]    160
+[loss]    2.8258
+[trn_rew] 0.6269
+[tst_rew] 0.3400
+
+[iter]    161
+[loss]    2.8615
+[trn_rew] 0.6426
+[tst_rew] 0.3500
+
+[iter]    162
+[loss]    2.8395
+[trn_rew] 0.6190
+[tst_rew] 0.3600
+
+[iter]    163
+[loss]    2.7799
+[trn_rew] 0.5940
+[tst_rew] 0.2700
+
+[iter]    164
+[loss]    2.7686
+[trn_rew] 0.6048
+[tst_rew] 0.3100
+
+[iter]    165
+[loss]    2.7969
+[trn_rew] 0.6125
+[tst_rew] 0.3300
+
+[iter]    166
+[loss]    2.8067
+[trn_rew] 0.6417
+[tst_rew] 0.2700
+
+[iter]    167
+[loss]    2.8307
+[trn_rew] 0.6400
+[tst_rew] 0.3000
+
+[iter]    168
+[loss]    2.8130
+[trn_rew] 0.6495
+[tst_rew] 0.2700
+
+[iter]    169
+[loss]    2.8082
+[trn_rew] 0.6264
+[tst_rew] 0.3100
+
+[iter]    170
+[loss]    2.8076
+[trn_rew] 0.6455
+[tst_rew] 0.2800
+
+[iter]    171
+[loss]    2.8172
+[trn_rew] 0.6171
+[tst_rew] 0.3100
+
+[iter]    172
+[loss]    2.8000
+[trn_rew] 0.6477
+[tst_rew] 0.2400
+
+[iter]    173
+[loss]    2.8126
+[trn_rew] 0.6140
+[tst_rew] 0.2800
+
+[iter]    174
+[loss]    2.8187
+[trn_rew] 0.6432
+[tst_rew] 0.3400
+
+[iter]    175
+[loss]    2.8425
+[trn_rew] 0.6640
+[tst_rew] 0.3600
+
+[iter]    176
+[loss]    2.8154
+[trn_rew] 0.6482
+[tst_rew] 0.3000
+
+[iter]    177
+[loss]    2.8083
+[trn_rew] 0.6491
+[tst_rew] 0.2800
+
+[iter]    178
+[loss]    2.7961
+[trn_rew] 0.6339
+[tst_rew] 0.4100
+
+[iter]    179
+[loss]    2.8161
+[trn_rew] 0.6482
+[tst_rew] 0.3800
+
+[iter]    180
+[loss]    2.8657
+[trn_rew] 0.6959
+[tst_rew] 0.3100
+
+[iter]    181
+[loss]    2.8029
+[trn_rew] 0.6684
+[tst_rew] 0.4200
+
+[iter]    182
+[loss]    2.7875
+[trn_rew] 0.6667
+[tst_rew] 0.3100
+
+[iter]    183
+[loss]    2.7947
+[trn_rew] 0.6573
+[tst_rew] 0.3000
+
+[iter]    184
+[loss]    2.8215
+[trn_rew] 0.6696
+[tst_rew] 0.4200
+
+[iter]    185
+[loss]    2.8150
+[trn_rew] 0.6687
+[tst_rew] 0.3400
+
+[iter]    186
+[loss]    2.8602
+[trn_rew] 0.6925
+[tst_rew] 0.3500
+
+[iter]    187
+[loss]    2.8414
+[trn_rew] 0.6617
+[tst_rew] 0.3800
+
+[iter]    188
+[loss]    2.8307
+[trn_rew] 0.6829
+[tst_rew] 0.3800
+
+[iter]    189
+[loss]    2.8302
+[trn_rew] 0.6733
+[tst_rew] 0.3300
+
+[iter]    190
+[loss]    2.8160
+[trn_rew] 0.6992
+[tst_rew] 0.3400
+
+[iter]    191
+[loss]    2.8287
+[trn_rew] 0.6883
+[tst_rew] 0.3600
+
+[iter]    192
+[loss]    2.8360
+[trn_rew] 0.6756
+[tst_rew] 0.4100
+
+[iter]    193
+[loss]    2.7925
+[trn_rew] 0.6765
+[tst_rew] 0.4800
+
+[iter]    194
+[loss]    2.8320
+[trn_rew] 0.6815
+[tst_rew] 0.3100
+
+[iter]    195
+[loss]    2.8423
+[trn_rew] 0.6898
+[tst_rew] 0.3800
+
+[iter]    196
+[loss]    2.8170
+[trn_rew] 0.6814
+[tst_rew] 0.4000
+
+[iter]    197
+[loss]    2.8323
+[trn_rew] 0.6951
+[tst_rew] 0.3800
+
+[iter]    198
+[loss]    2.8045
+[trn_rew] 0.6849
+[tst_rew] 0.4300
+
+[iter]    199
+[loss]    2.8210
+[trn_rew] 0.7063
+[tst_rew] 0.4600
+
+[iter]    200
+[loss]    2.8227
+[trn_rew] 0.7000
+[tst_rew] 0.4400
+
+[iter]    201
+[loss]    2.8446
+[trn_rew] 0.7164
+[tst_rew] 0.4300
+
+[iter]    202
+[loss]    2.8003
+[trn_rew] 0.7048
+[tst_rew] 0.4000
+
+[iter]    203
+[loss]    2.8512
+[trn_rew] 0.7240
+[tst_rew] 0.4000
+
+[iter]    204
+[loss]    2.8366
+[trn_rew] 0.7294
+[tst_rew] 0.4000
+
+[iter]    205
+[loss]    2.8513
+[trn_rew] 0.7459
+[tst_rew] 0.2700
+
+[iter]    206
+[loss]    2.8032
+[trn_rew] 0.7024
+[tst_rew] 0.3500
+
+[iter]    207
+[loss]    2.8380
+[trn_rew] 0.7333
+[tst_rew] 0.3800
+
+[iter]    208
+[loss]    2.8220
+[trn_rew] 0.7292
+[tst_rew] 0.4800
+
+[iter]    209
+[loss]    2.8158
+[trn_rew] 0.7209
+[tst_rew] 0.4500
+
+[iter]    210
+[loss]    2.8268
+[trn_rew] 0.7353
+[tst_rew] 0.4700
+
+[iter]    211
+[loss]    2.8244
+[trn_rew] 0.7173
+[tst_rew] 0.4000
+
+[iter]    212
+[loss]    2.8269
+[trn_rew] 0.7209
+[tst_rew] 0.3400
+
+[iter]    213
+[loss]    2.7936
+[trn_rew] 0.7039
+[tst_rew] 0.4500
+
+[iter]    214
+[loss]    2.8370
+[trn_rew] 0.7366
+[tst_rew] 0.4300
+
+[iter]    215
+[loss]    2.8162
+[trn_rew] 0.7279
+[tst_rew] 0.5100
+
+[iter]    216
+[loss]    2.8050
+[trn_rew] 0.7250
+[tst_rew] 0.4500
+
+[iter]    217
+[loss]    2.8108
+[trn_rew] 0.7242
+[tst_rew] 0.4200
+
+[iter]    218
+[loss]    2.8746
+[trn_rew] 0.7452
+[tst_rew] 0.3700
+
+[iter]    219
+[loss]    2.7808
+[trn_rew] 0.7115
+[tst_rew] 0.3500
+
+[iter]    220
+[loss]    2.8463
+[trn_rew] 0.7394
+[tst_rew] 0.3700
+
+[iter]    221
+[loss]    2.8141
+[trn_rew] 0.7171
+[tst_rew] 0.4400
+
+[iter]    222
+[loss]    2.8233
+[trn_rew] 0.7215
+[tst_rew] 0.3900
+
+[iter]    223
+[loss]    2.8539
+[trn_rew] 0.7391
+[tst_rew] 0.3700
+
+[iter]    224
+[loss]    2.8686
+[trn_rew] 0.7493
+[tst_rew] 0.4600
+
+[iter]    225
+[loss]    2.8442
+[trn_rew] 0.7482
+[tst_rew] 0.4200
+
+[iter]    226
+[loss]    2.8651
+[trn_rew] 0.7538
+[tst_rew] 0.3800
+
+[iter]    227
+[loss]    2.8536
+[trn_rew] 0.7493
+[tst_rew] 0.4500
+
+[iter]    228
+[loss]    2.8552
+[trn_rew] 0.7694
+[tst_rew] 0.5200
+
+[iter]    229
+[loss]    2.8484
+[trn_rew] 0.7703
+[tst_rew] 0.4900
+
+[iter]    230
+[loss]    2.8102
+[trn_rew] 0.7579
+[tst_rew] 0.4600
+
+[iter]    231
+[loss]    2.8761
+[trn_rew] 0.7811
+[tst_rew] 0.4600
+
+[iter]    232
+[loss]    2.8416
+[trn_rew] 0.7787
+[tst_rew] 0.4400
+
+[iter]    233
+[loss]    2.8383
+[trn_rew] 0.7645
+[tst_rew] 0.4600
+
+[iter]    234
+[loss]    2.8378
+[trn_rew] 0.7760
+[tst_rew] 0.4700
+
+[iter]    235
+[loss]    2.8502
+[trn_rew] 0.7599
+[tst_rew] 0.3500
+
+[iter]    236
+[loss]    2.8826
+[trn_rew] 0.7830
+[tst_rew] 0.4100
+
+[iter]    237
+[loss]    2.8151
+[trn_rew] 0.7669
+[tst_rew] 0.4500
+
+[iter]    238
+[loss]    2.8205
+[trn_rew] 0.7688
+[tst_rew] 0.5000
+
+[iter]    239
+[loss]    2.8613
+[trn_rew] 0.7823
+[tst_rew] 0.5000
+
+[iter]    240
+[loss]    2.8492
+[trn_rew] 0.7803
+[tst_rew] 0.4300
+
+[iter]    241
+[loss]    2.8725
+[trn_rew] 0.7921
+[tst_rew] 0.4400
+
+[iter]    242
+[loss]    2.8419
+[trn_rew] 0.7705
+[tst_rew] 0.4900
+
+[iter]    243
+[loss]    2.8373
+[trn_rew] 0.7592
+[tst_rew] 0.4900
+
+[iter]    244
+[loss]    2.8692
+[trn_rew] 0.7811
+[tst_rew] 0.4900
+
+[iter]    245
+[loss]    2.8114
+[trn_rew] 0.7610
+[tst_rew] 0.4000
+
+[iter]    246
+[loss]    2.8663
+[trn_rew] 0.7801
+[tst_rew] 0.5300
+
+[iter]    247
+[loss]    2.8121
+[trn_rew] 0.7650
+[tst_rew] 0.4800
+
+[iter]    248
+[loss]    2.8733
+[trn_rew] 0.8070
+[tst_rew] 0.4900
+
+[iter]    249
+[loss]    2.8420
+[trn_rew] 0.7886
+[tst_rew] 0.4500
+
+[iter]    250
+[loss]    2.8388
+[trn_rew] 0.7854
+[tst_rew] 0.4800
+
+[iter]    251
+[loss]    2.8367
+[trn_rew] 0.7861
+[tst_rew] 0.4000
+
+[iter]    252
+[loss]    2.8921
+[trn_rew] 0.8130
+[tst_rew] 0.4700
+
+[iter]    253
+[loss]    2.8414
+[trn_rew] 0.7772
+[tst_rew] 0.5200
+
+[iter]    254
+[loss]    2.8449
+[trn_rew] 0.7847
+[tst_rew] 0.4500
+
+[iter]    255
+[loss]    2.8675
+[trn_rew] 0.7747
+[tst_rew] 0.4400
+
+[iter]    256
+[loss]    2.8671
+[trn_rew] 0.8083
+[tst_rew] 0.4300
+
+[iter]    257
+[loss]    2.8611
+[trn_rew] 0.7942
+[tst_rew] 0.4300
+
+[iter]    258
+[loss]    2.8389
+[trn_rew] 0.7842
+[tst_rew] 0.4900
+
+[iter]    259
+[loss]    2.8378
+[trn_rew] 0.7881
+[tst_rew] 0.4800
+
+[iter]    260
+[loss]    2.8809
+[trn_rew] 0.8189
+[tst_rew] 0.3900
+
+[iter]    261
+[loss]    2.8149
+[trn_rew] 0.7772
+[tst_rew] 0.5000
+
+[iter]    262
+[loss]    2.8373
+[trn_rew] 0.8051
+[tst_rew] 0.5300
+
+[iter]    263
+[loss]    2.8394
+[trn_rew] 0.7827
+[tst_rew] 0.4700
+
+[iter]    264
+[loss]    2.8476
+[trn_rew] 0.8062
+[tst_rew] 0.4500
+
+[iter]    265
+[loss]    2.8381
+[trn_rew] 0.8043
+[tst_rew] 0.4500
+
+[iter]    266
+[loss]    2.8685
+[trn_rew] 0.8176
+[tst_rew] 0.4100
+
+[iter]    267
+[loss]    2.8557
+[trn_rew] 0.8238
+[tst_rew] 0.5000
+
+[iter]    268
+[loss]    2.8195
+[trn_rew] 0.8043
+[tst_rew] 0.4400
+
+[iter]    269
+[loss]    2.8161
+[trn_rew] 0.7994
+[tst_rew] 0.5500
+
+[iter]    270
+[loss]    2.8568
+[trn_rew] 0.7877
+[tst_rew] 0.5200
+
+[iter]    271
+[loss]    2.8589
+[trn_rew] 0.8116
+[tst_rew] 0.4300
+
+[iter]    272
+[loss]    2.8523
+[trn_rew] 0.8288
+[tst_rew] 0.4500
+
+[iter]    273
+[loss]    2.8708
+[trn_rew] 0.8208
+[tst_rew] 0.4200
+
+[iter]    274
+[loss]    2.8603
+[trn_rew] 0.8214
+[tst_rew] 0.3500
+
+[iter]    275
+[loss]    2.8183
+[trn_rew] 0.7868
+[tst_rew] 0.4100
+
+[iter]    276
+[loss]    2.8546
+[trn_rew] 0.8050
+[tst_rew] 0.5400
+
+[iter]    277
+[loss]    2.8520
+[trn_rew] 0.8138
+[tst_rew] 0.5200
+
+[iter]    278
+[loss]    2.8212
+[trn_rew] 0.8102
+[tst_rew] 0.5100
+
+[iter]    279
+[loss]    2.8859
+[trn_rew] 0.8282
+[tst_rew] 0.4800
+
+[iter]    280
+[loss]    2.8542
+[trn_rew] 0.8265
+[tst_rew] 0.4100
+
+[iter]    281
+[loss]    2.8600
+[trn_rew] 0.8368
+[tst_rew] 0.5300
+
+[iter]    282
+[loss]    2.8547
+[trn_rew] 0.8320
+[tst_rew] 0.5800
+
+[iter]    283
+[loss]    2.8557
+[trn_rew] 0.8365
+[tst_rew] 0.5300
+
+[iter]    284
+[loss]    2.8712
+[trn_rew] 0.8310
+[tst_rew] 0.5500
+
+[iter]    285
+[loss]    2.9028
+[trn_rew] 0.8345
+[tst_rew] 0.5200
+
+[iter]    286
+[loss]    2.8346
+[trn_rew] 0.8240
+[tst_rew] 0.5300
+
+[iter]    287
+[loss]    2.8647
+[trn_rew] 0.8262
+[tst_rew] 0.4600
+
+[iter]    288
+[loss]    2.8676
+[trn_rew] 0.8318
+[tst_rew] 0.5000
+
+[iter]    289
+[loss]    2.8688
+[trn_rew] 0.8371
+[tst_rew] 0.5100
+
+[iter]    290
+[loss]    2.8352
+[trn_rew] 0.8234
+[tst_rew] 0.4400
+
+[iter]    291
+[loss]    2.8643
+[trn_rew] 0.8433
+[tst_rew] 0.5400
+
+[iter]    292
+[loss]    2.8728
+[trn_rew] 0.8557
+[tst_rew] 0.6100
+
+[iter]    293
+[loss]    2.8317
+[trn_rew] 0.8311
+[tst_rew] 0.5100
+
+[iter]    294
+[loss]    2.8453
+[trn_rew] 0.8189
+[tst_rew] 0.4900
+
+[iter]    295
+[loss]    2.8609
+[trn_rew] 0.8387
+[tst_rew] 0.5100
+
+[iter]    296
+[loss]    2.8212
+[trn_rew] 0.8379
+[tst_rew] 0.4400
+
+[iter]    297
+[loss]    2.8467
+[trn_rew] 0.8420
+[tst_rew] 0.5200
+
+[iter]    298
+[loss]    2.8928
+[trn_rew] 0.8548
+[tst_rew] 0.5900
+
+[iter]    299
+[loss]    2.8460
+[trn_rew] 0.8352
+[tst_rew] 0.4800
+

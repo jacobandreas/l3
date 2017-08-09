@@ -56,6 +56,9 @@ TEMPLATES = {
     "bridge_?": ["grass", "stone_?"]
 }
 
+START = "<s>"
+STOP = "</s>"
+
 RECIPES = {}
 HINTS = []
 for group in CRAFTS.values():
@@ -91,10 +94,10 @@ for group in CRAFTS.values():
             else:
                 specialized.append(ingredient)
         #print goal, specialized
-        HINTS.append((goal, specialized))
+        HINTS.append((goal, [START] + specialized + [STOP]))
 
 for ingredient in INGREDIENTS:
-    HINTS.append((ingredient, [ingredient]))
+    HINTS.append((ingredient, [START, ingredient, STOP]))
 
 util.next_random().shuffle(HINTS)
 
@@ -217,6 +220,9 @@ class Minicraft2World(object):
         self.n_vocab = len(self.vocab)
         self.random = util.next_random()
 
+        self.START = START
+        self.STOP = STOP
+
         self.tasks = []
         for i, (goal, steps) in enumerate(self.hints):
             self.tasks.append(Minicraft2Task(i, goal, None))
@@ -313,6 +319,7 @@ class Minicraft2State(object):
         self.task = task
         self._cached_features = None
         self.instruction = instruction
+        self.task_id = task.id
         self.features = self._features()
 
     def _features(self):

@@ -3,6 +3,7 @@ from models import N_HIDDEN as N_DEC_HIDDEN
 from net import _mlp, _linear, _embed_dict
 from misc import util
 
+from collections import defaultdict
 import gflags
 import numpy as np
 import tensorflow as tf
@@ -132,22 +133,58 @@ class Policy(object):
         loss, _ = self.session.run([self.t_dagger_loss, self.o_dagger_train], feed_dict)
         return loss
 
-    def sample(self):
-        init = [self.task.vocab[self.task.START] for _ in range(100)]
+    def sample(self, states):
+        init = [self.task.vocab[self.task.START] for state in states]
         hyps = self.hyp_decoder.decode(
                 init,
                 self.task.vocab[self.task.STOP], 
                 {self.t_n_batch: len(init)},
                 self.session,
                 temp=1)
-        words = [" ".join(self.task.vocab.get(w) for w in hyp) for hyp in hyps]
-        return words
+        return hyps
+        #words = [" ".join(self.task.vocab.get(w) for w in hyp) for hyp in hyps]
+        #return words
 
     def adapt(self, transitions):
-        pass
+        if not hasattr(self, "_adapt_scores"):
+            self._adapt_scores = defaultdict(lambda: 0.)
+            self._adapt_counts = defaultdict(lambda: 0)
+            self._adapt_total = 0
+
+        if self._adapt_total < 5000:
+            for s, a, s_, r in transitions:
+                hyp = tuple(s.instruction)
+                self._adapt_scores[s.task_id, hyp] += r
+                self._adapt_counts[s.task_id, hyp] += 1
+                self._adapt_total += 1
+        else:
+            self.train(transitions)
 
     def hypothesize(self, states):
-        return [() for state in states]
+        if not hasattr(self, "_adapt_total") or self._adapt_total < 5000:
+            return self.sample(states)
+
+        adapt_means = {}
+        for k in self._adapt_scores:
+            adapt_means[k] = self._adapt_scores[k] / self._adapt_counts[k]
+
+        hyps = []
+        #print self._adapt_counts
+        for state in states:
+            valid_keys = [k for k in adapt_means if k[0] == state.task_id]
+            best_key = max(valid_keys, key=lambda x: adapt_means[x])
+            hyps.append(best_key[1])
+
+            #print state.instruction
+            #print
+            #for key in sorted(valid_keys):
+            #    print key, self._adapt_counts[key], adapt_means[key]
+            #exit()
+            #print state.instruction
+            #print best_key[1]
+            #print
+        #exit()
+        return hyps
 
     def save(self):
         self.saver.save(self.session, "model.chk")

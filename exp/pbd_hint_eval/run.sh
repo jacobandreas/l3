@@ -8,6 +8,6 @@ python -u ../../pbd.py \
   --n_sample_hyps=100 \
   --restore="../pbd_hint/model" \
   --test \
-  > train.out \
-  2> train.err
+  > eval.out \
+  2> eval.err
 

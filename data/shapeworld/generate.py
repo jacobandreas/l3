@@ -13,9 +13,26 @@ ATTEMPTS = 100
 
 random = np.random.RandomState()
 
-def generate(mode, n):
+all_captions = {}
+for _ in range(500):
+    inp_world = DATASET.world_generator("train")
+    caption = DATASET.world_captioner(
+            world=inp_world.model(), correct=bool(random.randint(2)),
+            mode="train")
+    realized, = DATASET.caption_realizer.realize(captions=[caption])
+    realized = tuple(realized)
+    all_captions[realized] = caption
+
+captions = list(sorted(all_captions.keys()))
+random.shuffle(captions)
+train_captions = captions[:-20]
+val_captions = captions[-20:-10]
+test_captions = captions[-10:]
+print(len(train_captions), len(val_captions), len(test_captions))
+
+def generate(name, mode, captions, n):
     print()
-    print(mode)
+    print(name)
     examples = np.zeros((n, EXAMPLES, WIDTH, HEIGHT, CHANNELS))
     example_structs = []
     inputs = np.zeros((n, WIDTH, HEIGHT, CHANNELS))
@@ -26,16 +43,19 @@ def generate(mode, n):
     i = 0
     running = 0
     while i < n:
-        inp_world = DATASET.world_generator(mode)
-        caption = DATASET.world_captioner(
-                world=inp_world.model(), correct=bool(random.randint(2)), mode=mode)
-        if not caption:
-            continue
-        #assert caption.agreement(world=model) == 1.0
+        get_true = random.randint(2)
+        capt_key = captions[random.randint(len(captions))]
+        caption = all_captions[capt_key]
+        success = False
+        for _ in range(100 if name == "train" else 100):
+            inp_world = DATASET.world_generator(mode)
+            agree = caption.agreement(world=inp_world.model())
+            if get_true == agree:
+                success = True
+                break
 
         ex = []
         ex_struct = []
-        #for _ in range(ATTEMPTS):
         while len(ex) < EXAMPLES:
             world = DATASET.world_generator(mode)
             model = world.model()
@@ -48,20 +68,10 @@ def generate(mode, n):
                 color = str(entity.color)
                 struct.update({(shape,), (color,), (shape, color)})
             ex_struct.append(list(struct))
-        #if len(ex) < EXAMPLES:
-        #    continue
 
-        #inp = DATASET.world_generator(mode)
-        #label = int(caption.agreement(world=inp.model()))
         label = caption.agreement(world=inp_world.model())
-
         caption_text, = DATASET.caption_realizer.realize(captions=[caption])
         caption_text = " ".join(caption_text)
-
-        print(inp_world.get_array())
-        print(inp_world.get_array().max())
-        print(inp_world.get_array().shape)
-        exit()
 
         examples[i, ...] = ex
         inputs[i, ...] = inp_world.get_array()
@@ -82,18 +92,17 @@ def generate(mode, n):
         if i % 10 == 0:
             print(i, running / i)
 
-    np.save(os.path.join(mode, "examples.npy"), examples)
-    np.save(os.path.join(mode, "inputs.npy"), inputs)
-    np.save(os.path.join(mode, "labels.npy"), labels)
-    with open(os.path.join(mode, "hints.json"), "w") as hint_f:
+    np.save(os.path.join(name, "examples.npy"), examples)
+    np.save(os.path.join(name, "inputs.npy"), inputs)
+    np.save(os.path.join(name, "labels.npy"), labels)
+    with open(os.path.join(name, "hints.json"), "w") as hint_f:
         json.dump(hints, hint_f)
-    with open(os.path.join(mode, "examples.struct.json"), "w") as ex_f:
+    with open(os.path.join(name, "examples.struct.json"), "w") as ex_f:
         json.dump(example_structs, ex_f)
-    with open(os.path.join(mode, "inputs.struct.json"), "w") as inp_f:
+    with open(os.path.join(name, "inputs.struct.json"), "w") as inp_f:
         json.dump(input_structs, inp_f)
 
-generate("train", 10000)
-generate("validation", 1000)
-generate("test", 1000)
+generate("train", "train", train_captions, 5000)
+generate("validation", "train", val_captions, 500)
+generate("test", "train", test_captions, 500)
 
-#generate("train", 20)

@@ -18,13 +18,14 @@ UNK = "UNK"
 random = util.next_random()
 
 class NavDatum(object):
-    def __init__(self, features, reward, terminal, instructions, values, task):
+    def __init__(self, features, reward, terminal, instructions, values, task, task_id=None):
         self.features = features
         self.reward = reward
         self.terminal = terminal
         self.instructions = instructions
         self.values = values
         self.task = task
+        self.task_id = task_id
 
     def init(self):
         pos = None
@@ -42,6 +43,7 @@ class NavState(object):
         self.datum = datum
         self.features = self._make_features(datum.features)
         self.expert_a = self._make_expert()
+        self.task_id = datum.task_id
 
     def _make_expert(self):
         best_action = -1
@@ -109,18 +111,10 @@ class NavState(object):
         if rew > 0:
             assert term
 
-        #rew = self.datum.values[r, c] - self.datum.values[pr, pc]
-        #val = self.datum.values[r, c] - self.datum.values[pr, pc]
-
-        if rew > 0:
-            rew = 1
-        elif rew < 0:
-            rew = -.1
-        #print self.datum.values
-        #exit()
-
-        #term = False
-        #rew = min(self.datum.reward[r, c], 0)
+        #if rew > 0:
+        #    rew = 1
+        #elif rew < 0:
+        #    rew = -.1
 
         return NavState((r, c), self.instruction, self.datum), rew, term
 
@@ -149,6 +143,8 @@ class NavTask(object):
         #train_global, test_global = loading.load("global", "human", 20, 20)
         self.vocab = util.Index()
         self.vocab.index("UNK")
+        self.START = START
+        self.STOP = STOP
 
         loaded_splits = {
             ("train", "local"): train_local,
@@ -198,20 +194,45 @@ class NavTask(object):
                     data.append(datum)
                 splits[fold, mode] = data
 
-        self.train_local = splits["train", "local"]
-        self.train_global = splits["train", "global"]
-        #self.train = self.train_local + self.train_global
-        self.train = self.train_local
-        self.test_local = splits["test", "local"]
-        self.test_global = splits["test", "global"]
+        train_local = splits["train", "local"]
+        train_global = splits["train", "global"]
+        test_local = splits["test", "local"]
+        test_global = splits["test", "global"]
         #self.test = self.test_local + self.test_global
-        self.train = self.train_local
-        self.test = self.test_local
+        self.train = train_local
+        self.test = self._build_test(test_local)
 
         samp = self.sample_train()
         self.n_features = samp.features.size
         #self.feature_shape = samp.features.shape
         self.n_actions = ACTS
+
+    def _build_test(self, in_data):
+        data = []
+        for i_goal in range(1):
+            obj = random.choice(list(range(1, OBJS-4)))
+            offset_r = random.choice(3) - 1
+            offset_c = random.choice(3) - 1
+            i_map = 0
+            while i_map < 30:
+                base_datum = in_data[random.randint(len(in_data))]
+                ((obj_r, obj_c),) = np.argwhere(base_datum.features[:, :, obj])
+                goal_r = obj_r + offset_r
+                goal_c = obj_c + offset_c
+                if goal_r < 0 or goal_c < 0 or goal_r >= ROWS or goal_c >= COLS:
+                    continue
+                if base_datum.reward[goal_r, goal_c] < 0:
+                    continue
+
+                new_rew = np.minimum(base_datum.reward, 0)
+                new_rew[goal_r, goal_c] = 3
+                new_term = np.zeros((ROWS, COLS), dtype=np.int32)
+                new_term[goal_r, goal_c] = 1
+                datum = NavDatum(base_datum.features, new_rew, new_term, [[]],
+                        new_rew, base_datum.task, task_id=i_goal)
+                data.append(datum)
+                i_map += 1
+        return data
 
     def sample_train(self):
         data = self.train
