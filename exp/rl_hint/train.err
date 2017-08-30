@@ -1,23 +1,104 @@
-2017-07-29 14:41:59.322393: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-29 14:41:59.322418: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-29 14:41:59.322421: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-29 14:41:59.322424: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-29 14:41:59.322426: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
-2017-07-29 14:42:01.319651: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2017-07-29 14:42:01.320081: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+  0%|          | 0/2000 [00:00<?, ?it/s]  1%|          | 15/2000 [00:00<00:13, 146.20it/s]  1%|1         | 29/2000 [00:00<00:13, 142.95it/s]  2%|2         | 45/2000 [00:00<00:13, 144.79it/s]  3%|3         | 60/2000 [00:00<00:13, 146.29it/s]  4%|3         | 76/2000 [00:00<00:13, 147.71it/s]  5%|4         | 91/2000 [00:00<00:13, 145.64it/s]  5%|5         | 106/2000 [00:00<00:12, 146.42it/s]  6%|6         | 121/2000 [00:00<00:12, 145.84it/s]  7%|6         | 135/2000 [00:00<00:12, 143.85it/s]  8%|7         | 150/2000 [00:01<00:12, 143.92it/s]  8%|8         | 166/2000 [00:01<00:12, 146.96it/s]  9%|9         | 181/2000 [00:01<00:12, 145.38it/s] 10%|9         | 196/2000 [00:01<00:12, 143.49it/s] 11%|#         | 211/2000 [00:01<00:12, 144.69it/s] 11%|#1        | 226/2000 [00:01<00:12, 142.99it/s] 12%|#2        | 241/2000 [00:01<00:12, 142.06it/s] 13%|#2        | 256/2000 [00:01<00:12, 141.94it/s] 14%|#3        | 271/2000 [00:01<00:12, 143.65it/s] 14%|#4        | 287/2000 [00:01<00:11, 147.64it/s] 15%|#5        | 303/2000 [00:02<00:11, 148.32it/s] 16%|#5        | 318/2000 [00:02<00:11, 148.13it/s] 17%|#6        | 333/2000 [00:02<00:11, 148.01it/s] 17%|#7        | 348/2000 [00:02<00:11, 146.31it/s] 18%|#8        | 363/2000 [00:02<00:11, 144.12it/s] 19%|#8        | 378/2000 [00:02<00:11, 142.73it/s] 20%|#9        | 393/2000 [00:02<00:11, 144.72it/s] 20%|##        | 408/2000 [00:02<00:10, 144.99it/s] 21%|##1       | 423/2000 [00:02<00:10, 146.14it/s] 22%|##1       | 438/2000 [00:03<00:10, 143.61it/s] 23%|##2       | 453/2000 [00:03<00:10, 142.21it/s] 23%|##3       | 468/2000 [00:03<00:10, 142.35it/s] 24%|##4       | 483/2000 [00:03<00:10, 141.74it/s] 25%|##4       | 498/2000 [00:03<00:10, 140.54it/s] 26%|##5       | 514/2000 [00:03<00:10, 144.90it/s] 26%|##6       | 530/2000 [00:03<00:10, 146.62it/s] 27%|##7       | 546/2000 [00:03<00:09, 148.13it/s] 28%|##8       | 561/2000 [00:03<00:09, 146.10it/s] 29%|##8       | 576/2000 [00:03<00:09, 147.05it/s] 30%|##9       | 591/2000 [00:04<00:09, 146.35it/s] 30%|###       | 606/2000 [00:04<00:09, 143.67it/s] 31%|###1      | 621/2000 [00:04<00:09, 143.40it/s] 32%|###1      | 637/2000 [00:04<00:09, 145.17it/s] 33%|###2      | 652/2000 [00:04<00:09, 144.46it/s] 33%|###3      | 667/2000 [00:04<00:09, 141.90it/s] 34%|###4      | 682/2000 [00:04<00:09, 142.93it/s] 35%|###4      | 697/2000 [00:04<00:09, 140.29it/s] 36%|###5      | 712/2000 [00:04<00:09, 139.40it/s] 36%|###6      | 727/2000 [00:05<00:09, 139.33it/s] 37%|###7      | 742/2000 [00:05<00:08, 140.47it/s] 38%|###7      | 758/2000 [00:05<00:08, 144.68it/s] 39%|###8      | 773/2000 [00:05<00:08, 145.64it/s] 39%|###9      | 788/2000 [00:05<00:08, 144.60it/s] 40%|####      | 803/2000 [00:05<00:08, 144.15it/s] 41%|####      | 818/2000 [00:05<00:08, 143.68it/s] 42%|####1     | 833/2000 [00:05<00:08, 143.83it/s] 42%|####2     | 848/2000 [00:05<00:08, 141.75it/s] 43%|####3     | 863/2000 [00:05<00:07, 142.41it/s] 44%|####3     | 878/2000 [00:06<00:07, 141.80it/s] 45%|####4     | 893/2000 [00:06<00:07, 142.96it/s] 45%|####5     | 908/2000 [00:06<00:07, 139.89it/s] 46%|####6     | 923/2000 [00:06<00:07, 140.43it/s] 47%|####6     | 938/2000 [00:06<00:07, 137.34it/s] 48%|####7     | 952/2000 [00:06<00:07, 137.87it/s] 48%|####8     | 966/2000 [00:06<00:07, 136.46it/s] 49%|####9     | 981/2000 [00:06<00:07, 139.32it/s] 50%|####9     | 995/2000 [00:06<00:07, 138.42it/s] 50%|#####     | 1009/2000 [00:07<00:07, 137.96it/s] 51%|#####1    | 1023/2000 [00:07<00:07, 136.69it/s] 52%|#####1    | 1037/2000 [00:07<00:07, 136.55it/s] 53%|#####2    | 1051/2000 [00:07<00:06, 136.35it/s] 53%|#####3    | 1065/2000 [00:07<00:06, 135.86it/s] 54%|#####3    | 1079/2000 [00:07<00:06, 133.03it/s] 55%|#####4    | 1093/2000 [00:07<00:06, 133.70it/s] 55%|#####5    | 1107/2000 [00:07<00:06, 133.45it/s] 56%|#####6    | 1121/2000 [00:07<00:06, 133.51it/s] 57%|#####6    | 1135/2000 [00:07<00:06, 131.98it/s] 57%|#####7    | 1149/2000 [00:08<00:06, 130.94it/s] 58%|#####8    | 1163/2000 [00:08<00:06, 128.85it/s] 59%|#####8    | 1176/2000 [00:08<00:06, 127.69it/s] 59%|#####9    | 1189/2000 [00:08<00:06, 127.85it/s] 60%|######    | 1203/2000 [00:08<00:06, 131.18it/s] 61%|######    | 1217/2000 [00:08<00:05, 132.63it/s] 62%|######1   | 1231/2000 [00:08<00:05, 132.68it/s] 62%|######2   | 1245/2000 [00:08<00:05, 133.44it/s] 63%|######2   | 1259/2000 [00:08<00:05, 132.21it/s] 64%|######3   | 1273/2000 [00:09<00:05, 132.03it/s] 64%|######4   | 1287/2000 [00:09<00:05, 130.02it/s] 65%|######5   | 1301/2000 [00:09<00:05, 130.73it/s] 66%|######5   | 1315/2000 [00:09<00:05, 131.28it/s] 66%|######6   | 1329/2000 [00:09<00:05, 131.25it/s] 67%|######7   | 1343/2000 [00:09<00:04, 131.56it/s] 68%|######7   | 1357/2000 [00:09<00:04, 130.16it/s] 69%|######8   | 1371/2000 [00:09<00:04, 130.11it/s] 69%|######9   | 1385/2000 [00:09<00:04, 127.35it/s] 70%|######9   | 1398/2000 [00:10<00:04, 126.87it/s] 71%|#######   | 1412/2000 [00:10<00:04, 128.19it/s] 71%|#######1  | 1426/2000 [00:10<00:04, 130.54it/s] 72%|#######2  | 1440/2000 [00:10<00:04, 130.16it/s] 73%|#######2  | 1454/2000 [00:10<00:04, 129.83it/s] 73%|#######3  | 1467/2000 [00:10<00:04, 127.55it/s] 74%|#######4  | 1480/2000 [00:10<00:04, 126.43it/s] 75%|#######4  | 1493/2000 [00:10<00:04, 125.41it/s] 75%|#######5  | 1506/2000 [00:10<00:03, 126.63it/s] 76%|#######5  | 1519/2000 [00:10<00:03, 126.47it/s] 77%|#######6  | 1533/2000 [00:11<00:03, 127.18it/s] 77%|#######7  | 1546/2000 [00:11<00:03, 127.96it/s] 78%|#######8  | 1560/2000 [00:11<00:03, 128.87it/s]
+  0%|          | 0/500 [00:00<?, ?it/s][A
+  3%|3         | 17/500 [00:00<00:02, 169.43it/s][A
+  7%|6         | 33/500 [00:00<00:02, 163.51it/s][A
+ 10%|9         | 48/500 [00:00<00:02, 157.67it/s][A
+ 13%|#2        | 63/500 [00:00<00:02, 154.16it/s][A
+ 16%|#6        | 80/500 [00:00<00:02, 155.54it/s][A
+ 19%|#9        | 96/500 [00:00<00:02, 154.79it/s][A
+ 22%|##2       | 111/500 [00:00<00:02, 151.98it/s][A
+ 25%|##5       | 127/500 [00:00<00:02, 154.08it/s][A
+ 29%|##8       | 143/500 [00:00<00:02, 154.50it/s][A
+ 32%|###1      | 159/500 [00:01<00:02, 154.48it/s][A
+ 35%|###5      | 175/500 [00:01<00:02, 153.15it/s][A
+ 38%|###8      | 191/500 [00:01<00:02, 154.03it/s][A
+ 41%|####1     | 207/500 [00:01<00:01, 153.25it/s][A
+ 45%|####4     | 223/500 [00:01<00:01, 152.73it/s][A
+ 48%|####7     | 239/500 [00:01<00:01, 148.93it/s][A
+ 51%|#####1    | 255/500 [00:01<00:01, 149.75it/s][A
+ 54%|#####4    | 271/500 [00:01<00:01, 149.92it/s][A
+ 57%|#####7    | 286/500 [00:01<00:01, 147.97it/s][A
+ 60%|######    | 301/500 [00:01<00:01, 147.23it/s][A
+ 63%|######3   | 317/500 [00:02<00:01, 150.68it/s][A
+ 67%|######6   | 333/500 [00:02<00:01, 151.36it/s][A
+ 70%|######9   | 349/500 [00:02<00:01, 147.59it/s][A
+ 73%|#######3  | 365/500 [00:02<00:00, 149.33it/s][A
+ 76%|#######6  | 380/500 [00:02<00:00, 149.46it/s][A
+ 79%|#######9  | 395/500 [00:02<00:00, 147.96it/s][A
+                                                  [A
+  0%|          | 0/1500 [00:00<?, ?it/s][A
+  2%|2         | 31/1500 [00:00<00:04, 307.22it/s][A
+  4%|4         | 63/1500 [00:00<00:04, 309.43it/s][A
+  6%|6         | 93/1500 [00:00<00:04, 303.65it/s][A
+  8%|8         | 125/1500 [00:00<00:04, 307.15it/s][A
+ 10%|#         | 154/1500 [00:00<00:04, 299.36it/s][A
+ 12%|#2        | 187/1500 [00:00<00:04, 306.64it/s][A
+ 14%|#4        | 217/1500 [00:00<00:04, 302.79it/s][A
+ 17%|#6        | 250/1500 [00:00<00:04, 308.24it/s][A
+ 19%|#8        | 280/1500 [00:00<00:04, 304.75it/s][A
+ 21%|##        | 310/1500 [00:01<00:03, 301.56it/s][A
+ 23%|##2       | 342/1500 [00:01<00:03, 305.89it/s][A
+ 25%|##4       | 373/1500 [00:01<00:03, 303.23it/s][A
+ 27%|##6       | 403/1500 [00:01<00:03, 297.52it/s][A
+ 29%|##8       | 434/1500 [00:01<00:03, 298.25it/s][A
+ 31%|###       | 464/1500 [00:01<00:03, 294.72it/s][A
+ 33%|###3      | 496/1500 [00:01<00:03, 299.38it/s][A
+ 35%|###5      | 526/1500 [00:01<00:03, 298.96it/s][A
+ 37%|###7      | 556/1500 [00:01<00:03, 292.25it/s][A
+ 39%|###9      | 586/1500 [00:01<00:03, 291.28it/s][A
+ 41%|####1     | 616/1500 [00:02<00:03, 290.69it/s][A
+ 43%|####3     | 648/1500 [00:02<00:02, 296.37it/s][A
+ 45%|####5     | 678/1500 [00:02<00:02, 292.33it/s][A
+ 47%|####7     | 708/1500 [00:02<00:02, 292.99it/s][A
+ 49%|####9     | 738/1500 [00:02<00:02, 288.25it/s][A
+ 51%|#####1    | 767/1500 [00:02<00:02, 281.24it/s][A
+ 53%|#####3    | 798/1500 [00:02<00:02, 289.11it/s][A
+ 55%|#####5    | 828/1500 [00:02<00:02, 290.12it/s][A
+ 57%|#####7    | 858/1500 [00:02<00:02, 288.92it/s][A
+ 59%|#####9    | 887/1500 [00:02<00:02, 287.66it/s][A
+ 61%|######1   | 916/1500 [00:03<00:02, 281.40it/s][A
+ 63%|######3   | 947/1500 [00:03<00:01, 287.22it/s][A
+ 65%|######5   | 976/1500 [00:03<00:01, 283.34it/s][A
+ 67%|######7   | 1005/1500 [00:03<00:01, 278.96it/s][A
+ 69%|######8   | 1033/1500 [00:03<00:01, 276.81it/s][A
+ 71%|#######   | 1061/1500 [00:03<00:01, 275.18it/s][A
+                                                    [A
+  0%|          | 0/500 [00:00<?, ?it/s][A
+  7%|6         | 34/500 [00:00<00:01, 327.33it/s][A
+ 14%|#3        | 68/500 [00:00<00:01, 328.82it/s][A
+ 20%|#9        | 99/500 [00:00<00:01, 319.83it/s][A
+ 26%|##6       | 131/500 [00:00<00:01, 317.25it/s][A
+ 33%|###2      | 164/500 [00:00<00:01, 319.49it/s][A
+ 39%|###9      | 196/500 [00:00<00:00, 318.18it/s][A
+ 46%|####5     | 228/500 [00:00<00:00, 316.89it/s][A
+ 52%|#####2    | 260/500 [00:00<00:00, 315.52it/s][A
+                                                  [A           78%|#######8  | 1566/2000 [00:30<00:03, 128.87it/s]2017-08-29 14:15:02.575468: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 14:15:02.575489: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 14:15:02.575493: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 14:15:02.575496: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 14:15:02.575499: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 14:15:04.583300: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-08-29 14:15:04.583697: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
 name: Tesla K40c
 major: 3 minor: 5 memoryClockRate (GHz) 0.745
 pciBusID 0000:04:00.0
 Total memory: 11.17GiB
 Free memory: 11.10GiB
-2017-07-29 14:42:01.320097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
-2017-07-29 14:42:01.320101: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
-2017-07-29 14:42:01.320109: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0)
-2017-07-29 14:42:41.914756: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 218165 get requests, put_count=218163 evicted_count=1000 eviction_rate=0.00458373 and unsatisfied allocation rate=0.00505122
-2017-07-29 14:42:41.914795: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
-2017-07-29 15:00:23.250287: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 5262243 get requests, put_count=5262257 evicted_count=7000 eviction_rate=0.00133023 and unsatisfied allocation rate=0.00133004
-2017-07-29 15:19:15.673292: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 13944335 get requests, put_count=13944353 evicted_count=17000 eviction_rate=0.00121913 and unsatisfied allocation rate=0.00121877
-2017-07-29 15:41:52.293940: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 23899248 get requests, put_count=23899252 evicted_count=27000 eviction_rate=0.00112974 and unsatisfied allocation rate=0.00113012
-2017-07-29 16:06:27.653147: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 35425431 get requests, put_count=35425449 evicted_count=37000 eviction_rate=0.00104445 and unsatisfied allocation rate=0.00104431
-2017-07-29 16:31:37.720750: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 49281608 get requests, put_count=49281628 evicted_count=47000 eviction_rate=0.000953702 and unsatisfied allocation rate=0.000953561
-2017-07-29 16:57:45.210198: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 65279854 get requests, put_count=65279876 evicted_count=57000 eviction_rate=0.000873163 and unsatisfied allocation rate=0.000873026
+2017-08-29 14:15:04.583708: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2017-08-29 14:15:04.583712: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2017-08-29 14:15:04.583718: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0)
+2017-08-29 14:15:17.574515: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 101222 get requests, put_count=101145 evicted_count=1000 eviction_rate=0.0098868 and unsatisfied allocation rate=0.0116279
+2017-08-29 14:15:17.574588: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+2017-08-29 14:19:01.161421: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 386324 get requests, put_count=386362 evicted_count=1000 eviction_rate=0.00258825 and unsatisfied allocation rate=0.00254967
+2017-08-29 14:19:01.161457: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 256 to 281
+2017-08-29 14:33:22.460828: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 7627367 get requests, put_count=7627370 evicted_count=10000 eviction_rate=0.00131107 and unsatisfied allocation rate=0.00131395
+2017-08-29 14:47:42.406404: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 15352696 get requests, put_count=15352719 evicted_count=20000 eviction_rate=0.0013027 and unsatisfied allocation rate=0.00130283
+2017-08-29 15:02:24.732211: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 23534501 get requests, put_count=23534507 evicted_count=30000 eviction_rate=0.00127472 and unsatisfied allocation rate=0.00127553
+2017-08-29 15:16:55.050138: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 31516346 get requests, put_count=31516362 evicted_count=40000 eviction_rate=0.00126918 and unsatisfied allocation rate=0.00126947
+2017-08-29 15:30:48.463760: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 38895880 get requests, put_count=38895883 evicted_count=50000 eviction_rate=0.00128548 and unsatisfied allocation rate=0.00128605
+2017-08-29 15:44:05.412656: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 45713743 get requests, put_count=45713778 evicted_count=60000 eviction_rate=0.00131251 and unsatisfied allocation rate=0.0013123
+2017-08-29 15:57:03.788889: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 52243374 get requests, put_count=52243405 evicted_count=70000 eviction_rate=0.00133988 and unsatisfied allocation rate=0.00133977
+2017-08-29 16:10:26.121467: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 58642287 get requests, put_count=58642289 evicted_count=80000 eviction_rate=0.0013642 and unsatisfied allocation rate=0.0013646
+2017-08-29 16:27:44.050071: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 64847554 get requests, put_count=64847574 evicted_count=90000 eviction_rate=0.00138787 and unsatisfied allocation rate=0.00138795
+2017-08-29 16:47:13.848218: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 71020354 get requests, put_count=71020380 evicted_count=100000 eviction_rate=0.00140805 and unsatisfied allocation rate=0.00140803
+Terminated

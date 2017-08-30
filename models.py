@@ -8,13 +8,15 @@ import tensorflow as tf
 import os
 
 FLAGS = gflags.FLAGS
-gflags.DEFINE_boolean("predict_hyp", False, "train to predict hypotheses")
-gflags.DEFINE_boolean("infer_hyp", False, "use hypotheses at test time")
-gflags.DEFINE_boolean("infer_by_likelihood", False, "use likelihood (rather than accuracy) to rank hypotheses")
-gflags.DEFINE_boolean("use_true_hyp", False, "predict using ground-truth description")
-gflags.DEFINE_integer("n_sample_hyps", 5, "number of hypotheses to sample")
-gflags.DEFINE_float("learning_rate", 0.001, "learning rate")
-gflags.DEFINE_string("restore", None, "model to restore")
+
+def _set_flags():
+    gflags.DEFINE_boolean("predict_hyp", False, "train to predict hypotheses")
+    gflags.DEFINE_boolean("infer_hyp", False, "use hypotheses at test time")
+    gflags.DEFINE_boolean("infer_by_likelihood", False, "use likelihood (rather than accuracy) to rank hypotheses")
+    gflags.DEFINE_boolean("use_true_hyp", False, "predict using ground-truth description")
+    gflags.DEFINE_integer("n_sample_hyps", 5, "number of hypotheses to sample")
+    gflags.DEFINE_float("learning_rate", 0.001, "learning rate")
+    gflags.DEFINE_string("restore", None, "model to restore")
 
 USE_IMAGES = False
 

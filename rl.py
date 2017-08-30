@@ -1,5 +1,6 @@
 #!/usr/bin/env python2
 
+import rl_models
 from rl_models import Policy
 from tasks import minicraft2
 from tasks import nav
@@ -13,9 +14,10 @@ gflags.DEFINE_boolean("train", False, "do a training run")
 gflags.DEFINE_boolean("test", False, "do a testing run")
 gflags.DEFINE_integer("n_epochs", 0, "number of epochs to run for")
 gflags.DEFINE_integer("n_batch", 5000, "batch size")
-gflags.DEFINE_float("discount", 0.95, "discount factor")
-gflags.DEFINE_integer("max_steps", 100, "max rollout length")
+gflags.DEFINE_float("discount", 0.9, "discount factor")
+gflags.DEFINE_integer("max_steps", 50, "max rollout length")
 gflags.DEFINE_boolean("use_expert", False, "DAGGER training with expert feedback")
+rl_models._set_flags()
 
 N_PAR = 10
 
@@ -36,48 +38,57 @@ def main():
                 buf = []
                 while len(buf) < FLAGS.n_batch:
                     states = [task.sample_train() for _ in range(N_PAR)]
-                    rollouts, rews = do_rollout(task, policy, states,
-                            expert=(FLAGS.use_expert and random.randint(2)))
+                    use_expert = FLAGS.use_expert and random.rand() < (0.95 ** i_epoch)
+                    rollouts, rews = do_rollout(task, policy, states, expert=use_expert)
                     for rollout, rew in zip(rollouts, rews):
                         buf.extend(rollout)
-                        total_rew += rew
-                        n_rollouts += 1
+                        if not use_expert:
+                            total_rew += rew
+                            n_rollouts += 1
                 if FLAGS.use_expert:
                     total_err += policy.train_dagger(buf)
                 else:
                     total_err += policy.train(buf)
 
-            #test_states = [task.sample_test() for _ in range(100)]
-            #_, test_rews = do_rollout(task, policy, test_states, vis=False)
-            #total_test_rew = sum(test_rews)
+            test_states = [task.sample_test(random.choice(task.test_ids)) for _ in range(100)]
+            _, test_rews = do_rollout(task, policy, test_states, vis=False)
+            total_test_rew = sum(test_rews)
 
             print("[iter]    %d" % i_epoch)
             print("[loss]    %01.4f" % (total_err / 10))
-            print("[trn_rew] %01.4f" % (total_rew / n_rollouts))
-            #print("[tst_rew] %01.4f" % (total_test_rew / len(test_rews)))
+            if n_rollouts > 0:
+                print("[trn_rew] %01.4f" % (total_rew / n_rollouts))
+            print("[tst_rew] %01.4f" % (total_test_rew / len(test_rews)))
+            hyps = policy.sample_hyps(3)
+            for hyp in hyps:
+                print " ".join(policy.task.vocab.get(w) for w in hyp)
             print
 
             if i_epoch % 10 == 0:
                 policy.save()
 
     if FLAGS.test:
-        for i_epoch in range(FLAGS.n_epochs):
-            total_rew = 0.
-            n_rollouts = 0
-            buf = []
-            while len(buf) < FLAGS.n_batch:
-                states = [task.sample_test() for _ in range(N_PAR)]
-                instructions = policy.hypothesize(states)
-                for state, inst in zip(states, instructions):
-                    state.instruction = inst
-                rollouts, rews = do_rollout(task, policy, states, expert=False)
-                total_rew += sum(rews)
-                n_rollouts += len(rews)
-                for rollout in rollouts:
-                    buf.extend(rollout)
+        for i_datum in task.test_ids:
+            print "TEST DATUM", i_datum
+            policy.restore(FLAGS.restore)
+            policy.reset()
+            for i_epoch in range(20): #range(45): #range(FLAGS.n_epochs):
+                total_rew = 0.
+                n_rollouts = 0
+                buf = []
+                episodes = []
+                while len(buf) < FLAGS.n_batch:
+                    states = [task.sample_test(i_datum, erase_hint=True) for _ in range(N_PAR)]
+                    states = policy.annotate(states)
+                    rollouts, rews = do_rollout(task, policy, states, expert=False)
+                    total_rew += sum(rews)
+                    n_rollouts += len(rews)
+                    for rollout, rew in zip(rollouts, rews):
+                        buf.extend(rollout)
+                        episodes.append((rollout, rew))
 
-            policy.adapt(buf)
-            print("[FINAL tst_rew] %01.4f" % (total_rew / n_rollouts))
+                policy.adapt(buf, episodes)
+                print("[FINAL tst_rew] %01.4f" % (total_rew / n_rollouts))
 
 def do_rollout(task, policy, states, vis=False, expert=False):
     states = list(states)
@@ -111,6 +122,7 @@ def do_rollout(task, policy, states, vis=False, expert=False):
         for s, a, s_, r in reversed(buf):
             forward_r *= FLAGS.discount
             r_ = r + forward_r
+            #r_ = max(r, 0)
             discounted_buf.append((s, a, s_, r_))
             forward_r += r
             total_r += r
