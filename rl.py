@@ -24,12 +24,13 @@ N_PAR = 10
 random = util.next_random()
 
 def main():
-    #task = minicraft.CraftTask()
-    #task = minicraft2.Minicraft2World()
     task = nav.NavTask()
     policy = Policy(task)
 
     if FLAGS.train:
+        if FLAGS.n_epochs == 0:
+            policy.save()
+
         for i_epoch in range(FLAGS.n_epochs):
             total_rew = 0
             total_err = 0
@@ -72,7 +73,7 @@ def main():
             print "TEST DATUM", i_datum
             policy.restore(FLAGS.restore)
             policy.reset()
-            for i_epoch in range(20): #range(45): #range(FLAGS.n_epochs):
+            for i_epoch in range(FLAGS.n_epochs):
                 total_rew = 0.
                 n_rollouts = 0
                 buf = []
@@ -122,7 +123,6 @@ def do_rollout(task, policy, states, vis=False, expert=False):
         for s, a, s_, r in reversed(buf):
             forward_r *= FLAGS.discount
             r_ = r + forward_r
-            #r_ = max(r, 0)
             discounted_buf.append((s, a, s_, r_))
             forward_r += r
             total_r += r

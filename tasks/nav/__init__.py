@@ -13,6 +13,8 @@ OBJS = 11
 WINDOW_SIZE = 5
 ACTS = 5
 
+MAPS_PER_TASK = 20
+
 START = "<s>"
 STOP = "</s>"
 UNK = "UNK"
@@ -51,27 +53,28 @@ class NavDatum(object):
             if self.features[r, c, 0] == 1:
                 pos = r, c
         instruction = self.instructions[random.choice(len(self.instructions))]
-        return NavState(pos, MAX_BREATH, instruction, self)
+        return NavState(pos, MAX_BREATH, instruction, self, self.task_id)
 
 class NavState(object):
-    def __init__(self, position, breath, instruction, datum, meta=None, task_repr=None):
+    def __init__(self, position, breath, instruction, datum, task_id, meta=None):
         self.position = position
         self.instruction = instruction
         self.breath = breath
         self.datum = datum
         self.features = self._make_features(datum.features)
         self.expert_a = self._make_expert()
-        self.task_id = datum.task_id
-        self.task_repr = task_repr
+        self.task_id = task_id
         self.meta = meta
 
     def annotate_instruction(self, new_instruction, meta):
-        return NavState(self.position, self.breath, new_instruction, self.datum, meta=meta)
+        return NavState(
+                self.position, self.breath, new_instruction, self.datum,
+                self.task_id, meta=meta)
 
-    def annotate_task_repr(self, new_repr, meta):
-        return NavState(self.position, self.breath, self.instruction, self.datum,
-                meta=meta, task_repr=new_repr)
-
+    def annotate_task(self, new_task, meta):
+        return NavState(
+                self.position, self.breath, self.instruction, self.datum,
+                new_task, meta=meta)
 
     def _make_expert(self):
         best_action = -1
@@ -86,8 +89,8 @@ class NavState(object):
                 r += 1
             elif action == 3:
                 c += 1
-            #else:
-            #    assert False
+            else:
+                assert action == 4
 
             if r < 0 or r > ROWS-1:
                 continue
@@ -135,9 +138,6 @@ class NavState(object):
         c = min(max(c, 0), COLS-1)
 
         rew = self.datum.reward[r, c]
-        #term = self.datum.terminal[r, c]
-        #if rew > 0:
-        #    assert term
         term = action == 4
 
         nbreath = self.breath
@@ -152,18 +152,13 @@ class NavState(object):
             term = True
             rew = 3
 
-        #if rew > 0:
-        #    rew = 1
-        #elif rew < 0:
-        #    rew = -.1
-
-        return NavState((r, c), nbreath, self.instruction, self.datum, self.meta,
-                self.task_repr), rew, term
+        return NavState((r, c), nbreath, self.instruction, self.datum,
+                self.task_id, self.meta), rew, term
 
     def render(self):
         rows = []
         rows.append(" ".join([self.datum.task.vocab.get(w) for w in self.instruction]))
-        for r in range(0): #range(ROWS):
+        for r in range(0):
             row = []
             for c in range(COLS):
                 if (r, c) == self.position:
@@ -173,17 +168,6 @@ class NavState(object):
                 elif self.datum.features[r, c, OBJS] == 1:
                     assert self.datum.reward[r, c] < 0
                     row.append("^")
-
-                ## TODO
-                #elif self.datum.features[r, c, :].mean() == 3:
-                #    row.append("*")
-                #elif self.datum.features[r, c, :].mean() < 0:
-                #    row.append("^")
-
-                #elif self.datum.reward[r, c] > 0:
-                #    row.append("*")
-                #elif self.datum.reward[r, c] < 0:
-                #    row.append("^")
                 else:
                     row.append(".")
             rows.append("".join(str(s) for s in row))
@@ -191,8 +175,8 @@ class NavState(object):
 
 class NavTask(object):
     def __init__(self):
-        train_local, test_local = loading.load("local", "human", 2000, 500)
-        train_global, test_global = loading.load("global", "human", 1500, 500)
+        train_local_raw, test_local_raw = loading.load("local", "human", 2000, 500)
+        train_global_raw, test_global_raw = loading.load("global", "human", 1500, 500)
         #train_local, test_local = loading.load("local", "human", 200, 200)
         #train_global, test_global = loading.load("global", "human", 200, 200)
         self.vocab = util.Index()
@@ -200,11 +184,11 @@ class NavTask(object):
         self.START = START
         self.STOP = STOP
 
-        loaded_splits = {
-            ("train", "local"): train_local,
-            #("train", "global"): train_global,
-            ("test", "local"): test_local,
-            #("test", "global"): test_global
+        raw_splits = {
+            ("train", "local"): train_local_raw,
+            ("train", "global"): train_global_raw,
+            ("test", "local"): test_local_raw,
+            ("test", "global"): test_global_raw
         }
 
         templates = defaultdict(list)
@@ -212,79 +196,8 @@ class NavTask(object):
         splits = {}
         task_id = 0
         for fold in ("train", "test"):
-            #for mode in ("local", "global"):
             for mode in ("local",):
-                insts = loaded_splits[fold, mode]
-                terrains, objects, rewards, terminals, instructions, values, goals = insts
-                #print instructions[0]
-                data = []
-                for i in range(terrains.shape[0]):
-                    terr = terrains[i, 0, :, :].astype(int)
-                    obj = objects[i, 0, :, :].astype(int)
-                    rew = rewards[i, 0, :, :]
-                    term = terminals[i, 0, :, :].astype(int)
-                    #instr = [instructions[i]]
-                    goal = goals[i]
-
-                    #if obj[goal] == 0 or obj[goal] >= OBJS - 4:
-                    #    continue
-                    instr = []
-                    for off_r, off_c in [(0, 0), (0, 1), (1, 0)]:
-                        gr, gc = goal
-                        tr, tc = gr + off_r, gc + off_c
-                        if tr < 0 or tr >= ROWS or tc < 0 or tc >= COLS:
-                            continue
-                        gobj = obj[tr, tc]
-                        instruction = instructions[i].replace(".", "")
-                        toks = instruction.split()
-                        good_names = [w for w in instruction.split() 
-                                if gobj in FEATURE_NAMES and w == FEATURE_NAMES[gobj]]
-                        names = [w for w in instruction.split() 
-                                if w in ALL_FEATURE_NAMES]
-                        if (
-                                gobj > 0 and 
-                                gobj < OBJS - 4 and
-                                len(good_names) == 1 and
-                                len(names) == 1):
-                            template = instruction.replace(good_names[0], "%s")
-                            templates[(off_r, off_c)].append(template)
-                            instr.append(instruction)
-                            #instr = [""]
-                    if len(instr) == 0:
-                        instr = [""]
-
-                    #obj_name = FEATURE_NAMES[obj[goal]]
-                    #instr = ["reach %s" % obj_name]
-
-                    features = np.zeros((ROWS, COLS, OBJS+3))
-                    for r in range(ROWS):
-                        for c in range(COLS):
-
-                            ## TODO
-                            #features[r, c, :] = rew[r, c]
-                            #continue
-
-                            if terr[r, c] == 0:
-                                assert obj[r, c] == 0
-                                features[r, c, OBJS] = 1
-                            else:
-                                features[r, c, obj[r, c]] = 1
-
-                            features[r, c, OBJS+1] = 1. * r / ROWS
-                            features[r, c, OBJS+2] = 1. * c / COLS
-
-                    indexed_instr = []
-                    for instruction in instr:
-                        p_instruction = [START] + instruction.split() + [STOP]
-                        if fold == "train":
-                            toks = [self.vocab.index(w) for w in p_instruction]
-                        else:
-                            toks = [self.vocab[w] or self.vocab[UNK] for w in p_instruction]
-                        indexed_instr.append(toks)
-
-                    datum = NavDatum(goal, features, rew, term, indexed_instr, values[i, ...], self, task_id)
-                    data.append(datum)
-                    task_id += 1
+                data, task_id = self._format_data(fold, raw_splits[fold, mode], templates, task_id)
                 splits[fold, mode] = data
 
         final_templates = defaultdict(list)
@@ -296,33 +209,90 @@ class NavTask(object):
                 if c > 1:
                     final_templates[k].append(v)
         final_templates = dict(final_templates)
-        #print "\n".join(final_templates.values())
-        #for vv in final_templates.values():
-        #    for v in vv:
-        #        print v
-        #exit()
-        #print self.vocab.contents
-        train_local = splits["train", "local"]
-        #train_global = splits["train", "global"]
-        test_local = splits["test", "local"]
-        #test_global = splits["test", "global"]
-        #self.test = self.test_local + self.test_global
-        #self.train = train_local
-        #self.test = self._build_test(test_local)
-        self._task_counter = 0
-        #self.train = self._build_test(train_local, 1000, final_templates)
-        self.train = self._build_test(train_local, 1, final_templates)
-        #self.train = train_local
-        self.test = self._build_test(test_local, 20, final_templates)
+
+        train_local_fmt = splits["train", "local"]
+        test_local_fmt = splits["test", "local"]
+
+        task_counter = 0
+        self.train, n_train_tasks = self._build_examples(
+                train_local_fmt, 5000, final_templates, task_counter,
+                group_tasks=False)
+        self.test, n_total_tasks = self._build_examples(
+                test_local_fmt, 50, final_templates, n_train_tasks,
+                group_tasks=True)
         self.test_ids = sorted(list(set(d.task_id for d in self.test)))
 
-        print len(self.train), "train"
-        print len(self.test), "test"
+        print "[n_train]", len(self.train)
+        print "[n_test]", len(self.test), "test"
 
         samp = self.sample_train()
         self.n_features = samp.features.size
-        #self.feature_shape = samp.features.shape
+        self.n_tasks = n_train_tasks
         self.n_actions = ACTS
+
+        print "[task_ids]", n_train_tasks, "->", n_total_tasks
+        print "[n_vocab]", len(self.vocab)
+
+    def _format_data(self, fold, insts, templates, task_id):
+        terrains, objects, rewards, terminals, instructions, values, goals = insts
+        data = []
+        for i in range(terrains.shape[0]):
+            terr = terrains[i, 0, :, :].astype(int)
+            obj = objects[i, 0, :, :].astype(int)
+            rew = rewards[i, 0, :, :]
+            term = terminals[i, 0, :, :].astype(int)
+            goal = goals[i]
+
+            formatted_instr = []
+            for off_r, off_c in [(0, 0), (0, 1), (1, 0), (-1, 0), (0, -1)]:
+                gr, gc = goal
+                tr, tc = gr + off_r, gc + off_c
+                if tr < 0 or tr >= ROWS or tc < 0 or tc >= COLS:
+                    continue
+                gobj = obj[tr, tc]
+                instruction = instructions[i].replace(".", "")
+                toks = instruction.split()
+                good_names = [w for w in instruction.split() 
+                        if gobj in FEATURE_NAMES and w == FEATURE_NAMES[gobj]]
+                names = [w for w in instruction.split() 
+                        if w in ALL_FEATURE_NAMES]
+                if (
+                        gobj > 0 and 
+                        gobj < OBJS - 4 and
+                        len(good_names) == 1 and
+                        len(names) == 1):
+                    template = instruction.replace(good_names[0], "%s")
+                    templates[(off_r, off_c)].append(template)
+                    formatted_instr.append(instruction)
+            if len(formatted_instr) == 0:
+                formatted_instr = [""]
+
+            features = np.zeros((ROWS, COLS, OBJS+3))
+            for r in range(ROWS):
+                for c in range(COLS):
+                    if terr[r, c] == 0:
+                        assert obj[r, c] == 0
+                        features[r, c, OBJS] = 1
+                    else:
+                        features[r, c, obj[r, c]] = 1
+
+                    features[r, c, OBJS+1] = 1. * r / ROWS
+                    features[r, c, OBJS+2] = 1. * c / COLS
+
+            indexed_instr = []
+            for instruction in formatted_instr:
+                p_instruction = [START] + instruction.split() + [STOP]
+                if fold == "train":
+                    toks = [self.vocab.index(w) for w in p_instruction]
+                else:
+                    toks = [self.vocab[w] or self.vocab[UNK] for w in p_instruction]
+                indexed_instr.append(toks)
+
+            datum = NavDatum(goal, features, rew, term, indexed_instr, values[i, ...], self, task_id)
+            data.append(datum)
+            task_id += 1
+
+        return data, task_id
 
     def _compute_values(self, rew, term):
         def neighbors(r, c):
@@ -338,7 +308,7 @@ class NavTask(object):
             return out
 
         v_curr = rew
-        for _ in range(20):
+        for _ in range(ROWS + COLS):
             v_next = rew.copy()
             for r in range(ROWS):
                 for c in range(COLS):
@@ -362,18 +332,18 @@ class NavTask(object):
             values = np.rot90(values)
         return NavDatum(None, features, reward, terminal, None, values, datum.task, datum.task_id)
 
-    def _build_test(self, in_data, n_goals, templates):
-        offsets = [(0, 0), (0, 1), (1, 0)]
+    def _build_examples(self, in_data, n_goals, templates, task_counter,
+            group_tasks):
+        offsets = [(0, 0), (0, 1), (1, 0), (-1, 0), (0, -1)]
         data = []
         for i_goal in range(n_goals):
             obj = random.choice(list(range(1, OBJS-4)))
-            #offset_r = random.choice(3) - 1
-            #offset_c = random.choice(3) - 1
             offset_r, offset_c = offsets[random.randint(len(offsets))]
             i_map = 0
 
-            print "BUILT", FEATURE_NAMES[obj], offset_r, offset_c
-            while i_map < 20:
+            n_maps = MAPS_PER_TASK if group_tasks else 1
+
+            while i_map < n_maps:
                 base_datum = in_data[random.randint(len(in_data))]
                 base_datum = self._randomize_map(base_datum)
                 ((obj_r, obj_c),) = np.argwhere(base_datum.features[:, :, obj])
@@ -385,9 +355,7 @@ class NavTask(object):
                     continue
 
                 new_rew = np.minimum(base_datum.reward, 0)
-                #new_rew[goal_r, goal_c] = 3
                 new_term = np.zeros((ROWS, COLS), dtype=np.int32)
-                #new_term[goal_r, goal_c] = 1
 
                 valid_templates = templates[(offset_r, offset_c)]
                 chosen_template = random.choice(valid_templates)
@@ -396,50 +364,25 @@ class NavTask(object):
                         filled_template.split()] + [self.vocab[STOP]]
                 assert None not in new_instr
 
-                #new_instr = [
-                #        self.vocab[START], 
-                #        self.vocab["reach"],
-                #        self.vocab[FEATURE_NAMES[obj]], 
-                #        self.vocab[STOP]]
-                #new_instr = [self.vocab[START], self.vocab[STOP]]
-
-                #new_feats = np.zeros((ROWS, COLS, OBJS+3))
-                #new_feats[...] = new_rew[:, :, np.newaxis]
                 new_feats = base_datum.features
 
                 fake_rew = new_rew.copy()
                 fake_rew[goal_r, goal_c] = 3
                 new_values = self._compute_values(fake_rew, new_term)
 
-                #print "feats"
-                #print base_datum.features.transpose((2, 0, 1))
-                #print base_datum.features.sum(axis=(0, 1))
-                #print "rew"
-                #print new_rew
-                #print "term"
-                #print new_term
-                #print "instr"
-                #print new_instr
-                #exit()
-
                 new_goal = (goal_r, goal_c)
 
                 datum = NavDatum(new_goal, new_feats, new_rew, new_term,
-                        #base_datum.instructions,
                         [new_instr],
                         new_values,
                         base_datum.task, 
-                        #task_id=len(self.train) + i_goal
-                        task_id=self._task_counter
+                        task_id=task_counter
                         )
                 data.append(datum)
-                i_map += 1
-            self._task_counter += 1
 
-        #for datum in data:
-        #    instr = datum.instructions[0]
-        #    print " ".join(self.vocab.get(i) for i in instr)
-        return data
+            task_counter += 1
+
+        return data, task_counter
 
     def sample_train(self):
         data = self.train
@@ -450,7 +393,6 @@ class NavTask(object):
         data = self.test
         available = [d for d in data if d.task_id == i_datum]
         assert len(available) > 0
-        #datum = data[random.choice(len(data))]
         datum = available[random.choice(len(available))]
         if erase_hint:
             datum.instructions = [[self.vocab[START], self.vocab[STOP]]]

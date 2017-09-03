@@ -13,7 +13,9 @@ def _set_flags():
     gflags.DEFINE_boolean("predict_hyp", False, "train to predict hypotheses")
     gflags.DEFINE_boolean("infer_hyp", False, "use hypotheses at test time")
     gflags.DEFINE_string("restore", None, "model to restore")
-    gflags.DEFINE_boolean("concept_prior", False, "place a standard normal prior on concept representations")
+    gflags.DEFINE_float("concept_prior", None, "place a normal prior on concept representations")
+    gflags.DEFINE_integer("adapt_reprs", 100, "number of representations to sample when doing adaptation")
+    gflags.DEFINE_integer("adapt_samples", 1000, "number of episodes to spend evaluating sampled representations")
 
 N_EMBED = 64
 N_HIDDEN = 64
@@ -49,7 +51,7 @@ class Policy(object):
                 self.t_last_hyp_hidden, t_hint_vecs)
 
         t_task_vecs = tf.get_variable(
-                "task_vec", (len(task.vocab), N_EMBED),
+                "task_vec", (task.n_tasks, N_EMBED),
                 initializer=tf.uniform_unit_scaling_initializer())
         t_task_repr = _embed_dict(self.t_task, t_task_vecs)
 
@@ -81,15 +83,17 @@ class Policy(object):
         self.t_rl_loss = t_loss_surrogate + t_baseline_err - 0.001 * t_entropy
         self.t_dagger_loss = -tf.reduce_mean(t_chosen_logprob)
 
+        if FLAGS.concept_prior is not None:
+            def normal(x):
+                return tf.reduce_mean(tf.reduce_sum(tf.square(x), axis=1))
+            self.t_rl_loss += normal(self.t_concept) / FLAGS.concept_prior
+            self.t_dagger_loss += normal(self.t_concept) / FLAGS.concept_prior
+
         if FLAGS.predict_hyp:
             self.t_loss = self.t_rl_loss + self.hyp_decoder.t_loss
             self.t_dagger_loss = self.t_dagger_loss + self.hyp_decoder.t_loss
-
-        if FLAGS.concept_prior:
-            def normal(x):
-                return tf.reduce_mean(tf.reduce_sum(tf.square(x), axis=1))
-            self.t_loss += normal(self.t_concept)
-            self.t_dagger_loss += normal(self.t_concept)
+        else:
+            self.t_loss = self.t_rl_loss
 
         optimizer = tf.train.AdamOptimizer(0.001)
         self.o_train = optimizer.minimize(self.t_loss)
@@ -119,10 +123,7 @@ class Policy(object):
             self.t_hint_len: hint_len,
             self.t_task: [s.task_id for s in states]
         }
-        # TODO naming
-        if states[0].task_repr is not None:
-            concepts = [s.task_repr for s in states]
-            feed_dict[self.t_concept] = concepts
+
         logprobs, = self.session.run([self.t_logprob], feed_dict)
         probs = np.exp(logprobs)
         actions = []
@@ -159,6 +160,7 @@ class Policy(object):
             self.t_hint_len: hint_len,
             self.t_task: [s.task_id for s in states]
         }
+
         loss, _ = self.session.run([self.t_dagger_loss, self.o_dagger_train], feed_dict)
         return loss
 
@@ -171,22 +173,6 @@ class Policy(object):
                 self.session,
                 temp=1)
         return hyps
-        #words = [" ".join(self.task.vocab.get(w) for w in hyp) for hyp in hyps]
-        #return words
-
-        #raw = [
-        #    "reach diamond", "reach circle", "reach star",
-        #    "reach triangle", "reach heart", "reach spade"
-        #]
-        #encoded = [
-        #    [self.task.vocab[self.task.START]]
-        #        + [self.task.vocab[w] for w in s.split()]
-        #        + [self.task.vocab[self.task.STOP]]
-        #    for s in raw]
-        #print self.task.vocab.contents
-        #print encoded
-        #assert not any(None in s for s in encoded)
-        #return [encoded[random.randint(len(encoded))] for _ in range(n)]
 
     def reset(self):
         self._adapt_scores = defaultdict(lambda: 0.)
@@ -195,47 +181,41 @@ class Policy(object):
         self._adapt_total = 0
 
         if FLAGS.infer_hyp:
-            adapt_reprs = self.sample_hyps(50)
+            adapt_reprs = self.sample_hyps(FLAGS.adapt_reprs)
             self._adapt_reprs = list(set(tuple(r) for r in adapt_reprs))
             self._n_ad = len(self._adapt_reprs)
             self._ann_counter = 0
         else:
-            self._adapt_reprs = random.normal(size=(50, N_EMBED))
-            self._n_ad = 20
+            self._adapt_reprs = random.randint(self.task.n_tasks,
+                    size=FLAGS.adapt_reprs)
+            self._n_ad = FLAGS.adapt_reprs
             self._ann_counter = 0
 
         self.ready = False
 
     def adapt(self, transitions, episodes):
-        #self.train(transitions)
-        #return
-
-        if self._adapt_total < 500:
+        if self._adapt_total < FLAGS.adapt_samples:
             for ss, r in episodes:
                 s = ss[0][0]
-                self._adapt_scores[s.task_id, s.meta] += r
-                self._adapt_counts[s.task_id, s.meta] += 1
-                self._adapt_all[s.task_id, s.meta].append(r)
+                # we might have written over the real task id
+                self._adapt_scores[s.datum.task_id, s.meta] += r
+                self._adapt_counts[s.datum.task_id, s.meta] += 1
+                self._adapt_all[s.datum.task_id, s.meta].append(r)
                 self._adapt_total += 1
         else:
             self.train(transitions)
 
     def annotate(self, states):
-        #return states
-        if self._adapt_total < 500:
+        if self._adapt_total < FLAGS.adapt_samples:
             n_ad = self._n_ad
             repr_ids = [random.randint(n_ad) for state in states]
-            #print repr_ids
-            #repr_ids = [self._ann_counter for state in states]
-            #self._ann_counter += 1
-            #print self._ann_counter
             reprs = [self._adapt_reprs[i] for i in repr_ids]
             new_states = []
             for i, state in enumerate(states):
                 if FLAGS.infer_hyp:
                     new_states.append(state.annotate_instruction(reprs[i], repr_ids[i]))
                 else:
-                    new_states.append(state.annotate_task_repr(reprs[i], repr_ids[i]))
+                    new_states.append(state.annotate_task(reprs[i], repr_ids[i]))
             return new_states
         else:
             # TODO outside
@@ -249,67 +229,27 @@ class Policy(object):
 
                 for k, v in sorted(self._adapt_counts.items(), 
                         key=lambda x: adapt_means[x[0]]):
-                    print (
-                            k,
-                            v,
-                            " ".join(self.task.vocab.get(w) for w in self._adapt_reprs[k[1]]),
-                            adapt_means[k]
-                            #self._adapt_all[k])
-                            )
+                    if FLAGS.infer_hyp:
+                        print (
+                                k,
+                                v,
+                                " ".join(self.task.vocab.get(w) for w in self._adapt_reprs[k[1]]),
+                                adapt_means[k]
+                                )
+                    else:
+                        print (k, v, adapt_means[k])
 
             new_states = []
             for state in states:
-                valid_keys = [k for k in adapt_means if k[0] == state.task_id]
+                # we might have written over the real task id
+                valid_keys = [k for k in adapt_means if k[0] == state.datum.task_id]
                 best_key = max(valid_keys, key=lambda x: adapt_means[x])
-                #print best_key, adapt_means[best_key]
                 choose_repr = self._adapt_reprs[best_key[1]]
                 if FLAGS.infer_hyp:
                     new_states.append(state.annotate_instruction(choose_repr, best_key[1]))
                 else:
-                    new_states.append(state.annotate_task_repr(choose_repr, best_key[1]))
+                    new_states.append(state.annotate_task(choose_repr, best_key[1]))
             return new_states
-
-
-    #def hypothesize(self, states):
-    #    if not hasattr(self, "_adapt_total") or self._adapt_total < 5000:
-    #        return self.sample(states)
-
-    #    adapt_means = {}
-    #    for k in self._adapt_scores:
-    #        adapt_means[k] = self._adapt_scores[k] / self._adapt_counts[k]
-
-    #    hyps = []
-    #    #print self._adapt_counts
-    #    for state in states:
-    #        valid_keys = [k for k in adapt_means if k[0] == state.task_id]
-    #        best_key = max(valid_keys, key=lambda x: adapt_means[x])
-    #        hyps.append(best_key[1])
-
-    #    return hyps
-
-    ## TODO copycat
-    #def sample_reprs(self, states):
-    #    if not hasattr(self, "_adapt_repr_total"):
-    #        self._adapt_repr_candidates = random.normal(size=(100, N_EMBED))
-    #        self._adapt_repr_total = 0
-    #        self._adapt_repr_scores = defaultdict(lambda: 0)
-    #        self._adapt_repr_counts = defaultdict(lambda: 0)
-
-    #    if self._adapt_repr_total < 5000:
-    #        return [self._adapt_repr_candidates[i, random.randint(100)] 
-    #                for _ in range(len(states)]
-
-    #    adapt_means = {}
-    #    for k in self._adapt_repr_scores:
-    #        adapt_means[k] = self._adapt_repr_scores[k] / self._adapt_counts[k]
-
-    #    reprs = []
-    #    for state in states:
-    #        valid_keys = [k for k in adapt_means if k[0] == state.task_id]
-    #        best_key = max(valid_keys, key=lambda x: adapt_means[x])
-    #        reprs.append(best_key[1])
-
-    #    return hyps
 
     def save(self):
         self.saver.save(self.session, "model.chk")
