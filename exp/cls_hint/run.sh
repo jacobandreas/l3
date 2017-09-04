@@ -12,7 +12,7 @@ python -u ../../cls.py \
   --use_true_hyp=false \
   --infer_by_likelihood=true \
   --n_sample_hyps=1 \
+  > train.out \
+  2> train.err
   #--n_sample_hyps=5 \
-  #> train.out \
-  #2> train.err
 

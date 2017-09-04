@@ -11,7 +11,6 @@ python -u ../../cls.py \
   --test \
   --use_true_hyp=false \
   --infer_by_likelihood=false \
-  #--n_sample_hyps=1 \
-  #> train.out \
-  #2> train.err
+  > train.out \
+  2> train.err
 
