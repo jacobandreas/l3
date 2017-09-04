@@ -73,6 +73,8 @@ def main():
             print "TEST DATUM", i_datum
             policy.restore(FLAGS.restore)
             policy.reset()
+            state = task.sample_test(i_datum, erase_hint=False)
+            print " ".join(task.vocab.get(w) for w in state.instruction)
             for i_epoch in range(FLAGS.n_epochs):
                 total_rew = 0.
                 n_rollouts = 0

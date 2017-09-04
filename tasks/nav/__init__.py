@@ -379,6 +379,7 @@ class NavTask(object):
                         task_id=task_counter
                         )
                 data.append(datum)
+                i_map += 1
 
             task_counter += 1
 

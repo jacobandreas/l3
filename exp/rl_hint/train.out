@@ -10,3568 +10,2006 @@
 
 <Data> Loading global test environments with human annotations
 <Data> Found 272 annotations
-BUILT triangle 0 0
-BUILT diamond 0 1
-BUILT spade 1 0
-BUILT spade 1 0
-BUILT spade 1 0
-BUILT diamond 1 0
-BUILT triangle 0 1
-BUILT spade 0 1
-BUILT diamond 0 1
-BUILT heart 0 0
-BUILT triangle 0 0
-BUILT heart 1 0
-BUILT star 1 0
-BUILT circle 0 1
-BUILT diamond 1 0
-BUILT circle 0 0
-BUILT diamond 0 1
-BUILT heart 1 0
-BUILT star 0 1
-BUILT spade 0 0
-BUILT heart 0 1
-BUILT heart 0 1
-BUILT star 1 0
-BUILT heart 1 0
-BUILT diamond 0 0
-BUILT star 0 0
-BUILT triangle 0 1
-BUILT heart 0 1
-BUILT triangle 1 0
-BUILT circle 0 1
-BUILT star 0 1
-BUILT diamond 0 1
-BUILT spade 0 0
-BUILT spade 1 0
-BUILT triangle 0 1
-BUILT spade 0 1
-BUILT triangle 0 1
-BUILT spade 1 0
-BUILT heart 0 1
-BUILT spade 0 0
-BUILT circle 0 0
-BUILT circle 0 0
-BUILT spade 0 1
-BUILT diamond 1 0
-BUILT diamond 1 0
-BUILT triangle 0 1
-BUILT spade 1 0
-BUILT triangle 0 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT circle 0 1
-BUILT heart 1 0
-BUILT triangle 0 0
-BUILT triangle 1 0
-BUILT diamond 0 1
-BUILT circle 1 0
-BUILT triangle 1 0
-BUILT heart 0 1
-BUILT heart 0 1
-BUILT diamond 0 1
-BUILT heart 1 0
-BUILT spade 0 0
-BUILT spade 1 0
-BUILT diamond 0 0
-BUILT diamond 1 0
-BUILT circle 0 1
-BUILT circle 1 0
-BUILT star 0 1
-BUILT diamond 0 1
-BUILT star 0 1
-BUILT star 1 0
-BUILT spade 1 0
-BUILT circle 0 1
-BUILT heart 0 1
-BUILT heart 1 0
-BUILT triangle 0 1
-BUILT spade 1 0
-BUILT heart 0 1
-BUILT star 1 0
-BUILT heart 1 0
-BUILT spade 1 0
-BUILT spade 1 0
-BUILT star 0 1
-BUILT triangle 0 0
-BUILT diamond 0 0
-BUILT heart 0 0
-BUILT heart 0 0
-BUILT diamond 0 1
-BUILT diamond 0 0
-BUILT diamond 0 1
-BUILT triangle 0 1
-BUILT heart 0 1
-BUILT spade 1 0
-BUILT star 1 0
-BUILT circle 0 0
-BUILT diamond 0 1
-BUILT star 1 0
-BUILT spade 0 0
-BUILT circle 0 0
-BUILT diamond 0 1
-BUILT heart 0 0
-BUILT star 0 1
-BUILT triangle 1 0
-BUILT star 0 0
-BUILT triangle 1 0
-BUILT spade 0 0
-BUILT triangle 1 0
-BUILT heart 0 0
-BUILT diamond 1 0
-BUILT triangle 0 1
-BUILT heart 0 0
-BUILT star 1 0
-BUILT star 0 0
-BUILT triangle 0 1
-BUILT spade 1 0
-BUILT heart 1 0
-BUILT triangle 1 0
-BUILT spade 0 1
-BUILT triangle 1 0
-BUILT spade 1 0
-BUILT diamond 0 0
-BUILT diamond 1 0
-BUILT diamond 1 0
-BUILT spade 0 0
-BUILT triangle 1 0
-BUILT circle 1 0
-BUILT star 0 1
-BUILT heart 0 0
-BUILT diamond 0 0
-BUILT diamond 0 0
-BUILT triangle 0 0
-BUILT diamond 1 0
-BUILT heart 0 1
-BUILT heart 1 0
-BUILT heart 0 0
-BUILT heart 0 0
-BUILT heart 0 1
-BUILT diamond 0 1
-BUILT circle 0 1
-BUILT spade 0 1
-BUILT star 0 1
-BUILT heart 0 0
-BUILT diamond 0 0
-BUILT triangle 1 0
-BUILT star 0 1
-BUILT star 0 1
-BUILT triangle 0 0
-BUILT star 0 1
-BUILT circle 0 0
-BUILT heart 1 0
-BUILT spade 1 0
-BUILT spade 0 1
-BUILT triangle 0 1
-BUILT spade 0 1
-BUILT circle 0 1
-BUILT star 0 0
-BUILT diamond 1 0
-BUILT spade 1 0
-BUILT heart 1 0
-BUILT star 0 0
-BUILT star 0 1
-BUILT heart 0 1
-BUILT diamond 1 0
-BUILT triangle 0 1
-BUILT heart 1 0
-BUILT diamond 1 0
-BUILT triangle 1 0
-BUILT spade 1 0
-BUILT spade 0 1
-BUILT star 0 1
-BUILT triangle 1 0
-BUILT star 0 0
-BUILT heart 1 0
-BUILT diamond 0 0
-BUILT diamond 1 0
-BUILT heart 0 1
-BUILT circle 0 0
-BUILT star 1 0
-BUILT star 1 0
-BUILT spade 0 0
-BUILT spade 1 0
-BUILT triangle 0 1
-BUILT circle 0 0
-BUILT spade 0 0
-BUILT triangle 0 0
-BUILT star 1 0
-BUILT diamond 0 0
-BUILT triangle 0 0
-BUILT triangle 0 1
-BUILT spade 0 1
-BUILT circle 1 0
-BUILT circle 1 0
-BUILT diamond 1 0
-BUILT star 0 0
-BUILT circle 1 0
-BUILT heart 0 1
-BUILT triangle 1 0
-BUILT star 0 1
-BUILT star 1 0
-BUILT heart 0 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT star 0 0
-BUILT spade 0 1
-BUILT spade 0 1
-BUILT spade 0 0
-BUILT circle 1 0
-BUILT diamond 0 1
-BUILT diamond 0 1
-BUILT circle 0 1
-BUILT heart 1 0
-BUILT circle 1 0
-BUILT heart 0 1
-BUILT star 0 1
-BUILT heart 0 0
-BUILT star 0 0
-BUILT diamond 1 0
-BUILT spade 0 1
-BUILT diamond 1 0
-BUILT star 0 0
-BUILT spade 0 0
-BUILT spade 1 0
-BUILT star 0 1
-BUILT diamond 1 0
-BUILT diamond 1 0
-BUILT circle 0 1
-BUILT star 0 0
-BUILT triangle 1 0
-BUILT star 0 1
-BUILT star 0 1
-BUILT star 1 0
-BUILT diamond 0 1
-BUILT spade 0 0
-BUILT heart 0 0
-BUILT star 1 0
-BUILT spade 1 0
-BUILT star 1 0
-BUILT heart 0 0
-BUILT heart 0 0
-BUILT spade 0 1
-BUILT circle 0 0
-BUILT spade 1 0
-BUILT diamond 0 0
-BUILT diamond 0 1
-BUILT spade 1 0
-BUILT star 0 1
-BUILT star 0 0
-BUILT diamond 0 0
-BUILT triangle 0 0
-BUILT circle 1 0
-BUILT heart 1 0
-BUILT diamond 1 0
-BUILT star 1 0
-BUILT triangle 0 1
-BUILT star 0 1
-BUILT star 0 1
-BUILT star 0 0
-BUILT star 0 0
-BUILT star 1 0
-BUILT circle 1 0
-BUILT triangle 0 1
-BUILT heart 1 0
-BUILT circle 0 0
-BUILT spade 0 1
-BUILT circle 0 1
-BUILT diamond 0 0
-BUILT star 1 0
-BUILT circle 0 1
-BUILT diamond 0 0
-BUILT star 0 0
-BUILT star 1 0
-BUILT star 0 1
-BUILT circle 1 0
-BUILT circle 1 0
-BUILT diamond 0 0
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT triangle 0 1
-BUILT diamond 1 0
-BUILT star 0 0
-BUILT spade 0 0
-BUILT diamond 1 0
-BUILT heart 0 1
-BUILT diamond 0 0
-BUILT heart 0 1
-BUILT diamond 1 0
-BUILT triangle 1 0
-BUILT triangle 0 1
-BUILT spade 0 1
-BUILT circle 0 0
-BUILT diamond 1 0
-BUILT star 0 1
-BUILT star 1 0
-BUILT diamond 0 1
-BUILT diamond 1 0
-BUILT diamond 0 0
-BUILT heart 1 0
-BUILT heart 1 0
-BUILT heart 0 1
-BUILT circle 0 1
-BUILT diamond 1 0
-BUILT triangle 0 1
-BUILT heart 0 0
-BUILT heart 1 0
-BUILT diamond 0 1
-BUILT triangle 0 1
-BUILT circle 0 1
-BUILT triangle 0 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT triangle 1 0
-BUILT circle 1 0
-BUILT heart 1 0
-BUILT heart 1 0
-BUILT circle 0 1
-BUILT heart 0 1
-BUILT circle 1 0
-BUILT heart 0 0
-BUILT diamond 0 0
-BUILT diamond 0 0
-BUILT star 0 1
-BUILT heart 1 0
-BUILT heart 0 0
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT star 1 0
-BUILT triangle 1 0
-BUILT spade 1 0
-BUILT circle 1 0
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT star 1 0
-BUILT triangle 0 0
-BUILT heart 0 1
-BUILT circle 0 1
-BUILT spade 0 1
-BUILT circle 0 0
-BUILT heart 0 1
-BUILT star 1 0
-BUILT triangle 0 0
-BUILT circle 1 0
-BUILT triangle 0 1
-BUILT circle 1 0
-BUILT star 1 0
-BUILT circle 0 1
-BUILT circle 0 1
-BUILT star 1 0
-BUILT triangle 0 1
-BUILT star 0 0
-BUILT triangle 1 0
-BUILT circle 0 0
-BUILT triangle 0 1
-BUILT diamond 0 0
-BUILT diamond 1 0
-BUILT spade 0 1
-BUILT star 0 0
-BUILT heart 0 1
-BUILT heart 1 0
-BUILT star 1 0
-BUILT circle 1 0
-BUILT diamond 0 1
-BUILT triangle 0 0
-BUILT circle 0 0
-BUILT diamond 0 0
-BUILT heart 0 1
-BUILT triangle 0 1
-BUILT circle 0 1
-BUILT diamond 0 1
-BUILT heart 0 0
-BUILT heart 1 0
-BUILT spade 0 0
-BUILT star 1 0
-BUILT star 0 0
-BUILT diamond 1 0
-BUILT triangle 1 0
-BUILT diamond 1 0
-BUILT triangle 0 1
-BUILT heart 1 0
-BUILT heart 0 1
-BUILT heart 1 0
-BUILT star 0 1
-BUILT heart 0 0
-BUILT triangle 0 1
-BUILT circle 0 0
-BUILT triangle 0 0
-BUILT star 1 0
-BUILT circle 1 0
-BUILT heart 0 0
-BUILT circle 1 0
-BUILT heart 0 0
-BUILT diamond 0 1
-BUILT heart 1 0
-BUILT triangle 1 0
-BUILT heart 0 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT diamond 0 1
-BUILT heart 1 0
-BUILT spade 0 0
-BUILT star 1 0
-BUILT star 1 0
-BUILT spade 0 1
-BUILT heart 1 0
-BUILT diamond 0 0
-BUILT triangle 0 1
-BUILT spade 1 0
-BUILT triangle 0 0
-BUILT diamond 0 1
-BUILT spade 0 0
-BUILT diamond 1 0
-BUILT spade 0 1
-BUILT star 1 0
-BUILT diamond 1 0
-BUILT heart 1 0
-BUILT spade 1 0
-BUILT star 0 1
-BUILT diamond 0 0
-BUILT triangle 0 0
-BUILT circle 0 1
-BUILT star 1 0
-BUILT diamond 0 1
-BUILT star 0 1
-BUILT diamond 0 0
-BUILT spade 0 0
-BUILT spade 0 1
-BUILT spade 0 0
-BUILT spade 0 1
-BUILT spade 1 0
-BUILT star 0 0
-BUILT circle 0 0
-BUILT spade 0 1
-BUILT diamond 1 0
-BUILT spade 0 1
-BUILT triangle 1 0
-BUILT circle 0 1
-BUILT star 0 1
-BUILT diamond 0 0
-BUILT spade 0 0
-BUILT spade 0 1
-BUILT diamond 0 1
-BUILT circle 1 0
-BUILT spade 0 0
-BUILT heart 1 0
-BUILT heart 0 0
-BUILT circle 0 1
-BUILT circle 0 1
-BUILT heart 0 0
-BUILT circle 0 1
-BUILT diamond 0 1
-BUILT triangle 0 0
-BUILT spade 0 0
-BUILT triangle 0 1
-BUILT star 1 0
-BUILT heart 1 0
-BUILT diamond 0 0
-BUILT star 0 1
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT triangle 0 1
-BUILT heart 1 0
-BUILT circle 1 0
-BUILT diamond 0 1
-BUILT star 0 0
-BUILT diamond 0 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT circle 0 1
-BUILT star 0 1
-BUILT star 0 0
-BUILT circle 0 1
-BUILT triangle 0 1
-BUILT circle 0 0
-BUILT star 0 0
-BUILT spade 0 0
-BUILT star 0 1
-BUILT circle 0 0
-BUILT diamond 1 0
-BUILT star 1 0
-BUILT diamond 0 0
-BUILT spade 0 1
-BUILT circle 1 0
-BUILT circle 1 0
-BUILT spade 0 1
-BUILT diamond 1 0
-BUILT diamond 0 0
-BUILT triangle 0 0
-BUILT star 0 1
-BUILT diamond 0 0
-BUILT diamond 0 1
-BUILT spade 0 1
-BUILT triangle 0 1
-BUILT spade 0 0
-BUILT spade 0 0
-BUILT diamond 0 0
-BUILT triangle 0 1
-BUILT circle 1 0
-BUILT triangle 1 0
-BUILT heart 1 0
-BUILT circle 0 1
-BUILT diamond 0 0
-BUILT heart 1 0
-BUILT diamond 0 1
-BUILT diamond 0 1
-BUILT star 1 0
-BUILT triangle 0 1
-BUILT star 0 1
-BUILT diamond 0 0
-BUILT triangle 0 0
-BUILT triangle 1 0
-BUILT diamond 0 1
-BUILT circle 1 0
-BUILT triangle 0 0
-BUILT spade 1 0
-BUILT circle 0 0
-BUILT triangle 1 0
-BUILT spade 0 1
-BUILT triangle 0 1
-BUILT circle 0 0
-BUILT diamond 0 0
-BUILT spade 1 0
-BUILT diamond 1 0
-BUILT spade 0 1
-BUILT diamond 0 0
-BUILT triangle 0 0
-BUILT diamond 0 0
-BUILT triangle 0 1
-BUILT circle 1 0
-BUILT spade 1 0
-BUILT spade 0 0
-BUILT star 0 1
-BUILT star 1 0
-BUILT triangle 1 0
-BUILT triangle 1 0
-BUILT circle 0 0
-BUILT circle 0 0
-BUILT circle 0 0
-BUILT star 1 0
-BUILT heart 1 0
-BUILT diamond 0 1
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT heart 0 1
-BUILT star 1 0
-BUILT circle 0 1
-BUILT spade 1 0
-BUILT circle 0 0
-BUILT triangle 0 1
-BUILT heart 0 1
-BUILT heart 0 1
-BUILT star 0 0
-BUILT diamond 0 0
-BUILT circle 1 0
-BUILT heart 0 0
-BUILT circle 0 1
-BUILT star 1 0
-BUILT spade 1 0
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT spade 0 0
-BUILT triangle 1 0
-BUILT diamond 0 0
-BUILT spade 0 0
-BUILT heart 0 1
-BUILT diamond 0 1
-BUILT spade 1 0
-BUILT spade 0 1
-BUILT spade 0 0
-BUILT star 1 0
-BUILT diamond 0 1
-BUILT diamond 0 1
-BUILT star 0 0
-BUILT heart 0 1
-BUILT triangle 0 1
-BUILT circle 1 0
-BUILT triangle 1 0
-BUILT heart 0 0
-BUILT star 0 0
-BUILT triangle 1 0
-BUILT heart 0 0
-BUILT heart 0 0
-BUILT circle 0 0
-BUILT triangle 0 0
-BUILT heart 0 0
-BUILT diamond 0 0
-BUILT circle 1 0
-BUILT star 1 0
-BUILT spade 1 0
-BUILT heart 0 0
-BUILT star 0 1
-BUILT heart 1 0
-BUILT circle 0 1
-BUILT heart 0 0
-BUILT triangle 1 0
-BUILT triangle 0 0
-BUILT spade 1 0
-BUILT diamond 0 0
-BUILT circle 0 1
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT diamond 1 0
-BUILT spade 0 1
-BUILT diamond 0 0
-BUILT diamond 1 0
-BUILT triangle 0 0
-BUILT heart 1 0
-BUILT spade 1 0
-BUILT diamond 0 0
-BUILT spade 0 0
-BUILT diamond 0 0
-BUILT heart 1 0
-BUILT circle 0 1
-BUILT star 0 0
-BUILT triangle 0 1
-BUILT spade 0 1
-BUILT diamond 0 0
-BUILT circle 0 1
-BUILT star 0 0
-BUILT heart 1 0
-BUILT triangle 0 1
-BUILT spade 1 0
-BUILT spade 1 0
-BUILT heart 0 0
-BUILT triangle 0 1
-BUILT heart 0 1
-BUILT diamond 1 0
-BUILT diamond 1 0
-BUILT star 0 1
-BUILT star 0 1
-BUILT spade 0 1
-BUILT spade 0 0
-BUILT circle 1 0
-BUILT diamond 1 0
-BUILT star 0 1
-BUILT star 1 0
-BUILT circle 0 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT heart 0 1
-BUILT diamond 0 0
-BUILT spade 0 0
-BUILT circle 0 1
-BUILT circle 0 0
-BUILT star 0 0
-BUILT spade 1 0
-BUILT heart 1 0
-BUILT triangle 0 0
-BUILT diamond 0 1
-BUILT heart 0 0
-BUILT heart 0 1
-BUILT spade 0 0
-BUILT spade 0 1
-BUILT triangle 1 0
-BUILT star 0 0
-BUILT circle 0 1
-BUILT triangle 1 0
-BUILT circle 0 1
-BUILT spade 0 1
-BUILT spade 1 0
-BUILT circle 0 1
-BUILT heart 1 0
-BUILT star 1 0
-BUILT star 0 1
-BUILT heart 0 1
-BUILT diamond 0 1
-BUILT spade 0 0
-BUILT star 1 0
-BUILT heart 0 1
-BUILT heart 0 1
-BUILT circle 1 0
-BUILT triangle 0 1
-BUILT circle 0 1
-BUILT spade 1 0
-BUILT star 0 0
-BUILT star 0 0
-BUILT circle 0 0
-BUILT star 1 0
-BUILT star 1 0
-BUILT circle 0 1
-BUILT triangle 0 0
-BUILT circle 1 0
-BUILT heart 1 0
-BUILT star 0 0
-BUILT heart 1 0
-BUILT star 1 0
-BUILT heart 0 1
-BUILT circle 1 0
-BUILT spade 0 0
-BUILT star 1 0
-BUILT star 0 1
-BUILT circle 0 0
-BUILT star 0 0
-BUILT triangle 1 0
-BUILT circle 0 1
-BUILT star 1 0
-BUILT triangle 1 0
-BUILT heart 1 0
-BUILT heart 0 0
-BUILT heart 0 1
-BUILT circle 0 1
-BUILT triangle 0 1
-BUILT triangle 1 0
-BUILT star 0 0
-BUILT circle 0 1
-BUILT circle 1 0
-BUILT triangle 0 1
-BUILT star 0 1
-BUILT circle 0 1
-BUILT heart 0 1
-BUILT circle 1 0
-BUILT heart 1 0
-BUILT diamond 0 1
-BUILT spade 0 0
-BUILT circle 0 0
-BUILT star 1 0
-BUILT star 1 0
-BUILT star 0 1
-BUILT diamond 0 0
-BUILT diamond 0 0
-BUILT spade 0 1
-BUILT diamond 0 0
-BUILT triangle 1 0
-BUILT heart 0 0
-BUILT diamond 0 0
-BUILT heart 1 0
-BUILT diamond 1 0
-BUILT heart 1 0
-BUILT star 0 0
-BUILT circle 0 1
-BUILT heart 0 1
-BUILT circle 1 0
-BUILT star 0 0
-BUILT diamond 0 0
-BUILT spade 1 0
-BUILT diamond 0 1
-BUILT spade 0 0
-BUILT star 0 1
-BUILT triangle 0 1
-BUILT heart 1 0
-BUILT diamond 1 0
-BUILT diamond 0 0
-BUILT circle 1 0
-BUILT star 0 1
-BUILT diamond 0 0
-BUILT heart 0 1
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT diamond 0 1
-BUILT heart 0 1
-BUILT diamond 0 1
-BUILT star 1 0
-BUILT diamond 0 0
-BUILT diamond 0 1
-BUILT star 0 1
-BUILT triangle 0 1
-BUILT heart 0 1
-BUILT spade 0 1
-BUILT triangle 1 0
-BUILT spade 1 0
-BUILT star 0 0
-BUILT heart 0 0
-BUILT triangle 1 0
-BUILT circle 1 0
-BUILT star 1 0
-BUILT spade 1 0
-BUILT spade 0 1
-BUILT spade 0 0
-BUILT triangle 0 1
-BUILT diamond 0 0
-BUILT triangle 0 0
-BUILT star 1 0
-BUILT spade 0 0
-BUILT circle 0 1
-BUILT triangle 1 0
-BUILT triangle 1 0
-BUILT diamond 0 0
-BUILT circle 0 0
-BUILT star 0 0
-BUILT heart 0 0
-BUILT circle 0 1
-BUILT spade 0 0
-BUILT star 1 0
-BUILT heart 0 1
-BUILT heart 0 1
-BUILT star 0 1
-BUILT heart 0 0
-BUILT spade 1 0
-BUILT circle 1 0
-BUILT triangle 1 0
-BUILT star 0 0
-BUILT triangle 0 1
-BUILT circle 0 0
-BUILT star 0 0
-BUILT triangle 0 0
-BUILT circle 1 0
-BUILT heart 0 1
-BUILT circle 1 0
-BUILT triangle 0 0
-BUILT spade 0 0
-BUILT star 1 0
-BUILT heart 1 0
-BUILT star 0 1
-BUILT spade 1 0
-BUILT triangle 0 1
-BUILT heart 1 0
-BUILT heart 1 0
-BUILT heart 0 0
-BUILT circle 1 0
-BUILT triangle 1 0
-BUILT heart 1 0
-BUILT triangle 0 1
-BUILT star 0 1
-BUILT spade 0 1
-BUILT triangle 0 1
-BUILT circle 1 0
-BUILT circle 0 1
-BUILT circle 0 0
-BUILT diamond 0 0
-BUILT star 1 0
-BUILT circle 0 1
-BUILT diamond 0 1
-BUILT triangle 0 0
-BUILT spade 0 1
-BUILT triangle 1 0
-BUILT star 0 0
-BUILT diamond 0 0
-BUILT circle 0 1
-BUILT diamond 1 0
-BUILT heart 1 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT circle 1 0
-BUILT triangle 0 1
-BUILT heart 0 0
-BUILT diamond 0 0
-BUILT heart 1 0
-BUILT circle 0 1
-BUILT triangle 0 1
-BUILT heart 1 0
-BUILT diamond 1 0
-BUILT diamond 1 0
-BUILT star 1 0
-BUILT heart 0 0
-BUILT circle 1 0
-BUILT heart 0 0
-BUILT heart 1 0
-BUILT triangle 0 1
-BUILT heart 0 0
-BUILT triangle 0 1
-BUILT spade 0 1
-BUILT spade 1 0
-BUILT spade 0 1
-BUILT triangle 1 0
-BUILT triangle 1 0
-BUILT triangle 0 0
-BUILT spade 0 0
-BUILT circle 1 0
-BUILT star 0 0
-BUILT circle 1 0
-BUILT star 0 1
-BUILT circle 0 0
-BUILT heart 0 0
-BUILT star 0 0
-BUILT heart 0 0
-BUILT triangle 0 1
-BUILT circle 0 0
-BUILT star 0 1
-BUILT spade 0 0
-BUILT diamond 0 1
-BUILT triangle 0 1
-BUILT circle 1 0
-BUILT triangle 0 1
-BUILT spade 1 0
-BUILT heart 1 0
-BUILT circle 0 1
-BUILT circle 0 0
-BUILT diamond 0 1
-BUILT star 1 0
-BUILT circle 0 1
-BUILT circle 1 0
-BUILT diamond 0 0
-BUILT star 1 0
-BUILT heart 1 0
-BUILT circle 0 0
-BUILT triangle 0 0
-BUILT heart 1 0
-BUILT triangle 0 1
-BUILT spade 0 1
-BUILT triangle 0 1
-BUILT heart 0 1
-BUILT heart 0 0
-BUILT star 0 1
-BUILT spade 1 0
-BUILT star 0 1
-BUILT circle 1 0
-BUILT heart 1 0
-BUILT triangle 0 0
-BUILT triangle 0 0
-BUILT heart 0 1
-BUILT star 1 0
-BUILT diamond 1 0
-BUILT triangle 1 0
-BUILT spade 1 0
-BUILT heart 1 0
-BUILT diamond 1 0
-BUILT circle 0 0
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT diamond 0 1
-BUILT circle 0 0
-BUILT star 0 0
-BUILT circle 0 1
-BUILT heart 0 1
-BUILT diamond 1 0
-BUILT star 0 0
-BUILT heart 0 1
-BUILT spade 1 0
-BUILT star 1 0
-BUILT circle 0 0
-BUILT star 1 0
-BUILT spade 1 0
-BUILT star 0 0
-BUILT circle 0 0
-BUILT star 0 0
-BUILT heart 0 1
-BUILT heart 0 0
-BUILT heart 1 0
-BUILT triangle 1 0
-BUILT spade 1 0
-BUILT diamond 0 1
-BUILT circle 0 0
-BUILT triangle 0 0
-BUILT spade 1 0
-BUILT circle 1 0
-BUILT triangle 0 1
-BUILT star 0 1
-BUILT diamond 0 0
-BUILT circle 0 0
-BUILT heart 1 0
-BUILT diamond 0 0
-BUILT circle 1 0
-BUILT triangle 1 0
-BUILT diamond 1 0
-BUILT heart 0 1
-BUILT triangle 0 1
-BUILT diamond 0 1
-BUILT circle 0 1
-BUILT heart 1 0
-BUILT star 0 0
-BUILT heart 0 0
-BUILT heart 0 0
-BUILT spade 0 0
-BUILT spade 0 1
-BUILT diamond 0 1
-BUILT star 1 0
-BUILT heart 0 1
-BUILT heart 0 1
-BUILT circle 0 0
-BUILT heart 0 0
-BUILT heart 1 0
-BUILT spade 0 1
-BUILT triangle 0 0
-BUILT circle 1 0
-BUILT diamond 0 1
-BUILT diamond 1 0
-BUILT heart 1 0
-BUILT diamond 1 0
-BUILT spade 0 0
-BUILT triangle 0 0
-BUILT triangle 0 1
-BUILT diamond 0 0
-BUILT spade 0 1
-BUILT heart 1 0
-BUILT star 0 0
-BUILT star 0 0
-BUILT triangle 0 1
-BUILT triangle 0 1
-BUILT diamond 0 1
-BUILT triangle 1 0
-BUILT diamond 0 0
-BUILT heart 1 0
-BUILT star 1 0
-BUILT circle 0 1
-BUILT circle 0 1
-BUILT star 0 1
-BUILT spade 1 0
-BUILT triangle 0 0
-BUILT heart 1 0
-BUILT spade 0 1
-BUILT heart 0 1
-BUILT spade 1 0
-BUILT diamond 0 1
-BUILT triangle 0 0
-BUILT circle 0 1
-BUILT star 0 0
-BUILT diamond 1 0
-BUILT triangle 0 1
-BUILT diamond 0 1
-BUILT triangle 0 0
-BUILT spade 0 0
-BUILT spade 0 1
-BUILT circle 0 1
-BUILT circle 0 0
-BUILT diamond 0 1
-BUILT star 0 1
-BUILT circle 1 0
-BUILT triangle 0 0
-BUILT circle 0 0
-BUILT diamond 1 0
-BUILT triangle 1 0
-BUILT heart 1 0
-BUILT star 0 1
-BUILT heart 1 0
-BUILT spade 0 1
-BUILT star 1 0
-BUILT spade 1 0
-BUILT diamond 1 0
-BUILT triangle 0 0
-BUILT triangle 0 0
-BUILT heart 1 0
-BUILT circle 0 0
-BUILT star 0 0
-BUILT heart 0 0
-BUILT spade 1 0
-BUILT heart 0 0
-BUILT spade 0 1
-BUILT diamond 1 0
-BUILT star 1 0
-BUILT star 0 1
-BUILT triangle 0 1
-BUILT circle 1 0
-BUILT triangle 0 0
-BUILT circle 0 0
-BUILT star 1 0
-BUILT heart 0 1
-BUILT star 0 0
-BUILT triangle 1 0
-BUILT heart 0 1
-BUILT diamond 1 0
-BUILT heart 0 1
-BUILT triangle 0 1
-BUILT circle 0 0
-BUILT diamond 1 0
-BUILT diamond 0 1
-BUILT circle 0 0
-BUILT heart 1 0
-BUILT star 0 1
-BUILT star 0 1
-BUILT heart 0 0
-BUILT triangle 0 1
-BUILT circle 1 0
-BUILT triangle 0 1
-BUILT heart 0 0
-BUILT heart 0 1
-BUILT spade 0 1
-BUILT diamond 0 1
-BUILT star 0 1
-BUILT heart 0 0
-BUILT star 0 1
-BUILT triangle 1 0
-BUILT star 0 0
-BUILT diamond 0 1
-BUILT triangle 0 0
-BUILT heart 0 0
-BUILT star 1 0
-BUILT heart 0 0
-BUILT spade 0 1
-BUILT heart 1 0
-BUILT triangle 1 0
-BUILT diamond 0 1
-BUILT circle 1 0
-BUILT triangle 1 0
-BUILT star 0 1
-BUILT diamond 0 1
-BUILT diamond 1 0
-BUILT star 0 1
-BUILT diamond 1 0
-BUILT triangle 0 1
-BUILT spade 0 0
-BUILT diamond 0 0
-BUILT diamond 1 0
-BUILT star 0 0
-BUILT circle 0 0
-BUILT triangle 1 0
-BUILT triangle 1 0
-BUILT heart 0 0
-BUILT triangle 0 1
-BUILT triangle 0 1
-BUILT spade 1 0
-BUILT diamond 0 0
-BUILT circle 0 1
-BUILT circle 1 0
-BUILT diamond 0 0
-BUILT spade 0 0
-BUILT heart 0 0
-BUILT heart 0 0
-BUILT star 0 0
-BUILT heart 0 1
-BUILT star 0 0
-BUILT star 0 1
-20000 train
-2000 test
+[n_train] 5000
+[n_test] 1000 test
+[task_ids] 5000 -> 5050
+[n_vocab] 74
 [iter]    0
-[loss]    26.0542
-[tst_rew] -0.8900
-<s> reach left left cell left *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
-<s> cell cell circle to blue *invalid* </s>
-<s> square the with of *invalid* of circle *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+[loss]    29.5914
+[tst_rew] -0.8500
+<s> reach diamond diamond of triangle *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+<s> cell cell go to circle *invalid* star *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+<s> reach the right below *invalid* the circle *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
 
 [iter]    1
-[loss]    18.4343
-[trn_rew] -0.5684
-[tst_rew] -0.7200
+[loss]    20.3486
+[trn_rew] -0.7297
+[tst_rew] -0.8400
 <s> reach above to </s>
-<s> reach above one with of *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
-<s> reach cell to left the *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+<s> reach above square with triangle *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+<s> reach cell to triangle the *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
 
 [iter]    2
-[loss]    16.9943
-[trn_rew] -0.6057
-[tst_rew] -0.8100
-<s> above triangle </s>
-<s> reach cell cell the </s>
-<s> go left the left of of spade the *invalid* with *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+[loss]    18.8831
+[trn_rew] -0.5053
+[tst_rew] -0.5200
+<s> above the </s>
+<s> reach cell cell the star of </s>
+<s> go left the triangle triangle diamond spade the *invalid* orange *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
 
 [iter]    3
-[loss]    15.8472
-[trn_rew] -0.4712
-[tst_rew] -0.5100
-<s> reach cell triangle above </s>
-<s> reach heart the left diamond UNK </s>
-<s> reach left to above the </s>
+[loss]    17.5323
+[trn_rew] -0.4563
+[tst_rew] -0.2800
+<s> reach cell below of </s>
+<s> reach space the diamond right </s>
+<s> reach cell to cell spade </s>
 
 [iter]    4
-[loss]    14.3531
-[trn_rew] -0.3745
-[tst_rew] -0.4700
-<s> the above the of the </s>
-<s> reach the above cell the left </s>
-<s> reach cell above diamond heart </s>
+[loss]    16.1866
+[trn_rew] -0.4029
+[tst_rew] -0.3500
+<s> cell square below below the *invalid* spade *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+<s> reach the star left the of </s>
+<s> reach cell above right circle left *invalid* </s>
 
 [iter]    5
-[loss]    13.0427
-[trn_rew] -0.3529
-[tst_rew] -0.1800
-<s> the square above *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
-<s> cell cell one to </s>
-<s> reach cell to star triangle </s>
+[loss]    14.7355
+[trn_rew] -0.3488
+[tst_rew] -0.3200
+<s> move one above *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+<s> cell cell one to *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
+<s> reach cell to cell the triangle </s>
 
 [iter]    6
-[loss]    11.5557
-[trn_rew] -0.2506
-[tst_rew] -0.2200
-<s> reach cell to the spade </s>
-<s> the to left of the heart </s>
-<s> reach cell with left of diamond </s>
+[loss]    13.3297
+[trn_rew] -0.3398
+[tst_rew] -0.4100
+<s> reach cell to the heart </s>
+<s> the to triangle the spade triangle </s>
+<s> reach cell blue diamond </s>
 
 [iter]    7
-[loss]    10.2602
-[trn_rew] -0.2420
-[tst_rew] -0.1600
-<s> go square orange </s>
-<s> go to star </s>
-<s> reach cell circle above triangle </s>
+[loss]    11.7990
+[trn_rew] -0.2437
+[tst_rew] -0.1400
+<s> go square directly left of the to the left orange triangle </s>
+<s> go the above </s>
+<s> reach cell to the the of the </s>
 
 [iter]    8
-[loss]    9.3926
-[trn_rew] -0.1886
-[tst_rew] -0.1000
-<s> reach cell above the diamond </s>
+[loss]    10.5312
+[trn_rew] -0.2220
+[tst_rew] -0.3100
+<s> reach cell above the circle </s>
 <s> reach above blue star </s>
-<s> reach left blue to the left of the diamond </s>
+<s> reach diamond green spade </s>
 
 [iter]    9
-[loss]    8.7932
-[trn_rew] -0.1513
-[tst_rew] -0.2000
-<s> reach cell to the left of the star </s>
-<s> reach heart to heart </s>
-<s> reach one cell above spade </s>
+[loss]    9.7173
+[trn_rew] -0.2589
+[tst_rew] -0.2900
+<s> reach the cell below the star </s>
+<s> reach space to the left of spade circle </s>
+<s> reach one left of spade </s>
 
 [iter]    10
-[loss]    8.2581
-[trn_rew] -0.2414
-[tst_rew] -0.4000
-<s> reach square above the diamond </s>
-<s> reach the cell to the left diamond </s>
-<s> square above the triangle </s>
+[loss]    9.1265
+[trn_rew] -0.2107
+[tst_rew] -0.0900
+<s> reach square above triangle </s>
+<s> reach the cell to the circle teal the right of the circle </s>
+<s> reach cell below the star </s>
 
 [iter]    11
-[loss]    7.9455
-[trn_rew] -0.1439
-[tst_rew] -0.2700
-<s> reach cell to the left of triangle </s>
-<s> cell above the spade </s>
-<s> reach cell to the left of the circle </s>
+[loss]    8.8119
+[trn_rew] -0.1468
+[tst_rew] -0.4600
+<s> reach cell to the right of triangle </s>
+<s> cell one left of star </s>
+<s> reach cell to the right of the heart </s>
 
 [iter]    12
-[loss]    7.7193
-[trn_rew] -0.0952
+[loss]    8.5826
+[trn_rew] -0.1967
 [tst_rew] -0.1600
 <s> above heart </s>
-<s> heart cell on the left of the </s>
+<s> move cell directly cell *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid* *invalid*
 <s> reach the spade </s>
 
 [iter]    13
-[loss]    7.4488
-[trn_rew] -0.1119
-[tst_rew] -0.1900
-<s> reach the cell one above circle </s>
-<s> reach square above the star </s>
-<s> cell one left of diamond </s>
+[loss]    8.3269
+[trn_rew] -0.1820
+[tst_rew] -0.3000
+<s> reach the cell one below circle </s>
+<s> reach square one right of triangle </s>
+<s> cell one left of circle </s>
 
 [iter]    14
-[loss]    7.3803
-[trn_rew] -0.1029
-[tst_rew] -0.2000
-<s> reach the spade </s>
-<s> reach cell above diamond </s>
-<s> reach the cell to the left of the star </s>
+[loss]    8.1830
+[trn_rew] -0.1988
+[tst_rew] -0.1900
+<s> reach the triangle </s>
+<s> reach cell of circle </s>
+<s> reach the cell to the is blue the diamond </s>
 
 [iter]    15
-[loss]    7.2543
-[trn_rew] -0.1262
-[tst_rew] -0.1400
+[loss]    8.0099
+[trn_rew] -0.2080
+[tst_rew] -0.1700
 <s> cell one above star </s>
-<s> reach the cell with the spade </s>
-<s> reach the cell one above the heart </s>
+<s> reach the cell with the diamond </s>
+<s> reach the cell one below the is star </s>
 
 [iter]    16
-[loss]    7.1735
-[trn_rew] -0.1369
+[loss]    7.8670
+[trn_rew] -0.1900
 [tst_rew] -0.2800
-<s> reach cell to spade is </s>
-<s> square above the heart </s>
-<s> reach cell one above orange star </s>
+<s> reach cell below circle </s>
+<s> reach cell 1 below spade </s>
+<s> reach cell one above orange diamond </s>
 
 [iter]    17
-[loss]    7.0693
-[trn_rew] -0.0817
-[tst_rew] -0.0300
-<s> reach the cell one above the star </s>
-<s> one space left of diamond </s>
-<s> one space diamond </s>
+[loss]    7.8109
+[trn_rew] -0.1747
+[tst_rew] -0.3600
+<s> reach the cell one the left of the star </s>
+<s> reach the cell to the left of the triangle </s>
+<s> reach the orange star </s>
 
 [iter]    18
-[loss]    7.0756
-[trn_rew] -0.0677
-[tst_rew] -0.1600
-<s> reach heart </s>
+[loss]    7.7386
+[trn_rew] -0.1942
+[tst_rew] -0.2300
+<s> reach space one below heart </s>
 <s> above heart </s>
-<s> reach the blue star </s>
+<s> reach cell with star </s>
 
 [iter]    19
-[loss]    6.9919
-[trn_rew] -0.1202
-[tst_rew] -0.0300
-<s> reach the cell that above is </s>
-<s> reach square above star </s>
-<s> reach cell above heart </s>
+[loss]    7.6313
+[trn_rew] -0.1426
+[tst_rew] -0.1500
+<s> reach the cell to the right of the star </s>
+<s> reach square below star </s>
+<s> reach cell of heart </s>
 
 [iter]    20
-[loss]    6.9012
-[trn_rew] -0.0875
-[tst_rew] -0.1800
-<s> reach the cell with the heart </s>
-<s> the cell with triangle </s>
-<s> left of star </s>
+[loss]    7.6297
+[trn_rew] -0.1921
+[tst_rew] -0.1400
+<s> reach the cell to the right of the circle </s>
+<s> move to the star </s>
+<s> cell one left of heart </s>
 
 [iter]    21
-[loss]    6.9317
-[trn_rew] -0.0952
-[tst_rew] -0.2700
-<s> reach the blue heart </s>
-<s> above circle </s>
-<s> reach circle cell </s>
+[loss]    7.5364
+[trn_rew] -0.1936
+[tst_rew] -0.1200
+<s> reach cell with spade </s>
+<s> square to the left of the triangle </s>
+<s> reach space to cell right of triangle </s>
 
 [iter]    22
-[loss]    6.9017
-[trn_rew] -0.0808
-[tst_rew] -0.0400
-<s> reach cell on left of triangle </s>
-<s> reach the star </s>
-<s> reach the square that is to the left of the triangle </s>
+[loss]    7.5376
+[trn_rew] -0.1731
+[tst_rew] -0.1700
+<s> reach cell on right of triangle </s>
+<s> reach the square that is to the right of the spade </s>
+<s> reach the square that is to the right of the spade </s>
 
 [iter]    23
-[loss]    6.8696
-[trn_rew] -0.0381
-[tst_rew] -0.3400
-<s> reach the space to the left of the diamond </s>
-<s> reach the cell one above the circle </s>
-<s> cell above star </s>
+[loss]    7.5068
+[trn_rew] -0.1016
+[tst_rew] -0.2500
+<s> one to left of the spade </s>
+<s> reach cell above triangle </s>
+<s> cell above diamond </s>
 
 [iter]    24
-[loss]    6.8911
-[trn_rew] -0.0572
-[tst_rew] -0.2600
-<s> reach the blue diamond </s>
-<s> reach cell to the left of the spade </s>
+[loss]    7.4677
+[trn_rew] -0.2013
+[tst_rew] -0.2900
+<s> reach the heart cell </s>
+<s> reach cell to right of spade </s>
 <s> reach square left of triangle </s>
 
 [iter]    25
-[loss]    6.8776
-[trn_rew] -0.0357
-[tst_rew] -0.2100
-<s> reach cell with heart </s>
-<s> cell with orange star </s>
-<s> reach the diamond </s>
+[loss]    7.4642
+[trn_rew] -0.1510
+[tst_rew] -0.1600
+<s> reach cell right of triangle </s>
+<s> cell with blue star </s>
+<s> reach the blue star </s>
 
 [iter]    26
-[loss]    6.8356
-[trn_rew] -0.0486
-[tst_rew] -0.0600
-<s> reach cell one above spade </s>
-<s> reach cell above the spade </s>
-<s> reach cell above heart </s>
+[loss]    7.4701
+[trn_rew] -0.1553
+[tst_rew] -0.2300
+<s> reach cell one above triangle </s>
+<s> reach the cell to the left of the spade </s>
+<s> reach cell left of star </s>
 
 [iter]    27
-[loss]    6.8489
-[trn_rew] -0.0328
-[tst_rew] -0.2900
-<s> reach the diamond cell </s>
-<s> reach the triangle </s>
-<s> reach the blue diamond </s>
+[loss]    7.4287
+[trn_rew] -0.1102
+[tst_rew] 0.1200
+<s> reach cell on left of triangle </s>
+<s> reach the cell below star </s>
+<s> reach the space to the left of the heart </s>
 
 [iter]    28
-[loss]    6.8210
-[trn_rew] -0.0749
-[tst_rew] -0.2400
-<s> reach one above heart </s>
-<s> cell above diamond </s>
-<s> cell above circle </s>
+[loss]    7.3394
+[trn_rew] -0.0606
+[tst_rew] -0.4800
+<s> reach square one right of heart </s>
+<s> cell one right of star </s>
+<s> cell one right of star </s>
 
 [iter]    29
-[loss]    6.8230
-[trn_rew] -0.0106
-[tst_rew] -0.1800
-<s> reach the star </s>
-<s> cell with star </s>
-<s> reach the cell above the diamond </s>
+[loss]    7.3949
+[trn_rew] -0.1344
+[tst_rew] -0.1300
+<s> reach the cell above the triangle </s>
+<s> square above triangle </s>
+<s> reach the cell to the right of the heart </s>
 
 [iter]    30
-[loss]    6.7877
-[trn_rew] 0.0024
-[tst_rew] -0.1700
-<s> reach cell of diamond </s>
-<s> reach one above circle </s>
-<s> go to the cell with the circle </s>
+[loss]    7.3899
+[trn_rew] -0.0939
+[tst_rew] -0.2000
+<s> reach cell to right of spade </s>
+<s> reach one above spade </s>
+<s> go to the cell with the heart </s>
 
 [iter]    31
-[loss]    6.7922
-[trn_rew] -0.0131
-[tst_rew] -0.1200
-<s> the cell above the spade </s>
-<s> reach cell with diamond </s>
-<s> reach cell on left of triangle </s>
+[loss]    7.3460
+[trn_rew] -0.0929
+[tst_rew] -0.3000
+<s> move one cell to right of spade </s>
+<s> reach cell with blue diamond </s>
+<s> reach cell directly below green star </s>
 
 [iter]    32
-[loss]    6.7706
-[trn_rew] -0.0247
-[tst_rew] -0.2800
-<s> reach one above spade </s>
-<s> reach the blue star </s>
-<s> reach cell on left of heart </s>
-
-[iter]    33
-[loss]    6.7701
-[trn_rew] -0.0962
-[tst_rew] -0.1400
-<s> move to the diamond </s>
-<s> square above the star </s>
-<s> reach cell to spade </s>
-
-[iter]    34
-[loss]    6.8066
-[trn_rew] 0.0171
-[tst_rew] -0.1700
-<s> reach the spade </s>
-<s> reach cell above diamond </s>
-<s> reach the space to the left of the spade </s>
-
-[iter]    35
-[loss]    6.8428
-[trn_rew] 0.0074
-[tst_rew] -0.2200
-<s> reach the space to the left of the diamond </s>
-<s> reach heart cell </s>
-<s> reach the cell above the diamond </s>
-
-[iter]    36
-[loss]    6.8239
-[trn_rew] -0.0368
-[tst_rew] -0.3000
-<s> reach the cell to the left of the diamond </s>
-<s> one space to the left of the heart </s>
-<s> reach the blue heart </s>
-
-[iter]    37
-[loss]    6.7887
-[trn_rew] 0.0215
-[tst_rew] -0.1200
-<s> reach spade </s>
-<s> reach spade </s>
+[loss]    7.3027
+[trn_rew] -0.0708
+[tst_rew] -0.2700
+<s> reach one above triangle </s>
+<s> reach the space below the star </s>
 <s> reach cell on left of triangle </s>
 
+[iter]    33
+[loss]    7.2892
+[trn_rew] -0.0890
+[tst_rew] -0.3000
+<s> the cell above the star </s>
+<s> reach the cell one below heart </s>
+<s> reach cell to right of spade </s>
+
+[iter]    34
+[loss]    7.2705
+[trn_rew] -0.0823
+[tst_rew] -0.2500
+<s> reach the triangle </s>
+<s> reach cell above blue diamond </s>
+<s> reach the space below the heart </s>
+
+[iter]    35
+[loss]    7.2906
+[trn_rew] -0.1588
+[tst_rew] -0.3600
+<s> reach the triangle </s>
+<s> reach spade triangle </s>
+<s> reach the cell one below heart </s>
+
+[iter]    36
+[loss]    7.3279
+[trn_rew] -0.1215
+[tst_rew] -0.0200
+<s> reach the cell to the right of the circle </s>
+<s> reach the cell one below spade </s>
+<s> reach the circle star </s>
+
+[iter]    37
+[loss]    7.2863
+[trn_rew] -0.1214
+[tst_rew] -0.2300
+<s> reach spade </s>
+<s> reach spade </s>
+<s> reach cell directly below green diamond </s>
+
 [iter]    38
-[loss]    6.7485
-[trn_rew] 0.0407
-[tst_rew] 0.1000
-<s> reach cell to spade </s>
-<s> one cell left of circle </s>
-<s> cell with star </s>
+[loss]    7.2591
+[trn_rew] -0.0755
+[tst_rew] -0.2300
+<s> reach diamond </s>
+<s> reach cell with spade </s>
+<s> cell above star </s>
 
 [iter]    39
-[loss]    6.7454
-[trn_rew] 0.0232
-[tst_rew] -0.3300
-<s> reach cell above star </s>
-<s> reach the cell one above the triangle </s>
-<s> one space to the left of the triangle </s>
+[loss]    7.2432
+[trn_rew] -0.0425
+[tst_rew] -0.4100
+<s> reach the cell </s>
+<s> reach the cell one above heart </s>
+<s> reach the cell one below circle </s>
 
 [iter]    40
-[loss]    6.7236
-[trn_rew] 0.0183
-[tst_rew] -0.0600
-<s> the cell above the heart </s>
-<s> cell above spade </s>
-<s> reach the cell with the triangle </s>
+[loss]    7.2430
+[trn_rew] -0.0851
+[tst_rew] -0.3900
+<s> left of star </s>
+<s> cell above the spade </s>
+<s> reach spade </s>
 
 [iter]    41
-[loss]    6.7390
-[trn_rew] 0.0657
-[tst_rew] -0.1700
-<s> reach the square that is to the left of the circle </s>
-<s> reach the cell above the triangle </s>
-<s> reach the diamond </s>
+[loss]    7.2732
+[trn_rew] -0.0791
+[tst_rew] 0.0400
+<s> reach the square that is to the right of the orange triangle </s>
+<s> reach the cell one below triangle </s>
+<s> reach cell directly below green star </s>
 
 [iter]    42
-[loss]    6.7430
-[trn_rew] 0.0013
-[tst_rew] -0.1900
-<s> reach the diamond </s>
-<s> reach cell one above heart </s>
+[loss]    7.2743
+[trn_rew] -0.0419
+[tst_rew] -0.1700
+<s> reach the blue star </s>
+<s> reach cell above the spade </s>
 <s> the cell above the circle </s>
 
 [iter]    43
-[loss]    6.7734
-[trn_rew] 0.0804
-[tst_rew] -0.2100
-<s> reach the cell above the spade </s>
+[loss]    7.2197
+[trn_rew] -0.0947
+[tst_rew] -0.0100
+<s> reach the cell below the triangle </s>
 <s> cell above triangle </s>
-<s> above the triangle </s>
+<s> cell below the triangle </s>
 
 [iter]    44
-[loss]    6.7633
-[trn_rew] 0.1126
-[tst_rew] -0.0600
-<s> one cell left of star </s>
-<s> go to the diamond </s>
-<s> cell above circle </s>
+[loss]    7.2156
+[trn_rew] -0.0585
+[tst_rew] -0.0700
+<s> square above the triangle </s>
+<s> go to the circle </s>
+<s> cell one right of circle </s>
 
 [iter]    45
-[loss]    6.7424
-[trn_rew] 0.0111
-[tst_rew] -0.1500
-<s> reach cell one above star </s>
-<s> reach circle </s>
-<s> above the heart </s>
+[loss]    7.2181
+[trn_rew] 0.0033
+[tst_rew] -0.2700
+<s> reach the cell to the right of the heart </s>
+<s> reach space below spade </s>
+<s> reach cell to right of spade </s>
 
 [iter]    46
-[loss]    6.7705
-[trn_rew] 0.0378
-[tst_rew] -0.1200
-<s> reach cell above the triangle </s>
-<s> reach the cell with the circle </s>
-<s> reach cell above the triangle </s>
+[loss]    7.1924
+[trn_rew] -0.0536
+[tst_rew] -0.2200
+<s> reach cell one above diamond </s>
+<s> reach cell to right of heart </s>
+<s> reach cell above diamond </s>
 
 [iter]    47
-[loss]    6.7286
-[trn_rew] 0.0696
-[tst_rew] -0.0300
-<s> left of spade </s>
-<s> reach the cell above the diamond </s>
-<s> reach cell with star </s>
+[loss]    7.1878
+[trn_rew] -0.1278
+[tst_rew] 0.1100
+<s> cell above spade </s>
+<s> reach the cell above the right </s>
+<s> reach cell directly below green star </s>
 
 [iter]    48
-[loss]    6.6896
-[trn_rew] 0.0761
-[tst_rew] -0.1000
-<s> reach the diamond </s>
-<s> reach square to the left of triangle </s>
-<s> the cell above the heart </s>
+[loss]    7.1962
+[trn_rew] -0.0604
+[tst_rew] -0.1900
+<s> reach the blue diamond </s>
+<s> reach square to the left of diamond </s>
+<s> the cell where diamond is </s>
 
 [iter]    49
-[loss]    6.7195
-[trn_rew] 0.1290
-[tst_rew] -0.5300
-<s> reach cell above the spade </s>
-<s> cell with diamond </s>
-<s> reach spade </s>
+[loss]    7.2041
+[trn_rew] -0.0289
+[tst_rew] 0.1200
+<s> reach square above spade </s>
+<s> above heart </s>
+<s> reach space below star </s>
 
 [iter]    50
-[loss]    6.7013
-[trn_rew] 0.0464
-[tst_rew] -0.1000
-<s> reach the heart cell </s>
-<s> reach the square that is to the left of the circle </s>
-<s> above triangle </s>
+[loss]    7.2084
+[trn_rew] 0.0008
+[tst_rew] -0.1700
+<s> reach the spade cell </s>
+<s> reach the square that is to the right of the orange diamond </s>
+<s> square above the spade </s>
 
 [iter]    51
-[loss]    6.7166
-[trn_rew] 0.0308
-[tst_rew] -0.0600
-<s> reach cell with the spade </s>
-<s> above spade </s>
-<s> left of spade </s>
+[loss]    7.2027
+[trn_rew] -0.0073
+[tst_rew] -0.1800
+<s> reach cell right of triangle </s>
+<s> square above the star </s>
+<s> cell below the triangle </s>
 
 [iter]    52
-[loss]    6.6579
-[trn_rew] 0.1130
-[tst_rew] -0.0700
-<s> move to the triangle </s>
-<s> above the spade </s>
-<s> reach cell one above triangle </s>
+[loss]    7.1520
+[trn_rew] -0.0015
+[tst_rew] -0.3900
+<s> to the left of the spade </s>
+<s> cell above triangle </s>
+<s> reach cell one above diamond </s>
 
 [iter]    53
-[loss]    6.6887
-[trn_rew] 0.1273
-[tst_rew] -0.1200
-<s> reach the star </s>
-<s> reach the cell above the diamond </s>
+[loss]    7.1750
+[trn_rew] 0.0322
+[tst_rew] -0.0200
+<s> reach the square that is to the right of the orange triangle </s>
+<s> reach the cell below the circle </s>
 <s> reach cell one above heart </s>
 
 [iter]    54
-[loss]    6.6918
-[trn_rew] 0.1298
-[tst_rew] -0.1100
-<s> reach the cell one above the circle </s>
+[loss]    7.1462
+[trn_rew] 0.0371
+[tst_rew] -0.1700
+<s> reach the cell one below triangle </s>
 <s> reach the blue circle </s>
-<s> go to diamond </s>
+<s> go to spade </s>
 
 [iter]    55
-[loss]    6.7017
-[trn_rew] 0.1775
-[tst_rew] 0.1600
-<s> reach the spade </s>
-<s> reach cell with blue spade </s>
-<s> reach cell above triangle </s>
+[loss]    7.0955
+[trn_rew] 0.0665
+[tst_rew] -0.0400
+<s> reach the cell to the left of the triangle </s>
+<s> reach the triangle cell </s>
+<s> reach cell above diamond </s>
 
 [iter]    56
-[loss]    6.6934
-[trn_rew] 0.1170
-[tst_rew] -0.0800
-<s> the diamond cell </s>
-<s> reach the diamond </s>
-<s> reach cell above circle </s>
+[loss]    7.1273
+[trn_rew] 0.0834
+[tst_rew] -0.0400
+<s> the right of the star </s>
+<s> reach the blue star </s>
+<s> reach cell below circle </s>
 
 [iter]    57
-[loss]    6.7064
-[trn_rew] 0.1405
-[tst_rew] 0.1100
-<s> reach the cell to the left of the triangle </s>
-<s> go to the cell to the left of the triangle </s>
-<s> above triangle </s>
+[loss]    7.0794
+[trn_rew] 0.0153
+[tst_rew] -0.0300
+<s> reach the cell below the diamond </s>
+<s> left of spade </s>
+<s> reach cell with the spade </s>
 
 [iter]    58
-[loss]    6.6533
-[trn_rew] 0.2307
-[tst_rew] -0.2600
-<s> go to the cell with the triangle </s>
-<s> reach the cell with the spade </s>
-<s> cell with diamond </s>
+[loss]    7.1485
+[trn_rew] 0.0540
+[tst_rew] -0.1300
+<s> go to the cell to the left of the triangle </s>
+<s> reach the cell to the left of the circle </s>
+<s> cell to the heart </s>
 
 [iter]    59
-[loss]    6.6745
-[trn_rew] 0.2464
-[tst_rew] -0.0500
-<s> reach the heart </s>
-<s> reach cell above the triangle </s>
-<s> reach cell above the triangle </s>
+[loss]    7.1628
+[trn_rew] 0.1180
+[tst_rew] -0.0300
+<s> reach the spade </s>
+<s> reach cell to the left of the heart </s>
+<s> reach cell below the star </s>
 
 [iter]    60
-[loss]    6.6766
-[trn_rew] 0.2145
-[tst_rew] 0.0000
-<s> reach the heart cell </s>
-<s> go to the cell to the left of the circle </s>
-<s> cell above heart </s>
+[loss]    7.1607
+[trn_rew] 0.0821
+[tst_rew] 0.1800
+<s> reach the triangle </s>
+<s> go to the cell below the triangle </s>
+<s> the cell above the diamond </s>
 
 [iter]    61
-[loss]    6.6555
-[trn_rew] 0.2328
-[tst_rew] 0.0500
-<s> reach cell above heart </s>
-<s> the cell above the spade </s>
-<s> reach cell left of star </s>
+[loss]    7.1503
+[trn_rew] 0.1323
+[tst_rew] -0.2500
+<s> reach cell one below the heart </s>
+<s> left of the heart </s>
+<s> reach cell to right of heart </s>
 
 [iter]    62
-[loss]    6.7002
-[trn_rew] 0.2875
-[tst_rew] 0.0900
-<s> reach cell to the left of the triangle </s>
-<s> reach cell above triangle </s>
-<s> reach cell one above circle </s>
+[loss]    7.1537
+[trn_rew] 0.0823
+[tst_rew] 0.1000
+<s> reach cell 1 below star </s>
+<s> reach cell left of triangle </s>
+<s> reach cell one above is </s>
 
 [iter]    63
-[loss]    6.6431
-[trn_rew] 0.3330
-[tst_rew] 0.1300
-<s> the cell where left of circle </s>
-<s> reach the cell with the spade </s>
-<s> reach cell to the left of the star </s>
+[loss]    7.1382
+[trn_rew] 0.1000
+[tst_rew] 0.0300
+<s> the cell where star is </s>
+<s> reach the cell to the right of the star </s>
+<s> reach cell to right of heart </s>
 
 [iter]    64
-[loss]    6.6704
-[trn_rew] 0.3474
-[tst_rew] -0.3300
-<s> reach the the heart </s>
+[loss]    7.1805
+[trn_rew] 0.1167
+[tst_rew] -0.1900
+<s> reach the cell to the left of the diamond </s>
 <s> reach the cell one above star </s>
 <s> the cell above the spade </s>
 
 [iter]    65
-[loss]    6.6218
-[trn_rew] 0.2657
-[tst_rew] -0.0400
+[loss]    7.1373
+[trn_rew] 0.1047
+[tst_rew] -0.0300
 <s> reach cell to left of triangle </s>
-<s> reach cell above the star </s>
-<s> reach cell with blue spade </s>
+<s> reach cell below the star </s>
+<s> reach cell right of triangle </s>
 
 [iter]    66
-[loss]    6.6249
-[trn_rew] 0.3674
-[tst_rew] 0.2600
-<s> move to the diamond </s>
-<s> reach square above triangle </s>
-<s> reach the square that is to the left of the triangle </s>
+[loss]    7.1277
+[trn_rew] 0.1201
+[tst_rew] 0.0300
+<s> move to the circle </s>
+<s> reach cell one above triangle </s>
+<s> reach the square that is to the left of the diamond </s>
 
 [iter]    67
-[loss]    6.6380
-[trn_rew] 0.3535
-[tst_rew] 0.1200
-<s> reach the diamond cell </s>
-<s> the cell above the triangle </s>
+[loss]    7.1281
+[trn_rew] 0.1220
+[tst_rew] -0.1100
+<s> reach the blue circle </s>
+<s> the cell above the diamond </s>
 <s> reach cell above the star </s>
 
 [iter]    68
-[loss]    6.6735
-[trn_rew] 0.3964
-[tst_rew] 0.0000
+[loss]    7.0862
+[trn_rew] 0.1429
+[tst_rew] 0.1600
 <s> reach cell to left of triangle </s>
-<s> reach one space to the left of the star </s>
-<s> reach square left of star </s>
+<s> reach one right of spade </s>
+<s> reach cell to the left of the star </s>
 
 [iter]    69
-[loss]    6.6047
-[trn_rew] 0.4021
-[tst_rew] 0.2600
-<s> square above the spade </s>
-<s> the cell where spade is </s>
-<s> reach cell to heart </s>
+[loss]    7.0776
+[trn_rew] 0.1594
+[tst_rew] -0.0700
+<s> reach the cell to the right of the star </s>
+<s> left of heart </s>
+<s> reach cell to right of diamond </s>
 
 [iter]    70
-[loss]    6.6374
-[trn_rew] 0.3733
-[tst_rew] 0.1100
-<s> reach the diamond </s>
-<s> reach cell above circle </s>
-<s> reach the circle cell </s>
+[loss]    7.1019
+[trn_rew] 0.1785
+[tst_rew] 0.0000
+<s> reach the blue star </s>
+<s> reach cell to circle </s>
+<s> reach the space to the right of the heart </s>
 
 [iter]    71
-[loss]    6.5978
-[trn_rew] 0.4657
-[tst_rew] 0.1400
-<s> above heart </s>
-<s> cell with orange heart </s>
-<s> reach the star </s>
+[loss]    7.1038
+[trn_rew] 0.2208
+[tst_rew] -0.0600
+<s> reach the cell to the right of the diamond </s>
+<s> above circle </s>
+<s> reach the square that is to the right of the orange triangle </s>
 
 [iter]    72
-[loss]    6.5813
-[trn_rew] 0.4812
-[tst_rew] 0.0100
-<s> reach cell with heart </s>
-<s> reach the cell one above the circle </s>
+[loss]    7.0748
+[trn_rew] 0.2422
+[tst_rew] 0.0800
+<s> reach cell with spade </s>
+<s> reach the cell one below triangle </s>
 <s> reach cell with spade </s>
 
 [iter]    73
-[loss]    6.5993
-[trn_rew] 0.4820
-[tst_rew] -0.0700
-<s> square above the spade </s>
-<s> reach square above circle </s>
-<s> reach cell to the left of the diamond </s>
+[loss]    7.0803
+[trn_rew] 0.2067
+[tst_rew] 0.1300
+<s> one above triangle </s>
+<s> reach square left of spade </s>
+<s> reach cell to right of triangle </s>
 
 [iter]    74
-[loss]    6.6000
-[trn_rew] 0.4641
-[tst_rew] -0.0900
-<s> reach cell above the heart </s>
-<s> reach the diamond cell </s>
-<s> reach cell with triangle </s>
+[loss]    7.0492
+[trn_rew] 0.2092
+[tst_rew] -0.0500
+<s> reach cell left of heart </s>
+<s> reach the blue circle </s>
+<s> reach cell right of heart </s>
 
 [iter]    75
-[loss]    6.5962
-[trn_rew] 0.5041
-[tst_rew] 0.3500
-<s> reach the cell one above the heart </s>
-<s> above heart </s>
-<s> reach cell one above star </s>
+[loss]    7.0523
+[trn_rew] 0.2409
+[tst_rew] -0.0400
+<s> reach the cell one above the spade </s>
+<s> square above the heart </s>
+<s> reach cell one below star </s>
 
 [iter]    76
-[loss]    6.5762
-[trn_rew] 0.5447
-[tst_rew] 0.2300
-<s> reach cell with diamond </s>
-<s> reach the cell one above the spade </s>
-<s> reach one above triangle </s>
+[loss]    7.0425
+[trn_rew] 0.3006
+[tst_rew] 0.0200
+<s> reach cell with blue diamond </s>
+<s> reach the cell one above the triangle </s>
+<s> reach square below triangle </s>
 
 [iter]    77
-[loss]    6.5792
-[trn_rew] 0.5343
-[tst_rew] 0.0000
-<s> the cell where circle is </s>
-<s> reach the cell with the heart </s>
-<s> reach the star cell </s>
+[loss]    7.0340
+[trn_rew] 0.2966
+[tst_rew] -0.2600
+<s> left of circle </s>
+<s> reach the cell with the spade </s>
+<s> reach the square that is to the left of the heart </s>
 
 [iter]    78
-[loss]    6.5797
-[trn_rew] 0.6139
-[tst_rew] 0.3100
-<s> reach cell above spade </s>
-<s> reach one cell left of triangle </s>
-<s> to the left of the diamond </s>
+[loss]    7.0268
+[trn_rew] 0.2851
+[tst_rew] -0.1300
+<s> reach cell above the spade </s>
+<s> reach square below star </s>
+<s> the cell above the spade </s>
 
 [iter]    79
-[loss]    6.5383
-[trn_rew] 0.6213
-[tst_rew] 0.3900
-<s> reach one cell left of spade </s>
-<s> reach cell above heart </s>
+[loss]    7.0568
+[trn_rew] 0.3185
+[tst_rew] -0.1900
+<s> reach one cell left of diamond </s>
+<s> reach cell below the star </s>
 <s> reach cell above spade </s>
 
 [iter]    80
-[loss]    6.5088
-[trn_rew] 0.7021
-[tst_rew] 0.0600
-<s> reach cell above heart </s>
-<s> go to the cell to the left of the triangle </s>
-<s> reach square to the left of spade </s>
+[loss]    7.0087
+[trn_rew] 0.3274
+[tst_rew] 0.0300
+<s> reach cell above spade </s>
+<s> go to the cell below the diamond </s>
+<s> reach square to the left of triangle </s>
 
 [iter]    81
-[loss]    6.5407
-[trn_rew] 0.6780
-[tst_rew] 0.0000
-<s> reach cell to the left of blue diamond </s>
-<s> reach cell left of heart </s>
-<s> reach cell to the left of the spade </s>
+[loss]    7.0210
+[trn_rew] 0.3196
+[tst_rew] -0.0800
+<s> reach cell to right of heart </s>
+<s> reach cell to the right of heart </s>
+<s> reach cell to the left of the triangle </s>
 
 [iter]    82
-[loss]    6.4998
-[trn_rew] 0.7021
-[tst_rew] 0.4300
-<s> reach the spade </s>
-<s> left of the spade </s>
-<s> reach spade cell </s>
+[loss]    7.0049
+[trn_rew] 0.4349
+[tst_rew] 0.1500
+<s> reach the diamond cell </s>
+<s> cell one left of the diamond </s>
+<s> reach the blue star </s>
 
 [iter]    83
-[loss]    6.5351
-[trn_rew] 0.7442
-[tst_rew] 0.2000
-<s> to the left of the star </s>
-<s> reach cell with the star </s>
-<s> reach the star </s>
+[loss]    7.0167
+[trn_rew] 0.3385
+[tst_rew] 0.1800
+<s> the cell above the diamond </s>
+<s> reach cell directly below green diamond </s>
+<s> reach the square that is to the right of the orange spade </s>
 
 [iter]    84
-[loss]    6.4949
-[trn_rew] 0.6820
-[tst_rew] 0.1900
-<s> reach square left of spade </s>
-<s> reach square above star </s>
-<s> reach the square that is to the left of the star </s>
+[loss]    7.0177
+[trn_rew] 0.4095
+[tst_rew] -0.3500
+<s> reach cell to the left of blue diamond </s>
+<s> reach star </s>
+<s> reach the star cell </s>
 
 [iter]    85
-[loss]    6.5202
-[trn_rew] 0.7120
-[tst_rew] 0.5800
+[loss]    7.0038
+[trn_rew] 0.4210
+[tst_rew] -0.1200
 <s> above circle </s>
-<s> reach cell to the left of the triangle </s>
-<s> reach one above triangle </s>
+<s> reach cell 1 below heart </s>
+<s> reach one cell left of diamond </s>
 
 [iter]    86
-[loss]    6.5065
-[trn_rew] 0.7997
-[tst_rew] 0.5800
-<s> reach square to the left of spade </s>
-<s> reach cell above heart </s>
-<s> cell one left of diamond </s>
+[loss]    7.0087
+[trn_rew] 0.4064
+[tst_rew] 0.1400
+<s> reach square to the left of diamond </s>
+<s> reach cell one below star </s>
+<s> cell one below diamond </s>
 
 [iter]    87
-[loss]    6.4972
-[trn_rew] 0.7863
-[tst_rew] 0.2100
-<s> reach one above diamond </s>
-<s> reach cell above spade </s>
-<s> one space to the left of the diamond </s>
+[loss]    6.9914
+[trn_rew] 0.3894
+[tst_rew] 0.0800
+<s> reach one above heart </s>
+<s> reach cell to the left of heart </s>
+<s> reach the cell to the left of the triangle </s>
 
 [iter]    88
-[loss]    6.4939
-[trn_rew] 0.7759
-[tst_rew] 0.2700
-<s> left of spade </s>
-<s> reach cell to the left of spade </s>
-<s> left of the heart </s>
+[loss]    6.9690
+[trn_rew] 0.3836
+[tst_rew] 0.2900
+<s> cell with orange diamond </s>
+<s> reach cell to the right of the diamond </s>
+<s> cell one left of heart </s>
 
 [iter]    89
-[loss]    6.5084
-[trn_rew] 0.8056
-[tst_rew] 0.5000
-<s> reach cell above triangle </s>
-<s> reach cell with blue heart </s>
-<s> reach the square that is to the left of the diamond </s>
+[loss]    6.9752
+[trn_rew] 0.4803
+[tst_rew] 0.0000
+<s> reach cell above diamond </s>
+<s> reach cell 1 below spade </s>
+<s> reach the square that is to the right of the orange spade </s>
 
 [iter]    90
-[loss]    6.5107
-[trn_rew] 0.8206
-[tst_rew] 0.6700
-<s> cell above spade </s>
-<s> go to the cell with the diamond </s>
-<s> reach square left of triangle </s>
+[loss]    6.9893
+[trn_rew] 0.5270
+[tst_rew] -0.0100
+<s> above triangle </s>
+<s> go to the cell with the circle </s>
+<s> reach square below spade </s>
 
 [iter]    91
-[loss]    6.4741
-[trn_rew] 0.8894
-[tst_rew] 0.6800
-<s> reach the blue spade </s>
-<s> reach cell above the diamond </s>
-<s> reach the star </s>
+[loss]    6.9965
+[trn_rew] 0.4864
+[tst_rew] -0.0200
+<s> reach the blue triangle </s>
+<s> reach cell one below circle </s>
+<s> reach the square that is to the right of the orange circle </s>
 
 [iter]    92
-[loss]    6.4553
-[trn_rew] 0.9222
-[tst_rew] 0.6000
-<s> one space to the left of the diamond </s>
+[loss]    6.9576
+[trn_rew] 0.4936
+[tst_rew] 0.0300
+<s> square above the spade </s>
 <s> reach spade cell </s>
-<s> reach the cell left of heart </s>
+<s> reach the cell below the heart </s>
 
 [iter]    93
-[loss]    6.4740
-[trn_rew] 0.9070
-[tst_rew] 0.3600
-<s> reach star </s>
-<s> cell with orange circle </s>
+[loss]    6.9733
+[trn_rew] 0.5108
+[tst_rew] 0.0700
+<s> reach cell one below the triangle </s>
+<s> above heart </s>
 <s> reach one above star </s>
 
 [iter]    94
-[loss]    6.4564
-[trn_rew] 0.9152
-[tst_rew] 0.3600
-<s> reach the cell above the diamond </s>
-<s> reach cell with triangle </s>
-<s> the cell where star is </s>
+[loss]    6.9455
+[trn_rew] 0.5403
+[tst_rew] 0.2900
+<s> reach the cell one above the triangle </s>
+<s> reach cell on left of circle </s>
+<s> cell one right of diamond </s>
 
 [iter]    95
-[loss]    6.4372
-[trn_rew] 0.9141
-[tst_rew] 0.6200
-<s> reach cell left of spade </s>
+[loss]    6.9502
+[trn_rew] 0.5373
+[tst_rew] -0.0400
+<s> reach cell to diamond </s>
 <s> reach one above star </s>
-<s> reach the blue circle </s>
+<s> reach cell with circle </s>
 
 [iter]    96
-[loss]    6.4290
-[trn_rew] 0.9446
-[tst_rew] 0.5000
-<s> go to the spade </s>
-<s> reach the triangle cell </s>
-<s> reach the spade </s>
+[loss]    6.9350
+[trn_rew] 0.5628
+[tst_rew] -0.2200
+<s> go to diamond </s>
+<s> reach cell to right of spade </s>
+<s> reach the cell below the triangle </s>
 
 [iter]    97
-[loss]    6.4197
-[trn_rew] 1.0691
-[tst_rew] 0.6700
-<s> reach the cell to the left of the circle </s>
-<s> reach square to the left of star </s>
-<s> reach cell to left of triangle </s>
+[loss]    6.9128
+[trn_rew] 0.6033
+[tst_rew] 0.0300
+<s> reach the cell to the right of the heart </s>
+<s> reach cell right of triangle </s>
+<s> reach cell to the left of the diamond </s>
 
 [iter]    98
-[loss]    6.4022
-[trn_rew] 1.0452
-[tst_rew] 0.4200
-<s> reach the cell one above the triangle </s>
-<s> reach one above heart </s>
-<s> reach the cell to the left of the circle </s>
+[loss]    6.9270
+[trn_rew] 0.5801
+[tst_rew] 0.2200
+<s> reach the cell one below star </s>
+<s> reach one cell left of star </s>
+<s> reach the cell below the heart </s>
 
 [iter]    99
-[loss]    6.4116
-[trn_rew] 1.0421
-[tst_rew] 0.4500
-<s> above triangle </s>
-<s> reach cell with blue spade </s>
-<s> reach cell above circle </s>
+[loss]    6.9082
+[trn_rew] 0.6114
+[tst_rew] 0.1500
+<s> one cell left of diamond </s>
+<s> reach cell right of triangle </s>
+<s> reach cell above heart </s>
 
 [iter]    100
-[loss]    6.3914
-[trn_rew] 1.0277
-[tst_rew] 0.7300
-<s> reach cell one above diamond </s>
-<s> reach square above spade </s>
-<s> reach cell to diamond </s>
+[loss]    6.8991
+[trn_rew] 0.6500
+[tst_rew] -0.0700
+<s> reach the square that is to the right of the orange diamond </s>
+<s> reach square one right of circle </s>
+<s> reach cell right of triangle </s>
 
 [iter]    101
-[loss]    6.4160
-[trn_rew] 1.0735
-[tst_rew] 0.9000
-<s> go to diamond </s>
-<s> reach one above triangle </s>
-<s> reach cell to the left of the spade </s>
+[loss]    6.9440
+[trn_rew] 0.6609
+[tst_rew] 0.3700
+<s> go to circle </s>
+<s> reach one cell left of triangle </s>
+<s> reach cell to the left of the triangle </s>
 
 [iter]    102
-[loss]    6.3946
-[trn_rew] 1.1303
-[tst_rew] 0.7300
-<s> reach the cell to the left of the triangle </s>
-<s> reach the blue spade </s>
-<s> reach the blue star </s>
+[loss]    6.8977
+[trn_rew] 0.6665
+[tst_rew] 0.0600
+<s> reach cell above the diamond </s>
+<s> reach the circle </s>
+<s> reach the space to the right of the circle </s>
 
 [iter]    103
-[loss]    6.3819
-[trn_rew] 1.1346
-[tst_rew] 0.8400
-<s> above the triangle </s>
-<s> square above the diamond </s>
-<s> left of the star </s>
+[loss]    6.9030
+[trn_rew] 0.7263
+[tst_rew] -0.0800
+<s> one space to the left of the spade </s>
+<s> reach the diamond cell </s>
+<s> cell one left of heart </s>
 
 [iter]    104
-[loss]    6.3682
-[trn_rew] 1.1431
-[tst_rew] 0.7200
-<s> above diamond </s>
-<s> reach the heart cell </s>
-<s> reach cell of spade </s>
+[loss]    6.8992
+[trn_rew] 0.7251
+[tst_rew] 0.1200
+<s> square above the heart </s>
+<s> reach the space to the left of the diamond </s>
+<s> reach cell to the right of the spade </s>
 
 [iter]    105
-[loss]    6.3704
-[trn_rew] 1.2269
-[tst_rew] 0.6000
-<s> to the left of the circle </s>
-<s> square above the spade </s>
-<s> reach the blue triangle </s>
+[loss]    6.8701
+[trn_rew] 0.7502
+[tst_rew] 0.2500
+<s> move to the heart </s>
+<s> reach the triangle </s>
+<s> reach the space to the left of the heart </s>
 
 [iter]    106
-[loss]    6.3801
-[trn_rew] 1.1774
-[tst_rew] 0.5000
-<s> cell with heart </s>
-<s> above triangle </s>
-<s> move to the heart </s>
+[loss]    6.8686
+[trn_rew] 0.7253
+[tst_rew] 0.4000
+<s> cell below the diamond </s>
+<s> square above the spade </s>
+<s> move to the spade </s>
 
 [iter]    107
-[loss]    6.3364
-[trn_rew] 1.2102
-[tst_rew] 0.6500
-<s> reach diamond </s>
-<s> move to the spade </s>
+[loss]    6.8771
+[trn_rew] 0.7457
+[tst_rew] 0.2800
+<s> reach circle </s>
+<s> move to the triangle </s>
 <s> to the left of the spade </s>
 
 [iter]    108
-[loss]    6.3284
-[trn_rew] 1.2224
-[tst_rew] 0.5900
-<s> reach cell left of spade </s>
-<s> reach the circle </s>
-<s> reach one above star </s>
+[loss]    6.8626
+[trn_rew] 0.7446
+[tst_rew] 0.1200
+<s> reach cell of spade </s>
+<s> reach the diamond </s>
+<s> reach square one right of star </s>
 
 [iter]    109
-[loss]    6.3499
-[trn_rew] 1.2856
-[tst_rew] 1.0100
+[loss]    6.8465
+[trn_rew] 0.8268
+[tst_rew] 0.3000
 <s> reach cell with triangle </s>
-<s> reach the diamond cell </s>
-<s> cell above star </s>
+<s> reach the blue heart </s>
+<s> cell above diamond </s>
 
 [iter]    110
-[loss]    6.3386
-[trn_rew] 1.2992
-[tst_rew] 0.7500
-<s> reach cell above spade </s>
-<s> reach cell above heart </s>
-<s> reach diamond </s>
+[loss]    6.8559
+[trn_rew] 0.7712
+[tst_rew] 0.1600
+<s> one cell left of diamond </s>
+<s> reach cell one below star </s>
+<s> reach space below diamond </s>
 
 [iter]    111
-[loss]    6.3215
-[trn_rew] 1.3394
-[tst_rew] 0.5300
-<s> reach the star cell </s>
-<s> reach the diamond </s>
-<s> above the spade </s>
+[loss]    6.8240
+[trn_rew] 0.8643
+[tst_rew] 0.0300
+<s> reach the square that is to the left of the circle </s>
+<s> reach the blue star </s>
+<s> above diamond </s>
 
 [iter]    112
-[loss]    6.3080
-[trn_rew] 1.3267
-[tst_rew] 0.6400
-<s> reach heart cell </s>
-<s> reach one above diamond </s>
+[loss]    6.8427
+[trn_rew] 0.8239
+[tst_rew] 0.3200
+<s> reach space below triangle </s>
+<s> reach square one right of circle </s>
 <s> reach one above triangle </s>
 
 [iter]    113
-[loss]    6.2747
-[trn_rew] 1.3559
-[tst_rew] 0.6000
-<s> go to the cell with the diamond </s>
-<s> above the spade </s>
-<s> reach the space to the left of the circle </s>
+[loss]    6.8208
+[trn_rew] 0.8787
+[tst_rew] 0.2400
+<s> go to the cell with the circle </s>
+<s> cell below the diamond </s>
+<s> reach the cell one above the star </s>
 
 [iter]    114
-[loss]    6.2808
-[trn_rew] 1.4004
-[tst_rew] 0.6500
-<s> go to the cell to the left of the heart </s>
-<s> reach one above diamond </s>
-<s> reach cell above spade </s>
+[loss]    6.8213
+[trn_rew] 0.8959
+[tst_rew] 0.3500
+<s> go to the cell below the diamond </s>
+<s> reach one above circle </s>
+<s> reach cell above the spade </s>
 
 [iter]    115
-[loss]    6.2648
-[trn_rew] 1.4396
-[tst_rew] 0.7200
+[loss]    6.7800
+[trn_rew] 0.9722
+[tst_rew] 0.0300
 <s> reach cell above spade </s>
 <s> reach the cell with the star </s>
-<s> above the diamond </s>
+<s> one space to the left of the spade </s>
 
 [iter]    116
-[loss]    6.2567
-[trn_rew] 1.4147
-[tst_rew] 0.8700
-<s> reach cell above the spade </s>
-<s> reach cell above heart </s>
-<s> reach cell to left of spade </s>
+[loss]    6.8059
+[trn_rew] 0.8937
+[tst_rew] 0.6300
+<s> reach cell one above triangle </s>
+<s> reach cell left of heart </s>
+<s> reach cell to the left of blue diamond </s>
 
 [iter]    117
-[loss]    6.2448
-[trn_rew] 1.4270
-[tst_rew] 0.9500
-<s> reach square above diamond </s>
-<s> cell with diamond </s>
-<s> go to the cell with the star </s>
+[loss]    6.8197
+[trn_rew] 0.9796
+[tst_rew] 0.2200
+<s> reach square one right of star </s>
+<s> cell below the diamond </s>
+<s> go to the cell to the left of the diamond </s>
 
 [iter]    118
-[loss]    6.2473
-[trn_rew] 1.4736
-[tst_rew] 1.0400
+[loss]    6.7996
+[trn_rew] 0.9428
+[tst_rew] 0.2800
 <s> go to the cell with the star </s>
-<s> reach the cell with the spade </s>
-<s> reach cell above triangle </s>
+<s> reach the cell to the right of the diamond </s>
+<s> reach cell above diamond </s>
 
 [iter]    119
-[loss]    6.2306
-[trn_rew] 1.4883
-[tst_rew] 1.2200
-<s> reach the blue spade </s>
-<s> reach one cell left of circle </s>
-<s> one space to the left of the triangle </s>
+[loss]    6.8010
+[trn_rew] 0.9702
+[tst_rew] 0.1000
+<s> reach the circle </s>
+<s> reach square below circle </s>
+<s> reach the triangle </s>
 
 [iter]    120
-[loss]    6.2320
-[trn_rew] 1.4714
-[tst_rew] 1.1800
-<s> reach square to the left of diamond </s>
-<s> go to the cell to the left of the triangle </s>
-<s> cell with diamond </s>
+[loss]    6.7706
+[trn_rew] 1.0426
+[tst_rew] 0.3400
+<s> reach square below circle </s>
+<s> go to the cell below the diamond </s>
+<s> cell above triangle </s>
 
 [iter]    121
-[loss]    6.2448
-[trn_rew] 1.5308
-[tst_rew] 0.7400
-<s> reach cell above diamond </s>
-<s> reach circle </s>
-<s> reach square above spade </s>
-
-[iter]    122
-[loss]    6.2350
-[trn_rew] 1.5411
-[tst_rew] 1.1300
-<s> the cell above the spade </s>
-<s> reach cell with the circle </s>
-<s> reach the triangle cell </s>
-
-[iter]    123
-[loss]    6.2225
-[trn_rew] 1.5707
-[tst_rew] 0.7800
-<s> reach the star </s>
-<s> reach the blue circle </s>
-<s> cell with diamond </s>
-
-[iter]    124
-[loss]    6.1999
-[trn_rew] 1.5696
-[tst_rew] 1.0200
-<s> reach the spade </s>
-<s> reach cell above heart </s>
-<s> reach the cell one above the diamond </s>
-
-[iter]    125
-[loss]    6.2033
-[trn_rew] 1.5339
-[tst_rew] 1.0000
-<s> reach the cell with the star </s>
-<s> reach cell with diamond </s>
-<s> reach triangle cell </s>
-
-[iter]    126
-[loss]    6.1846
-[trn_rew] 1.6249
-[tst_rew] 0.9500
-<s> reach cell one above circle </s>
-<s> reach the cell with the heart </s>
-<s> reach square left of heart </s>
-
-[iter]    127
-[loss]    6.1993
-[trn_rew] 1.5730
-[tst_rew] 1.0600
-<s> move to the circle </s>
-<s> reach the blue diamond </s>
-<s> reach heart </s>
-
-[iter]    128
-[loss]    6.1762
-[trn_rew] 1.6664
-[tst_rew] 0.9400
-<s> left of star </s>
-<s> reach cell to left of diamond </s>
-<s> reach the cell one above the circle </s>
-
-[iter]    129
-[loss]    6.1741
-[trn_rew] 1.7009
-[tst_rew] 0.9200
-<s> cell one left of heart </s>
-<s> reach one square that is to the left of the star </s>
-<s> reach circle </s>
-
-[iter]    130
-[loss]    6.1654
-[trn_rew] 1.6745
-[tst_rew] 0.9700
-<s> reach the blue heart </s>
-<s> reach cell to left of triangle </s>
-<s> reach cell one above circle </s>
-
-[iter]    131
-[loss]    6.1790
-[trn_rew] 1.6978
-[tst_rew] 1.1800
-<s> reach the spade </s>
-<s> reach heart </s>
-<s> reach the space to the left of the spade </s>
-
-[iter]    132
-[loss]    6.1501
-[trn_rew] 1.7146
-[tst_rew] 1.0900
-<s> reach square to the left of spade </s>
-<s> reach cell above diamond </s>
-<s> reach cell with star </s>
-
-[iter]    133
-[loss]    6.1358
-[trn_rew] 1.7431
-[tst_rew] 0.9900
-<s> reach the cell to the left of the star </s>
-<s> reach cell to the left of blue circle </s>
-<s> reach the blue triangle </s>
-
-[iter]    134
-[loss]    6.1388
-[trn_rew] 1.7427
-[tst_rew] 1.4000
-<s> reach square left of diamond </s>
-<s> reach cell above the circle </s>
-<s> to the left of the star </s>
-
-[iter]    135
-[loss]    6.1544
-[trn_rew] 1.7264
-[tst_rew] 0.9300
-<s> reach the cell with the diamond </s>
-<s> reach cell above spade </s>
-<s> cell above circle </s>
-
-[iter]    136
-[loss]    6.1338
-[trn_rew] 1.7416
-[tst_rew] 1.0500
-<s> reach go to the left of the diamond </s>
-<s> reach cell to triangle </s>
-<s> above diamond </s>
-
-[iter]    137
-[loss]    6.1328
-[trn_rew] 1.7860
-[tst_rew] 1.1500
-<s> above diamond </s>
-<s> one space to the left of the spade </s>
-<s> reach the cell to the left of the diamond </s>
-
-[iter]    138
-[loss]    6.1097
-[trn_rew] 1.7846
-[tst_rew] 1.3300
-<s> reach cell to star </s>
-<s> reach spade cell </s>
-<s> reach cell on left of heart </s>
-
-[iter]    139
-[loss]    6.1151
-[trn_rew] 1.7923
-[tst_rew] 1.2500
-<s> reach cell above triangle </s>
-<s> cell with diamond </s>
-<s> reach the cell above the star </s>
-
-[iter]    140
-[loss]    6.0984
-[trn_rew] 1.8431
-[tst_rew] 1.2100
-<s> go to the cell to the left of the circle </s>
-<s> cell one left of triangle </s>
-<s> reach cell left of circle </s>
-
-[iter]    141
-[loss]    6.1002
-[trn_rew] 1.8881
-[tst_rew] 1.2800
-<s> go to the star </s>
-<s> left of the diamond </s>
-<s> reach cell with circle </s>
-
-[iter]    142
-[loss]    6.1052
-[trn_rew] 1.8250
-[tst_rew] 1.3300
-<s> reach the star </s>
-<s> reach one cell left of circle </s>
-<s> reach cell above triangle </s>
-
-[iter]    143
-[loss]    6.0965
-[trn_rew] 1.8416
-[tst_rew] 1.4000
-<s> reach cell on left of circle </s>
-<s> reach cell to the left of blue circle </s>
-<s> reach circle cell </s>
-
-[iter]    144
-[loss]    6.1088
-[trn_rew] 1.8604
-[tst_rew] 1.1700
-<s> reach cell left of circle </s>
-<s> reach square left of triangle </s>
-<s> above the circle </s>
-
-[iter]    145
-[loss]    6.0843
-[trn_rew] 1.8466
-[tst_rew] 1.2700
-<s> the cell above the diamond </s>
-<s> to the left of the circle </s>
-<s> cell above star </s>
-
-[iter]    146
-[loss]    6.0852
-[trn_rew] 1.8781
-[tst_rew] 1.1500
-<s> reach the cell one above the diamond </s>
-<s> reach square above spade </s>
-<s> move to the triangle </s>
-
-[iter]    147
-[loss]    6.1027
-[trn_rew] 1.9024
-[tst_rew] 1.5000
-<s> reach the triangle </s>
-<s> reach cell above the circle </s>
-<s> reach the cell to the left of the diamond </s>
-
-[iter]    148
-[loss]    6.0496
-[trn_rew] 1.9345
-[tst_rew] 1.6600
-<s> reach the star cell </s>
-<s> reach one above heart </s>
-<s> above cell </s>
-
-[iter]    149
-[loss]    6.0624
-[trn_rew] 1.9225
-[tst_rew] 1.3700
-<s> left of the triangle </s>
-<s> reach square above diamond </s>
-<s> reach one cell left of diamond </s>
-
-[iter]    150
-[loss]    6.0565
-[trn_rew] 1.9384
-[tst_rew] 1.3300
-<s> reach square above heart </s>
-<s> the cell above the diamond </s>
-<s> above diamond </s>
-
-[iter]    151
-[loss]    6.0529
-[trn_rew] 1.9262
-[tst_rew] 1.4200
-<s> reach cell above the diamond </s>
-<s> reach the blue circle </s>
+[loss]    6.7880
+[trn_rew] 1.0168
+[tst_rew] 0.6200
+<s> one space to the left of the triangle </s>
+<s> reach space below circle </s>
 <s> reach cell one above heart </s>
 
-[iter]    152
-[loss]    6.0331
-[trn_rew] 1.9474
-[tst_rew] 1.4700
-<s> reach cell to the left of blue heart </s>
-<s> reach cell on left of heart </s>
-<s> reach the cell to the left of the triangle </s>
-
-[iter]    153
-[loss]    6.0521
-[trn_rew] 1.9650
-[tst_rew] 1.2100
-<s> reach cell to the left of star </s>
-<s> cell with spade </s>
-<s> left of the triangle </s>
-
-[iter]    154
-[loss]    6.0419
-[trn_rew] 1.9634
-[tst_rew] 1.5600
-<s> reach cell one above triangle </s>
-<s> reach cell to left of diamond </s>
-<s> reach the star cell </s>
-
-[iter]    155
-[loss]    6.0242
-[trn_rew] 1.9775
-[tst_rew] 1.7700
-<s> reach the blue spade </s>
-<s> one space to the left of the circle </s>
-<s> reach square to the left of diamond </s>
-
-[iter]    156
-[loss]    6.0341
-[trn_rew] 1.9560
-[tst_rew] 1.5400
-<s> reach the space to the left of the diamond </s>
-<s> reach cell with spade </s>
-<s> cell above diamond </s>
-
-[iter]    157
-[loss]    6.0237
-[trn_rew] 2.0402
-[tst_rew] 1.5500
-<s> reach the triangle cell </s>
-<s> reach the cell one above the heart </s>
+[iter]    122
+[loss]    6.7557
+[trn_rew] 1.0171
+[tst_rew] 0.3900
+<s> the cell where diamond is </s>
+<s> reach cell with the heart </s>
 <s> reach the diamond </s>
 
+[iter]    123
+[loss]    6.7606
+[trn_rew] 1.0182
+[tst_rew] 0.4000
+<s> reach the square that is to the left of the heart </s>
+<s> reach the heart cell </s>
+<s> above heart </s>
+
+[iter]    124
+[loss]    6.7489
+[trn_rew] 1.1180
+[tst_rew] 0.3100
+<s> reach the triangle </s>
+<s> reach cell below spade </s>
+<s> reach the cell one below star </s>
+
+[iter]    125
+[loss]    6.7222
+[trn_rew] 1.1094
+[tst_rew] 0.4900
+<s> reach the cell with the star </s>
+<s> reach cell with blue circle </s>
+<s> reach cell right of spade </s>
+
+[iter]    126
+[loss]    6.7102
+[trn_rew] 1.1029
+[tst_rew] 0.1700
+<s> reach cell one below spade </s>
+<s> reach the cell with the spade </s>
+<s> reach square below triangle </s>
+
+[iter]    127
+[loss]    6.7064
+[trn_rew] 1.0973
+[tst_rew] 0.3400
+<s> move to the heart </s>
+<s> reach the blue circle </s>
+<s> reach space below star </s>
+
+[iter]    128
+[loss]    6.7280
+[trn_rew] 1.1922
+[tst_rew] 0.5700
+<s> the cell above the heart </s>
+<s> reach cell to diamond </s>
+<s> reach the cell one below circle </s>
+
+[iter]    129
+[loss]    6.7052
+[trn_rew] 1.1271
+[tst_rew] 0.5300
+<s> cell one below diamond </s>
+<s> reach square one right of circle </s>
+<s> reach space below triangle </s>
+
+[iter]    130
+[loss]    6.7056
+[trn_rew] 1.1905
+[tst_rew] 0.8700
+<s> reach the space to the right of the triangle </s>
+<s> reach cell to left of diamond </s>
+<s> reach cell one below spade </s>
+
+[iter]    131
+[loss]    6.6832
+[trn_rew] 1.2018
+[tst_rew] 0.3500
+<s> reach the cell one below triangle </s>
+<s> reach space below triangle </s>
+<s> reach the cell below the diamond </s>
+
+[iter]    132
+[loss]    6.6877
+[trn_rew] 1.1940
+[tst_rew] 0.6700
+<s> reach square below star </s>
+<s> reach cell above circle </s>
+<s> reach cell right of circle </s>
+
+[iter]    133
+[loss]    6.6937
+[trn_rew] 1.2159
+[tst_rew] 0.6200
+<s> reach the cell below the circle </s>
+<s> reach cell to the left of blue spade </s>
+<s> reach the blue star </s>
+
+[iter]    134
+[loss]    6.6839
+[trn_rew] 1.2487
+[tst_rew] 0.5600
+<s> reach square below star </s>
+<s> reach cell above the circle </s>
+<s> move one cell to right of diamond </s>
+
+[iter]    135
+[loss]    6.6860
+[trn_rew] 1.2416
+[tst_rew] 0.5600
+<s> reach the cell to the right of the star </s>
+<s> reach cell above spade </s>
+<s> above the spade </s>
+
+[iter]    136
+[loss]    6.6697
+[trn_rew] 1.2261
+[tst_rew] 0.5300
+<s> reach with the spade </s>
+<s> reach cell to triangle </s>
+<s> reach the above </s>
+
+[iter]    137
+[loss]    6.6641
+[trn_rew] 1.3361
+[tst_rew] 0.6800
+<s> square above the star </s>
+<s> reach the cell one below triangle </s>
+<s> reach the cell to the right of the circle </s>
+
+[iter]    138
+[loss]    6.6486
+[trn_rew] 1.2334
+[tst_rew] 0.4400
+<s> reach cell to left of star </s>
+<s> reach space below circle </s>
+<s> reach cell directly below green spade </s>
+
+[iter]    139
+[loss]    6.6221
+[trn_rew] 1.3238
+[tst_rew] 0.3400
+<s> reach cell below triangle </s>
+<s> cell with orange triangle </s>
+<s> reach the cell above the diamond </s>
+
+[iter]    140
+[loss]    6.6495
+[trn_rew] 1.3073
+[tst_rew] 0.8200
+<s> go to the cell to the left of the heart </s>
+<s> square above the triangle </s>
+<s> reach the cell below the spade </s>
+
+[iter]    141
+[loss]    6.6635
+[trn_rew] 1.3352
+[tst_rew] 0.5600
+<s> to the left of the spade </s>
+<s> cell one space to right of spade </s>
+<s> reach cell with heart </s>
+
+[iter]    142
+[loss]    6.6313
+[trn_rew] 1.3478
+[tst_rew] 0.3300
+<s> reach the star </s>
+<s> reach one cell left of heart </s>
+<s> reach cell above diamond </s>
+
+[iter]    143
+[loss]    6.6278
+[trn_rew] 1.3686
+[tst_rew] 0.6200
+<s> reach cell on left of heart </s>
+<s> reach cell to the right of the heart </s>
+<s> reach space below star </s>
+
+[iter]    144
+[loss]    6.6273
+[trn_rew] 1.4083
+[tst_rew] 0.4300
+<s> reach the cell one below diamond </s>
+<s> reach square below spade </s>
+<s> cell above heart </s>
+
+[iter]    145
+[loss]    6.6331
+[trn_rew] 1.3985
+[tst_rew] 0.7300
+<s> the cell above the circle </s>
+<s> go to the cell to the left of the circle </s>
+<s> cell below the circle </s>
+
+[iter]    146
+[loss]    6.6092
+[trn_rew] 1.3866
+[tst_rew] 0.8400
+<s> reach the cell one below circle </s>
+<s> reach square above diamond </s>
+<s> to the left of the triangle </s>
+
+[iter]    147
+[loss]    6.6113
+[trn_rew] 1.4440
+[tst_rew] 0.9900
+<s> reach the cell above the star </s>
+<s> reach cell of diamond </s>
+<s> reach the cell to the left of the circle </s>
+
+[iter]    148
+[loss]    6.6080
+[trn_rew] 1.4685
+[tst_rew] 0.8000
+<s> reach triangle </s>
+<s> reach one above spade </s>
+<s> reach square one right of triangle </s>
+
+[iter]    149
+[loss]    6.6058
+[trn_rew] 1.4894
+[tst_rew] 0.5900
+<s> cell one below diamond </s>
+<s> reach square one right of circle </s>
+<s> reach square below circle </s>
+
+[iter]    150
+[loss]    6.6146
+[trn_rew] 1.4750
+[tst_rew] 0.5900
+<s> reach square one right of spade </s>
+<s> move one cell to right of spade </s>
+<s> cell with heart </s>
+
+[iter]    151
+[loss]    6.5968
+[trn_rew] 1.4842
+[tst_rew] 0.8400
+<s> reach cell below the circle </s>
+<s> reach the circle cell </s>
+<s> reach cell one below the circle </s>
+
+[iter]    152
+[loss]    6.5912
+[trn_rew] 1.5151
+[tst_rew] 0.9500
+<s> reach the cell below the heart </s>
+<s> reach cell on left of heart </s>
+<s> reach the cell below the star </s>
+
+[iter]    153
+[loss]    6.5750
+[trn_rew] 1.4903
+[tst_rew] 1.1700
+<s> reach cell right of triangle </s>
+<s> cell with heart </s>
+<s> the cell above the triangle </s>
+
+[iter]    154
+[loss]    6.5785
+[trn_rew] 1.5475
+[tst_rew] 0.4100
+<s> reach cell one above diamond </s>
+<s> reach square below star </s>
+<s> reach the square that is to the left of the spade </s>
+
+[iter]    155
+[loss]    6.5876
+[trn_rew] 1.5171
+[tst_rew] 0.7500
+<s> reach the heart cell </s>
+<s> reach cell right of heart </s>
+<s> reach square below diamond </s>
+
+[iter]    156
+[loss]    6.5374
+[trn_rew] 1.5582
+[tst_rew] 0.8600
+<s> reach the diamond cell </s>
+<s> reach cell directly below green triangle </s>
+<s> cell one right of spade </s>
+
+[iter]    157
+[loss]    6.5594
+[trn_rew] 1.5604
+[tst_rew] 0.8300
+<s> reach the cell to the left of the spade </s>
+<s> reach the cell one below triangle </s>
+<s> reach the blue star </s>
+
 [iter]    158
-[loss]    6.0356
-[trn_rew] 2.0252
-[tst_rew] 1.5700
-<s> reach cell to spade </s>
-<s> reach cell of spade </s>
-<s> reach the cell to the left of the triangle </s>
+[loss]    6.5398
+[trn_rew] 1.5923
+[tst_rew] 0.8100
+<s> reach cell to circle </s>
+<s> reach cell to the right of star </s>
+<s> reach the cell to the left of the star </s>
 
 [iter]    159
-[loss]    6.0166
-[trn_rew] 2.0344
-[tst_rew] 1.3200
-<s> reach the square that is to the left of the triangle </s>
-<s> reach the cell with the triangle </s>
-<s> reach the blue spade </s>
+[loss]    6.5567
+[trn_rew] 1.5871
+[tst_rew] 0.6400
+<s> reach the square that is to the left of the diamond </s>
+<s> reach the star cell </s>
+<s> reach the circle </s>
 
 [iter]    160
-[loss]    5.9976
-[trn_rew] 2.0052
-[tst_rew] 1.3300
-<s> reach cell to the left of the spade </s>
-<s> reach cell to the left of blue circle </s>
-<s> reach cell above star </s>
+[loss]    6.5529
+[trn_rew] 1.6317
+[tst_rew] 0.8700
+<s> reach cell to the right of diamond </s>
+<s> reach the cell below the diamond </s>
+<s> reach cell to left of spade </s>
 
 [iter]    161
-[loss]    6.0159
-[trn_rew] 2.0142
-[tst_rew] 1.6100
-<s> reach cell to the left of blue spade </s>
-<s> go to heart </s>
+[loss]    6.5661
+[trn_rew] 1.5980
+[tst_rew] 0.5400
+<s> reach the triangle </s>
+<s> move to the star </s>
 <s> reach square above triangle </s>
 
 [iter]    162
-[loss]    6.0048
-[trn_rew] 2.0659
-[tst_rew] 1.6500
+[loss]    6.5515
+[trn_rew] 1.6123
+[tst_rew] 0.8300
 <s> cell above triangle </s>
-<s> reach cell to the left of the heart </s>
-<s> reach the cell one above the diamond </s>
+<s> reach cell to the left of spade </s>
+<s> reach the cell one below heart </s>
 
 [iter]    163
-[loss]    6.0012
-[trn_rew] 2.0461
-[tst_rew] 1.5100
-<s> go to the circle </s>
-<s> reach the diamond </s>
-<s> reach cell to left of heart </s>
+[loss]    6.5415
+[trn_rew] 1.6518
+[tst_rew] 1.2700
+<s> go to the heart </s>
+<s> reach the blue triangle </s>
+<s> reach cell to left of spade </s>
 
 [iter]    164
-[loss]    6.0201
-[trn_rew] 2.0465
-[tst_rew] 1.0300
-<s> left of the diamond </s>
-<s> reach cell above circle </s>
-<s> left of the diamond </s>
+[loss]    6.5283
+[trn_rew] 1.6655
+[tst_rew] 0.9900
+<s> cell one below circle </s>
+<s> reach cell above heart </s>
+<s> cell one left of triangle </s>
 
 [iter]    165
-[loss]    6.0076
-[trn_rew] 2.0820
-[tst_rew] 1.5700
-<s> the cell above the heart </s>
-<s> reach cell to left of circle </s>
-<s> reach cell with the star </s>
+[loss]    6.5261
+[trn_rew] 1.6501
+[tst_rew] 0.8600
+<s> left of the spade </s>
+<s> reach cell to the left of the diamond </s>
+<s> reach cell to the left of spade </s>
 
 [iter]    166
-[loss]    5.9920
-[trn_rew] 2.0717
-[tst_rew] 1.4000
-<s> move to the diamond </s>
-<s> reach cell above the circle </s>
-<s> one cell left of heart </s>
+[loss]    6.5061
+[trn_rew] 1.6952
+[tst_rew] 0.9400
+<s> move one cell to right of heart </s>
+<s> reach cell left of heart </s>
+<s> one cell left of spade </s>
 
 [iter]    167
-[loss]    6.0047
-[trn_rew] 2.1183
-[tst_rew] 1.5600
-<s> reach the circle </s>
-<s> to the left of the star </s>
-<s> reach the square that is to the left of the diamond </s>
+[loss]    6.5066
+[trn_rew] 1.6907
+[tst_rew] 1.5200
+<s> reach the space to the right of the spade </s>
+<s> move one cell to right of circle </s>
+<s> reach the square that is to the right of the orange heart </s>
 
 [iter]    168
-[loss]    6.0037
-[trn_rew] 2.1170
-[tst_rew] 1.3500
+[loss]    6.5117
+[trn_rew] 1.6585
+[tst_rew] 0.7700
 <s> reach cell to the left of triangle </s>
-<s> reach the cell to the left of the star </s>
-<s> reach cell to the left of circle </s>
+<s> reach the cell to the right of the star </s>
+<s> reach cell to the right of the diamond </s>
 
 [iter]    169
-[loss]    5.9893
-[trn_rew] 2.1225
-[tst_rew] 1.6200
-<s> reach the square that is to the left of the heart </s>
-<s> the cell above the diamond </s>
-<s> above the triangle </s>
+[loss]    6.5157
+[trn_rew] 1.7244
+[tst_rew] 1.0100
+<s> reach the square that is to the right of the orange circle </s>
+<s> left of the heart </s>
+<s> above the diamond </s>
 
 [iter]    170
-[loss]    5.9961
-[trn_rew] 2.1268
-[tst_rew] 1.7000
-<s> left of the triangle </s>
-<s> reach square left of circle </s>
-<s> reach cell with blue triangle </s>
+[loss]    6.5159
+[trn_rew] 1.6979
+[tst_rew] 0.9600
+<s> the cell above the spade </s>
+<s> reach square left of heart </s>
+<s> reach cell to the left of the circle </s>
 
 [iter]    171
-[loss]    5.9843
-[trn_rew] 2.1424
-[tst_rew] 1.6700
-<s> reach square to the left of spade </s>
-<s> reach the cell to the left of the spade </s>
-<s> the cell where diamond is </s>
+[loss]    6.5016
+[trn_rew] 1.7238
+[tst_rew] 1.0100
+<s> reach square to the left of triangle </s>
+<s> reach the cell to the left of the diamond </s>
+<s> the cell where heart is </s>
 
 [iter]    172
-[loss]    5.9953
-[trn_rew] 2.1372
-[tst_rew] 1.9900
-<s> reach the blue diamond </s>
-<s> reach the space to the left of the spade </s>
-<s> reach the cell with the triangle </s>
+[loss]    6.4896
+[trn_rew] 1.7246
+[tst_rew] 0.9300
+<s> reach the heart cell </s>
+<s> reach the spade </s>
+<s> reach the cell with the diamond </s>
 
 [iter]    173
-[loss]    5.9738
-[trn_rew] 2.1091
-[tst_rew] 1.4000
-<s> reach square left of spade </s>
-<s> reach one cell left of star </s>
-<s> above the star </s>
+[loss]    6.4917
+[trn_rew] 1.7099
+[tst_rew] 1.2500
+<s> reach square above spade </s>
+<s> reach square left of triangle </s>
+<s> reach cell one above triangle </s>
 
 [iter]    174
-[loss]    5.9763
-[trn_rew] 2.1180
-[tst_rew] 1.7000
-<s> reach the cell above the spade </s>
-<s> reach cell to the left of the diamond </s>
-<s> reach heart cell </s>
+[loss]    6.4806
+[trn_rew] 1.8076
+[tst_rew] 1.1900
+<s> reach the cell above the triangle </s>
+<s> reach the triangle </s>
+<s> reach space below circle </s>
 
 [iter]    175
-[loss]    5.9723
-[trn_rew] 2.1558
-[tst_rew] 1.6100
-<s> above star </s>
-<s> reach one cell left of circle </s>
-<s> reach the space to the left of the spade </s>
+[loss]    6.4738
+[trn_rew] 1.7807
+[tst_rew] 0.9600
+<s> one cell left of triangle </s>
+<s> reach one cell left of spade </s>
+<s> reach the diamond </s>
 
 [iter]    176
-[loss]    5.9696
-[trn_rew] 2.1391
-[tst_rew] 1.6900
-<s> reach cell above triangle </s>
-<s> to the left of the circle </s>
-<s> reach square left of heart </s>
+[loss]    6.4611
+[trn_rew] 1.7747
+[tst_rew] 1.1100
+<s> reach cell above diamond </s>
+<s> move one cell to right of circle </s>
+<s> reach square left of spade </s>
 
 [iter]    177
-[loss]    5.9612
-[trn_rew] 2.1766
-[tst_rew] 1.5000
-<s> reach cell one above triangle </s>
-<s> above the diamond </s>
-<s> square above the diamond </s>
+[loss]    6.4689
+[trn_rew] 1.7873
+[tst_rew] 0.8900
+<s> reach cell one above diamond </s>
+<s> above triangle </s>
+<s> square above the circle </s>
 
 [iter]    178
-[loss]    5.9648
-[trn_rew] 2.1879
-[tst_rew] 1.3200
+[loss]    6.4866
+[trn_rew] 1.8323
+[tst_rew] 0.6600
 <s> reach the square that is to the left of the heart </s>
-<s> reach square left of heart </s>
-<s> reach the blue triangle </s>
+<s> reach square left of spade </s>
+<s> reach the blue diamond </s>
 
 [iter]    179
-[loss]    5.9533
-[trn_rew] 2.1953
-[tst_rew] 1.6400
-<s> go to the spade </s>
-<s> left of the circle </s>
-<s> reach cell above triangle </s>
+[loss]    6.4511
+[trn_rew] 1.7936
+[tst_rew] 0.7800
+<s> go to the diamond </s>
+<s> cell one left of diamond </s>
+<s> reach cell above diamond </s>
 
 [iter]    180
-[loss]    5.9480
-[trn_rew] 2.1532
-[tst_rew] 1.3500
-<s> reach the triangle cell </s>
-<s> above spade </s>
+[loss]    6.4427
+[trn_rew] 1.8610
+[tst_rew] 1.1400
+<s> reach the cell to the right of the circle </s>
+<s> cell below the triangle </s>
 <s> reach cell above the star </s>
 
 [iter]    181
-[loss]    5.9428
-[trn_rew] 2.2150
-[tst_rew] 1.6800
-<s> go to triangle </s>
-<s> reach one above circle </s>
-<s> reach cell with the spade </s>
+[loss]    6.4507
+[trn_rew] 1.8140
+[tst_rew] 1.1400
+<s> go to diamond </s>
+<s> reach square above heart </s>
+<s> reach cell with the triangle </s>
 
 [iter]    182
-[loss]    5.9314
-[trn_rew] 2.1947
-[tst_rew] 1.6200
-<s> reach cell above spade </s>
-<s> reach cell above the triangle </s>
-<s> left of spade </s>
+[loss]    6.4233
+[trn_rew] 1.8522
+[tst_rew] 1.4100
+<s> reach the cell to the left of the triangle </s>
+<s> reach cell above triangle </s>
+<s> cell one right of star </s>
 
 [iter]    183
-[loss]    5.9471
-[trn_rew] 2.1903
-[tst_rew] 1.5100
-<s> one cell left of heart </s>
-<s> go to the cell with the spade </s>
-<s> reach cell above triangle </s>
+[loss]    6.4371
+[trn_rew] 1.8431
+[tst_rew] 0.9500
+<s> reach square to the left of heart </s>
+<s> go to the cell to the left of the diamond </s>
+<s> reach cell below triangle </s>
 
 [iter]    184
-[loss]    5.9270
-[trn_rew] 2.1900
-[tst_rew] 1.7800
-<s> one space to the left of the spade </s>
+[loss]    6.4303
+[trn_rew] 1.8611
+[tst_rew] 1.1700
+<s> reach the blue heart </s>
 <s> reach cell with heart </s>
-<s> reach the cell to the left of the triangle </s>
+<s> reach the cell to the left of the diamond </s>
 
 [iter]    185
-[loss]    5.9326
-[trn_rew] 2.2029
-[tst_rew] 1.7200
-<s> cell above heart </s>
-<s> reach the cell one above the heart </s>
-<s> cell one left of diamond </s>
+[loss]    6.4544
+[trn_rew] 1.8610
+[tst_rew] 0.8700
+<s> above the triangle </s>
+<s> reach the cell one below diamond </s>
+<s> cell one left of heart </s>
 
 [iter]    186
-[loss]    5.9541
-[trn_rew] 2.2168
-[tst_rew] 1.7400
-<s> reach the cell with the spade </s>
+[loss]    6.4291
+[trn_rew] 1.8824
+[tst_rew] 1.2100
+<s> reach the cell to the left of the circle </s>
 <s> reach cell with heart </s>
-<s> one cell left of circle </s>
+<s> reach cell to diamond </s>
 
 [iter]    187
-[loss]    5.9607
-[trn_rew] 2.2199
-[tst_rew] 1.6900
-<s> reach the cell above the circle </s>
-<s> reach the blue diamond </s>
-<s> to the left of the diamond </s>
+[loss]    6.4230
+[trn_rew] 1.8809
+[tst_rew] 1.1900
+<s> reach the cell one below circle </s>
+<s> reach the space to the left of the heart </s>
+<s> go to the spade </s>
 
 [iter]    188
-[loss]    5.9262
-[trn_rew] 2.2267
-[tst_rew] 1.8900
-<s> one space to the left of the diamond </s>
-<s> reach cell one above star </s>
-<s> reach the cell with the circle </s>
+[loss]    6.4345
+[trn_rew] 1.8670
+[tst_rew] 1.1700
+<s> reach space below spade </s>
+<s> reach cell one below star </s>
+<s> reach the cell with the heart </s>
 
 [iter]    189
-[loss]    5.9534
-[trn_rew] 2.2523
-[tst_rew] 1.8800
-<s> above star </s>
-<s> left of heart </s>
-<s> reach cell to the left of the diamond </s>
+[loss]    6.4254
+[trn_rew] 1.8919
+[tst_rew] 1.1400
+<s> square above the spade </s>
+<s> cell with orange diamond </s>
+<s> reach cell right of heart </s>
 
 [iter]    190
-[loss]    5.9415
-[trn_rew] 2.2146
-[tst_rew] 1.5400
-<s> move to the spade </s>
-<s> reach cell to heart </s>
-<s> reach the square that is to the left of the heart </s>
+[loss]    6.4227
+[trn_rew] 1.9279
+[tst_rew] 1.3000
+<s> move to the triangle </s>
+<s> reach cell to right of triangle </s>
+<s> reach the square that is to the right of the orange circle </s>
 
 [iter]    191
-[loss]    5.9410
-[trn_rew] 2.2141
-[tst_rew] 1.2700
-<s> reach the star </s>
-<s> reach one above circle </s>
-<s> go to the cell to the left of the heart </s>
+[loss]    6.4075
+[trn_rew] 1.9131
+[tst_rew] 1.0700
+<s> reach the square that is to the left of the diamond </s>
+<s> reach square above heart </s>
+<s> go to the cell below the star </s>
 
 [iter]    192
-[loss]    5.9121
-[trn_rew] 2.2566
-[tst_rew] 1.3600
-<s> cell above circle </s>
-<s> go to the cell to the left of the triangle </s>
-<s> reach cell one above star </s>
+[loss]    6.4120
+[trn_rew] 1.9087
+[tst_rew] 1.1700
+<s> cell above heart </s>
+<s> go to the cell with the diamond </s>
+<s> reach cell one below star </s>
 
 [iter]    193
-[loss]    5.9103
-[trn_rew] 2.2300
-[tst_rew] 1.7000
-<s> reach cell to the left of heart </s>
-<s> reach cell above heart </s>
-<s> reach the triangle </s>
+[loss]    6.4072
+[trn_rew] 1.9223
+[tst_rew] 1.5000
+<s> reach cell to the left of circle </s>
+<s> reach cell one below diamond </s>
+<s> reach the cell to the right of the spade </s>
 
 [iter]    194
-[loss]    5.9230
-[trn_rew] 2.3086
-[tst_rew] 1.7500
+[loss]    6.4182
+[trn_rew] 1.8960
+[tst_rew] 0.8400
 <s> go to star </s>
-<s> reach the circle </s>
-<s> reach cell one above triangle </s>
+<s> reach the space to the right of the triangle </s>
+<s> reach cell one below diamond </s>
 
 [iter]    195
-[loss]    5.9217
-[trn_rew] 2.2573
-[tst_rew] 1.6200
-<s> cell above spade </s>
-<s> one space to the left of the triangle </s>
-<s> reach spade cell </s>
-
-[iter]    196
-[loss]    5.9207
-[trn_rew] 2.2889
-[tst_rew] 1.5000
-<s> reach the cell with the circle </s>
-<s> reach cell to the left of star </s>
-<s> square above the star </s>
-
-[iter]    197
-[loss]    5.9035
-[trn_rew] 2.2652
-[tst_rew] 1.7800
-<s> cell above star </s>
-<s> reach the triangle cell </s>
-<s> reach one cell left of diamond </s>
-
-[iter]    198
-[loss]    5.9034
-[trn_rew] 2.2777
-[tst_rew] 1.8800
-<s> reach the cell to the left of the star </s>
-<s> reach cell to the left of the diamond </s>
-<s> reach the cell one above the diamond </s>
-
-[iter]    199
-[loss]    5.9008
-[trn_rew] 2.3012
-[tst_rew] 1.8700
-<s> reach the cell to the left of the triangle </s>
-<s> reach cell to the left of blue diamond </s>
-<s> go to the cell to the left of the heart </s>
-
-[iter]    200
-[loss]    5.9102
-[trn_rew] 2.2778
-[tst_rew] 1.5200
-<s> reach cell with diamond </s>
-<s> cell one left of heart </s>
-<s> reach cell to circle </s>
-
-[iter]    201
-[loss]    5.9103
-[trn_rew] 2.2936
-[tst_rew] 1.8800
-<s> reach cell above heart </s>
-<s> reach cell with the triangle </s>
-<s> one cell left of triangle </s>
-
-[iter]    202
-[loss]    5.9076
-[trn_rew] 2.2556
-[tst_rew] 1.9000
-<s> reach cell above the star </s>
-<s> reach cell one above diamond </s>
-<s> reach cell with the heart </s>
-
-[iter]    203
-[loss]    5.9000
-[trn_rew] 2.2771
-[tst_rew] 1.4500
-<s> reach cell above diamond </s>
-<s> left of circle </s>
-<s> reach the space to the left of the diamond </s>
-
-[iter]    204
-[loss]    5.9005
-[trn_rew] 2.3040
-[tst_rew] 1.8600
-<s> left of star </s>
-<s> reach the spade cell </s>
-<s> reach the spade </s>
-
-[iter]    205
-[loss]    5.8974
-[trn_rew] 2.2908
-[tst_rew] 1.3500
-<s> reach cell to the left of circle </s>
-<s> reach cell of star </s>
-<s> go to spade </s>
-
-[iter]    206
-[loss]    5.9017
-[trn_rew] 2.3231
-[tst_rew] 1.5600
-<s> above star </s>
-<s> reach the cell above the star </s>
-<s> left of circle </s>
-
-[iter]    207
-[loss]    5.8998
-[trn_rew] 2.3115
-[tst_rew] 1.5600
-<s> reach cell above circle </s>
-<s> reach cell above the circle </s>
-<s> one space to the left of the circle </s>
-
-[iter]    208
-[loss]    5.9182
-[trn_rew] 2.3164
-[tst_rew] 1.9500
-<s> reach cell to left of spade </s>
-<s> reach the cell one above the triangle </s>
-<s> reach the star cell </s>
-
-[iter]    209
-[loss]    5.9063
-[trn_rew] 2.3217
-[tst_rew] 1.8400
-<s> reach cell one above star </s>
-<s> reach cell one above star </s>
-<s> reach cell with the heart </s>
-
-[iter]    210
-[loss]    5.8860
-[trn_rew] 2.2938
-[tst_rew] 1.5300
-<s> reach cell of triangle </s>
-<s> reach the spade </s>
-<s> reach the spade cell </s>
-
-[iter]    211
-[loss]    5.8820
-[trn_rew] 2.3228
-[tst_rew] 2.0000
-<s> reach one above triangle </s>
-<s> reach the cell to the left of the spade </s>
-<s> reach cell with circle </s>
-
-[iter]    212
-[loss]    5.8953
-[trn_rew] 2.3379
-[tst_rew] 1.6200
-<s> left of diamond </s>
-<s> reach square left of circle </s>
+[loss]    6.4226
+[trn_rew] 1.9553
+[tst_rew] 1.1300
+<s> cell above triangle </s>
+<s> reach cell with triangle </s>
 <s> reach the heart </s>
 
-[iter]    213
-[loss]    5.8838
-[trn_rew] 2.3542
-[tst_rew] 1.9200
-<s> reach the space to the left of the triangle </s>
-<s> go to the cell with the circle </s>
-<s> reach cell to the left of blue star </s>
-
-[iter]    214
-[loss]    5.8792
-[trn_rew] 2.3017
-[tst_rew] 1.8300
-<s> reach the cell above the diamond </s>
-<s> go to diamond </s>
-<s> above the triangle </s>
-
-[iter]    215
-[loss]    5.8891
-[trn_rew] 2.3577
-[tst_rew] 1.7500
-<s> reach the space to the left of the heart </s>
-<s> to the left of the diamond </s>
-<s> reach cell one above star </s>
-
-[iter]    216
-[loss]    5.8811
-[trn_rew] 2.3261
-[tst_rew] 1.4100
-<s> reach cell on left of heart </s>
-<s> reach cell to left of spade </s>
-<s> reach cell of spade </s>
-
-[iter]    217
-[loss]    5.8939
-[trn_rew] 2.3301
-[tst_rew] 1.8700
-<s> reach the square that is to the left of the diamond </s>
-<s> reach cell with heart </s>
-<s> reach cell above the triangle </s>
-
-[iter]    218
-[loss]    5.8898
-[trn_rew] 2.3137
-[tst_rew] 1.7700
-<s> cell above spade </s>
-<s> reach cell one above star </s>
-<s> one space to the left of the diamond </s>
-
-[iter]    219
-[loss]    5.8764
-[trn_rew] 2.3334
-[tst_rew] 1.8000
-<s> reach cell one above diamond </s>
-<s> reach cell above heart </s>
-<s> reach cell above triangle </s>
-
-[iter]    220
-[loss]    5.8597
-[trn_rew] 2.3438
-[tst_rew] 1.9600
-<s> cell with triangle </s>
-<s> reach square above circle </s>
-<s> reach square above heart </s>
-
-[iter]    221
-[loss]    5.8680
-[trn_rew] 2.3784
-[tst_rew] 1.5300
-<s> reach cell one above star </s>
-<s> reach spade </s>
-<s> one cell left of diamond </s>
-
-[iter]    222
-[loss]    5.8567
-[trn_rew] 2.3811
-[tst_rew] 1.8300
-<s> move to the diamond </s>
-<s> reach square above heart </s>
+[iter]    196
+[loss]    6.4056
+[trn_rew] 1.9520
+[tst_rew] 1.0300
+<s> reach the cell to the right of the star </s>
+<s> reach cell right of spade </s>
 <s> reach the blue diamond </s>
 
-[iter]    223
-[loss]    5.8661
-[trn_rew] 2.3415
-[tst_rew] 1.7200
-<s> reach the triangle </s>
+[iter]    197
+[loss]    6.4077
+[trn_rew] 1.9744
+[tst_rew] 1.3100
+<s> cell one left of circle </s>
+<s> reach the cell to the right of the star </s>
+<s> reach one cell left of circle </s>
+
+[iter]    198
+[loss]    6.3933
+[trn_rew] 2.0195
+[tst_rew] 1.1300
+<s> reach the cell to the right of the star </s>
+<s> reach cell 1 below triangle </s>
+<s> reach the cell one above the circle </s>
+
+[iter]    199
+[loss]    6.4025
+[trn_rew] 1.9949
+[tst_rew] 1.2900
+<s> reach the cell to the right of the diamond </s>
+<s> reach cell to the left of blue circle </s>
+<s> go to the cell below the heart </s>
+
+[iter]    200
+[loss]    6.3854
+[trn_rew] 1.9789
+[tst_rew] 1.6200
+<s> reach cell with blue circle </s>
+<s> cell one right of spade </s>
+<s> reach cell to right of circle </s>
+
+[iter]    201
+[loss]    6.3898
+[trn_rew] 2.0028
+[tst_rew] 1.1000
+<s> reach cell above heart </s>
+<s> reach cell with triangle </s>
+<s> square above the triangle </s>
+
+[iter]    202
+[loss]    6.3842
+[trn_rew] 2.0101
+[tst_rew] 1.0200
+<s> reach cell above the star </s>
 <s> reach cell one above circle </s>
-<s> reach cell above star </s>
+<s> reach cell right of spade </s>
+
+[iter]    203
+[loss]    6.3893
+[trn_rew] 2.0326
+[tst_rew] 1.3600
+<s> reach cell above circle </s>
+<s> cell with orange diamond </s>
+<s> reach the triangle cell </s>
+
+[iter]    204
+[loss]    6.3864
+[trn_rew] 2.0498
+[tst_rew] 1.2100
+<s> cell one left of circle </s>
+<s> reach the cell to the right of the heart </s>
+<s> reach the cell below the heart </s>
+
+[iter]    205
+[loss]    6.3642
+[trn_rew] 2.0423
+[tst_rew] 1.1200
+<s> reach cell to the left of blue spade </s>
+<s> reach cell to left of heart </s>
+<s> go to the cell with the circle </s>
+
+[iter]    206
+[loss]    6.3584
+[trn_rew] 2.0366
+[tst_rew] 1.2500
+<s> above star </s>
+<s> reach the cell above the diamond </s>
+<s> left of spade </s>
+
+[iter]    207
+[loss]    6.3643
+[trn_rew] 2.0113
+[tst_rew] 1.3700
+<s> reach cell of circle </s>
+<s> reach cell above the heart </s>
+<s> one space to the left of the heart </s>
+
+[iter]    208
+[loss]    6.3534
+[trn_rew] 2.0410
+[tst_rew] 1.0800
+<s> reach cell to left of spade </s>
+<s> reach the cell one above the triangle </s>
+<s> reach the square that is to the right of the orange spade </s>
+
+[iter]    209
+[loss]    6.3761
+[trn_rew] 2.0341
+[tst_rew] 1.3500
+<s> reach cell one above star </s>
+<s> reach cell one below star </s>
+<s> reach cell 1 below spade </s>
+
+[iter]    210
+[loss]    6.3621
+[trn_rew] 2.0809
+[tst_rew] 1.5000
+<s> reach cell to the right of spade </s>
+<s> reach the cell one below star </s>
+<s> reach the cell with the circle </s>
+
+[iter]    211
+[loss]    6.3513
+[trn_rew] 2.0446
+[tst_rew] 1.1100
+<s> reach one above triangle </s>
+<s> reach the cell to the left of the triangle </s>
+<s> reach cell 1 below circle </s>
+
+[iter]    212
+[loss]    6.3578
+[trn_rew] 2.0744
+[tst_rew] 1.0800
+<s> cell above circle </s>
+<s> reach square left of heart </s>
+<s> reach the space to the right of the heart </s>
+
+[iter]    213
+[loss]    6.3441
+[trn_rew] 2.0925
+[tst_rew] 1.2300
+<s> reach the spade spade </s>
+<s> go to the cell to the left of the spade </s>
+<s> reach the cell to the left of the diamond </s>
+
+[iter]    214
+[loss]    6.3457
+[trn_rew] 2.1074
+[tst_rew] 1.2600
+<s> reach the cell above the circle </s>
+<s> move to the spade </s>
+<s> above the diamond </s>
+
+[iter]    215
+[loss]    6.3390
+[trn_rew] 2.0929
+[tst_rew] 1.3500
+<s> reach the triangle </s>
+<s> move one the triangle </s>
+<s> reach cell one below diamond </s>
+
+[iter]    216
+[loss]    6.3226
+[trn_rew] 2.0865
+[tst_rew] 1.3800
+<s> reach cell on left of heart </s>
+<s> reach cell 1 below diamond </s>
+<s> reach cell to the right of star </s>
+
+[iter]    217
+[loss]    6.3331
+[trn_rew] 2.0621
+[tst_rew] 1.5000
+<s> reach the square that is to the right of the orange star </s>
+<s> reach cell right of star </s>
+<s> reach cell of triangle </s>
+
+[iter]    218
+[loss]    6.3593
+[trn_rew] 2.0894
+[tst_rew] 1.3500
+<s> cell above triangle </s>
+<s> reach cell one above star </s>
+<s> reach cell above heart </s>
+
+[iter]    219
+[loss]    6.3383
+[trn_rew] 2.1092
+[tst_rew] 1.3400
+<s> reach cell one below spade </s>
+<s> reach cell above spade </s>
+<s> reach cell above diamond </s>
+
+[iter]    220
+[loss]    6.3357
+[trn_rew] 2.0651
+[tst_rew] 1.2200
+<s> above the diamond </s>
+<s> reach star </s>
+<s> reach square above spade </s>
+
+[iter]    221
+[loss]    6.3491
+[trn_rew] 2.1149
+[tst_rew] 1.3800
+<s> reach cell one below diamond </s>
+<s> reach the cell one below diamond </s>
+<s> reach one above star </s>
+
+[iter]    222
+[loss]    6.3308
+[trn_rew] 2.1041
+[tst_rew] 1.5000
+<s> go to the cell to the left of the circle </s>
+<s> reach square one right of triangle </s>
+<s> reach the circle cell </s>
+
+[iter]    223
+[loss]    6.3281
+[trn_rew] 2.1211
+[tst_rew] 1.4200
+<s> reach the cell below the circle </s>
+<s> reach cell one above spade </s>
+<s> reach cell left of circle </s>
 
 [iter]    224
-[loss]    5.8545
-[trn_rew] 2.3565
-[tst_rew] 2.0500
-<s> reach the cell to the left of the heart </s>
-<s> reach one above heart </s>
-<s> reach cell one above spade </s>
+[loss]    6.3076
+[trn_rew] 2.1358
+[tst_rew] 1.4300
+<s> reach the cell to the left of the triangle </s>
+<s> reach square one right of star </s>
+<s> reach cell one above diamond </s>
 
 [iter]    225
-[loss]    5.8655
-[trn_rew] 2.4087
-[tst_rew] 1.8600
-<s> go to the spade </s>
-<s> cell above heart </s>
-<s> reach cell to heart </s>
+[loss]    6.3185
+[trn_rew] 2.1269
+[tst_rew] 1.8100
+<s> go to the triangle </s>
+<s> square above the spade </s>
+<s> reach cell to right of triangle </s>
 
 [iter]    226
-[loss]    5.8620
-[trn_rew] 2.3825
-[tst_rew] 1.6800
-<s> reach cell to the left of triangle </s>
-<s> reach one cell left of spade </s>
-<s> reach cell above circle </s>
+[loss]    6.3395
+[trn_rew] 2.1338
+[tst_rew] 1.1100
+<s> reach cell to the right of star </s>
+<s> reach one cell left of triangle </s>
+<s> reach cell above heart </s>
 
 [iter]    227
-[loss]    5.8692
-[trn_rew] 2.3909
-[tst_rew] 1.6100
-<s> above the circle </s>
-<s> reach the triangle </s>
-<s> reach diamond cell </s>
+[loss]    6.3230
+[trn_rew] 2.1233
+[tst_rew] 1.5900
+<s> square above the heart </s>
+<s> reach the cell to the left of the triangle </s>
+<s> reach space below spade </s>
 
 [iter]    228
-[loss]    5.8802
-[trn_rew] 2.3844
-[tst_rew] 1.9300
-<s> reach cell with the diamond </s>
-<s> reach one above spade </s>
-<s> above the triangle </s>
+[loss]    6.3256
+[trn_rew] 2.1855
+[tst_rew] 1.4300
+<s> reach cell directly below green spade </s>
+<s> reach square left of star </s>
+<s> above the diamond </s>
 
 [iter]    229
-[loss]    5.8572
-[trn_rew] 2.3752
-[tst_rew] 1.8700
+[loss]    6.3230
+[trn_rew] 2.1503
+[tst_rew] 1.4100
+<s> cell one right of spade </s>
 <s> cell above circle </s>
-<s> cell above diamond </s>
 <s> cell above star </s>
 
 [iter]    230
-[loss]    5.8597
-[trn_rew] 2.3640
-[tst_rew] 1.7800
-<s> one cell left of diamond </s>
-<s> go to diamond </s>
-<s> move to the circle </s>
+[loss]    6.3193
+[trn_rew] 2.1144
+[tst_rew] 1.5900
+<s> one space to the left of the triangle </s>
+<s> go to circle </s>
+<s> move one cell to right of circle </s>
 
 [iter]    231
-[loss]    5.8454
-[trn_rew] 2.3748
-[tst_rew] 1.7300
-<s> reach the square that is to the left of the heart </s>
-<s> left of the triangle </s>
-<s> above star </s>
+[loss]    6.3014
+[trn_rew] 2.1511
+[tst_rew] 1.5700
+<s> reach the square that is to the right of the orange heart </s>
+<s> cell one right of spade </s>
+<s> square above the star </s>
 
 [iter]    232
-[loss]    5.8679
-[trn_rew] 2.4150
-[tst_rew] 1.6700
-<s> reach the triangle cell </s>
-<s> reach cell above triangle </s>
-<s> cell with heart </s>
+[loss]    6.3185
+[trn_rew] 2.1815
+[tst_rew] 1.4800
+<s> reach the cell to the right of the spade </s>
+<s> reach cell above star </s>
+<s> cell below the diamond </s>
 
 [iter]    233
-[loss]    5.8840
-[trn_rew] 2.3648
-[tst_rew] 1.8700
-<s> reach the cell one above the circle </s>
-<s> reach cell with diamond </s>
-<s> reach cell one above spade </s>
+[loss]    6.3165
+[trn_rew] 2.1812
+[tst_rew] 1.5000
+<s> reach the cell one below heart </s>
+<s> reach cell with blue circle </s>
+<s> reach cell one below the circle </s>
 
 [iter]    234
-[loss]    5.8524
-[trn_rew] 2.4300
-[tst_rew] 1.4800
-<s> reach the star cell </s>
-<s> reach the space to the left of the triangle </s>
-<s> go to the cell with the diamond </s>
+[loss]    6.3091
+[trn_rew] 2.1763
+[tst_rew] 1.2500
+<s> reach the square that is to the right of the orange heart </s>
+<s> reach the cell above the diamond </s>
+<s> go to the cell to the left of the diamond </s>
 
 [iter]    235
-[loss]    5.8515
-[trn_rew] 2.3921
-[tst_rew] 1.8800
-<s> reach cell above spade </s>
-<s> reach cell above diamond </s>
-<s> reach cell one above spade </s>
+[loss]    6.3220
+[trn_rew] 2.1716
+[tst_rew] 1.4000
+<s> reach cell left of circle </s>
+<s> reach cell below circle </s>
+<s> reach cell one above triangle </s>
 
 [iter]    236
-[loss]    5.8416
-[trn_rew] 2.4070
-[tst_rew] 1.6000
+[loss]    6.3065
+[trn_rew] 2.1799
+[tst_rew] 1.1700
 <s> reach cell above circle </s>
-<s> reach one above triangle </s>
-<s> left of diamond </s>
+<s> reach square above diamond </s>
+<s> cell one right of spade </s>
 
 [iter]    237
-[loss]    5.8423
-[trn_rew] 2.3966
-[tst_rew] 1.7300
-<s> reach cell to the left of diamond </s>
-<s> square above the triangle </s>
-<s> go to the cell to the left of the spade </s>
+[loss]    6.3042
+[trn_rew] 2.1886
+[tst_rew] 1.3900
+<s> reach cell to the left of blue triangle </s>
+<s> one space to the left of the spade </s>
+<s> go to the cell below the circle </s>
 
 [iter]    238
-[loss]    5.8429
-[trn_rew] 2.3909
-[tst_rew] 2.4000
-<s> reach the cell with the heart </s>
-<s> reach one cell left of triangle </s>
-<s> reach cell with blue diamond </s>
+[loss]    6.2976
+[trn_rew] 2.1962
+[tst_rew] 1.3400
+<s> reach the cell with the spade </s>
+<s> reach square below heart </s>
+<s> reach cell directly below green heart </s>
 
 [iter]    239
-[loss]    5.8428
-[trn_rew] 2.3832
-[tst_rew] 1.8500
-<s> reach cell with blue star </s>
+[loss]    6.2976
+[trn_rew] 2.1902
+[tst_rew] 1.5100
+<s> reach cell right of diamond </s>
 <s> reach cell above the star </s>
-<s> above spade </s>
+<s> one right of the triangle </s>
 
 [iter]    240
-[loss]    5.8515
-[trn_rew] 2.4088
-[tst_rew] 2.0600
-<s> reach cell to the left of blue spade </s>
-<s> go to the cell with the heart </s>
-<s> reach the space to the left of the diamond </s>
+[loss]    6.2950
+[trn_rew] 2.2172
+[tst_rew] 1.5600
+<s> reach cell to the left of blue triangle </s>
+<s> move one cell to right of spade </s>
+<s> reach the space to the left of the circle </s>
 
 [iter]    241
-[loss]    5.8473
-[trn_rew] 2.4166
-[tst_rew] 1.7700
-<s> reach the diamond </s>
-<s> above the circle </s>
-<s> reach the space to the left of the spade </s>
+[loss]    6.2923
+[trn_rew] 2.2038
+[tst_rew] 1.3700
+<s> reach the blue triangle </s>
+<s> one cell left of spade </s>
+<s> reach the triangle </s>
 
 [iter]    242
-[loss]    5.8564
-[trn_rew] 2.4056
-[tst_rew] 1.9400
-<s> the cell where triangle is </s>
-<s> reach cell one above triangle </s>
+[loss]    6.2884
+[trn_rew] 2.2207
+[tst_rew] 1.5700
+<s> the cell where diamond is </s>
+<s> reach cell one below triangle </s>
 <s> reach cell with star </s>
 
 [iter]    243
-[loss]    5.8542
-[trn_rew] 2.4300
-[tst_rew] 1.7400
-<s> reach one cell left of triangle </s>
-<s> reach cell of triangle </s>
-<s> move to the triangle </s>
+[loss]    6.2822
+[trn_rew] 2.2325
+[tst_rew] 1.3400
+<s> reach one cell left of star </s>
+<s> reach cell to the right of the triangle </s>
+<s> the cell where star is </s>
 
 [iter]    244
-[loss]    5.8402
-[trn_rew] 2.4186
-[tst_rew] 2.0600
-<s> reach one above star </s>
-<s> reach cell left of heart </s>
-<s> reach cell with spade </s>
+[loss]    6.2766
+[trn_rew] 2.1974
+[tst_rew] 1.0900
+<s> reach one cell left of diamond </s>
+<s> reach cell to the right of triangle </s>
+<s> reach cell with the circle </s>
 
 [iter]    245
-[loss]    5.8391
-[trn_rew] 2.4241
-[tst_rew] 2.2300
-<s> reach cell to the left of blue triangle </s>
-<s> reach the cell one above the star </s>
-<s> above the heart </s>
+[loss]    6.2803
+[trn_rew] 2.2270
+[tst_rew] 1.4400
+<s> reach cell to the right of the triangle </s>
+<s> reach the cell one below circle </s>
+<s> one right of the star </s>
 
 [iter]    246
-[loss]    5.8366
-[trn_rew] 2.3874
-[tst_rew] 1.6300
-<s> reach the cell to the left of the star </s>
-<s> reach the cell to the left of the diamond </s>
-<s> reach cell above heart </s>
+[loss]    6.2793
+[trn_rew] 2.2033
+[tst_rew] 1.3400
+<s> reach the cell to the right of the star </s>
+<s> reach the cell to the left of the heart </s>
+<s> one cell left of heart </s>
 
 [iter]    247
-[loss]    5.8294
-[trn_rew] 2.4057
-[tst_rew] 2.1100
-<s> to the left of the triangle </s>
-<s> reach cell above star </s>
-<s> one space to the left of the triangle </s>
+[loss]    6.2849
+[trn_rew] 2.2216
+[tst_rew] 1.6000
+<s> move to the spade </s>
+<s> reach cell one above star </s>
+<s> reach cell below star </s>
 
 [iter]    248
-[loss]    5.8357
-[trn_rew] 2.3924
-[tst_rew] 1.8000
-<s> to the left of the spade </s>
-<s> reach cell above heart </s>
-<s> move to the diamond </s>
+[loss]    6.2840
+[trn_rew] 2.2386
+[tst_rew] 1.3400
+<s> to the left of the triangle </s>
+<s> reach cell above spade </s>
+<s> move one cell to right of diamond </s>
 
 [iter]    249
-[loss]    5.8528
-[trn_rew] 2.4127
-[tst_rew] 1.9000
-<s> reach the square that is to the left of the heart </s>
-<s> go to the spade </s>
-<s> reach cell to the left of blue star </s>
-
-[iter]    250
-[loss]    5.8482
-[trn_rew] 2.4411
-[tst_rew] 2.1100
-<s> reach cell with the spade </s>
-<s> square above the star </s>
-<s> reach the cell above the spade </s>
-
-[iter]    251
-[loss]    5.8506
-[trn_rew] 2.4203
-[tst_rew] 1.9600
-<s> above spade </s>
-<s> reach cell above star </s>
-<s> reach the diamond </s>
-
-[iter]    252
-[loss]    5.8275
-[trn_rew] 2.4092
-[tst_rew] 1.5700
-<s> reach diamond </s>
-<s> one cell left of triangle </s>
-<s> above the spade </s>
-
-[iter]    253
-[loss]    5.8278
-[trn_rew] 2.4344
-[tst_rew] 2.2700
-<s> above circle </s>
-<s> reach the cell to the left of the diamond </s>
-<s> one cell left of heart </s>
-
-[iter]    254
-[loss]    5.8187
-[trn_rew] 2.4441
-[tst_rew] 1.7100
-<s> reach cell to the left of triangle </s>
-<s> to the left of the triangle </s>
-<s> reach spade </s>
-
-[iter]    255
-[loss]    5.8243
-[trn_rew] 2.4316
-[tst_rew] 1.7900
-<s> go to the cell with the circle </s>
-<s> reach cell to left of circle </s>
-<s> cell with orange star </s>
-
-[iter]    256
-[loss]    5.8468
-[trn_rew] 2.4405
-[tst_rew] 1.9100
-<s> reach star cell </s>
-<s> cell above spade </s>
-<s> reach the spade </s>
-
-[iter]    257
-[loss]    5.8309
-[trn_rew] 2.4569
-[tst_rew] 1.8700
-<s> reach cell above the heart </s>
-<s> reach cell one above heart </s>
-<s> reach cell to the left of blue triangle </s>
-
-[iter]    258
-[loss]    5.8296
-[trn_rew] 2.4533
-[tst_rew] 1.8500
-<s> left of triangle </s>
-<s> reach the square that is to the left of the triangle </s>
-<s> reach cell with diamond </s>
-
-[iter]    259
-[loss]    5.8178
-[trn_rew] 2.4697
-[tst_rew] 1.9500
-<s> go to heart </s>
+[loss]    6.2768
+[trn_rew] 2.2322
+[tst_rew] 1.3100
 <s> reach triangle </s>
-<s> reach the cell to the left of the star </s>
-
-[iter]    260
-[loss]    5.8230
-[trn_rew] 2.4330
-[tst_rew] 1.7700
-<s> reach heart </s>
-<s> reach cell left of spade </s>
-<s> reach cell above the circle </s>
-
-[iter]    261
-[loss]    5.8098
-[trn_rew] 2.4612
-[tst_rew] 1.6200
-<s> reach the circle </s>
-<s> reach cell one that left of circle </s>
-<s> reach square above star </s>
-
-[iter]    262
-[loss]    5.8208
-[trn_rew] 2.4428
-[tst_rew] 1.8700
-<s> reach square above spade </s>
-<s> reach the space to the left of the diamond </s>
-<s> go to the star </s>
-
-[iter]    263
-[loss]    5.8248
-[trn_rew] 2.4262
-[tst_rew] 2.0700
-<s> reach cell one above star </s>
-<s> reach the cell to the left of the star </s>
-<s> reach cell left of heart </s>
-
-[iter]    264
-[loss]    5.8082
-[trn_rew] 2.4816
-[tst_rew] 1.9200
-<s> square above the triangle </s>
-<s> reach cell one above heart </s>
-<s> square above the triangle </s>
-
-[iter]    265
-[loss]    5.8109
-[trn_rew] 2.4771
-[tst_rew] 1.7600
-<s> reach one above spade </s>
-<s> cell one left of star </s>
-<s> reach cell with the spade </s>
-
-[iter]    266
-[loss]    5.8103
-[trn_rew] 2.4651
-[tst_rew] 2.2700
-<s> reach one above heart </s>
-<s> reach the cell to the left of the spade </s>
-<s> reach cell to left of triangle </s>
-
-[iter]    267
-[loss]    5.8156
-[trn_rew] 2.5093
-[tst_rew] 2.0500
-<s> cell with spade </s>
-<s> reach diamond </s>
-<s> left of the diamond </s>
-
-[iter]    268
-[loss]    5.8051
-[trn_rew] 2.4583
-[tst_rew] 1.5500
-<s> the cell where star is </s>
-<s> reach square above triangle </s>
-<s> the cell where triangle is </s>
-
-[iter]    269
-[loss]    5.8196
-[trn_rew] 2.4556
-[tst_rew] 1.8500
-<s> reach the blue circle </s>
-<s> reach cell to the left of the circle </s>
-<s> reach the cell above the spade </s>
-
-[iter]    270
-[loss]    5.8169
-[trn_rew] 2.4969
-[tst_rew] 1.5500
-<s> reach heart </s>
-<s> reach heart cell </s>
-<s> reach the circle cell </s>
-
-[iter]    271
-[loss]    5.8229
-[trn_rew] 2.4958
-[tst_rew] 2.0500
-<s> reach the blue triangle </s>
-<s> reach the square that is to the left of the star </s>
-<s> reach the triangle cell </s>
-
-[iter]    272
-[loss]    5.7993
-[trn_rew] 2.4581
-[tst_rew] 2.0100
-<s> reach the cell to the left of the circle </s>
-<s> reach cell on left of star </s>
-<s> reach cell one above triangle </s>
-
-[iter]    273
-[loss]    5.7984
-[trn_rew] 2.4759
-[tst_rew] 1.9400
-<s> reach cell to triangle </s>
-<s> reach the cell above the triangle </s>
-<s> cell with orange heart </s>
-
-[iter]    274
-[loss]    5.8082
-[trn_rew] 2.4854
-[tst_rew] 1.8800
-<s> reach the cell one above the spade </s>
-<s> reach square left of diamond </s>
-<s> reach square left of triangle </s>
-
-[iter]    275
-[loss]    5.8005
-[trn_rew] 2.4793
-[tst_rew] 1.5000
-<s> reach cell to the left of diamond </s>
-<s> go to the cell to the left of the heart </s>
-<s> reach cell to the left of the star </s>
-
-[iter]    276
-[loss]    5.8111
-[trn_rew] 2.4926
-[tst_rew] 2.0400
-<s> reach the cell to the left of the triangle </s>
-<s> reach the circle cell </s>
-<s> go to diamond </s>
-
-[iter]    277
-[loss]    5.8052
-[trn_rew] 2.4943
-[tst_rew] 1.7000
-<s> reach square left of star </s>
-<s> cell with orange heart </s>
-<s> reach the cell with the diamond </s>
-
-[iter]    278
-[loss]    5.7981
-[trn_rew] 2.4631
-[tst_rew] 1.5900
-<s> reach the cell with the diamond </s>
-<s> reach cell above triangle </s>
-<s> reach the cell one above the diamond </s>
-
-[iter]    279
-[loss]    5.8129
-[trn_rew] 2.4835
-[tst_rew] 2.0300
-<s> reach the heart cell </s>
-<s> reach cell above the heart </s>
-<s> above spade </s>
-
-[iter]    280
-[loss]    5.7971
-[trn_rew] 2.4721
-[tst_rew] 2.0200
-<s> reach the blue heart </s>
-<s> reach the square that is to the left of the star </s>
-<s> reach cell above the circle </s>
-
-[iter]    281
-[loss]    5.8072
-[trn_rew] 2.4308
-[tst_rew] 1.8400
-<s> reach cell with the circle </s>
-<s> reach the space to the left of the triangle </s>
-<s> one space to the left of the star </s>
-
-[iter]    282
-[loss]    5.7989
-[trn_rew] 2.4874
-[tst_rew] 1.8900
-<s> reach cell to the left of the star </s>
-<s> left of diamond </s>
-<s> the cell above the star </s>
-
-[iter]    283
-[loss]    5.8089
-[trn_rew] 2.4823
-[tst_rew] 1.9500
-<s> move to the diamond </s>
-<s> reach cell above diamond </s>
-<s> reach diamond </s>
-
-[iter]    284
-[loss]    5.8041
-[trn_rew] 2.5109
-[tst_rew] 2.3700
-<s> reach one above star </s>
-<s> reach cell above star </s>
-<s> reach cell to the left of star </s>
-
-[iter]    285
-[loss]    5.8001
-[trn_rew] 2.5162
-[tst_rew] 1.9600
-<s> above the heart </s>
-<s> above the diamond </s>
-<s> reach the space to the left of the diamond </s>
-
-[iter]    286
-[loss]    5.8001
-[trn_rew] 2.4772
-[tst_rew] 2.1100
-<s> reach cell to the left of diamond </s>
-<s> reach the space to the left of the circle </s>
-<s> reach the cell above the diamond </s>
-
-[iter]    287
-[loss]    5.7915
-[trn_rew] 2.4795
-[tst_rew] 1.8900
-<s> reach heart cell </s>
-<s> reach one cell left of triangle </s>
-<s> reach square left of diamond </s>
-
-[iter]    288
-[loss]    5.7926
-[trn_rew] 2.4804
-[tst_rew] 1.6400
-<s> reach spade </s>
-<s> reach cell to left of triangle </s>
-<s> reach circle cell </s>
-
-[iter]    289
-[loss]    5.8025
-[trn_rew] 2.5072
-[tst_rew] 1.9900
-<s> reach cell above triangle </s>
-<s> one cell left of heart </s>
-<s> reach the cell one above the heart </s>
-
-[iter]    290
-[loss]    5.8193
-[trn_rew] 2.4996
-[tst_rew] 1.9500
-<s> reach cell above diamond </s>
-<s> left of the spade </s>
-<s> reach cell above diamond </s>
-
-[iter]    291
-[loss]    5.7990
-[trn_rew] 2.4938
-[tst_rew] 2.2000
-<s> reach cell one above circle </s>
-<s> reach cell of triangle </s>
-<s> reach cell above triangle </s>
-
-[iter]    292
-[loss]    5.7780
-[trn_rew] 2.4788
-[tst_rew] 1.6800
-<s> reach cell one above diamond </s>
-<s> cell one left of triangle </s>
-<s> go to the cell to the left of the spade </s>
-
-[iter]    293
-[loss]    5.7967
-[trn_rew] 2.5119
-[tst_rew] 1.8700
-<s> above star </s>
-<s> above the diamond </s>
-<s> one cell left of heart </s>
-
-[iter]    294
-[loss]    5.7855
-[trn_rew] 2.4663
-[tst_rew] 1.7100
-<s> reach cell one above star </s>
-<s> reach the space to the left of the star </s>
-<s> move to the diamond </s>
-
-[iter]    295
-[loss]    5.7926
-[trn_rew] 2.5074
-[tst_rew] 2.0600
-<s> reach cell left of heart </s>
-<s> reach triangle </s>
-<s> reach the square that is is to the left of the star </s>
-
-[iter]    296
-[loss]    5.7967
-[trn_rew] 2.4757
-[tst_rew] 1.5100
-<s> go to the cell to the left of the circle </s>
-<s> reach the star </s>
-<s> reach the cell to the left of the heart </s>
-
-[iter]    297
-[loss]    5.8036
-[trn_rew] 2.5305
-[tst_rew] 1.9500
-<s> go to the heart </s>
-<s> reach the square that is to the left of the diamond </s>
-<s> cell above heart </s>
-
-[iter]    298
-[loss]    5.7926
-[trn_rew] 2.4915
-[tst_rew] 1.9400
-<s> reach cell above circle </s>
-<s> reach cell to left of heart </s>
-<s> reach the blue heart </s>
-
-[iter]    299
-[loss]    5.7852
-[trn_rew] 2.4933
-[tst_rew] 1.9700
-<s> square above the spade </s>
-<s> left of the heart </s>
-<s> left of diamond </s>
-
-[iter]    300
-[loss]    5.7875
-[trn_rew] 2.5099
-[tst_rew] 1.8600
-<s> cell above star </s>
-<s> left of spade </s>
-<s> reach the cell above the spade </s>
-
-[iter]    301
-[loss]    5.7807
-[trn_rew] 2.5054
-[tst_rew] 1.9700
-<s> reach cell to the left of blue star </s>
-<s> reach the square that is to the left of the diamond </s>
-<s> above star </s>
-
-[iter]    302
-[loss]    5.8019
-[trn_rew] 2.5226
-[tst_rew] 1.6400
-<s> reach square to the left of spade </s>
-<s> reach the star </s>
-<s> reach the heart </s>
-
-[iter]    303
-[loss]    5.7930
-[trn_rew] 2.5534
-[tst_rew] 1.7700
-<s> reach one cell left of circle </s>
-<s> cell with triangle </s>
-<s> above the spade </s>
-
-[iter]    304
-[loss]    5.7934
-[trn_rew] 2.4891
-[tst_rew] 1.9500
-<s> square above the circle </s>
-<s> above the circle </s>
-<s> reach cell to star </s>
-
-[iter]    305
-[loss]    5.7758
-[trn_rew] 2.5564
-[tst_rew] 1.9900
-<s> the cell above the diamond </s>
-<s> reach cell with the circle </s>
-<s> reach diamond </s>
-
-[iter]    306
-[loss]    5.7847
-[trn_rew] 2.5189
-[tst_rew] 2.0000
-<s> the cell where heart is </s>
-<s> cell with heart </s>
-<s> reach the space to the left of the spade </s>
-
-[iter]    307
-[loss]    5.7856
-[trn_rew] 2.5175
-[tst_rew] 1.6600
-<s> reach star </s>
-<s> reach cell to left of diamond </s>
-<s> reach cell to the left of blue heart </s>
+<s> go to the cell with the triangle </s>
+<s> reach cell to the right of the diamond </s>
 

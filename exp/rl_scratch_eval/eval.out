@@ -1,0 +1,1216 @@
+
+<Data> Loading local train environments with human annotations
+<Data> Found 1566 annotations
+
+<Data> Loading local test environments with human annotations
+<Data> Found 399 annotations
+
+<Data> Loading global train environments with human annotations
+<Data> Found 1071 annotations
+
+<Data> Loading global test environments with human annotations
+<Data> Found 272 annotations
+[n_train] 5000
+[n_test] 1000 test
+[task_ids] 5000 -> 5050
+[n_vocab] 74
+TEST DATUM 5000
+<s> reach cell one above star </s>
+[FINAL tst_rew] -0.5693
+TRANSITION
+((5000, 0), 1140, -0.56929824561403508)
+[FINAL tst_rew] -0.5602
+[FINAL tst_rew] -0.4853
+[FINAL tst_rew] -0.3601
+[FINAL tst_rew] -0.3490
+[FINAL tst_rew] -0.2726
+[FINAL tst_rew] -0.2299
+[FINAL tst_rew] -0.1625
+[FINAL tst_rew] -0.0993
+[FINAL tst_rew] -0.0977
+[FINAL tst_rew] -0.0598
+[FINAL tst_rew] -0.0454
+[FINAL tst_rew] -0.0157
+[FINAL tst_rew] -0.0111
+[FINAL tst_rew] 0.0029
+[FINAL tst_rew] 0.0047
+[FINAL tst_rew] 0.0159
+[FINAL tst_rew] 0.0157
+[FINAL tst_rew] 0.0143
+[FINAL tst_rew] 0.0093
+TEST DATUM 5001
+<s> reach cell one above diamond </s>
+[FINAL tst_rew] -0.6556
+TRANSITION
+((5001, 0), 1080, -0.65555555555555556)
+[FINAL tst_rew] -0.6554
+[FINAL tst_rew] -0.5631
+[FINAL tst_rew] -0.4351
+[FINAL tst_rew] -0.4119
+[FINAL tst_rew] -0.3717
+[FINAL tst_rew] -0.2945
+[FINAL tst_rew] -0.2396
+[FINAL tst_rew] -0.2013
+[FINAL tst_rew] -0.1532
+[FINAL tst_rew] -0.1140
+[FINAL tst_rew] -0.0826
+[FINAL tst_rew] -0.0495
+[FINAL tst_rew] -0.0310
+[FINAL tst_rew] -0.0223
+[FINAL tst_rew] -0.0082
+[FINAL tst_rew] -0.0015
+[FINAL tst_rew] 0.0104
+[FINAL tst_rew] 0.0069
+[FINAL tst_rew] 0.0142
+TEST DATUM 5002
+<s> reach the square that is to the right of the orange star </s>
+[FINAL tst_rew] -0.6111
+TRANSITION
+((5002, 0), 1170, -0.61111111111111116)
+[FINAL tst_rew] -0.5609
+[FINAL tst_rew] -0.4725
+[FINAL tst_rew] -0.4542
+[FINAL tst_rew] -0.4049
+[FINAL tst_rew] -0.4145
+[FINAL tst_rew] -0.2345
+[FINAL tst_rew] -0.2732
+[FINAL tst_rew] -0.1947
+[FINAL tst_rew] -0.1248
+[FINAL tst_rew] -0.0851
+[FINAL tst_rew] -0.0498
+[FINAL tst_rew] -0.0430
+[FINAL tst_rew] -0.0143
+[FINAL tst_rew] -0.0016
+[FINAL tst_rew] 0.0192
+[FINAL tst_rew] 0.0202
+[FINAL tst_rew] 0.0317
+[FINAL tst_rew] 0.0399
+[FINAL tst_rew] 0.0300
+TEST DATUM 5003
+<s> above circle </s>
+[FINAL tst_rew] -0.7673
+TRANSITION
+((5003, 0), 1100, -0.76727272727272722)
+[FINAL tst_rew] -0.7336
+[FINAL tst_rew] -0.7314
+[FINAL tst_rew] -0.5787
+[FINAL tst_rew] -0.5145
+[FINAL tst_rew] -0.4213
+[FINAL tst_rew] -0.3068
+[FINAL tst_rew] -0.2472
+[FINAL tst_rew] -0.1972
+[FINAL tst_rew] -0.1161
+[FINAL tst_rew] -0.1164
+[FINAL tst_rew] -0.0678
+[FINAL tst_rew] -0.0409
+[FINAL tst_rew] -0.0172
+[FINAL tst_rew] 0.0018
+[FINAL tst_rew] 0.0168
+[FINAL tst_rew] 0.0092
+[FINAL tst_rew] 0.0143
+[FINAL tst_rew] 0.0228
+[FINAL tst_rew] 0.0303
+TEST DATUM 5004
+<s> reach the spade </s>
+[FINAL tst_rew] -0.5743
+TRANSITION
+((5004, 0), 1130, -0.57433628318584073)
+[FINAL tst_rew] -0.6170
+[FINAL tst_rew] -0.4754
+[FINAL tst_rew] -0.4070
+[FINAL tst_rew] -0.3669
+[FINAL tst_rew] -0.3242
+[FINAL tst_rew] -0.2708
+[FINAL tst_rew] -0.1876
+[FINAL tst_rew] -0.1575
+[FINAL tst_rew] -0.1254
+[FINAL tst_rew] -0.0872
+[FINAL tst_rew] -0.0714
+[FINAL tst_rew] -0.0599
+[FINAL tst_rew] -0.0394
+[FINAL tst_rew] -0.0204
+[FINAL tst_rew] -0.0234
+[FINAL tst_rew] -0.0136
+[FINAL tst_rew] -0.0088
+[FINAL tst_rew] -0.0050
+[FINAL tst_rew] -0.0041
+TEST DATUM 5005
+<s> move one cell to right of spade </s>
+[FINAL tst_rew] -0.6685
+TRANSITION
+((5005, 0), 1080, -0.66851851851851851)
+[FINAL tst_rew] -0.5759
+[FINAL tst_rew] -0.6110
+[FINAL tst_rew] -0.4305
+[FINAL tst_rew] -0.3849
+[FINAL tst_rew] -0.4103
+[FINAL tst_rew] -0.3213
+[FINAL tst_rew] -0.2437
+[FINAL tst_rew] -0.1729
+[FINAL tst_rew] -0.1424
+[FINAL tst_rew] -0.1037
+[FINAL tst_rew] -0.0749
+[FINAL tst_rew] -0.0511
+[FINAL tst_rew] -0.0250
+[FINAL tst_rew] -0.0181
+[FINAL tst_rew] -0.0034
+[FINAL tst_rew] 0.0002
+[FINAL tst_rew] 0.0053
+[FINAL tst_rew] 0.0098
+[FINAL tst_rew] 0.0131
+TEST DATUM 5006
+<s> reach cell with the star </s>
+[FINAL tst_rew] -0.6035
+TRANSITION
+((5006, 0), 1150, -0.60347826086956524)
+[FINAL tst_rew] -0.5876
+[FINAL tst_rew] -0.5093
+[FINAL tst_rew] -0.4546
+[FINAL tst_rew] -0.3841
+[FINAL tst_rew] -0.3325
+[FINAL tst_rew] -0.3056
+[FINAL tst_rew] -0.2064
+[FINAL tst_rew] -0.1665
+[FINAL tst_rew] -0.1414
+[FINAL tst_rew] -0.1146
+[FINAL tst_rew] -0.0748
+[FINAL tst_rew] -0.0624
+[FINAL tst_rew] -0.0350
+[FINAL tst_rew] -0.0319
+[FINAL tst_rew] -0.0181
+[FINAL tst_rew] -0.0113
+[FINAL tst_rew] -0.0136
+[FINAL tst_rew] -0.0092
+[FINAL tst_rew] -0.0078
+TEST DATUM 5007
+<s> reach the cell one below circle </s>
+[FINAL tst_rew] -0.6632
+TRANSITION
+((5007, 0), 1140, -0.66315789473684206)
+[FINAL tst_rew] -0.7546
+[FINAL tst_rew] -0.7145
+[FINAL tst_rew] -0.6115
+[FINAL tst_rew] -0.5062
+[FINAL tst_rew] -0.4108
+[FINAL tst_rew] -0.3473
+[FINAL tst_rew] -0.3020
+[FINAL tst_rew] -0.1913
+[FINAL tst_rew] -0.1684
+[FINAL tst_rew] -0.1118
+[FINAL tst_rew] -0.0727
+[FINAL tst_rew] -0.0376
+[FINAL tst_rew] -0.0339
+[FINAL tst_rew] -0.0056
+[FINAL tst_rew] 0.0144
+[FINAL tst_rew] 0.0216
+[FINAL tst_rew] 0.0245
+[FINAL tst_rew] 0.0293
+[FINAL tst_rew] 0.0327
+TEST DATUM 5008
+<s> reach cell above spade </s>
+[FINAL tst_rew] -0.6171
+TRANSITION
+((5008, 0), 1110, -0.61711711711711714)
+[FINAL tst_rew] -0.6257
+[FINAL tst_rew] -0.5492
+[FINAL tst_rew] -0.4631
+[FINAL tst_rew] -0.3656
+[FINAL tst_rew] -0.3798
+[FINAL tst_rew] -0.3000
+[FINAL tst_rew] -0.2010
+[FINAL tst_rew] -0.1833
+[FINAL tst_rew] -0.1236
+[FINAL tst_rew] -0.1007
+[FINAL tst_rew] -0.0565
+[FINAL tst_rew] -0.0467
+[FINAL tst_rew] 0.0002
+[FINAL tst_rew] 0.0063
+[FINAL tst_rew] 0.0253
+[FINAL tst_rew] 0.0183
+[FINAL tst_rew] 0.0312
+[FINAL tst_rew] 0.0346
+[FINAL tst_rew] 0.0342
+TEST DATUM 5009
+<s> reach the cell below the spade </s>
+[FINAL tst_rew] -0.6824
+TRANSITION
+((5009, 0), 1080, -0.68240740740740746)
+[FINAL tst_rew] -0.7239
+[FINAL tst_rew] -0.6137
+[FINAL tst_rew] -0.5435
+[FINAL tst_rew] -0.4539
+[FINAL tst_rew] -0.3896
+[FINAL tst_rew] -0.3740
+[FINAL tst_rew] -0.2732
+[FINAL tst_rew] -0.2636
+[FINAL tst_rew] -0.1827
+[FINAL tst_rew] -0.1273
+[FINAL tst_rew] -0.1113
+[FINAL tst_rew] -0.0588
+[FINAL tst_rew] -0.0381
+[FINAL tst_rew] -0.0172
+[FINAL tst_rew] -0.0036
+[FINAL tst_rew] 0.0061
+[FINAL tst_rew] 0.0101
+[FINAL tst_rew] 0.0117
+[FINAL tst_rew] 0.0266
+TEST DATUM 5010
+<s> left of spade </s>
+[FINAL tst_rew] -0.6425
+TRANSITION
+((5010, 0), 1130, -0.64247787610619467)
+[FINAL tst_rew] -0.7234
+[FINAL tst_rew] -0.5720
+[FINAL tst_rew] -0.4766
+[FINAL tst_rew] -0.4520
+[FINAL tst_rew] -0.3534
+[FINAL tst_rew] -0.2914
+[FINAL tst_rew] -0.2704
+[FINAL tst_rew] -0.1688
+[FINAL tst_rew] -0.1518
+[FINAL tst_rew] -0.0956
+[FINAL tst_rew] -0.0798
+[FINAL tst_rew] -0.0470
+[FINAL tst_rew] -0.0120
+[FINAL tst_rew] 0.0023
+[FINAL tst_rew] 0.0031
+[FINAL tst_rew] 0.0136
+[FINAL tst_rew] 0.0192
+[FINAL tst_rew] 0.0185
+[FINAL tst_rew] 0.0215
+TEST DATUM 5011
+<s> above diamond </s>
+[FINAL tst_rew] -0.4924
+TRANSITION
+((5011, 0), 1050, -0.49238095238095236)
+[FINAL tst_rew] -0.5255
+[FINAL tst_rew] -0.4412
+[FINAL tst_rew] -0.3414
+[FINAL tst_rew] -0.3235
+[FINAL tst_rew] -0.2727
+[FINAL tst_rew] -0.1989
+[FINAL tst_rew] -0.1935
+[FINAL tst_rew] -0.1462
+[FINAL tst_rew] -0.0980
+[FINAL tst_rew] -0.0870
+[FINAL tst_rew] -0.0671
+[FINAL tst_rew] -0.0097
+[FINAL tst_rew] 0.0119
+[FINAL tst_rew] 0.0048
+[FINAL tst_rew] 0.0215
+[FINAL tst_rew] 0.0370
+[FINAL tst_rew] 0.0390
+[FINAL tst_rew] 0.0410
+[FINAL tst_rew] 0.0375
+TEST DATUM 5012
+<s> reach cell to the right of circle </s>
+[FINAL tst_rew] -0.5766
+TRANSITION
+((5012, 0), 1110, -0.57657657657657657)
+[FINAL tst_rew] -0.5202
+[FINAL tst_rew] -0.4725
+[FINAL tst_rew] -0.4711
+[FINAL tst_rew] -0.3896
+[FINAL tst_rew] -0.3239
+[FINAL tst_rew] -0.2544
+[FINAL tst_rew] -0.2223
+[FINAL tst_rew] -0.1493
+[FINAL tst_rew] -0.1195
+[FINAL tst_rew] -0.0839
+[FINAL tst_rew] -0.0511
+[FINAL tst_rew] -0.0255
+[FINAL tst_rew] -0.0177
+[FINAL tst_rew] 0.0020
+[FINAL tst_rew] 0.0092
+[FINAL tst_rew] 0.0232
+[FINAL tst_rew] 0.0167
+[FINAL tst_rew] 0.0234
+[FINAL tst_rew] 0.0252
+TEST DATUM 5013
+<s> cell above triangle </s>
+[FINAL tst_rew] -0.5533
+TRANSITION
+((5013, 0), 1050, -0.55333333333333334)
+[FINAL tst_rew] -0.6056
+[FINAL tst_rew] -0.5096
+[FINAL tst_rew] -0.4242
+[FINAL tst_rew] -0.3767
+[FINAL tst_rew] -0.3262
+[FINAL tst_rew] -0.2570
+[FINAL tst_rew] -0.1957
+[FINAL tst_rew] -0.1470
+[FINAL tst_rew] -0.0830
+[FINAL tst_rew] -0.0773
+[FINAL tst_rew] -0.0420
+[FINAL tst_rew] -0.0256
+[FINAL tst_rew] -0.0094
+[FINAL tst_rew] 0.0188
+[FINAL tst_rew] 0.0260
+[FINAL tst_rew] 0.0271
+[FINAL tst_rew] 0.0386
+[FINAL tst_rew] 0.0307
+[FINAL tst_rew] 0.0387
+TEST DATUM 5014
+<s> reach the cell one below circle </s>
+[FINAL tst_rew] -0.6649
+TRANSITION
+((5014, 0), 1110, -0.66486486486486485)
+[FINAL tst_rew] -0.6632
+[FINAL tst_rew] -0.5870
+[FINAL tst_rew] -0.4888
+[FINAL tst_rew] -0.4342
+[FINAL tst_rew] -0.3370
+[FINAL tst_rew] -0.3396
+[FINAL tst_rew] -0.2537
+[FINAL tst_rew] -0.2187
+[FINAL tst_rew] -0.1694
+[FINAL tst_rew] -0.0997
+[FINAL tst_rew] -0.0571
+[FINAL tst_rew] -0.0465
+[FINAL tst_rew] -0.0316
+[FINAL tst_rew] -0.0155
+[FINAL tst_rew] -0.0016
+[FINAL tst_rew] 0.0067
+[FINAL tst_rew] 0.0206
+[FINAL tst_rew] 0.0124
+[FINAL tst_rew] 0.0242
+TEST DATUM 5015
+<s> the cell above the star </s>
+[FINAL tst_rew] -0.5336
+TRANSITION
+((5015, 0), 1130, -0.53362831858407078)
+[FINAL tst_rew] -0.4741
+[FINAL tst_rew] -0.3837
+[FINAL tst_rew] -0.3246
+[FINAL tst_rew] -0.2975
+[FINAL tst_rew] -0.2199
+[FINAL tst_rew] -0.2103
+[FINAL tst_rew] -0.1607
+[FINAL tst_rew] -0.1285
+[FINAL tst_rew] -0.0777
+[FINAL tst_rew] -0.0461
+[FINAL tst_rew] -0.0267
+[FINAL tst_rew] -0.0077
+[FINAL tst_rew] 0.0064
+[FINAL tst_rew] 0.0020
+[FINAL tst_rew] 0.0178
+[FINAL tst_rew] 0.0190
+[FINAL tst_rew] 0.0243
+[FINAL tst_rew] 0.0192
+[FINAL tst_rew] 0.0198
+TEST DATUM 5016
+<s> the cell where spade is </s>
+[FINAL tst_rew] -0.6425
+TRANSITION
+((5016, 0), 1130, -0.64247787610619467)
+[FINAL tst_rew] -0.6439
+[FINAL tst_rew] -0.5240
+[FINAL tst_rew] -0.5143
+[FINAL tst_rew] -0.4299
+[FINAL tst_rew] -0.3387
+[FINAL tst_rew] -0.2756
+[FINAL tst_rew] -0.2353
+[FINAL tst_rew] -0.1983
+[FINAL tst_rew] -0.1372
+[FINAL tst_rew] -0.1105
+[FINAL tst_rew] -0.0766
+[FINAL tst_rew] -0.0521
+[FINAL tst_rew] -0.0451
+[FINAL tst_rew] -0.0315
+[FINAL tst_rew] -0.0206
+[FINAL tst_rew] -0.0148
+[FINAL tst_rew] -0.0120
+[FINAL tst_rew] -0.0092
+[FINAL tst_rew] -0.0045
+TEST DATUM 5017
+<s> reach cell one below the diamond </s>
+[FINAL tst_rew] -0.7704
+TRANSITION
+((5017, 0), 1080, -0.77037037037037037)
+[FINAL tst_rew] -0.7770
+[FINAL tst_rew] -0.6577
+[FINAL tst_rew] -0.5165
+[FINAL tst_rew] -0.4444
+[FINAL tst_rew] -0.3769
+[FINAL tst_rew] -0.2933
+[FINAL tst_rew] -0.2084
+[FINAL tst_rew] -0.1316
+[FINAL tst_rew] -0.1094
+[FINAL tst_rew] -0.0791
+[FINAL tst_rew] -0.0402
+[FINAL tst_rew] -0.0171
+[FINAL tst_rew] -0.0108
+[FINAL tst_rew] 0.0220
+[FINAL tst_rew] 0.0210
+[FINAL tst_rew] 0.0240
+[FINAL tst_rew] 0.0269
+[FINAL tst_rew] 0.0347
+[FINAL tst_rew] 0.0350
+TEST DATUM 5018
+<s> reach the square that is to the left of the star </s>
+[FINAL tst_rew] -0.5422
+TRANSITION
+((5018, 0), 1160, -0.54224137931034477)
+[FINAL tst_rew] -0.6252
+[FINAL tst_rew] -0.5085
+[FINAL tst_rew] -0.4651
+[FINAL tst_rew] -0.3831
+[FINAL tst_rew] -0.3557
+[FINAL tst_rew] -0.3040
+[FINAL tst_rew] -0.2145
+[FINAL tst_rew] -0.1784
+[FINAL tst_rew] -0.1709
+[FINAL tst_rew] -0.1096
+[FINAL tst_rew] -0.0717
+[FINAL tst_rew] -0.0293
+[FINAL tst_rew] -0.0276
+[FINAL tst_rew] -0.0176
+[FINAL tst_rew] 0.0091
+[FINAL tst_rew] 0.0060
+[FINAL tst_rew] 0.0148
+[FINAL tst_rew] 0.0293
+[FINAL tst_rew] 0.0320
+TEST DATUM 5019
+<s> reach square one right of diamond </s>
+[FINAL tst_rew] -0.6735
+TRANSITION
+((5019, 0), 1130, -0.67345132743362834)
+[FINAL tst_rew] -0.7036
+[FINAL tst_rew] -0.6975
+[FINAL tst_rew] -0.5694
+[FINAL tst_rew] -0.5305
+[FINAL tst_rew] -0.4636
+[FINAL tst_rew] -0.3258
+[FINAL tst_rew] -0.2872
+[FINAL tst_rew] -0.2061
+[FINAL tst_rew] -0.1560
+[FINAL tst_rew] -0.1416
+[FINAL tst_rew] -0.0651
+[FINAL tst_rew] -0.0530
+[FINAL tst_rew] -0.0165
+[FINAL tst_rew] 0.0113
+[FINAL tst_rew] 0.0187
+[FINAL tst_rew] 0.0150
+[FINAL tst_rew] 0.0202
+[FINAL tst_rew] 0.0317
+[FINAL tst_rew] 0.0352
+TEST DATUM 5020
+<s> reach cell one below the spade </s>
+[FINAL tst_rew] -0.6524
+TRANSITION
+((5020, 0), 1050, -0.65238095238095239)
+[FINAL tst_rew] -0.5735
+[FINAL tst_rew] -0.5624
+[FINAL tst_rew] -0.5254
+[FINAL tst_rew] -0.4640
+[FINAL tst_rew] -0.3730
+[FINAL tst_rew] -0.3047
+[FINAL tst_rew] -0.2712
+[FINAL tst_rew] -0.2193
+[FINAL tst_rew] -0.1775
+[FINAL tst_rew] -0.1377
+[FINAL tst_rew] -0.0972
+[FINAL tst_rew] -0.0681
+[FINAL tst_rew] -0.0241
+[FINAL tst_rew] -0.0120
+[FINAL tst_rew] 0.0016
+[FINAL tst_rew] 0.0128
+[FINAL tst_rew] 0.0157
+[FINAL tst_rew] 0.0289
+[FINAL tst_rew] 0.0199
+TEST DATUM 5021
+<s> move one cell to right of spade </s>
+[FINAL tst_rew] -0.6518
+TRANSITION
+((5021, 0), 1120, -0.6517857142857143)
+[FINAL tst_rew] -0.6046
+[FINAL tst_rew] -0.5214
+[FINAL tst_rew] -0.4574
+[FINAL tst_rew] -0.3556
+[FINAL tst_rew] -0.3463
+[FINAL tst_rew] -0.2137
+[FINAL tst_rew] -0.1924
+[FINAL tst_rew] -0.1349
+[FINAL tst_rew] -0.1214
+[FINAL tst_rew] -0.0615
+[FINAL tst_rew] -0.0524
+[FINAL tst_rew] -0.0123
+[FINAL tst_rew] -0.0005
+[FINAL tst_rew] 0.0055
+[FINAL tst_rew] 0.0156
+[FINAL tst_rew] 0.0190
+[FINAL tst_rew] 0.0333
+[FINAL tst_rew] 0.0225
+[FINAL tst_rew] 0.0275
+TEST DATUM 5022
+<s> move one cell to right of circle </s>
+[FINAL tst_rew] -0.6574
+TRANSITION
+((5022, 0), 1010, -0.65742574257425745)
+[FINAL tst_rew] -0.6716
+[FINAL tst_rew] -0.5723
+[FINAL tst_rew] -0.5074
+[FINAL tst_rew] -0.4400
+[FINAL tst_rew] -0.3875
+[FINAL tst_rew] -0.3608
+[FINAL tst_rew] -0.2718
+[FINAL tst_rew] -0.2081
+[FINAL tst_rew] -0.1643
+[FINAL tst_rew] -0.1061
+[FINAL tst_rew] -0.0562
+[FINAL tst_rew] -0.0562
+[FINAL tst_rew] -0.0153
+[FINAL tst_rew] -0.0098
+[FINAL tst_rew] 0.0133
+[FINAL tst_rew] 0.0137
+[FINAL tst_rew] 0.0162
+[FINAL tst_rew] 0.0141
+[FINAL tst_rew] 0.0271
+TEST DATUM 5023
+<s> cell below the spade </s>
+[FINAL tst_rew] -0.5598
+TRANSITION
+((5023, 0), 1120, -0.55982142857142858)
+[FINAL tst_rew] -0.5982
+[FINAL tst_rew] -0.4883
+[FINAL tst_rew] -0.4520
+[FINAL tst_rew] -0.3736
+[FINAL tst_rew] -0.3113
+[FINAL tst_rew] -0.2505
+[FINAL tst_rew] -0.1938
+[FINAL tst_rew] -0.1453
+[FINAL tst_rew] -0.1141
+[FINAL tst_rew] -0.0639
+[FINAL tst_rew] -0.0601
+[FINAL tst_rew] -0.0267
+[FINAL tst_rew] -0.0076
+[FINAL tst_rew] 0.0206
+[FINAL tst_rew] 0.0187
+[FINAL tst_rew] 0.0371
+[FINAL tst_rew] 0.0234
+[FINAL tst_rew] 0.0327
+[FINAL tst_rew] 0.0369
+TEST DATUM 5024
+<s> cell above star </s>
+[FINAL tst_rew] -0.5034
+TRANSITION
+((5024, 0), 1170, -0.50341880341880341)
+[FINAL tst_rew] -0.5893
+[FINAL tst_rew] -0.4752
+[FINAL tst_rew] -0.4310
+[FINAL tst_rew] -0.3447
+[FINAL tst_rew] -0.3029
+[FINAL tst_rew] -0.1924
+[FINAL tst_rew] -0.1900
+[FINAL tst_rew] -0.1254
+[FINAL tst_rew] -0.0986
+[FINAL tst_rew] -0.0742
+[FINAL tst_rew] -0.0353
+[FINAL tst_rew] -0.0064
+[FINAL tst_rew] -0.0077
+[FINAL tst_rew] 0.0052
+[FINAL tst_rew] 0.0201
+[FINAL tst_rew] 0.0236
+[FINAL tst_rew] 0.0163
+[FINAL tst_rew] 0.0239
+[FINAL tst_rew] 0.0253
+TEST DATUM 5025
+<s> reach cell above circle </s>
+[FINAL tst_rew] -0.6685
+TRANSITION
+((5025, 0), 1080, -0.66851851851851851)
+[FINAL tst_rew] -0.5929
+[FINAL tst_rew] -0.5883
+[FINAL tst_rew] -0.4786
+[FINAL tst_rew] -0.4300
+[FINAL tst_rew] -0.3396
+[FINAL tst_rew] -0.2599
+[FINAL tst_rew] -0.1966
+[FINAL tst_rew] -0.1852
+[FINAL tst_rew] -0.1398
+[FINAL tst_rew] -0.1217
+[FINAL tst_rew] -0.0669
+[FINAL tst_rew] -0.0508
+[FINAL tst_rew] -0.0226
+[FINAL tst_rew] -0.0107
+[FINAL tst_rew] 0.0052
+[FINAL tst_rew] 0.0178
+[FINAL tst_rew] 0.0225
+[FINAL tst_rew] 0.0234
+[FINAL tst_rew] 0.0220
+TEST DATUM 5026
+<s> reach space below diamond </s>
+[FINAL tst_rew] -0.7066
+TRANSITION
+((5026, 0), 1060, -0.70660377358490567)
+[FINAL tst_rew] -0.7608
+[FINAL tst_rew] -0.5593
+[FINAL tst_rew] -0.4859
+[FINAL tst_rew] -0.4559
+[FINAL tst_rew] -0.4097
+[FINAL tst_rew] -0.3267
+[FINAL tst_rew] -0.2800
+[FINAL tst_rew] -0.2197
+[FINAL tst_rew] -0.1956
+[FINAL tst_rew] -0.1439
+[FINAL tst_rew] -0.1065
+[FINAL tst_rew] -0.0795
+[FINAL tst_rew] -0.0431
+[FINAL tst_rew] -0.0140
+[FINAL tst_rew] 0.0119
+[FINAL tst_rew] 0.0179
+[FINAL tst_rew] 0.0175
+[FINAL tst_rew] 0.0194
+[FINAL tst_rew] 0.0201
+TEST DATUM 5027
+<s> reach cell 1 below star </s>
+[FINAL tst_rew] -0.5182
+TRANSITION
+((5027, 0), 1100, -0.51818181818181819)
+[FINAL tst_rew] -0.5278
+[FINAL tst_rew] -0.4941
+[FINAL tst_rew] -0.3797
+[FINAL tst_rew] -0.3759
+[FINAL tst_rew] -0.2840
+[FINAL tst_rew] -0.1989
+[FINAL tst_rew] -0.1734
+[FINAL tst_rew] -0.1553
+[FINAL tst_rew] -0.1141
+[FINAL tst_rew] -0.0711
+[FINAL tst_rew] -0.0497
+[FINAL tst_rew] -0.0312
+[FINAL tst_rew] -0.0157
+[FINAL tst_rew] -0.0028
+[FINAL tst_rew] 0.0031
+[FINAL tst_rew] 0.0056
+[FINAL tst_rew] 0.0073
+[FINAL tst_rew] 0.0058
+[FINAL tst_rew] 0.0131
+TEST DATUM 5028
+<s> reach the blue star </s>
+[FINAL tst_rew] -0.4835
+TRANSITION
+((5028, 0), 1210, -0.48347107438016529)
+[FINAL tst_rew] -0.5284
+[FINAL tst_rew] -0.4281
+[FINAL tst_rew] -0.3713
+[FINAL tst_rew] -0.3181
+[FINAL tst_rew] -0.2379
+[FINAL tst_rew] -0.1798
+[FINAL tst_rew] -0.1534
+[FINAL tst_rew] -0.1307
+[FINAL tst_rew] -0.0876
+[FINAL tst_rew] -0.0610
+[FINAL tst_rew] -0.0344
+[FINAL tst_rew] -0.0312
+[FINAL tst_rew] -0.0249
+[FINAL tst_rew] -0.0174
+[FINAL tst_rew] -0.0057
+[FINAL tst_rew] -0.0064
+[FINAL tst_rew] -0.0025
+[FINAL tst_rew] -0.0061
+[FINAL tst_rew] -0.0012
+TEST DATUM 5029
+<s> reach cell one below the star </s>
+[FINAL tst_rew] -0.6396
+TRANSITION
+((5029, 0), 1060, -0.63962264150943393)
+[FINAL tst_rew] -0.6914
+[FINAL tst_rew] -0.5737
+[FINAL tst_rew] -0.5907
+[FINAL tst_rew] -0.4497
+[FINAL tst_rew] -0.4012
+[FINAL tst_rew] -0.3103
+[FINAL tst_rew] -0.2327
+[FINAL tst_rew] -0.1595
+[FINAL tst_rew] -0.1337
+[FINAL tst_rew] -0.0706
+[FINAL tst_rew] -0.0654
+[FINAL tst_rew] -0.0283
+[FINAL tst_rew] -0.0037
+[FINAL tst_rew] -0.0067
+[FINAL tst_rew] 0.0213
+[FINAL tst_rew] 0.0158
+[FINAL tst_rew] 0.0214
+[FINAL tst_rew] 0.0410
+[FINAL tst_rew] 0.0416
+TEST DATUM 5030
+<s> cell with diamond </s>
+[FINAL tst_rew] -0.4823
+TRANSITION
+((5030, 0), 1130, -0.48230088495575218)
+[FINAL tst_rew] -0.4957
+[FINAL tst_rew] -0.4333
+[FINAL tst_rew] -0.3239
+[FINAL tst_rew] -0.2940
+[FINAL tst_rew] -0.2781
+[FINAL tst_rew] -0.1825
+[FINAL tst_rew] -0.1712
+[FINAL tst_rew] -0.1325
+[FINAL tst_rew] -0.1102
+[FINAL tst_rew] -0.0657
+[FINAL tst_rew] -0.0649
+[FINAL tst_rew] -0.0386
+[FINAL tst_rew] -0.0339
+[FINAL tst_rew] -0.0143
+[FINAL tst_rew] -0.0150
+[FINAL tst_rew] -0.0116
+[FINAL tst_rew] -0.0064
+[FINAL tst_rew] -0.0052
+[FINAL tst_rew] -0.0033
+TEST DATUM 5031
+<s> reach cell to the right of circle </s>
+[FINAL tst_rew] -0.7459
+TRANSITION
+((5031, 0), 1090, -0.74587155963302754)
+[FINAL tst_rew] -0.7402
+[FINAL tst_rew] -0.6400
+[FINAL tst_rew] -0.5811
+[FINAL tst_rew] -0.4490
+[FINAL tst_rew] -0.3724
+[FINAL tst_rew] -0.3115
+[FINAL tst_rew] -0.2621
+[FINAL tst_rew] -0.1852
+[FINAL tst_rew] -0.1338
+[FINAL tst_rew] -0.1039
+[FINAL tst_rew] -0.0792
+[FINAL tst_rew] -0.0415
+[FINAL tst_rew] -0.0267
+[FINAL tst_rew] -0.0051
+[FINAL tst_rew] 0.0002
+[FINAL tst_rew] 0.0043
+[FINAL tst_rew] 0.0089
+[FINAL tst_rew] 0.0152
+[FINAL tst_rew] 0.0140
+TEST DATUM 5032
+<s> reach the cell to the right of the diamond </s>
+[FINAL tst_rew] -0.7202
+TRANSITION
+((5032, 0), 1140, -0.72017543859649125)
+[FINAL tst_rew] -0.7209
+[FINAL tst_rew] -0.5865
+[FINAL tst_rew] -0.5461
+[FINAL tst_rew] -0.4853
+[FINAL tst_rew] -0.3598
+[FINAL tst_rew] -0.2779
+[FINAL tst_rew] -0.2200
+[FINAL tst_rew] -0.1737
+[FINAL tst_rew] -0.1258
+[FINAL tst_rew] -0.0619
+[FINAL tst_rew] -0.0289
+[FINAL tst_rew] -0.0102
+[FINAL tst_rew] 0.0014
+[FINAL tst_rew] 0.0154
+[FINAL tst_rew] 0.0274
+[FINAL tst_rew] 0.0258
+[FINAL tst_rew] 0.0257
+[FINAL tst_rew] 0.0391
+[FINAL tst_rew] 0.0379
+TEST DATUM 5033
+<s> cell below the star </s>
+[FINAL tst_rew] -0.6538
+TRANSITION
+((5033, 0), 1040, -0.65384615384615385)
+[FINAL tst_rew] -0.6320
+[FINAL tst_rew] -0.4839
+[FINAL tst_rew] -0.4839
+[FINAL tst_rew] -0.3902
+[FINAL tst_rew] -0.3079
+[FINAL tst_rew] -0.3073
+[FINAL tst_rew] -0.2011
+[FINAL tst_rew] -0.1642
+[FINAL tst_rew] -0.1340
+[FINAL tst_rew] -0.1337
+[FINAL tst_rew] -0.0717
+[FINAL tst_rew] -0.0414
+[FINAL tst_rew] -0.0300
+[FINAL tst_rew] -0.0003
+[FINAL tst_rew] 0.0112
+[FINAL tst_rew] 0.0242
+[FINAL tst_rew] 0.0204
+[FINAL tst_rew] 0.0295
+[FINAL tst_rew] 0.0367
+TEST DATUM 5034
+<s> one right of the diamond </s>
+[FINAL tst_rew] -0.5907
+TRANSITION
+((5034, 0), 1180, -0.59067796610169487)
+[FINAL tst_rew] -0.5623
+[FINAL tst_rew] -0.5418
+[FINAL tst_rew] -0.4979
+[FINAL tst_rew] -0.4253
+[FINAL tst_rew] -0.2821
+[FINAL tst_rew] -0.2532
+[FINAL tst_rew] -0.2129
+[FINAL tst_rew] -0.1663
+[FINAL tst_rew] -0.1216
+[FINAL tst_rew] -0.0939
+[FINAL tst_rew] -0.0604
+[FINAL tst_rew] -0.0352
+[FINAL tst_rew] -0.0144
+[FINAL tst_rew] -0.0009
+[FINAL tst_rew] 0.0202
+[FINAL tst_rew] 0.0139
+[FINAL tst_rew] 0.0175
+[FINAL tst_rew] 0.0161
+[FINAL tst_rew] 0.0292
+TEST DATUM 5035
+<s> reach space below circle </s>
+[FINAL tst_rew] -0.6404
+TRANSITION
+((5035, 0), 1140, -0.64035087719298245)
+[FINAL tst_rew] -0.6583
+[FINAL tst_rew] -0.6427
+[FINAL tst_rew] -0.4923
+[FINAL tst_rew] -0.4444
+[FINAL tst_rew] -0.3477
+[FINAL tst_rew] -0.3141
+[FINAL tst_rew] -0.2325
+[FINAL tst_rew] -0.1525
+[FINAL tst_rew] -0.1252
+[FINAL tst_rew] -0.1009
+[FINAL tst_rew] -0.0551
+[FINAL tst_rew] -0.0430
+[FINAL tst_rew] -0.0136
+[FINAL tst_rew] 0.0036
+[FINAL tst_rew] 0.0011
+[FINAL tst_rew] 0.0117
+[FINAL tst_rew] 0.0145
+[FINAL tst_rew] 0.0173
+[FINAL tst_rew] 0.0228
+TEST DATUM 5036
+<s> reach the cell to the right of the spade </s>
+[FINAL tst_rew] -0.4734
+TRANSITION
+((5036, 0), 1090, -0.47339449541284406)
+[FINAL tst_rew] -0.4661
+[FINAL tst_rew] -0.4823
+[FINAL tst_rew] -0.4154
+[FINAL tst_rew] -0.3493
+[FINAL tst_rew] -0.3155
+[FINAL tst_rew] -0.2486
+[FINAL tst_rew] -0.2020
+[FINAL tst_rew] -0.1487
+[FINAL tst_rew] -0.1047
+[FINAL tst_rew] -0.0606
+[FINAL tst_rew] -0.0345
+[FINAL tst_rew] -0.0122
+[FINAL tst_rew] -0.0043
+[FINAL tst_rew] 0.0125
+[FINAL tst_rew] 0.0200
+[FINAL tst_rew] 0.0383
+[FINAL tst_rew] 0.0366
+[FINAL tst_rew] 0.0332
+[FINAL tst_rew] 0.0276
+TEST DATUM 5037
+<s> reach cell to left of triangle </s>
+[FINAL tst_rew] -0.6231
+TRANSITION
+((5037, 0), 1040, -0.62307692307692308)
+[FINAL tst_rew] -0.6170
+[FINAL tst_rew] -0.5295
+[FINAL tst_rew] -0.4444
+[FINAL tst_rew] -0.3601
+[FINAL tst_rew] -0.3712
+[FINAL tst_rew] -0.3233
+[FINAL tst_rew] -0.2212
+[FINAL tst_rew] -0.1919
+[FINAL tst_rew] -0.1703
+[FINAL tst_rew] -0.1095
+[FINAL tst_rew] -0.0945
+[FINAL tst_rew] -0.0546
+[FINAL tst_rew] -0.0320
+[FINAL tst_rew] -0.0084
+[FINAL tst_rew] 0.0087
+[FINAL tst_rew] 0.0078
+[FINAL tst_rew] 0.0131
+[FINAL tst_rew] 0.0264
+[FINAL tst_rew] 0.0237
+TEST DATUM 5038
+<s> reach cell one below diamond </s>
+[FINAL tst_rew] -0.7596
+TRANSITION
+((5038, 0), 1090, -0.75963302752293582)
+[FINAL tst_rew] -0.7495
+[FINAL tst_rew] -0.6350
+[FINAL tst_rew] -0.6074
+[FINAL tst_rew] -0.5453
+[FINAL tst_rew] -0.4825
+[FINAL tst_rew] -0.3294
+[FINAL tst_rew] -0.2961
+[FINAL tst_rew] -0.2120
+[FINAL tst_rew] -0.1793
+[FINAL tst_rew] -0.0977
+[FINAL tst_rew] -0.0584
+[FINAL tst_rew] -0.0432
+[FINAL tst_rew] -0.0198
+[FINAL tst_rew] 0.0083
+[FINAL tst_rew] 0.0211
+[FINAL tst_rew] 0.0210
+[FINAL tst_rew] 0.0282
+[FINAL tst_rew] 0.0360
+[FINAL tst_rew] 0.0340
+TEST DATUM 5039
+<s> reach the blue circle </s>
+[FINAL tst_rew] -0.5577
+TRANSITION
+((5039, 0), 1230, -0.55772357723577237)
+[FINAL tst_rew] -0.5793
+[FINAL tst_rew] -0.5392
+[FINAL tst_rew] -0.3929
+[FINAL tst_rew] -0.3473
+[FINAL tst_rew] -0.2758
+[FINAL tst_rew] -0.2193
+[FINAL tst_rew] -0.1764
+[FINAL tst_rew] -0.1299
+[FINAL tst_rew] -0.1117
+[FINAL tst_rew] -0.0734
+[FINAL tst_rew] -0.0416
+[FINAL tst_rew] -0.0297
+[FINAL tst_rew] -0.0234
+[FINAL tst_rew] -0.0134
+[FINAL tst_rew] -0.0091
+[FINAL tst_rew] -0.0033
+[FINAL tst_rew] -0.0037
+[FINAL tst_rew] -0.0033
+[FINAL tst_rew] -0.0012
+TEST DATUM 5040
+<s> reach cell one below triangle </s>
+[FINAL tst_rew] -0.6027
+TRANSITION
+((5040, 0), 1100, -0.60272727272727278)
+[FINAL tst_rew] -0.6000
+[FINAL tst_rew] -0.5407
+[FINAL tst_rew] -0.4112
+[FINAL tst_rew] -0.4184
+[FINAL tst_rew] -0.2981
+[FINAL tst_rew] -0.2798
+[FINAL tst_rew] -0.2497
+[FINAL tst_rew] -0.1735
+[FINAL tst_rew] -0.1223
+[FINAL tst_rew] -0.0875
+[FINAL tst_rew] -0.0758
+[FINAL tst_rew] -0.0371
+[FINAL tst_rew] -0.0128
+[FINAL tst_rew] -0.0153
+[FINAL tst_rew] -0.0024
+[FINAL tst_rew] 0.0109
+[FINAL tst_rew] 0.0172
+[FINAL tst_rew] 0.0118
+[FINAL tst_rew] 0.0204
+TEST DATUM 5041
+<s> reach the spade cell </s>
+[FINAL tst_rew] -0.7204
+TRANSITION
+((5041, 0), 1030, -0.7203883495145631)
+[FINAL tst_rew] -0.7257
+[FINAL tst_rew] -0.6071
+[FINAL tst_rew] -0.5512
+[FINAL tst_rew] -0.4007
+[FINAL tst_rew] -0.3814
+[FINAL tst_rew] -0.3589
+[FINAL tst_rew] -0.2708
+[FINAL tst_rew] -0.2512
+[FINAL tst_rew] -0.1692
+[FINAL tst_rew] -0.1221
+[FINAL tst_rew] -0.0704
+[FINAL tst_rew] -0.0684
+[FINAL tst_rew] -0.0357
+[FINAL tst_rew] -0.0406
+[FINAL tst_rew] -0.0248
+[FINAL tst_rew] -0.0146
+[FINAL tst_rew] -0.0120
+[FINAL tst_rew] -0.0079
+[FINAL tst_rew] -0.0049
+TEST DATUM 5042
+<s> reach the square that is to the right of the orange heart </s>
+[FINAL tst_rew] -0.6435
+TRANSITION
+((5042, 0), 1080, -0.64351851851851849)
+[FINAL tst_rew] -0.7104
+[FINAL tst_rew] -0.6059
+[FINAL tst_rew] -0.5188
+[FINAL tst_rew] -0.4065
+[FINAL tst_rew] -0.4100
+[FINAL tst_rew] -0.3081
+[FINAL tst_rew] -0.2825
+[FINAL tst_rew] -0.2204
+[FINAL tst_rew] -0.1496
+[FINAL tst_rew] -0.0926
+[FINAL tst_rew] -0.0878
+[FINAL tst_rew] -0.0507
+[FINAL tst_rew] -0.0290
+[FINAL tst_rew] -0.0123
+[FINAL tst_rew] -0.0009
+[FINAL tst_rew] 0.0156
+[FINAL tst_rew] 0.0127
+[FINAL tst_rew] 0.0243
+[FINAL tst_rew] 0.0233
+TEST DATUM 5043
+<s> cell below the diamond </s>
+[FINAL tst_rew] -0.6111
+TRANSITION
+((5043, 0), 1170, -0.61111111111111116)
+[FINAL tst_rew] -0.5467
+[FINAL tst_rew] -0.5263
+[FINAL tst_rew] -0.4750
+[FINAL tst_rew] -0.3974
+[FINAL tst_rew] -0.3473
+[FINAL tst_rew] -0.2588
+[FINAL tst_rew] -0.2162
+[FINAL tst_rew] -0.1574
+[FINAL tst_rew] -0.1024
+[FINAL tst_rew] -0.0883
+[FINAL tst_rew] -0.0476
+[FINAL tst_rew] -0.0112
+[FINAL tst_rew] -0.0026
+[FINAL tst_rew] 0.0052
+[FINAL tst_rew] 0.0357
+[FINAL tst_rew] 0.0368
+[FINAL tst_rew] 0.0343
+[FINAL tst_rew] 0.0441
+[FINAL tst_rew] 0.0454
+TEST DATUM 5044
+<s> one right of the star </s>
+[FINAL tst_rew] -0.6337
+TRANSITION
+((5044, 0), 1040, -0.63365384615384612)
+[FINAL tst_rew] -0.4769
+[FINAL tst_rew] -0.4521
+[FINAL tst_rew] -0.4782
+[FINAL tst_rew] -0.3350
+[FINAL tst_rew] -0.2916
+[FINAL tst_rew] -0.2489
+[FINAL tst_rew] -0.2040
+[FINAL tst_rew] -0.1732
+[FINAL tst_rew] -0.1201
+[FINAL tst_rew] -0.0821
+[FINAL tst_rew] -0.0446
+[FINAL tst_rew] -0.0348
+[FINAL tst_rew] -0.0202
+[FINAL tst_rew] -0.0131
+[FINAL tst_rew] 0.0130
+[FINAL tst_rew] 0.0082
+[FINAL tst_rew] 0.0282
+[FINAL tst_rew] 0.0305
+[FINAL tst_rew] 0.0277
+TEST DATUM 5045
+<s> reach cell below the heart </s>
+[FINAL tst_rew] -0.5743
+TRANSITION
+((5045, 0), 1050, -0.57428571428571429)
+[FINAL tst_rew] -0.5769
+[FINAL tst_rew] -0.5653
+[FINAL tst_rew] -0.4969
+[FINAL tst_rew] -0.3558
+[FINAL tst_rew] -0.3211
+[FINAL tst_rew] -0.2620
+[FINAL tst_rew] -0.1860
+[FINAL tst_rew] -0.1649
+[FINAL tst_rew] -0.1167
+[FINAL tst_rew] -0.0948
+[FINAL tst_rew] -0.0474
+[FINAL tst_rew] -0.0317
+[FINAL tst_rew] -0.0005
+[FINAL tst_rew] -0.0009
+[FINAL tst_rew] 0.0071
+[FINAL tst_rew] 0.0215
+[FINAL tst_rew] 0.0278
+[FINAL tst_rew] 0.0260
+[FINAL tst_rew] 0.0333
+TEST DATUM 5046
+<s> reach cell to the right of the triangle </s>
+[FINAL tst_rew] -0.4786
+TRANSITION
+((5046, 0), 1030, -0.4786407766990291)
+[FINAL tst_rew] -0.5642
+[FINAL tst_rew] -0.4870
+[FINAL tst_rew] -0.4480
+[FINAL tst_rew] -0.3708
+[FINAL tst_rew] -0.3196
+[FINAL tst_rew] -0.2563
+[FINAL tst_rew] -0.2111
+[FINAL tst_rew] -0.1279
+[FINAL tst_rew] -0.1238
+[FINAL tst_rew] -0.0935
+[FINAL tst_rew] -0.0736
+[FINAL tst_rew] -0.0538
+[FINAL tst_rew] -0.0281
+[FINAL tst_rew] -0.0178
+[FINAL tst_rew] -0.0074
+[FINAL tst_rew] -0.0053
+[FINAL tst_rew] 0.0060
+[FINAL tst_rew] 0.0025
+[FINAL tst_rew] 0.0060
+TEST DATUM 5047
+<s> reach the cell one below diamond </s>
+[FINAL tst_rew] -0.5565
+TRANSITION
+((5047, 0), 1150, -0.55652173913043479)
+[FINAL tst_rew] -0.6406
+[FINAL tst_rew] -0.4769
+[FINAL tst_rew] -0.4256
+[FINAL tst_rew] -0.3503
+[FINAL tst_rew] -0.3134
+[FINAL tst_rew] -0.2527
+[FINAL tst_rew] -0.1831
+[FINAL tst_rew] -0.1235
+[FINAL tst_rew] -0.1011
+[FINAL tst_rew] -0.0709
+[FINAL tst_rew] -0.0386
+[FINAL tst_rew] -0.0222
+[FINAL tst_rew] -0.0116
+[FINAL tst_rew] 0.0164
+[FINAL tst_rew] 0.0118
+[FINAL tst_rew] 0.0236
+[FINAL tst_rew] 0.0247
+[FINAL tst_rew] 0.0284
+[FINAL tst_rew] 0.0283
+TEST DATUM 5048
+<s> reach square to the left of circle </s>
+[FINAL tst_rew] -0.8439
+TRANSITION
+((5048, 0), 1140, -0.84385964912280698)
+[FINAL tst_rew] -0.7624
+[FINAL tst_rew] -0.6728
+[FINAL tst_rew] -0.5554
+[FINAL tst_rew] -0.4238
+[FINAL tst_rew] -0.3790
+[FINAL tst_rew] -0.3325
+[FINAL tst_rew] -0.2401
+[FINAL tst_rew] -0.1825
+[FINAL tst_rew] -0.1260
+[FINAL tst_rew] -0.0647
+[FINAL tst_rew] -0.0454
+[FINAL tst_rew] -0.0182
+[FINAL tst_rew] 0.0104
+[FINAL tst_rew] 0.0161
+[FINAL tst_rew] 0.0251
+[FINAL tst_rew] 0.0174
+[FINAL tst_rew] 0.0427
+[FINAL tst_rew] 0.0291
+[FINAL tst_rew] 0.0381
+TEST DATUM 5049
+<s> reach space below circle </s>
+[FINAL tst_rew] -0.5813
+TRANSITION
+((5049, 0), 1120, -0.58125000000000004)
+[FINAL tst_rew] -0.5009
+[FINAL tst_rew] -0.4661
+[FINAL tst_rew] -0.4466
+[FINAL tst_rew] -0.3448
+[FINAL tst_rew] -0.2842
+[FINAL tst_rew] -0.2419
+[FINAL tst_rew] -0.1967
+[FINAL tst_rew] -0.1442
+[FINAL tst_rew] -0.1129
+[FINAL tst_rew] -0.0434
+[FINAL tst_rew] -0.0395
+[FINAL tst_rew] -0.0242
+[FINAL tst_rew] 0.0032
+[FINAL tst_rew] -0.0030
+[FINAL tst_rew] 0.0158
+[FINAL tst_rew] 0.0178
+[FINAL tst_rew] 0.0288
+[FINAL tst_rew] 0.0259
+[FINAL tst_rew] 0.0349

@@ -1,0 +1,815 @@
+
+<Data> Loading local train environments with human annotations
+<Data> Found 1566 annotations
+
+<Data> Loading local test environments with human annotations
+<Data> Found 399 annotations
+
+<Data> Loading global train environments with human annotations
+<Data> Found 1071 annotations
+
+<Data> Loading global test environments with human annotations
+<Data> Found 272 annotations
+[n_train] 5000
+[n_test] 1000 test
+[task_ids] 5000 -> 5050
+[n_vocab] 74
+[iter]    0
+[loss]    1.5877
+[tst_rew] -0.6000
+<s> corner highlighting green a gold above down read left contains that blank gold corner block corner heart blue below move
+<s> red stone moving read box UNK moving surround highlighting and from UNK containing spot goal the spot has of surround
+<s> red red contains where square top bellow down under blue surround containing contains a bottom left blank above highlighting move
+
+[iter]    1
+[loss]    1.4926
+[trn_rew] -0.7243
+[tst_rew] -0.9400
+<s> spade the at star bellow reach heart blue blank above heart on where *invalid* teal blank the moving at blank
+<s> diamond to cell bellow highlighting space left one that where bottom is UNK corner find where find block empty two
+<s> red surround top stone red of 1 block by next of below row that to blank a is two block
+
+[iter]    2
+[loss]    1.3400
+[trn_rew] -0.8064
+[tst_rew] -0.7300
+<s> up red UNK get under containing bottom go read box under containing at one on moving teal reach read next
+<s> bottom stone empty bottom 1 gold right right block on between left blank block between *invalid* under below the directly
+<s> next corner on with gold corner rocks two star has diamond moving circle right bellow spot and UNK get <s>
+
+[iter]    3
+[loss]    1.1791
+[trn_rew] -0.7515
+[tst_rew] -0.9800
+<s> move 1 containing go the stone goal block UNK surround has that heart row that find contains the below surround
+<s> red box bottom right next move right empty one by spade UNK empty orange read block teal stone blue that
+<s> on block red move red that 1 the corner rocks bottom up where two triangle the to UNK go where
+
+[iter]    4
+[loss]    1.0436
+[trn_rew] -0.6532
+[tst_rew] -0.3300
+<s> moving below highlighting by from above find star corner where bellow find contains two containing of green left stone between
+<s> triangle red spade blue red blank space UNK down one between move read is *invalid* he orange top the bellow
+<s> corner with below next two gold to next is with 1 contains orange moving get with spot triangle above find
+
+[iter]    5
+[loss]    0.9222
+[trn_rew] -0.3220
+[tst_rew] -0.8600
+<s> two star diamond *invalid* above that moving of that block below block that that surround one blank <s> by cell
+<s> at with goal from star right teal goal surround is read down go spot </s>
+<s> surround 1 red triangle block where is heart corner empty goal from where below read space highlighting stone that find
+
+[iter]    6
+[loss]    0.8190
+[trn_rew] -0.3144
+[tst_rew] -0.6800
+<s> space going red teal up below with surround at diamond goal moving spot triangle above right containing blue the *invalid*
+<s> two moving surround red bottom read gold contains box orange blue <s> spot circle contains 1 <s> goal move star
+<s> corner going two empty that contains moving where at circle that find UNK next between spade UNK move cell containing
+
+[iter]    7
+[loss]    0.7510
+[trn_rew] -0.1062
+[tst_rew] -0.4900
+<s> contains spade he get that right directly top move he space star block two go diamond row contains contains bellow
+<s> bellow red one that corner where a next spot bellow has contains goal that red a spade orange red has
+<s> going gold read block going space go reach at box to move teal go move space green between block a
+
+[iter]    8
+[loss]    0.7018
+[trn_rew] 0.0232
+[tst_rew] -0.6100
+<s> above stone surround gold two is that empty 1 reach star corner the two <s> go square 1 below block
+<s> blue triangle between 1 right with stone by next that get containing get by directly by yellow containing star corner
+<s> spade corner contains highlighting where a 1 red moving right red directly corner is *invalid* next UNK that blank find
+
+[iter]    9
+[loss]    0.6404
+[trn_rew] 0.1869
+[tst_rew] -0.6700
+<s> *invalid* corner red circle with star highlighting of stone next box empty under box a move goal rocks space surround
+<s> red contains at read going move two he next top <s> find rocks under one </s>
+<s> red UNK where star on a orange between going bellow triangle space a bottom block goal red and spot he
+
+[iter]    10
+[loss]    0.5974
+[trn_rew] 0.2807
+[tst_rew] -0.6000
+<s> that square spot blue find go blue on bellow block goal and cell red he of between where between star
+<s> surround corner is green of containing has highlighting two 1 move from star moving circle block above move reach right
+<s> red where where circle star corner go read up under a find where contains go bottom green under surround he
+
+[iter]    11
+[loss]    0.5620
+[trn_rew] 0.4362
+[tst_rew] -0.5300
+<s> blank go red corner highlighting corner cell 1 cell orange between circle below moving square above goal in of and
+<s> moving with blue right square red blue <s> gold find <s> stone UNK go square that moving from triangle get
+<s> triangle with red with at going blue red block star by go stone spade spade goal under right blue down
+
+[iter]    12
+[loss]    0.5220
+[trn_rew] 0.5829
+[tst_rew] -0.4500
+<s> read between red blue yellow block left bellow containing on space stone go heart a contains bellow move next green
+<s> box with bellow by is space triangle *invalid* square find going that *invalid* between 1 has read the is from
+<s> reach moving from a and by reach below two stone next two to right two go corner under right moving
+
+[iter]    13
+[loss]    0.5024
+[trn_rew] 0.6929
+[tst_rew] -0.3800
+<s> the at empty left orange next that highlighting read spot spot between triangle and blue next read star at reach
+<s> blank left above orange of blue with blue directly rocks containing cell circle with goal the under teal with is
+<s> top the with is bellow that </s>
+
+[iter]    14
+[loss]    0.4826
+[trn_rew] 0.7584
+[tst_rew] -0.4100
+<s> in at red in *invalid* on under next gold that box 1 blue teal blank 1 left with containing orange
+<s> that where with moving on the go is find between below heart spot teal down from between a green circle
+<s> under moving right red box green next get under with by right box is read teal a in between yellow
+
+[iter]    15
+[loss]    0.4559
+[trn_rew] 0.8869
+[tst_rew] -0.2600
+<s> at goal of of bellow where up and in </s>
+<s> with moving blue two star circle 1 with top from </s>
+<s> get rocks spade goal moving go bottom rocks on spade 1 at 1 spade empty 1 the is with rocks
+
+[iter]    16
+[loss]    0.4349
+[trn_rew] 1.0008
+[tst_rew] -0.2700
+<s> get in by moving next spade 1 read next row *invalid* stone stone corner with two spade star UNK move
+<s> red blue red red by in gold teal green spade 1 teal contains gold directly stone find is circle where
+<s> diamond blue square the has heart box blank between from move star spade *invalid* </s>
+
+[iter]    17
+[loss]    0.4126
+[trn_rew] 1.0917
+[tst_rew] -0.2900
+<s> spot next going under next go of 1 UNK moving that that heart in *invalid* square between contains block he
+<s> red read spade stone find that by highlighting a with UNK top read directly *invalid* reach of that above orange
+<s> red top has square red is under teal bottom bellow with move on yellow stone bellow *invalid* diamond to and
+
+[iter]    18
+[loss]    0.3950
+[trn_rew] 1.1825
+[tst_rew] -0.2700
+<s> by contains reach blank up up orange next he one the diamond stone at find has cell below orange teal
+<s> at row red yellow between UNK blank that down with blue a <s> going star has where find that 1
+<s> the block rocks of star find heart top stone a spot that box moving orange gold *invalid* 1 find down
+
+[iter]    19
+[loss]    0.3750
+[trn_rew] 1.2618
+[tst_rew] -0.3700
+<s> under red get red to contains cell diamond star a space where empty of bottom spot next box go that
+<s> and left where <s> is 1 highlighting a UNK read empty he that on blue directly between that in UNK
+<s> get with blue corner read at red two where next with block contains next below highlighting at spot bottom circle
+
+[iter]    20
+[loss]    0.3623
+[trn_rew] 1.3453
+[tst_rew] -0.4100
+<s> right row orange read read stone from he contains up below spot bottom goal bellow where bellow in gold down
+<s> next red at reach goal below where has to spade star *invalid* circle that of blank spot empty star block
+<s> moving right cell at bottom diamond he left surround blank cell blue square diamond read stone down find yellow box
+
+[iter]    21
+[loss]    0.3483
+[trn_rew] 1.4448
+[tst_rew] 0.0000
+<s> circle corner row corner from red read corner is 1 1 go bottom above blue contains two reach top bellow
+<s> read next a with by read in UNK he reach contains UNK under between read containing from empty directly from
+<s> orange find moving reach read 1 with star of 1 moving top has is corner above directly under two has
+
+[iter]    22
+[loss]    0.3324
+[trn_rew] 1.4783
+[tst_rew] -0.3900
+<s> red right contains rocks bellow blue to by block empty space at square block is red read from of stone
+<s> goal at one spot a from is block down yellow space where go directly going find bottom contains up the
+<s> <s> moving goal gold corner by that contains triangle corner spot square from from going that where <s> square that
+
+[iter]    23
+[loss]    0.3181
+[trn_rew] 1.5715
+[tst_rew] -0.1900
+<s> red by block empty spot highlighting two go has UNK the left the corner left to by above green contains
+<s> reach orange blue the contains highlighting from spade box rocks corner that left reach heart red contains circle bottom two
+<s> moving highlighting cell gold find he 1 with left by highlighting goal below star space has circle is right directly
+
+[iter]    24
+[loss]    0.3059
+[trn_rew] 1.6332
+[tst_rew] -0.2200
+<s> highlighting red two read moving orange next rocks from the UNK box stone top <s> bellow go bottom he star
+<s> the circle red top box by 1 surround corner corner highlighting 1 of goal find by get spot <s> </s>
+<s> by left corner and space in he at 1 row a with directly is bottom read go box triangle spade
+
+[iter]    25
+[loss]    0.3017
+[trn_rew] 1.6384
+[tst_rew] -0.2800
+<s> containing gold read highlighting a a 1 between from in star one teal space of is get has cell get
+<s> top box orange goal highlighting on bellow in box a he with box green below between moving moving row next
+<s> get red bellow spade from read bottom red under next two on read block with where at yellow reach find
+
+[iter]    26
+[loss]    0.2882
+[trn_rew] 1.6726
+[tst_rew] -0.3100
+<s> red orange square with spot reach highlighting moving rocks <s> teal the right of space below highlighting yellow where reach
+<s> red highlighting is highlighting go that from on gold has top star directly next contains bottom top go two diamond
+<s> goal right a red UNK red from bellow gold of go red box yellow has star block empty next star
+
+[iter]    27
+[loss]    0.2802
+[trn_rew] 1.7549
+[tst_rew] -0.2200
+<s> heart teal he read reach with corner blue read square move and find between gold yellow above from next the
+<s> surround red teal spot *invalid* bottom read and find read under corner move in blue circle under that top </s>
+<s> bottom moving top moving space star the surround read one the surround up right going block moving go containing blue
+
+[iter]    28
+[loss]    0.2645
+[trn_rew] 1.7961
+[tst_rew] -0.2800
+<s> red reach spade in two directly a from heart move is moving to read cell below under heart empty top
+<s> top 1 read bellow of cell red row stone heart spot under rocks at the is with blue square top
+<s> row a down triangle below where rocks <s> blue contains *invalid* the the next red under star UNK green one
+
+[iter]    29
+[loss]    0.2615
+[trn_rew] 1.8381
+[tst_rew] -0.4400
+<s> red down left heart teal 1 spade two above row containing up blue moving he that down bottom orange in
+<s> top moving *invalid* bottom circle between read triangle bellow blank and triangle heart from one spot of goal box row
+<s> go at spade a below find is corner block with surround diamond one by from spade row at red that
+
+[iter]    30
+[loss]    0.2447
+[trn_rew] 1.8777
+[tst_rew] -0.2400
+<s> corner heart blank moving contains orange containing get red in heart between gold triangle diamond down the heart next containing
+<s> blue UNK </s>
+<s> contains blue highlighting corner at UNK at down between with space heart box bellow block containing star a circle cell
+
+[iter]    31
+[loss]    0.2387
+[trn_rew] 1.9257
+[tst_rew] -0.2700
+<s> rocks going stone in empty by containing 1 contains moving at directly on on stone directly rocks green spot block
+<s> star is moving moving spade reach move star left that gold cell read top right next block is heart that
+<s> highlighting right next bottom right diamond top above of bottom find in UNK red going containing goal is blank cell
+
+[iter]    32
+[loss]    0.2269
+[trn_rew] 1.9941
+[tst_rew] -0.1700
+<s> square *invalid* star with blue at bottom contains containing *invalid* highlighting where up spade down yellow bellow one *invalid* on
+<s> on box top reach between UNK goal triangle the by directly left has left under of space right going block
+<s> is highlighting bellow of triangle with orange teal *invalid* contains green two is find going under contains cell star under
+
+[iter]    33
+[loss]    0.2289
+[trn_rew] 2.0265
+[tst_rew] -0.2400
+<s> next red right two <s> read highlighting with gold triangle blue </s>
+<s> red red a the corner red stone by heart diamond that UNK teal <s> blank that go *invalid* at he
+<s> a right corner moving right green read that where blue of that with triangle moving goal in of from empty
+
+[iter]    34
+[loss]    0.2197
+[trn_rew] 2.0081
+[tst_rew] -0.2100
+<s> red red red above next *invalid* by empty row of yellow diamond gold top moving directly directly spade is to
+<s> above 1 spot bellow that that left where green read stone UNK with with blank bellow spot get move surround
+<s> going next down goal up red yellow corner circle directly bottom heart block of red is empty find where row
+
+[iter]    35
+[loss]    0.2147
+[trn_rew] 2.0646
+[tst_rew] -0.3300
+<s> spot highlighting red blue that in move circle box has star next on heart </s>
+<s> blank find contains reach the corner 1 <s> yellow highlighting down spade the at surround blank in blue <s> move
+<s> red red with spade up at directly right 1 go directly cell triangle by block spade on two where that
+
+[iter]    36
+[loss]    0.1973
+[trn_rew] 2.1287
+[tst_rew] -0.3700
+<s> right read with block circle highlighting bellow UNK moving cell find find surround cell 1 go contains goal read to
+<s> up at with above he red moving where orange by where highlighting rocks star orange by blank find reach to
+<s> block top box gold UNK heart box space by orange bellow stone <s> up gold highlighting containing and yellow read
+
+[iter]    37
+[loss]    0.1966
+[trn_rew] 2.1164
+[tst_rew] -0.5000
+<s> red contains reach rocks go of of corner is find has square the spot on from is blank that a
+<s> where contains gold highlighting two that with square go empty red 1 moving and stone circle to rocks where top
+<s> UNK is next spot and is box *invalid* from corner orange box block going left find 1 diamond right next
+
+[iter]    38
+[loss]    0.1922
+[trn_rew] 2.1723
+[tst_rew] -0.1500
+<s> highlighting highlighting bottom rocks empty bellow at read left blue containing above directly move has blue two spade has above
+<s> red circle two where red right in corner where box row he stone on moving is that 1 blank spot
+<s> at red goal UNK stone spot block a rocks stone in to with cell by stone green triangle teal rocks
+
+[iter]    39
+[loss]    0.1773
+[trn_rew] 2.2093
+[tst_rew] -0.3300
+<s> star on below *invalid* stone get surround down with move spot rocks contains from cell spot that at green blue
+<s> move top 1 square that box move is where spot star space teal cell spade go surround red diamond red
+<s> red box with to moving bellow space circle has that spot go stone surround of contains at is diamond and
+
+[iter]    40
+[loss]    0.1805
+[trn_rew] 2.2024
+[tst_rew] -0.0300
+<s> moving corner <s> goal down reach spade find below surround find from is bottom corner up where go blank move
+<s> top corner gold highlighting <s> that spot spot up *invalid* <s> spot yellow <s> top on square between blue one
+<s> reach contains move down right spade is rocks goal read next box above with of in gold space two red
+
+[iter]    41
+[loss]    0.1726
+[trn_rew] 2.2427
+[tst_rew] -0.2000
+<s> going next UNK on find highlighting blue blank blue rocks block go block bottom up to to bottom find green
+<s> teal moving right the in is blank stone in go </s>
+<s> reach on bellow stone UNK star UNK read red gold read surround below move find heart teal between highlighting is
+
+[iter]    42
+[loss]    0.1740
+[trn_rew] 2.2245
+[tst_rew] -0.4800
+<s> right row next goal corner has top stone get stone spot moving he UNK move one to he two under
+<s> space in that spade containing from left below containing cell he spot and block heart square circle contains one spot
+<s> two surround highlighting highlighting moving with block bellow between at two up surround between green yellow right left stone red
+
+[iter]    43
+[loss]    0.1640
+[trn_rew] 2.2586
+[tst_rew] -0.1900
+<s> blank next circle surround star with down highlighting star moving find 1 above right has box where goal bottom of
+<s> at highlighting blue cell between space on read corner stone read moving right *invalid* top at teal from up circle
+<s> red at surround in goal triangle under from on surround in right between containing containing green moving a by one
+
+[iter]    44
+[loss]    0.1600
+[trn_rew] 2.3010
+[tst_rew] -0.2500
+<s> red with orange space one move next in blue go stone bellow find block is read red blank *invalid* gold
+<s> next corner go contains *invalid* 1 bottom 1 the down down read empty corner is below get surround blue from
+<s> at yellow red block has spade stone orange bottom blue right top where find next blank blue up 1 one
+
+[iter]    45
+[loss]    0.1512
+[trn_rew] 2.3184
+[tst_rew] -0.1600
+<s> spade corner triangle highlighting of that move surround up top gold square 1 bottom row under diamond cell next square
+<s> red bellow red gold square containing green read triangle below below contains cell above highlighting box has surround left box
+<s> from orange corner next below highlighting green with by surround up surround blue space the is space blue square a
+
+[iter]    46
+[loss]    0.1520
+[trn_rew] 2.3292
+[tst_rew] -0.2100
+<s> spade to is move heart spade left go orange highlighting red star UNK right *invalid* between spot box directly empty
+<s> red corner where moving blue from going between stone moving block space teal blue triangle that is he 1 going
+<s> corner right spot below space spot of empty of star between block between is he bellow of heart above cell
+
+[iter]    47
+[loss]    0.1431
+[trn_rew] 2.3586
+[tst_rew] -0.2000
+<s> at corner red from corner next heart moving move is is star red next space block read top 1 one
+<s> highlighting at with blue spade has below block teal block bellow empty contains with one that triangle move read blank
+<s> spot a contains UNK of is with row box circle get right at on spot between 1 1 <s> empty
+
+[iter]    48
+[loss]    0.1415
+[trn_rew] 2.3629
+[tst_rew] -0.1300
+<s> red down find of find directly next yellow find go cell UNK moving from next to of has moving bottom
+<s> circle above next orange red surround get read cell with to of containing bellow *invalid* in a </s>
+<s> two read red 1 highlighting circle reach bottom box a red UNK diamond contains where heart green space top with
+
+[iter]    49
+[loss]    0.1373
+[trn_rew] 2.3753
+[tst_rew] -0.1800
+<s> 1 the blue block stone corner between rocks </s>
+<s> at at go contains star moving left stone of of read above at by block stone in is contains at
+<s> corner contains above diamond </s>
+
+[iter]    50
+[loss]    0.1365
+[trn_rew] 2.3738
+[tst_rew] -0.3000
+<s> in top at corner get square orange circle contains above with spade the corner row in of empty from red
+<s> red at goal left surround stone heart block box at block under goal blank that with green teal circle yellow
+<s> at spade move highlighting spot find contains highlighting under box one gold space 1 that a to contains where spot
+
+[iter]    51
+[loss]    0.1272
+[trn_rew] 2.4201
+[tst_rew] -0.2200
+<s> the blue read surround with yellow a spade get corner row he down square to with bellow directly get where
+<s> from read with star is </s>
+<s> top corner red gold between yellow read that goal with bottom that circle read block containing that two </s>
+
+[iter]    52
+[loss]    0.1211
+[trn_rew] 2.4257
+[tst_rew] -0.1900
+<s> rocks corner blue below red red find read two row blank containing yellow find under gold circle space surround empty
+<s> read corner stone the at corner of triangle contains moving where move directly highlighting above row in gold under blue
+<s> above that goal a below two above the 1 gold space triangle containing of below rocks at under right move
+
+[iter]    53
+[loss]    0.1298
+[trn_rew] 2.4403
+[tst_rew] -0.3400
+<s> the red star UNK orange from gold circle heart block a a and one rocks next teal empty <s> where
+<s> yellow red highlighting yellow box contains containing read UNK where bottom blue go <s> that under to down under going
+<s> go corner above that red highlighting moving bottom spade is left by up yellow diamond go spade box find at
+
+[iter]    54
+[loss]    0.1154
+[trn_rew] 2.4695
+[tst_rew] -0.2800
+<s> goal at by *invalid* he circle red gold the UNK under between with red spot empty directly *invalid* box next
+<s> <s> up box up right heart spade bellow find contains a orange highlighting *invalid* goal next rocks is get get
+<s> contains the box *invalid* bellow 1 moving he reach find with from teal above go in a at is highlighting
+
+[iter]    55
+[loss]    0.1184
+[trn_rew] 2.4769
+[tst_rew] -0.1600
+<s> blue box red containing find the *invalid* a a 1 two in has above is find get diamond above that
+<s> of directly down on with green to two has block rocks that row bellow heart he stone contains yellow space
+<s> bottom is circle the bellow below blue highlighting containing green go orange spot empty with is *invalid* <s> teal space
+
+[iter]    56
+[loss]    0.1104
+[trn_rew] 2.4719
+[tst_rew] -0.0700
+<s> moving has from red star is on read going with contains orange that down green red UNK read <s> box
+<s> spot red next above blue corner go read corner moving that above by green that a space red space go
+<s> corner a right between where where in on above gold star down at bellow space yellow between UNK surround is
+
+[iter]    57
+[loss]    0.1034
+[trn_rew] 2.5309
+[tst_rew] -0.3300
+<s> block row orange blue directly yellow 1 corner space move red UNK *invalid* that is up right spade triangle from
+<s> two spade red circle gold moving from is two 1 move row space green next and surround next move blue
+<s> from diamond contains in red the spot the surround *invalid* gold below next circle down top green to top *invalid*
+
+[iter]    58
+[loss]    0.1067
+[trn_rew] 2.4941
+[tst_rew] -0.2000
+<s> contains read yellow spade corner gold empty with bottom spade has *invalid* yellow directly on in blue square UNK above
+<s> the box is red the with going bellow box up where under row in directly 1 star triangle blue the
+<s> top read right at </s>
+
+[iter]    59
+[loss]    0.1012
+[trn_rew] 2.5090
+[tst_rew] -0.2800
+<s> red at read 1 on down cell 1 where rocks from space bottom go reach down UNK cell 1 bellow
+<s> corner the right empty that box going top under to space star containing two below highlighting in gold circle bellow
+<s> to below circle circle go highlighting highlighting down block find containing top of under to UNK orange move star a
+
+[iter]    60
+[loss]    0.1061
+[trn_rew] 2.5268
+[tst_rew] -0.4100
+<s> circle red read orange blue spade find corner top goal *invalid* under a corner spot moving top from with yellow
+<s> next in where red the stone by that the teal spade where between a moving under going goal contains square
+<s> at green on star that UNK goal cell cell highlighting block spade space above bellow get from 1 rocks circle
+
+[iter]    61
+[loss]    0.0995
+[trn_rew] 2.5214
+[tst_rew] -0.2700
+<s> corner blue spade read blue at with left above orange to has of read 1 orange highlighting up circle reach
+<s> two on below read a bottom box empty blank next above go directly blank at bottom containing spot below heart
+<s> blue orange in bellow *invalid* from <s> above spade top contains surround blue </s>
+
+[iter]    62
+[loss]    0.0942
+[trn_rew] 2.5246
+[tst_rew] -0.2700
+<s> left heart red highlighting below bottom spot yellow the of rocks contains 1 find get box below red a that
+<s> get right blue the surround *invalid* corner UNK corner next space empty 1 spade he blank and under below by
+<s> empty the under goal on read <s> at is gold top box has row moving is corner by going triangle
+
+[iter]    63
+[loss]    0.0938
+[trn_rew] 2.5423
+[tst_rew] -0.4100
+<s> two diamond contains move that red with has read space block bottom between empty by circle highlighting and with teal
+<s> surround teal surround row rocks with one get reach reach stone triangle 1 reach corner triangle contains yellow of contains
+<s> red go corner read reach top move triangle one has read spade right directly that yellow bottom above blank is
+
+[iter]    64
+[loss]    0.0914
+[trn_rew] 2.5496
+[tst_rew] -0.3000
+<s> by at highlighting read going goal a a heart by where move to circle from containing <s> a corner under
+<s> is read is move move *invalid* box space containing up two red 1 containing moving gold is moving diamond row
+<s> moving goal of by and between stone above up diamond spade at orange green between right goal gold to that
+
+[iter]    65
+[loss]    0.0872
+[trn_rew] 2.5598
+[tst_rew] -0.2400
+<s> corner right corner star highlighting 1 corner red UNK stone 1 green <s> heart move from star moving directly of
+<s> the a circle empty of highlighting with the moving cell stone top blue he go <s> orange that by by
+<s> the a down block with of is diamond green cell block go square between blue </s>
+
+[iter]    66
+[loss]    0.0901
+[trn_rew] 2.6057
+[tst_rew] -0.4200
+<s> box red stone has by contains of go </s>
+<s> corner left diamond 1 by red the blank stone go move cell top is get star he contains row between
+<s> that read reach contains star by right square <s> goal below get contains in reach in triangle between below move
+
+[iter]    67
+[loss]    0.0881
+[trn_rew] 2.5692
+[tst_rew] -0.3100
+<s> bottom red bellow red get highlighting goal the under find between block moving find corner surround read </s>
+<s> box bottom stone bottom move and UNK that between triangle blue reach square with that circle contains gold that square
+<s> red spot circle circle above move red UNK to that that rocks read in highlighting box row block blue in
+
+[iter]    68
+[loss]    0.0845
+[trn_rew] 2.5789
+[tst_rew] -0.2100
+<s> teal blank corner of above a right stone containing row from box moving in above reach cell spade get down
+<s> 1 UNK has at highlighting get cell read left move triangle block by on of on on moving orange two
+<s> containing the directly with move bottom move *invalid* gold green under teal with empty bellow contains space box diamond heart
+
+[iter]    69
+[loss]    0.0795
+[trn_rew] 2.6057
+[tst_rew] -0.3600
+<s> red row gold by to on heart stone move empty circle is find next teal of orange from on stone
+<s> moving corner at by star gold orange get spade move cell in below on yellow and circle of stone blue
+<s> <s> stone red two block is is stone teal moving directly containing is right circle that moving where star heart
+
+[iter]    70
+[loss]    0.0799
+[trn_rew] 2.6182
+[tst_rew] -0.2000
+<s> teal red bellow the going box right next the directly two surround box top going of <s> green next a
+<s> surround is stone read is get right highlighting blank red of where right bellow where moving in gold is bottom
+<s> spot at at contains below stone from find corner 1 is is star get read on <s> orange moving at
+
+[iter]    71
+[loss]    0.0782
+[trn_rew] 2.6183
+[tst_rew] -0.2800
+<s> up at yellow bottom blank row highlighting get under surround bottom spot going of <s> gold heart moving rocks space
+<s> at two find by one under go with the row blue block from by red one go surround green is
+<s> red two goal that where get a empty square above between circle bellow left he goal *invalid* has orange cell
+
+[iter]    72
+[loss]    0.0769
+[trn_rew] 2.6108
+[tst_rew] -0.4800
+<s> corner blue two highlighting is goal blue moving by teal </s>
+<s> star at spade of red right red stone from where a below rocks that yellow is </s>
+<s> containing with box by corner between left contains bellow go yellow red bottom triangle red highlighting containing surround and two
+
+[iter]    73
+[loss]    0.0736
+[trn_rew] 2.6346
+[tst_rew] -0.3200
+<s> red *invalid* spade right directly right *invalid* reach <s> by row under UNK star up a with moving heart teal
+<s> on diamond highlighting read by stone bottom stone UNK UNK right containing orange under above of two of stone below
+<s> circle blue containing red reach surround that box gold star left 1 <s> of of red <s> next UNK box
+
+[iter]    74
+[loss]    0.0717
+[trn_rew] 2.6310
+[tst_rew] -0.1700
+<s> red spade get highlighting block find red </s>
+<s> blue at next read spot down with corner bottom spade the and by at 1 orange read circle down the
+<s> circle by read of directly where is under rocks with teal moving rocks spade bottom containing goal under yellow yellow
+
+[iter]    75
+[loss]    0.0749
+[trn_rew] 2.6401
+[tst_rew] -0.2100
+<s> by from stone spade square going orange rocks bottom read the square going at contains blank box stone cell heart
+<s> read at gold top bottom below one red containing space surround to below blank a circle in move block circle
+<s> where with *invalid* from UNK row highlighting left orange spot yellow cell 1 stone two get move move down read
+
+[iter]    76
+[loss]    0.0765
+[trn_rew] 2.6179
+[tst_rew] -0.1800
+<s> <s> highlighting top contains to red box cell orange from highlighting with *invalid* right circle heart above orange red and
+<s> surround between highlighting under green goal with is right rocks go circle 1 get 1 next teal <s> green moving
+<s> right reach bottom 1 containing right at red corner a next contains row where that find bottom that UNK two
+
+[iter]    77
+[loss]    0.0706
+[trn_rew] 2.6227
+[tst_rew] -0.3700
+<s> two 1 moving red in is with find get the left that below of bellow blank with and of spot
+<s> corner moving that rocks corner going gold green stone box is *invalid* 1 left teal 1 with triangle and corner
+<s> highlighting at star box left between goal triangle of between orange block is of contains under down at </s>
+
+[iter]    78
+[loss]    0.0648
+[trn_rew] 2.6684
+[tst_rew] -0.2400
+<s> corner blank get bottom highlighting with corner spade containing 1 with in space going has under right corner moving moving
+<s> corner above read above star space one box to gold gold block 1 bellow right blue <s> empty that at
+<s> two the 1 spade red moving corner diamond contains of from moving <s> teal red highlighting heart a containing spade
+
+[iter]    79
+[loss]    0.0608
+[trn_rew] 2.6536
+[tst_rew] -0.3000
+<s> goal </s>
+<s> yellow yellow right red is get read containing </s>
+<s> that highlighting move red by block </s>
+
+[iter]    80
+[loss]    0.0654
+[trn_rew] 2.6419
+[tst_rew] -0.1700
+<s> going and get from goal 1 with star square row with <s> 1 heart circle by corner go contains gold
+<s> next next blue spot and square 1 UNK space 1 reach find move go red green between reach empty below
+<s> corner star row moving corner that a between bottom highlighting yellow up circle box under where spade orange bellow by
+
+[iter]    81
+[loss]    0.0639
+[trn_rew] 2.6642
+[tst_rew] -0.3100
+<s> red move red read a read at has two red teal of with square is empty green bottom yellow find
+<s> red is blank orange blank box at bottom where go heart spot corner up to stone at is spade square
+<s> red 1 red stone triangle read below a has red two orange has at a the two between left and
+
+[iter]    82
+[loss]    0.0619
+[trn_rew] 2.6616
+[tst_rew] -0.1000
+<s> 1 red teal blank red that reach orange UNK spot that red under teal empty <s> *invalid* a that blank
+<s> moving spade with a orange move space at blank has by get UNK with two the above find go spot
+<s> heart box contains the move stone red red a bottom above diamond down space cell stone block box next read
+
+[iter]    83
+[loss]    0.0607
+[trn_rew] 2.6716
+[tst_rew] -0.3600
+<s> box at going below to move blue space move of moving is red rocks one containing spot read with orange
+<s> red stone next spade triangle to find one up is read heart go highlighting diamond star on block below cell
+<s> spot red square move on spade empty spot cell is where gold stone by below <s> block containing in in
+
+[iter]    84
+[loss]    0.0556
+[trn_rew] 2.6858
+[tst_rew] -0.3000
+<s> of under corner where and on row heart circle that block in with cell corner has 1 has red up
+<s> corner of heart triangle red block gold next going heart is moving is diamond going triangle teal star in with
+<s> spade two square read a where gold and under stone of blue at has read read directly *invalid* block get
+
+[iter]    85
+[loss]    0.0575
+[trn_rew] 2.6846
+[tst_rew] -0.1400
+<s> at moving 1 next from corner goal a spade goal star read *invalid* box <s> empty </s>
+<s> stone the read gold corner with 1 move square red in containing with left above one UNK containing he that
+<s> red *invalid* highlighting space at is reach block row next right is rocks between bellow surround in 1 move move
+
+[iter]    86
+[loss]    0.0557
+[trn_rew] 2.6789
+[tst_rew] -0.2400
+<s> a goal bellow and red star empty space gold under with surround two *invalid* that a move diamond highlighting cell
+<s> with right below read <s> green highlighting corner and find red green next orange triangle below down top blue under
+<s> at left by 1 box the under row cell *invalid* spade that red move blank contains UNK by a next
+
+[iter]    87
+[loss]    0.0530
+[trn_rew] 2.7026
+[tst_rew] -0.3000
+<s> orange UNK with row red on box blue surround empty *invalid* diamond going and yellow block surround move teal bellow
+<s> highlighting highlighting with bottom goal gold with where below teal green bottom below at heart bellow blank find down he
+<s> red moving stone red bellow reach box rocks blue row that row red find is is find and under between
+
+[iter]    88
+[loss]    0.0518
+[trn_rew] 2.7157
+[tst_rew] -0.2500
+<s> top moving from right surround on that move down on orange left teal box find circle box where read reach
+<s> surround spot highlighting circle corner highlighting stone spade two triangle under from circle gold by on of yellow moving at
+<s> row spade left block read rocks red corner right heart find heart red under move contains two surround bottom UNK
+
+[iter]    89
+[loss]    0.0538
+[trn_rew] 2.6962
+[tst_rew] -0.3000
+<s> stone get get triangle goal star highlighting cell the go bottom row containing triangle go reach under yellow stone cell
+<s> gold stone at box highlighting go two cell box stone gold gold containing stone *invalid* teal gold between block UNK
+<s> bottom read UNK stone with highlighting green blue spade 1 contains right that space corner the he goal go go
+
+[iter]    90
+[loss]    0.0526
+[trn_rew] 2.6952
+[tst_rew] -0.3200
+<s> read circle stone UNK by row spade surround block move yellow down next orange empty by above top one </s>
+<s> bellow right corner corner next the between empty find that move directly 1 teal between next from with move empty
+<s> highlighting star corner block is is read UNK down blue read *invalid* <s> bottom spot teal box top between between
+
+[iter]    91
+[loss]    0.0510
+[trn_rew] 2.7159
+[tst_rew] -0.3000
+<s> containing red next get that orange under moving circle right read stone triangle star rocks corner above green two that
+<s> star blue the stone next on block gold at go corner rocks moving space star that move to triangle where
+<s> orange two star the red *invalid* on in moving reach a two stone block gold up *invalid* one in highlighting
+
+[iter]    92
+[loss]    0.0499
+[trn_rew] 2.6922
+[tst_rew] -0.1200
+<s> up row above corner block under find box below top where next box surround spot from surround with UNK find
+<s> blue contains read bottom highlighting moving read bottom gold is on is row on the left from bellow spade from
+<s> goal moving going where gold red gold heart red box read empty circle goal stone he get block to corner
+
+[iter]    93
+[loss]    0.0496
+[trn_rew] 2.7259
+[tst_rew] -0.1400
+<s> above the one down read yellow that empty rocks gold contains find cell left <s> get between below block reach
+<s> at moving box block spade blank heart where goal gold red between read highlighting down a that a green that
+<s> is *invalid* heart left on contains space read highlighting read triangle space bellow *invalid* at down down on corner the
+
+[iter]    94
+[loss]    0.0480
+[trn_rew] 2.7286
+[tst_rew] -0.4200
+<s> star between by move circle box green two spot read to where go stone goal where at UNK is bottom
+<s> 1 highlighting contains star surround top two that left he one green box surround spade with block red box circle
+<s> moving where next goal that red contains moving red with yellow diamond surround empty green spot contains goal from reach
+
+[iter]    95
+[loss]    0.0499
+[trn_rew] 2.7166
+[tst_rew] -0.3700
+<s> circle going stone spade circle surround spade row bottom <s> down empty in a has top move containing left square
+<s> highlighting reach UNK the highlighting UNK bellow a *invalid* above teal moving cell box goal from surround row blank a
+<s> blank teal next up *invalid* spade heart moving cell spade to one has under goal move contains between he from
+
+[iter]    96
+[loss]    0.0460
+[trn_rew] 2.7146
+[tst_rew] -0.2900
+<s> bellow from cell at highlighting UNK contains moving stone goal red find the under two spot by spade down right
+<s> below corner orange top *invalid* bottom triangle stone corner two in row spot contains right between with square block cell
+<s> by moving corner stone on and circle at two below 1 is 1 rocks down box by empty row and
+
+[iter]    97
+[loss]    0.0456
+[trn_rew] 2.7363
+[tst_rew] -0.3700
+<s> goal top surround stone going read *invalid* 1 read under circle star stone that space triangle in gold above has
+<s> where triangle top highlighting circle empty </s>
+<s> 1 where highlighting that cell is that go spot empty read move box stone </s>
+
+[iter]    98
+[loss]    0.0441
+[trn_rew] 2.7316
+[tst_rew] -0.1000
+<s> is red move UNK red goal move of read rocks spade up in a that on highlighting move <s> containing
+<s> red goal bottom on goal diamond star row that by bellow the heart has he that blank gold teal to
+<s> reach red get with in read under gold orange between square cell spade orange that from right two two get
+
+[iter]    99
+[loss]    0.0422
+[trn_rew] 2.7250
+[tst_rew] -0.2300
+<s> read of a surround spade star and contains goal highlighting under below gold surround and teal below 1 blue block
+<s> with empty at at circle blank gold move <s> and and that next box orange with next block above with
+<s> *invalid* with that read below get orange rocks cell diamond find left move directly teal is reach gold left 1
+
