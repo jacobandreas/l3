@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#export CUDA_VISIBLE_DEVICES=""
+
 python -u ../../pbd.py \
   --hint_type=nl \
   --predict_hyp=true \

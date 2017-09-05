@@ -1,0 +1,3002 @@
+[loss]    9717.3586
+[trn_acc] 0.0000
+[val_acc] 0.0000
+
+[loss]    7003.9195
+[trn_acc] 0.0000
+[val_acc] 0.0000
+
+[loss]    5755.2180
+[trn_acc] 0.0000
+[val_acc] 0.0000
+
+[loss]    4852.4470
+[trn_acc] 0.0000
+[val_acc] 0.0020
+
+[loss]    4263.7722
+[trn_acc] 0.0000
+[val_acc] 0.0020
+
+[loss]    3808.7425
+[trn_acc] 0.0000
+[val_acc] 0.0000
+
+[loss]    3444.9775
+[trn_acc] 0.0200
+[val_acc] 0.0180
+
+[loss]    3161.0078
+[trn_acc] 0.0000
+[val_acc] 0.0020
+
+[loss]    2925.8622
+[trn_acc] 0.0100
+[val_acc] 0.0120
+
+[loss]    2723.8828
+[trn_acc] 0.0100
+[val_acc] 0.0000
+
+[loss]    2521.8222
+[trn_acc] 0.0000
+[val_acc] 0.0080
+
+[loss]    2404.3650
+[trn_acc] 0.0000
+[val_acc] 0.0040
+
+[loss]    2273.2497
+[trn_acc] 0.0100
+[val_acc] 0.0060
+
+[loss]    2165.0601
+[trn_acc] 0.0000
+[val_acc] 0.0060
+
+[loss]    2068.8930
+[trn_acc] 0.0000
+[val_acc] 0.0000
+
+[loss]    1990.6781
+[trn_acc] 0.0000
+[val_acc] 0.0260
+
+[loss]    1906.3236
+[trn_acc] 0.0300
+[val_acc] 0.0660
+
+[loss]    1847.0793
+[trn_acc] 0.0200
+[val_acc] 0.0160
+
+[loss]    1758.8270
+[trn_acc] 0.0000
+[val_acc] 0.0160
+
+[loss]    1704.8021
+[trn_acc] 0.1100
+[val_acc] 0.0880
+
+[loss]    1643.5000
+[trn_acc] 0.0400
+[val_acc] 0.0540
+
+[loss]    1615.8938
+[trn_acc] 0.0600
+[val_acc] 0.0280
+
+[loss]    1557.9391
+[trn_acc] 0.1200
+[val_acc] 0.0600
+
+[loss]    1516.0712
+[trn_acc] 0.1100
+[val_acc] 0.0540
+
+[loss]    1471.0823
+[trn_acc] 0.0300
+[val_acc] 0.0480
+
+[loss]    1446.4549
+[trn_acc] 0.0800
+[val_acc] 0.0520
+
+[loss]    1392.4939
+[trn_acc] 0.1000
+[val_acc] 0.0740
+
+[loss]    1366.2399
+[trn_acc] 0.1000
+[val_acc] 0.0880
+
+[loss]    1335.8033
+[trn_acc] 0.1300
+[val_acc] 0.0720
+
+[loss]    1363.0688
+[trn_acc] 0.1500
+[val_acc] 0.1300
+
+[loss]    1298.7758
+[trn_acc] 0.1000
+[val_acc] 0.1100
+
+[loss]    1254.3565
+[trn_acc] 0.1400
+[val_acc] 0.1100
+
+[loss]    1220.9810
+[trn_acc] 0.1200
+[val_acc] 0.1280
+
+[loss]    1204.5588
+[trn_acc] 0.2000
+[val_acc] 0.1580
+
+[loss]    1169.1396
+[trn_acc] 0.1200
+[val_acc] 0.1440
+
+[loss]    1148.9225
+[trn_acc] 0.2200
+[val_acc] 0.1580
+
+[loss]    1127.0241
+[trn_acc] 0.2600
+[val_acc] 0.1900
+
+[loss]    1142.3231
+[trn_acc] 0.2300
+[val_acc] 0.2000
+
+[loss]    1072.2648
+[trn_acc] 0.2000
+[val_acc] 0.1720
+
+[loss]    1053.5926
+[trn_acc] 0.2600
+[val_acc] 0.2380
+
+[loss]    1042.0557
+[trn_acc] 0.2700
+[val_acc] 0.2060
+
+[loss]    1017.8353
+[trn_acc] 0.2800
+[val_acc] 0.2340
+
+[loss]    992.6727
+[trn_acc] 0.3100
+[val_acc] 0.2440
+
+[loss]    982.8768
+[trn_acc] 0.3100
+[val_acc] 0.2480
+
+[loss]    954.9443
+[trn_acc] 0.3300
+[val_acc] 0.2580
+
+[loss]    950.1277
+[trn_acc] 0.3100
+[val_acc] 0.2660
+
+[loss]    937.8516
+[trn_acc] 0.3300
+[val_acc] 0.2720
+
+[loss]    915.7210
+[trn_acc] 0.3000
+[val_acc] 0.2820
+
+[loss]    903.9588
+[trn_acc] 0.3700
+[val_acc] 0.2920
+
+[loss]    890.3406
+[trn_acc] 0.4700
+[val_acc] 0.3060
+
+[loss]    882.7701
+[trn_acc] 0.3300
+[val_acc] 0.3080
+
+[loss]    865.6267
+[trn_acc] 0.4300
+[val_acc] 0.3620
+
+[loss]    855.9346
+[trn_acc] 0.4100
+[val_acc] 0.3200
+
+[loss]    842.9883
+[trn_acc] 0.4300
+[val_acc] 0.3060
+
+[loss]    822.8817
+[trn_acc] 0.3900
+[val_acc] 0.3140
+
+[loss]    825.5445
+[trn_acc] 0.4400
+[val_acc] 0.3500
+
+[loss]    801.4751
+[trn_acc] 0.4800
+[val_acc] 0.3720
+
+[loss]    789.3217
+[trn_acc] 0.4100
+[val_acc] 0.3580
+
+[loss]    787.3046
+[trn_acc] 0.4900
+[val_acc] 0.3620
+
+[loss]    780.0066
+[trn_acc] 0.4000
+[val_acc] 0.3840
+
+[loss]    769.5580
+[trn_acc] 0.4700
+[val_acc] 0.3460
+
+[loss]    758.8562
+[trn_acc] 0.5400
+[val_acc] 0.3800
+
+[loss]    735.5561
+[trn_acc] 0.4400
+[val_acc] 0.3880
+
+[loss]    727.4476
+[trn_acc] 0.6200
+[val_acc] 0.4400
+
+[loss]    718.9959
+[trn_acc] 0.4400
+[val_acc] 0.4180
+
+[loss]    736.6334
+[trn_acc] 0.4000
+[val_acc] 0.3880
+
+[loss]    716.5297
+[trn_acc] 0.6000
+[val_acc] 0.3920
+
+[loss]    699.4293
+[trn_acc] 0.5700
+[val_acc] 0.4280
+
+[loss]    686.2999
+[trn_acc] 0.5600
+[val_acc] 0.4160
+
+[loss]    683.5152
+[trn_acc] 0.6000
+[val_acc] 0.4320
+
+[loss]    669.5841
+[trn_acc] 0.5200
+[val_acc] 0.4160
+
+[loss]    677.1607
+[trn_acc] 0.5800
+[val_acc] 0.4420
+
+[loss]    669.2794
+[trn_acc] 0.5800
+[val_acc] 0.4380
+
+[loss]    665.3457
+[trn_acc] 0.5700
+[val_acc] 0.4400
+
+[loss]    649.1156
+[trn_acc] 0.5700
+[val_acc] 0.4100
+
+[loss]    650.8600
+[trn_acc] 0.5400
+[val_acc] 0.4260
+
+[loss]    641.0721
+[trn_acc] 0.6900
+[val_acc] 0.4200
+
+[loss]    632.1308
+[trn_acc] 0.6200
+[val_acc] 0.4480
+
+[loss]    630.4741
+[trn_acc] 0.5600
+[val_acc] 0.4640
+
+[loss]    625.6942
+[trn_acc] 0.5600
+[val_acc] 0.4320
+
+[loss]    623.4331
+[trn_acc] 0.5900
+[val_acc] 0.4680
+
+[loss]    612.6664
+[trn_acc] 0.6800
+[val_acc] 0.4660
+
+[loss]    612.8639
+[trn_acc] 0.6500
+[val_acc] 0.4660
+
+[loss]    606.1393
+[trn_acc] 0.6900
+[val_acc] 0.4800
+
+[loss]    594.6060
+[trn_acc] 0.6300
+[val_acc] 0.5000
+
+[loss]    590.2940
+[trn_acc] 0.6100
+[val_acc] 0.4640
+
+[loss]    595.8882
+[trn_acc] 0.6600
+[val_acc] 0.4800
+
+[loss]    590.0198
+[trn_acc] 0.6500
+[val_acc] 0.4700
+
+[loss]    584.5456
+[trn_acc] 0.5700
+[val_acc] 0.4500
+
+[loss]    582.3080
+[trn_acc] 0.7000
+[val_acc] 0.5200
+
+[loss]    577.3014
+[trn_acc] 0.6900
+[val_acc] 0.4740
+
+[loss]    573.9777
+[trn_acc] 0.7200
+[val_acc] 0.5020
+
+[loss]    579.8259
+[trn_acc] 0.7100
+[val_acc] 0.5360
+
+[loss]    570.6648
+[trn_acc] 0.6700
+[val_acc] 0.4820
+
+[loss]    575.6279
+[trn_acc] 0.6700
+[val_acc] 0.4940
+
+[loss]    569.4692
+[trn_acc] 0.7000
+[val_acc] 0.5100
+
+[loss]    559.6334
+[trn_acc] 0.7300
+[val_acc] 0.5180
+
+[loss]    559.7761
+[trn_acc] 0.6600
+[val_acc] 0.4720
+
+[loss]    558.4208
+[trn_acc] 0.7300
+[val_acc] 0.5040
+
+[loss]    556.1932
+[trn_acc] 0.6900
+[val_acc] 0.4680
+
+[loss]    546.7926
+[trn_acc] 0.7100
+[val_acc] 0.4980
+
+[loss]    545.4586
+[trn_acc] 0.7500
+[val_acc] 0.4740
+
+[loss]    539.1434
+[trn_acc] 0.7400
+[val_acc] 0.5360
+
+[loss]    544.7062
+[trn_acc] 0.7300
+[val_acc] 0.5200
+
+[loss]    542.8297
+[trn_acc] 0.7100
+[val_acc] 0.4760
+
+[loss]    533.3996
+[trn_acc] 0.8000
+[val_acc] 0.5280
+
+[loss]    537.3406
+[trn_acc] 0.7400
+[val_acc] 0.5140
+
+[loss]    531.4849
+[trn_acc] 0.6200
+[val_acc] 0.5200
+
+[loss]    529.2733
+[trn_acc] 0.7900
+[val_acc] 0.5080
+
+[loss]    521.5015
+[trn_acc] 0.7300
+[val_acc] 0.5240
+
+[loss]    526.8788
+[trn_acc] 0.7500
+[val_acc] 0.5000
+
+[loss]    523.9562
+[trn_acc] 0.7400
+[val_acc] 0.5000
+
+[loss]    549.6720
+[trn_acc] 0.7200
+[val_acc] 0.5080
+
+[loss]    540.5437
+[trn_acc] 0.7100
+[val_acc] 0.4900
+
+[loss]    519.7711
+[trn_acc] 0.6900
+[val_acc] 0.5120
+
+[loss]    523.7031
+[trn_acc] 0.7500
+[val_acc] 0.5440
+
+[loss]    512.7099
+[trn_acc] 0.8000
+[val_acc] 0.4960
+
+[loss]    511.5257
+[trn_acc] 0.7800
+[val_acc] 0.5100
+
+[loss]    503.4185
+[trn_acc] 0.7800
+[val_acc] 0.5220
+
+[loss]    507.1812
+[trn_acc] 0.7600
+[val_acc] 0.5380
+
+[loss]    506.6370
+[trn_acc] 0.7500
+[val_acc] 0.5060
+
+[loss]    506.1608
+[trn_acc] 0.7600
+[val_acc] 0.5440
+
+[loss]    501.7785
+[trn_acc] 0.6600
+[val_acc] 0.5080
+
+[loss]    509.3848
+[trn_acc] 0.8200
+[val_acc] 0.5300
+
+[loss]    502.8002
+[trn_acc] 0.7500
+[val_acc] 0.5360
+
+[loss]    501.3301
+[trn_acc] 0.8200
+[val_acc] 0.5440
+
+[loss]    496.0472
+[trn_acc] 0.8600
+[val_acc] 0.5660
+
+[loss]    494.4306
+[trn_acc] 0.7800
+[val_acc] 0.5460
+
+[loss]    490.4909
+[trn_acc] 0.7400
+[val_acc] 0.5220
+
+[loss]    492.1482
+[trn_acc] 0.8100
+[val_acc] 0.5480
+
+[loss]    499.2758
+[trn_acc] 0.6900
+[val_acc] 0.5340
+
+[loss]    485.3386
+[trn_acc] 0.8000
+[val_acc] 0.5300
+
+[loss]    484.0259
+[trn_acc] 0.8500
+[val_acc] 0.5560
+
+[loss]    485.9616
+[trn_acc] 0.8100
+[val_acc] 0.5260
+
+[loss]    488.5966
+[trn_acc] 0.7600
+[val_acc] 0.5140
+
+[loss]    490.3203
+[trn_acc] 0.8100
+[val_acc] 0.5140
+
+[loss]    479.6446
+[trn_acc] 0.8000
+[val_acc] 0.5360
+
+[loss]    478.8861
+[trn_acc] 0.7900
+[val_acc] 0.5240
+
+[loss]    483.2429
+[trn_acc] 0.7600
+[val_acc] 0.5520
+
+[loss]    477.5010
+[trn_acc] 0.8200
+[val_acc] 0.5720
+
+[loss]    476.7117
+[trn_acc] 0.8000
+[val_acc] 0.5540
+
+[loss]    479.7646
+[trn_acc] 0.7900
+[val_acc] 0.5400
+
+[loss]    478.7083
+[trn_acc] 0.7700
+[val_acc] 0.5380
+
+[loss]    474.2585
+[trn_acc] 0.7800
+[val_acc] 0.5620
+
+[loss]    480.1357
+[trn_acc] 0.8300
+[val_acc] 0.5200
+
+[loss]    476.3997
+[trn_acc] 0.7600
+[val_acc] 0.5920
+
+[loss]    472.7762
+[trn_acc] 0.7900
+[val_acc] 0.5380
+
+[loss]    472.3841
+[trn_acc] 0.7600
+[val_acc] 0.5440
+
+[loss]    475.5289
+[trn_acc] 0.7800
+[val_acc] 0.5260
+
+[loss]    469.4198
+[trn_acc] 0.8900
+[val_acc] 0.5540
+
+[loss]    468.4939
+[trn_acc] 0.8200
+[val_acc] 0.5380
+
+[loss]    463.7717
+[trn_acc] 0.8600
+[val_acc] 0.5560
+
+[loss]    461.6079
+[trn_acc] 0.8200
+[val_acc] 0.5640
+
+[loss]    464.5612
+[trn_acc] 0.8900
+[val_acc] 0.5520
+
+[loss]    467.5864
+[trn_acc] 0.8000
+[val_acc] 0.5580
+
+[loss]    471.1600
+[trn_acc] 0.7600
+[val_acc] 0.5440
+
+[loss]    466.1948
+[trn_acc] 0.8200
+[val_acc] 0.5300
+
+[loss]    461.1882
+[trn_acc] 0.8100
+[val_acc] 0.6020
+
+[loss]    464.0668
+[trn_acc] 0.8100
+[val_acc] 0.5380
+
+[loss]    458.8557
+[trn_acc] 0.8100
+[val_acc] 0.5360
+
+[loss]    453.9664
+[trn_acc] 0.8500
+[val_acc] 0.6040
+
+[loss]    451.6945
+[trn_acc] 0.7800
+[val_acc] 0.5480
+
+[loss]    459.1535
+[trn_acc] 0.8800
+[val_acc] 0.5740
+
+[loss]    454.7648
+[trn_acc] 0.8000
+[val_acc] 0.5420
+
+[loss]    462.2690
+[trn_acc] 0.9000
+[val_acc] 0.5580
+
+[loss]    456.3031
+[trn_acc] 0.7700
+[val_acc] 0.6020
+
+[loss]    457.5753
+[trn_acc] 0.7600
+[val_acc] 0.5480
+
+[loss]    448.6639
+[trn_acc] 0.7900
+[val_acc] 0.5780
+
+[loss]    453.4661
+[trn_acc] 0.7600
+[val_acc] 0.5380
+
+[loss]    451.6392
+[trn_acc] 0.8900
+[val_acc] 0.5680
+
+[loss]    447.4252
+[trn_acc] 0.8100
+[val_acc] 0.5520
+
+[loss]    445.0029
+[trn_acc] 0.8400
+[val_acc] 0.5660
+
+[loss]    448.5776
+[trn_acc] 0.7800
+[val_acc] 0.5860
+
+[loss]    434.0158
+[trn_acc] 0.8300
+[val_acc] 0.5780
+
+[loss]    447.3869
+[trn_acc] 0.8100
+[val_acc] 0.5800
+
+[loss]    456.1156
+[trn_acc] 0.8000
+[val_acc] 0.5680
+
+[loss]    452.1756
+[trn_acc] 0.8000
+[val_acc] 0.5940
+
+[loss]    447.7949
+[trn_acc] 0.8900
+[val_acc] 0.5680
+
+[loss]    440.5424
+[trn_acc] 0.8600
+[val_acc] 0.5920
+
+[loss]    448.7270
+[trn_acc] 0.8400
+[val_acc] 0.5460
+
+[loss]    443.3804
+[trn_acc] 0.8300
+[val_acc] 0.5680
+
+[loss]    446.1517
+[trn_acc] 0.8000
+[val_acc] 0.5640
+
+[loss]    442.1325
+[trn_acc] 0.8500
+[val_acc] 0.5940
+
+[loss]    440.3817
+[trn_acc] 0.8000
+[val_acc] 0.5640
+
+[loss]    436.8778
+[trn_acc] 0.8600
+[val_acc] 0.5880
+
+[loss]    434.9723
+[trn_acc] 0.8500
+[val_acc] 0.5640
+
+[loss]    439.4905
+[trn_acc] 0.8300
+[val_acc] 0.5760
+
+[loss]    439.1978
+[trn_acc] 0.7800
+[val_acc] 0.5780
+
+[loss]    436.4870
+[trn_acc] 0.8800
+[val_acc] 0.5880
+
+[loss]    431.9857
+[trn_acc] 0.7900
+[val_acc] 0.5660
+
+[loss]    444.5791
+[trn_acc] 0.8600
+[val_acc] 0.5720
+
+[loss]    437.8052
+[trn_acc] 0.8900
+[val_acc] 0.5840
+
+[loss]    444.4661
+[trn_acc] 0.8600
+[val_acc] 0.5860
+
+[loss]    438.0505
+[trn_acc] 0.7900
+[val_acc] 0.6000
+
+[loss]    432.9211
+[trn_acc] 0.8400
+[val_acc] 0.5700
+
+[loss]    438.8145
+[trn_acc] 0.8800
+[val_acc] 0.5800
+
+[loss]    431.3414
+[trn_acc] 0.8700
+[val_acc] 0.5900
+
+[loss]    431.5657
+[trn_acc] 0.9200
+[val_acc] 0.5780
+
+[loss]    428.0934
+[trn_acc] 0.8000
+[val_acc] 0.5640
+
+[loss]    429.6267
+[trn_acc] 0.9000
+[val_acc] 0.5740
+
+[loss]    432.3776
+[trn_acc] 0.8300
+[val_acc] 0.5660
+
+[loss]    426.1201
+[trn_acc] 0.8800
+[val_acc] 0.5760
+
+[loss]    432.8937
+[trn_acc] 0.8900
+[val_acc] 0.6160
+
+[loss]    427.2788
+[trn_acc] 0.8800
+[val_acc] 0.5680
+
+[loss]    426.0931
+[trn_acc] 0.8500
+[val_acc] 0.5760
+
+[loss]    425.0632
+[trn_acc] 0.7700
+[val_acc] 0.5680
+
+[loss]    424.8174
+[trn_acc] 0.8700
+[val_acc] 0.5760
+
+[loss]    437.0638
+[trn_acc] 0.9100
+[val_acc] 0.5980
+
+[loss]    434.9188
+[trn_acc] 0.8900
+[val_acc] 0.6240
+
+[loss]    428.2746
+[trn_acc] 0.8800
+[val_acc] 0.5820
+
+[loss]    428.8831
+[trn_acc] 0.8800
+[val_acc] 0.5480
+
+[loss]    428.0351
+[trn_acc] 0.8700
+[val_acc] 0.5680
+
+[loss]    423.5774
+[trn_acc] 0.8200
+[val_acc] 0.6040
+
+[loss]    420.2506
+[trn_acc] 0.8500
+[val_acc] 0.6040
+
+[loss]    420.6467
+[trn_acc] 0.9100
+[val_acc] 0.6180
+
+[loss]    418.1704
+[trn_acc] 0.9300
+[val_acc] 0.6080
+
+[loss]    424.6640
+[trn_acc] 0.8000
+[val_acc] 0.5700
+
+[loss]    417.9343
+[trn_acc] 0.9400
+[val_acc] 0.5400
+
+[loss]    423.0551
+[trn_acc] 0.8000
+[val_acc] 0.5800
+
+[loss]    423.4872
+[trn_acc] 0.8800
+[val_acc] 0.6000
+
+[loss]    422.9178
+[trn_acc] 0.7900
+[val_acc] 0.6060
+
+[loss]    420.1931
+[trn_acc] 0.7500
+[val_acc] 0.5340
+
+[loss]    430.3194
+[trn_acc] 0.8400
+[val_acc] 0.5520
+
+[loss]    418.6857
+[trn_acc] 0.9000
+[val_acc] 0.5760
+
+[loss]    416.3876
+[trn_acc] 0.8500
+[val_acc] 0.5960
+
+[loss]    416.0899
+[trn_acc] 0.8700
+[val_acc] 0.5700
+
+[loss]    418.9855
+[trn_acc] 0.9000
+[val_acc] 0.5640
+
+[loss]    424.8155
+[trn_acc] 0.8700
+[val_acc] 0.5760
+
+[loss]    423.4776
+[trn_acc] 0.8800
+[val_acc] 0.5840
+
+[loss]    415.5316
+[trn_acc] 0.8900
+[val_acc] 0.6120
+
+[loss]    417.4151
+[trn_acc] 0.9100
+[val_acc] 0.5940
+
+[loss]    419.4864
+[trn_acc] 0.9500
+[val_acc] 0.5780
+
+[loss]    421.5371
+[trn_acc] 0.8600
+[val_acc] 0.5740
+
+[loss]    413.1963
+[trn_acc] 0.8300
+[val_acc] 0.5700
+
+[loss]    411.5374
+[trn_acc] 0.8500
+[val_acc] 0.5820
+
+[loss]    413.6630
+[trn_acc] 0.8200
+[val_acc] 0.5760
+
+[loss]    413.6772
+[trn_acc] 0.8900
+[val_acc] 0.5740
+
+[loss]    413.5004
+[trn_acc] 0.9100
+[val_acc] 0.6140
+
+[loss]    407.2562
+[trn_acc] 0.9500
+[val_acc] 0.6040
+
+[loss]    412.0260
+[trn_acc] 0.9600
+[val_acc] 0.5780
+
+[loss]    410.4719
+[trn_acc] 0.8700
+[val_acc] 0.5880
+
+[loss]    408.7179
+[trn_acc] 0.9500
+[val_acc] 0.5860
+
+[loss]    410.8577
+[trn_acc] 0.8900
+[val_acc] 0.6120
+
+[loss]    406.5234
+[trn_acc] 0.9300
+[val_acc] 0.6000
+
+[loss]    409.9635
+[trn_acc] 0.8500
+[val_acc] 0.6020
+
+[loss]    406.8345
+[trn_acc] 0.8400
+[val_acc] 0.5920
+
+[loss]    416.6134
+[trn_acc] 0.8600
+[val_acc] 0.5840
+
+[loss]    416.4135
+[trn_acc] 0.8600
+[val_acc] 0.5760
+
+[loss]    406.5351
+[trn_acc] 0.8900
+[val_acc] 0.5820
+
+[loss]    400.2146
+[trn_acc] 0.8400
+[val_acc] 0.6180
+
+[loss]    405.7985
+[trn_acc] 0.8600
+[val_acc] 0.5540
+
+[loss]    411.5769
+[trn_acc] 0.8900
+[val_acc] 0.5780
+
+[loss]    405.0364
+[trn_acc] 0.8600
+[val_acc] 0.5660
+
+[loss]    404.8271
+[trn_acc] 0.8400
+[val_acc] 0.5780
+
+[loss]    409.0777
+[trn_acc] 0.9000
+[val_acc] 0.5740
+
+[loss]    411.8627
+[trn_acc] 0.8500
+[val_acc] 0.5600
+
+[loss]    411.6719
+[trn_acc] 0.8800
+[val_acc] 0.5600
+
+[loss]    410.5984
+[trn_acc] 0.9100
+[val_acc] 0.5840
+
+[loss]    412.6300
+[trn_acc] 0.8800
+[val_acc] 0.6040
+
+[loss]    404.0074
+[trn_acc] 0.8800
+[val_acc] 0.5760
+
+[loss]    402.2110
+[trn_acc] 0.8900
+[val_acc] 0.5520
+
+[loss]    396.0842
+[trn_acc] 0.8700
+[val_acc] 0.5800
+
+[loss]    408.2972
+[trn_acc] 0.9000
+[val_acc] 0.6040
+
+[loss]    403.1770
+[trn_acc] 0.9000
+[val_acc] 0.6080
+
+[loss]    400.2417
+[trn_acc] 0.8700
+[val_acc] 0.5820
+
+[loss]    406.8571
+[trn_acc] 0.8700
+[val_acc] 0.5700
+
+[loss]    402.4044
+[trn_acc] 0.8800
+[val_acc] 0.6120
+
+[loss]    407.9273
+[trn_acc] 0.8800
+[val_acc] 0.6200
+
+[loss]    406.0998
+[trn_acc] 0.9300
+[val_acc] 0.5980
+
+[loss]    402.6889
+[trn_acc] 0.9100
+[val_acc] 0.5980
+
+[loss]    405.7908
+[trn_acc] 0.8500
+[val_acc] 0.5780
+
+[loss]    406.8223
+[trn_acc] 0.8400
+[val_acc] 0.5720
+
+[loss]    404.8644
+[trn_acc] 0.8500
+[val_acc] 0.5640
+
+[loss]    402.2963
+[trn_acc] 0.8600
+[val_acc] 0.5720
+
+[loss]    399.5691
+[trn_acc] 0.8900
+[val_acc] 0.6140
+
+[loss]    405.7030
+[trn_acc] 0.8900
+[val_acc] 0.5740
+
+[loss]    400.4022
+[trn_acc] 0.8800
+[val_acc] 0.5680
+
+[loss]    396.7287
+[trn_acc] 0.9100
+[val_acc] 0.5940
+
+[loss]    400.6689
+[trn_acc] 0.8700
+[val_acc] 0.5680
+
+[loss]    400.5360
+[trn_acc] 0.8500
+[val_acc] 0.5940
+
+[loss]    400.2746
+[trn_acc] 0.9000
+[val_acc] 0.5920
+
+[loss]    394.9438
+[trn_acc] 0.8500
+[val_acc] 0.5980
+
+[loss]    400.8549
+[trn_acc] 0.8800
+[val_acc] 0.6060
+
+[loss]    406.7146
+[trn_acc] 0.8800
+[val_acc] 0.5960
+
+[loss]    396.8887
+[trn_acc] 0.9000
+[val_acc] 0.5740
+
+[loss]    398.3626
+[trn_acc] 0.8900
+[val_acc] 0.5720
+
+[loss]    397.4037
+[trn_acc] 0.8600
+[val_acc] 0.5920
+
+[loss]    394.3714
+[trn_acc] 0.9200
+[val_acc] 0.5920
+
+[loss]    391.6189
+[trn_acc] 0.9000
+[val_acc] 0.6080
+
+[loss]    395.1926
+[trn_acc] 0.8700
+[val_acc] 0.6060
+
+[loss]    393.3151
+[trn_acc] 0.9500
+[val_acc] 0.6140
+
+[loss]    399.2564
+[trn_acc] 0.8600
+[val_acc] 0.5900
+
+[loss]    399.1308
+[trn_acc] 0.9100
+[val_acc] 0.6020
+
+[loss]    396.6707
+[trn_acc] 0.9300
+[val_acc] 0.5680
+
+[loss]    397.8667
+[trn_acc] 0.8400
+[val_acc] 0.5600
+
+[loss]    409.2485
+[trn_acc] 0.8700
+[val_acc] 0.5680
+
+[loss]    403.5998
+[trn_acc] 0.8700
+[val_acc] 0.5900
+
+[loss]    396.6277
+[trn_acc] 0.8900
+[val_acc] 0.5940
+
+[loss]    395.3333
+[trn_acc] 0.8500
+[val_acc] 0.5720
+
+[loss]    395.5008
+[trn_acc] 0.8700
+[val_acc] 0.6280
+
+[loss]    395.6549
+[trn_acc] 0.8900
+[val_acc] 0.5980
+
+[loss]    393.6132
+[trn_acc] 0.9000
+[val_acc] 0.6260
+
+[loss]    391.0041
+[trn_acc] 0.8800
+[val_acc] 0.6220
+
+[loss]    390.2265
+[trn_acc] 0.9100
+[val_acc] 0.5980
+
+[loss]    398.0304
+[trn_acc] 0.8600
+[val_acc] 0.5780
+
+[loss]    392.2448
+[trn_acc] 0.8900
+[val_acc] 0.5940
+
+[loss]    395.0323
+[trn_acc] 0.9300
+[val_acc] 0.6060
+
+[loss]    393.8545
+[trn_acc] 0.9100
+[val_acc] 0.5800
+
+[loss]    388.4198
+[trn_acc] 0.9100
+[val_acc] 0.5780
+
+[loss]    394.4159
+[trn_acc] 0.8500
+[val_acc] 0.5900
+
+[loss]    392.1686
+[trn_acc] 0.8900
+[val_acc] 0.5960
+
+[loss]    393.7157
+[trn_acc] 0.8700
+[val_acc] 0.5980
+
+[loss]    390.8342
+[trn_acc] 0.9500
+[val_acc] 0.6040
+
+[loss]    391.1461
+[trn_acc] 0.8700
+[val_acc] 0.5920
+
+[loss]    391.9592
+[trn_acc] 0.8900
+[val_acc] 0.6020
+
+[loss]    395.3756
+[trn_acc] 0.8800
+[val_acc] 0.5880
+
+[loss]    398.0192
+[trn_acc] 0.8700
+[val_acc] 0.5880
+
+[loss]    392.3025
+[trn_acc] 0.9100
+[val_acc] 0.5720
+
+[loss]    398.8672
+[trn_acc] 0.8900
+[val_acc] 0.6120
+
+[loss]    395.5004
+[trn_acc] 0.8800
+[val_acc] 0.5760
+
+[loss]    392.2120
+[trn_acc] 0.9000
+[val_acc] 0.6240
+
+[loss]    388.8325
+[trn_acc] 0.9100
+[val_acc] 0.6020
+
+[loss]    387.8012
+[trn_acc] 0.8700
+[val_acc] 0.5780
+
+[loss]    388.2604
+[trn_acc] 0.9100
+[val_acc] 0.6100
+
+[loss]    395.5337
+[trn_acc] 0.9000
+[val_acc] 0.5800
+
+[loss]    398.0406
+[trn_acc] 0.9000
+[val_acc] 0.6120
+
+[loss]    395.7246
+[trn_acc] 0.8800
+[val_acc] 0.5740
+
+[loss]    398.1674
+[trn_acc] 0.9000
+[val_acc] 0.5920
+
+[loss]    391.6722
+[trn_acc] 0.8900
+[val_acc] 0.5980
+
+[loss]    396.2942
+[trn_acc] 0.8700
+[val_acc] 0.5980
+
+[loss]    389.5147
+[trn_acc] 0.8900
+[val_acc] 0.6240
+
+[loss]    389.6704
+[trn_acc] 0.8900
+[val_acc] 0.6540
+
+[loss]    392.2184
+[trn_acc] 0.9000
+[val_acc] 0.6020
+
+[loss]    393.2080
+[trn_acc] 0.9000
+[val_acc] 0.6080
+
+[loss]    385.2439
+[trn_acc] 0.8900
+[val_acc] 0.5980
+
+[loss]    385.0375
+[trn_acc] 0.9100
+[val_acc] 0.5760
+
+[loss]    388.4330
+[trn_acc] 0.8700
+[val_acc] 0.6040
+
+[loss]    385.3674
+[trn_acc] 0.8800
+[val_acc] 0.5920
+
+[loss]    390.3508
+[trn_acc] 0.8700
+[val_acc] 0.5860
+
+[loss]    385.3465
+[trn_acc] 0.9000
+[val_acc] 0.5860
+
+[loss]    385.3814
+[trn_acc] 0.9200
+[val_acc] 0.6240
+
+[loss]    382.9225
+[trn_acc] 0.9400
+[val_acc] 0.5920
+
+[loss]    377.9842
+[trn_acc] 0.9300
+[val_acc] 0.6160
+
+[loss]    381.5918
+[trn_acc] 0.9200
+[val_acc] 0.5840
+
+[loss]    383.3786
+[trn_acc] 0.8700
+[val_acc] 0.5740
+
+[loss]    381.6438
+[trn_acc] 0.8600
+[val_acc] 0.5860
+
+[loss]    385.2928
+[trn_acc] 0.9200
+[val_acc] 0.6040
+
+[loss]    383.9711
+[trn_acc] 0.8800
+[val_acc] 0.5940
+
+[loss]    385.7797
+[trn_acc] 0.8700
+[val_acc] 0.6100
+
+[loss]    381.1392
+[trn_acc] 0.8500
+[val_acc] 0.5960
+
+[loss]    385.5617
+[trn_acc] 0.8500
+[val_acc] 0.6000
+
+[loss]    388.4416
+[trn_acc] 0.8500
+[val_acc] 0.5940
+
+[loss]    386.7792
+[trn_acc] 0.8900
+[val_acc] 0.6160
+
+[loss]    392.7758
+[trn_acc] 0.8800
+[val_acc] 0.5940
+
+[loss]    395.2794
+[trn_acc] 0.9300
+[val_acc] 0.6360
+
+[loss]    390.7847
+[trn_acc] 0.8900
+[val_acc] 0.6220
+
+[loss]    392.0582
+[trn_acc] 0.9300
+[val_acc] 0.5860
+
+[loss]    386.0407
+[trn_acc] 0.9100
+[val_acc] 0.5860
+
+[loss]    392.5217
+[trn_acc] 0.9400
+[val_acc] 0.6160
+
+[loss]    395.2915
+[trn_acc] 0.8600
+[val_acc] 0.5740
+
+[loss]    392.4503
+[trn_acc] 0.8900
+[val_acc] 0.5740
+
+[loss]    385.6449
+[trn_acc] 0.8700
+[val_acc] 0.6160
+
+[loss]    389.8701
+[trn_acc] 0.8600
+[val_acc] 0.6220
+
+[loss]    385.3589
+[trn_acc] 0.9000
+[val_acc] 0.6020
+
+[loss]    387.0998
+[trn_acc] 0.8800
+[val_acc] 0.6200
+
+[loss]    381.3845
+[trn_acc] 0.8900
+[val_acc] 0.6120
+
+[loss]    384.5348
+[trn_acc] 0.9000
+[val_acc] 0.6040
+
+[loss]    393.5546
+[trn_acc] 0.8900
+[val_acc] 0.5840
+
+[loss]    387.6882
+[trn_acc] 0.8500
+[val_acc] 0.6300
+
+[loss]    379.2415
+[trn_acc] 0.8600
+[val_acc] 0.6280
+
+[loss]    382.4331
+[trn_acc] 0.9000
+[val_acc] 0.6340
+
+[loss]    379.0238
+[trn_acc] 0.9100
+[val_acc] 0.6220
+
+[loss]    385.2498
+[trn_acc] 0.8900
+[val_acc] 0.6340
+
+[loss]    380.5498
+[trn_acc] 0.9100
+[val_acc] 0.6120
+
+[loss]    379.6589
+[trn_acc] 0.8400
+[val_acc] 0.6140
+
+[loss]    379.3686
+[trn_acc] 0.8700
+[val_acc] 0.6120
+
+[loss]    383.5777
+[trn_acc] 0.8800
+[val_acc] 0.6040
+
+[loss]    382.3332
+[trn_acc] 0.8900
+[val_acc] 0.6100
+
+[loss]    380.5579
+[trn_acc] 0.8200
+[val_acc] 0.5960
+
+[loss]    383.8713
+[trn_acc] 0.9200
+[val_acc] 0.6260
+
+[loss]    384.4776
+[trn_acc] 0.8900
+[val_acc] 0.6080
+
+[loss]    375.7846
+[trn_acc] 0.8500
+[val_acc] 0.6040
+
+[loss]    376.9114
+[trn_acc] 0.9100
+[val_acc] 0.5960
+
+[loss]    380.4222
+[trn_acc] 0.9400
+[val_acc] 0.6200
+
+[loss]    380.3812
+[trn_acc] 0.9100
+[val_acc] 0.6160
+
+[loss]    385.1762
+[trn_acc] 0.9000
+[val_acc] 0.5780
+
+[loss]    380.3384
+[trn_acc] 0.9100
+[val_acc] 0.5920
+
+[loss]    379.8494
+[trn_acc] 0.8600
+[val_acc] 0.6340
+
+[loss]    380.4945
+[trn_acc] 0.9400
+[val_acc] 0.6420
+
+[loss]    381.6010
+[trn_acc] 0.9200
+[val_acc] 0.6080
+
+[loss]    378.7981
+[trn_acc] 0.9000
+[val_acc] 0.6180
+
+[loss]    376.2167
+[trn_acc] 0.9000
+[val_acc] 0.6140
+
+[loss]    383.0207
+[trn_acc] 0.9200
+[val_acc] 0.6000
+
+[loss]    381.1202
+[trn_acc] 0.9000
+[val_acc] 0.6340
+
+[loss]    384.0269
+[trn_acc] 0.8600
+[val_acc] 0.6320
+
+[loss]    383.5878
+[trn_acc] 0.9100
+[val_acc] 0.6240
+
+[loss]    381.7231
+[trn_acc] 0.8900
+[val_acc] 0.6120
+
+[loss]    382.2657
+[trn_acc] 0.8800
+[val_acc] 0.6100
+
+[loss]    378.8441
+[trn_acc] 0.8800
+[val_acc] 0.5960
+
+[loss]    393.9523
+[trn_acc] 0.8900
+[val_acc] 0.5720
+
+[loss]    390.7391
+[trn_acc] 0.8500
+[val_acc] 0.5780
+
+[loss]    397.2235
+[trn_acc] 0.8800
+[val_acc] 0.5920
+
+[loss]    410.7883
+[trn_acc] 0.8100
+[val_acc] 0.5520
+
+[loss]    466.4310
+[trn_acc] 0.8700
+[val_acc] 0.5840
+
+[loss]    465.2273
+[trn_acc] 0.8600
+[val_acc] 0.5820
+
+[loss]    425.5189
+[trn_acc] 0.9200
+[val_acc] 0.6180
+
+[loss]    402.7247
+[trn_acc] 0.9500
+[val_acc] 0.5840
+
+[loss]    396.1991
+[trn_acc] 0.9100
+[val_acc] 0.5960
+
+[loss]    387.9710
+[trn_acc] 0.9200
+[val_acc] 0.6280
+
+[loss]    384.0951
+[trn_acc] 0.8700
+[val_acc] 0.6300
+
+[loss]    377.5573
+[trn_acc] 0.8700
+[val_acc] 0.6060
+
+[loss]    388.1179
+[trn_acc] 0.8900
+[val_acc] 0.6000
+
+[loss]    387.8383
+[trn_acc] 0.7800
+[val_acc] 0.6280
+
+[loss]    387.5031
+[trn_acc] 0.9400
+[val_acc] 0.6260
+
+[loss]    381.5335
+[trn_acc] 0.9300
+[val_acc] 0.5940
+
+[loss]    378.7952
+[trn_acc] 0.9100
+[val_acc] 0.6140
+
+[loss]    374.8850
+[trn_acc] 0.8800
+[val_acc] 0.5720
+
+[loss]    373.5471
+[trn_acc] 0.8900
+[val_acc] 0.6380
+
+[loss]    371.2518
+[trn_acc] 0.8600
+[val_acc] 0.6200
+
+[loss]    375.8615
+[trn_acc] 0.8900
+[val_acc] 0.6420
+
+[loss]    372.9252
+[trn_acc] 0.8900
+[val_acc] 0.6260
+
+[loss]    374.2110
+[trn_acc] 0.9300
+[val_acc] 0.5960
+
+[loss]    378.6541
+[trn_acc] 0.9100
+[val_acc] 0.6600
+
+[loss]    373.0296
+[trn_acc] 0.8700
+[val_acc] 0.6080
+
+[loss]    376.3333
+[trn_acc] 0.9000
+[val_acc] 0.6100
+
+[loss]    372.2754
+[trn_acc] 0.8300
+[val_acc] 0.6300
+
+[loss]    374.1110
+[trn_acc] 0.8800
+[val_acc] 0.6200
+
+[loss]    373.8867
+[trn_acc] 0.9300
+[val_acc] 0.5960
+
+[loss]    380.0710
+[trn_acc] 0.8900
+[val_acc] 0.6160
+
+[loss]    377.9940
+[trn_acc] 0.8900
+[val_acc] 0.6060
+
+[loss]    376.6291
+[trn_acc] 0.8100
+[val_acc] 0.6000
+
+[loss]    375.7424
+[trn_acc] 0.9000
+[val_acc] 0.6340
+
+[loss]    378.0835
+[trn_acc] 0.8900
+[val_acc] 0.6280
+
+[loss]    375.4477
+[trn_acc] 0.9200
+[val_acc] 0.6060
+
+[loss]    377.7697
+[trn_acc] 0.8600
+[val_acc] 0.6140
+
+[loss]    382.3699
+[trn_acc] 0.9200
+[val_acc] 0.5880
+
+[loss]    376.0639
+[trn_acc] 0.9300
+[val_acc] 0.5980
+
+[loss]    375.7467
+[trn_acc] 0.9200
+[val_acc] 0.6180
+
+[loss]    377.0855
+[trn_acc] 0.8900
+[val_acc] 0.6040
+
+[loss]    377.4135
+[trn_acc] 0.9100
+[val_acc] 0.6280
+
+[loss]    380.2825
+[trn_acc] 0.8900
+[val_acc] 0.6440
+
+[loss]    383.7217
+[trn_acc] 0.9400
+[val_acc] 0.5900
+
+[loss]    385.8169
+[trn_acc] 0.9000
+[val_acc] 0.6120
+
+[loss]    378.0503
+[trn_acc] 0.9000
+[val_acc] 0.6160
+
+[loss]    379.5921
+[trn_acc] 0.8500
+[val_acc] 0.6060
+
+[loss]    378.4473
+[trn_acc] 0.8900
+[val_acc] 0.6080
+
+[loss]    380.3262
+[trn_acc] 0.8900
+[val_acc] 0.6280
+
+[loss]    374.4352
+[trn_acc] 0.9400
+[val_acc] 0.6140
+
+[loss]    378.8092
+[trn_acc] 0.9000
+[val_acc] 0.6360
+
+[loss]    375.6404
+[trn_acc] 0.9000
+[val_acc] 0.6460
+
+[loss]    394.0644
+[trn_acc] 0.8600
+[val_acc] 0.5680
+
+[loss]    384.1611
+[trn_acc] 0.9400
+[val_acc] 0.6100
+
+[loss]    381.0467
+[trn_acc] 0.9400
+[val_acc] 0.6220
+
+[loss]    378.2729
+[trn_acc] 0.9300
+[val_acc] 0.5940
+
+[loss]    374.7053
+[trn_acc] 0.9300
+[val_acc] 0.5740
+
+[loss]    382.3449
+[trn_acc] 0.9100
+[val_acc] 0.6100
+
+[loss]    377.6589
+[trn_acc] 0.8600
+[val_acc] 0.6240
+
+[loss]    374.6826
+[trn_acc] 0.9400
+[val_acc] 0.6200
+
+[loss]    368.5649
+[trn_acc] 0.9400
+[val_acc] 0.6280
+
+[loss]    375.8933
+[trn_acc] 0.9000
+[val_acc] 0.6340
+
+[loss]    375.1235
+[trn_acc] 0.9400
+[val_acc] 0.6020
+
+[loss]    374.0820
+[trn_acc] 0.8800
+[val_acc] 0.6260
+
+[loss]    380.3220
+[trn_acc] 0.9300
+[val_acc] 0.6100
+
+[loss]    377.1252
+[trn_acc] 0.9300
+[val_acc] 0.6340
+
+[loss]    374.8858
+[trn_acc] 0.8900
+[val_acc] 0.6200
+
+[loss]    378.6777
+[trn_acc] 0.9300
+[val_acc] 0.5880
+
+[loss]    375.6271
+[trn_acc] 0.8600
+[val_acc] 0.6020
+
+[loss]    378.3691
+[trn_acc] 0.8600
+[val_acc] 0.6060
+
+[loss]    375.9859
+[trn_acc] 0.9200
+[val_acc] 0.6200
+
+[loss]    372.2790
+[trn_acc] 0.9300
+[val_acc] 0.6320
+
+[loss]    376.3505
+[trn_acc] 0.8700
+[val_acc] 0.6180
+
+[loss]    376.9784
+[trn_acc] 0.9400
+[val_acc] 0.6300
+
+[loss]    374.3780
+[trn_acc] 0.8900
+[val_acc] 0.6380
+
+[loss]    373.1862
+[trn_acc] 0.9400
+[val_acc] 0.5940
+
+[loss]    378.2726
+[trn_acc] 0.9400
+[val_acc] 0.6080
+
+[loss]    376.5990
+[trn_acc] 0.9200
+[val_acc] 0.6220
+
+[loss]    371.7919
+[trn_acc] 0.8800
+[val_acc] 0.6360
+
+[loss]    372.6078
+[trn_acc] 0.9100
+[val_acc] 0.6320
+
+[loss]    369.7137
+[trn_acc] 0.8900
+[val_acc] 0.6040
+
+[loss]    369.1689
+[trn_acc] 0.9300
+[val_acc] 0.5800
+
+[loss]    372.1109
+[trn_acc] 0.9600
+[val_acc] 0.6000
+
+[loss]    377.3096
+[trn_acc] 0.8500
+[val_acc] 0.6160
+
+[loss]    374.3428
+[trn_acc] 0.9500
+[val_acc] 0.6180
+
+[loss]    380.6989
+[trn_acc] 0.9100
+[val_acc] 0.6040
+
+[loss]    384.6534
+[trn_acc] 0.9200
+[val_acc] 0.5960
+
+[loss]    398.5186
+[trn_acc] 0.8400
+[val_acc] 0.5720
+
+[loss]    452.7430
+[trn_acc] 0.8100
+[val_acc] 0.5580
+
+[loss]    441.8122
+[trn_acc] 0.9100
+[val_acc] 0.6380
+
+[loss]    425.5061
+[trn_acc] 0.8500
+[val_acc] 0.6040
+
+[loss]    404.4755
+[trn_acc] 0.9300
+[val_acc] 0.6280
+
+[loss]    391.2875
+[trn_acc] 0.8600
+[val_acc] 0.6180
+
+[loss]    389.3091
+[trn_acc] 0.8600
+[val_acc] 0.6060
+
+[loss]    381.1919
+[trn_acc] 0.9000
+[val_acc] 0.5980
+
+[loss]    375.0502
+[trn_acc] 0.9300
+[val_acc] 0.6180
+
+[loss]    372.2804
+[trn_acc] 0.9400
+[val_acc] 0.6200
+
+[loss]    370.8153
+[trn_acc] 0.9000
+[val_acc] 0.6120
+
+[loss]    372.1008
+[trn_acc] 0.9500
+[val_acc] 0.6180
+
+[loss]    369.6536
+[trn_acc] 0.9500
+[val_acc] 0.6020
+
+[loss]    369.4580
+[trn_acc] 0.9300
+[val_acc] 0.6100
+
+[loss]    370.5854
+[trn_acc] 0.9200
+[val_acc] 0.6040
+
+[loss]    369.8774
+[trn_acc] 0.8800
+[val_acc] 0.6020
+
+[loss]    371.5812
+[trn_acc] 0.9200
+[val_acc] 0.6280
+
+[loss]    370.4706
+[trn_acc] 0.8800
+[val_acc] 0.6220
+
+[loss]    369.5747
+[trn_acc] 0.9100
+[val_acc] 0.6300
+
+[loss]    366.2993
+[trn_acc] 0.8700
+[val_acc] 0.6380
+
+[loss]    369.8017
+[trn_acc] 0.9200
+[val_acc] 0.6520
+
+[loss]    369.1097
+[trn_acc] 0.8900
+[val_acc] 0.6540
+
+[loss]    370.5066
+[trn_acc] 0.9000
+[val_acc] 0.6400
+
+[loss]    367.2126
+[trn_acc] 0.8500
+[val_acc] 0.6400
+
+[loss]    364.5506
+[trn_acc] 0.9100
+[val_acc] 0.6400
+
+[loss]    365.8553
+[trn_acc] 0.9300
+[val_acc] 0.6500
+
+[loss]    368.7042
+[trn_acc] 0.8400
+[val_acc] 0.6060
+
+[loss]    368.0223
+[trn_acc] 0.9300
+[val_acc] 0.6420
+
+[loss]    370.0239
+[trn_acc] 0.9300
+[val_acc] 0.6600
+
+[loss]    367.8175
+[trn_acc] 0.8400
+[val_acc] 0.6040
+
+[loss]    371.7896
+[trn_acc] 0.8600
+[val_acc] 0.6060
+
+[loss]    377.2692
+[trn_acc] 0.9400
+[val_acc] 0.6260
+
+[loss]    377.2949
+[trn_acc] 0.9000
+[val_acc] 0.6260
+
+[loss]    373.1798
+[trn_acc] 0.9600
+[val_acc] 0.6160
+
+[loss]    376.0888
+[trn_acc] 0.9100
+[val_acc] 0.6320
+
+[loss]    372.9724
+[trn_acc] 0.8700
+[val_acc] 0.6240
+
+[loss]    368.0727
+[trn_acc] 0.9400
+[val_acc] 0.6520
+
+[loss]    368.8566
+[trn_acc] 0.9200
+[val_acc] 0.6320
+
+[loss]    373.0275
+[trn_acc] 0.9200
+[val_acc] 0.6520
+
+[loss]    374.1888
+[trn_acc] 0.9000
+[val_acc] 0.6120
+
+[loss]    370.0677
+[trn_acc] 0.8800
+[val_acc] 0.6500
+
+[loss]    373.8127
+[trn_acc] 0.9200
+[val_acc] 0.6080
+
+[loss]    377.9048
+[trn_acc] 0.8500
+[val_acc] 0.6060
+
+[loss]    381.2172
+[trn_acc] 0.8800
+[val_acc] 0.6020
+
+[loss]    393.1304
+[trn_acc] 0.9000
+[val_acc] 0.5700
+
+[loss]    431.3661
+[trn_acc] 0.8400
+[val_acc] 0.5380
+
+[loss]    461.8635
+[trn_acc] 0.7900
+[val_acc] 0.5840
+
+[loss]    455.2559
+[trn_acc] 0.8800
+[val_acc] 0.5680
+
+[loss]    426.4848
+[trn_acc] 0.8900
+[val_acc] 0.6040
+
+[loss]    408.8777
+[trn_acc] 0.9000
+[val_acc] 0.6280
+
+[loss]    395.1344
+[trn_acc] 0.8700
+[val_acc] 0.5960
+
+[loss]    390.8543
+[trn_acc] 0.9300
+[val_acc] 0.6140
+
+[loss]    389.7824
+[trn_acc] 0.8800
+[val_acc] 0.6400
+
+[loss]    388.6519
+[trn_acc] 0.9500
+[val_acc] 0.6180
+
+[loss]    380.1689
+[trn_acc] 0.9200
+[val_acc] 0.6040
+
+[loss]    373.6847
+[trn_acc] 0.9000
+[val_acc] 0.6020
+
+[loss]    381.2105
+[trn_acc] 0.9300
+[val_acc] 0.6420
+
+[loss]    373.2298
+[trn_acc] 0.9100
+[val_acc] 0.6140
+
+[loss]    372.7667
+[trn_acc] 0.9100
+[val_acc] 0.6280
+
+[loss]    370.8618
+[trn_acc] 0.9100
+[val_acc] 0.6300
+
+[loss]    372.4279
+[trn_acc] 0.9400
+[val_acc] 0.6640
+
+[loss]    369.6527
+[trn_acc] 0.9400
+[val_acc] 0.6440
+
+[loss]    367.0871
+[trn_acc] 0.9100
+[val_acc] 0.6300
+
+[loss]    370.5881
+[trn_acc] 0.9400
+[val_acc] 0.6300
+
+[loss]    373.8666
+[trn_acc] 0.9500
+[val_acc] 0.6520
+
+[loss]    368.8181
+[trn_acc] 0.8700
+[val_acc] 0.6240
+
+[loss]    369.2713
+[trn_acc] 0.9400
+[val_acc] 0.6540
+
+[loss]    367.8743
+[trn_acc] 0.9400
+[val_acc] 0.6500
+
+[loss]    370.0145
+[trn_acc] 0.9500
+[val_acc] 0.6340
+
+[loss]    369.9399
+[trn_acc] 0.9300
+[val_acc] 0.6360
+
+[loss]    367.2694
+[trn_acc] 0.9400
+[val_acc] 0.6480
+
+[loss]    370.9628
+[trn_acc] 0.8700
+[val_acc] 0.6260
+
+[loss]    368.6868
+[trn_acc] 0.9200
+[val_acc] 0.6200
+
+[loss]    371.4872
+[trn_acc] 0.9000
+[val_acc] 0.6400
+
+[loss]    367.5582
+[trn_acc] 0.8700
+[val_acc] 0.6340
+
+[loss]    374.4009
+[trn_acc] 0.9300
+[val_acc] 0.6260
+
+[loss]    370.5410
+[trn_acc] 0.9100
+[val_acc] 0.6500
+
+[loss]    369.7286
+[trn_acc] 0.9000
+[val_acc] 0.6440
+
+[loss]    368.8320
+[trn_acc] 0.9000
+[val_acc] 0.6440
+
+[loss]    368.8672
+[trn_acc] 0.9500
+[val_acc] 0.6180
+
+[loss]    365.8711
+[trn_acc] 0.9300
+[val_acc] 0.6160
+
+[loss]    375.3685
+[trn_acc] 0.8800
+[val_acc] 0.6560
+
+[loss]    373.5874
+[trn_acc] 0.9000
+[val_acc] 0.6680
+
+[loss]    368.5773
+[trn_acc] 0.9400
+[val_acc] 0.6440
+
+[loss]    368.1706
+[trn_acc] 0.9500
+[val_acc] 0.6220
+
+[loss]    366.8625
+[trn_acc] 0.9100
+[val_acc] 0.6380
+
+[loss]    367.2294
+[trn_acc] 0.9100
+[val_acc] 0.6440
+
+[loss]    375.6272
+[trn_acc] 0.9000
+[val_acc] 0.6220
+
+[loss]    373.6149
+[trn_acc] 0.9400
+[val_acc] 0.6300
+
+[loss]    373.2763
+[trn_acc] 0.9300
+[val_acc] 0.6180
+
+[loss]    374.7303
+[trn_acc] 0.9300
+[val_acc] 0.6220
+
+[loss]    370.4350
+[trn_acc] 0.9300
+[val_acc] 0.6380
+
+[loss]    374.5572
+[trn_acc] 0.9000
+[val_acc] 0.6480
+
+[loss]    370.4982
+[trn_acc] 0.9200
+[val_acc] 0.6580
+
+[loss]    367.9553
+[trn_acc] 0.9000
+[val_acc] 0.6220
+
+[loss]    370.0884
+[trn_acc] 0.9600
+[val_acc] 0.6560
+
+[loss]    370.8882
+[trn_acc] 0.9000
+[val_acc] 0.6240
+
+[loss]    375.2558
+[trn_acc] 0.8800
+[val_acc] 0.6760
+
+[loss]    370.9900
+[trn_acc] 0.9000
+[val_acc] 0.6500
+
+[loss]    375.0326
+[trn_acc] 0.9300
+[val_acc] 0.6360
+
+[loss]    379.2494
+[trn_acc] 0.9200
+[val_acc] 0.6240
+
+[loss]    380.5067
+[trn_acc] 0.8800
+[val_acc] 0.6200
+
+[loss]    390.8510
+[trn_acc] 0.8900
+[val_acc] 0.6160
+
+[loss]    457.0235
+[trn_acc] 0.7500
+[val_acc] 0.5080
+
+[loss]    604.0006
+[trn_acc] 0.7300
+[val_acc] 0.5060
+
+[loss]    546.8125
+[trn_acc] 0.6700
+[val_acc] 0.5280
+
+[loss]    500.2179
+[trn_acc] 0.8000
+[val_acc] 0.5740
+
+[loss]    485.3887
+[trn_acc] 0.7200
+[val_acc] 0.5880
+
+[loss]    499.5032
+[trn_acc] 0.7500
+[val_acc] 0.5840
+
+[loss]    511.1643
+[trn_acc] 0.6500
+[val_acc] 0.5280
+
+[loss]    504.1224
+[trn_acc] 0.7800
+[val_acc] 0.5760
+
+[loss]    477.9258
+[trn_acc] 0.8700
+[val_acc] 0.5900
+
+[loss]    463.9777
+[trn_acc] 0.8600
+[val_acc] 0.5900
+
+[loss]    445.8393
+[trn_acc] 0.8700
+[val_acc] 0.6120
+
+[loss]    434.9784
+[trn_acc] 0.8400
+[val_acc] 0.6380
+
+[loss]    423.4520
+[trn_acc] 0.8800
+[val_acc] 0.6320
+
+[loss]    412.7575
+[trn_acc] 0.8500
+[val_acc] 0.6280
+
+[loss]    403.0922
+[trn_acc] 0.8900
+[val_acc] 0.6100
+
+[loss]    409.5823
+[trn_acc] 0.9300
+[val_acc] 0.6180
+
+[loss]    398.7308
+[trn_acc] 0.9600
+[val_acc] 0.6100
+
+[loss]    392.5142
+[trn_acc] 0.8800
+[val_acc] 0.6300
+
+[loss]    386.4734
+[trn_acc] 0.8800
+[val_acc] 0.6500
+
+[loss]    388.4283
+[trn_acc] 0.9400
+[val_acc] 0.6200
+
+[loss]    381.9377
+[trn_acc] 0.9300
+[val_acc] 0.6440
+
+[loss]    382.7938
+[trn_acc] 0.8500
+[val_acc] 0.6200
+
+[loss]    381.8605
+[trn_acc] 0.9100
+[val_acc] 0.6220
+
+[loss]    375.2297
+[trn_acc] 0.8700
+[val_acc] 0.6340
+
+[loss]    379.3533
+[trn_acc] 0.9400
+[val_acc] 0.6020
+
+[loss]    381.9593
+[trn_acc] 0.9400
+[val_acc] 0.6480
+
+[loss]    384.3435
+[trn_acc] 0.9100
+[val_acc] 0.6220
+
+[loss]    380.4149
+[trn_acc] 0.8800
+[val_acc] 0.6080
+
+[loss]    383.5172
+[trn_acc] 0.9300
+[val_acc] 0.6440
+
+[loss]    385.3322
+[trn_acc] 0.9300
+[val_acc] 0.6340
+
+[loss]    375.2407
+[trn_acc] 0.8700
+[val_acc] 0.6360
+
+[loss]    379.2211
+[trn_acc] 0.9400
+[val_acc] 0.6420
+
+[loss]    374.1361
+[trn_acc] 0.9100
+[val_acc] 0.6500
+
+[loss]    377.7087
+[trn_acc] 0.9200
+[val_acc] 0.6340
+
+[loss]    376.2905
+[trn_acc] 0.8800
+[val_acc] 0.6420
+
+[loss]    374.2996
+[trn_acc] 0.9100
+[val_acc] 0.6400
+
+[loss]    374.1340
+[trn_acc] 0.9400
+[val_acc] 0.6520
+
+[loss]    375.9328
+[trn_acc] 0.8600
+[val_acc] 0.6260
+
+[loss]    367.4484
+[trn_acc] 0.9400
+[val_acc] 0.6400
+
+[loss]    374.1856
+[trn_acc] 0.9200
+[val_acc] 0.6460
+
+[loss]    375.5794
+[trn_acc] 0.9600
+[val_acc] 0.6440
+
+[loss]    366.5268
+[trn_acc] 0.9100
+[val_acc] 0.6560
+
+[loss]    372.0105
+[trn_acc] 0.9200
+[val_acc] 0.6360
+
+[loss]    373.7308
+[trn_acc] 0.9600
+[val_acc] 0.6260
+
+[loss]    374.5955
+[trn_acc] 0.9100
+[val_acc] 0.6360
+
+[loss]    367.9697
+[trn_acc] 0.9100
+[val_acc] 0.6560
+
+[loss]    370.5611
+[trn_acc] 0.9000
+[val_acc] 0.6360
+
+[loss]    373.4285
+[trn_acc] 0.8900
+[val_acc] 0.6080
+
+[loss]    377.0008
+[trn_acc] 0.9600
+[val_acc] 0.6640
+
+[loss]    373.5981
+[trn_acc] 0.8900
+[val_acc] 0.6820
+
+[loss]    369.0272
+[trn_acc] 0.9400
+[val_acc] 0.6180
+
+[loss]    367.1140
+[trn_acc] 0.8700
+[val_acc] 0.6480
+
+[loss]    372.5688
+[trn_acc] 0.9100
+[val_acc] 0.6400
+
+[loss]    369.7911
+[trn_acc] 0.9300
+[val_acc] 0.6500
+
+[loss]    379.5390
+[trn_acc] 0.8700
+[val_acc] 0.6440
+
+[loss]    378.9482
+[trn_acc] 0.8800
+[val_acc] 0.6520
+
+[loss]    375.4930
+[trn_acc] 0.9100
+[val_acc] 0.6260
+
+[loss]    377.4079
+[trn_acc] 0.9100
+[val_acc] 0.6420
+
+[loss]    376.0096
+[trn_acc] 0.9400
+[val_acc] 0.6580
+
+[loss]    373.7748
+[trn_acc] 0.9500
+[val_acc] 0.6440
+
+[loss]    376.1185
+[trn_acc] 0.9300
+[val_acc] 0.6420
+
+[loss]    375.6088
+[trn_acc] 0.9200
+[val_acc] 0.6440
+
+[loss]    378.9911
+[trn_acc] 0.9100
+[val_acc] 0.6460
+
+[loss]    374.5760
+[trn_acc] 0.8400
+[val_acc] 0.6240
+
+[loss]    376.6415
+[trn_acc] 0.8000
+[val_acc] 0.6580
+
+[loss]    381.0362
+[trn_acc] 0.9400
+[val_acc] 0.5980
+
+[loss]    379.9680
+[trn_acc] 0.9000
+[val_acc] 0.6260
+
+[loss]    373.5039
+[trn_acc] 0.9500
+[val_acc] 0.5900
+
+[loss]    382.2472
+[trn_acc] 0.9100
+[val_acc] 0.6480
+
+[loss]    380.3386
+[trn_acc] 0.9400
+[val_acc] 0.6180
+
+[loss]    374.6212
+[trn_acc] 0.8700
+[val_acc] 0.5880
+
+[loss]    376.3207
+[trn_acc] 0.8900
+[val_acc] 0.6140
+
+[loss]    378.5790
+[trn_acc] 0.9100
+[val_acc] 0.6360
+
+[loss]    380.1758
+[trn_acc] 0.8700
+[val_acc] 0.6220
+
+[loss]    376.3350
+[trn_acc] 0.9300
+[val_acc] 0.6200
+
+[loss]    382.6378
+[trn_acc] 0.9100
+[val_acc] 0.6240
+
+[loss]    394.0802
+[trn_acc] 0.9100
+[val_acc] 0.6420
+
+[loss]    388.4751
+[trn_acc] 0.8800
+[val_acc] 0.6200
+
+[loss]    384.8648
+[trn_acc] 0.9100
+[val_acc] 0.6360
+
+[loss]    385.6274
+[trn_acc] 0.8800
+[val_acc] 0.6340
+
+[loss]    391.6794
+[trn_acc] 0.9400
+[val_acc] 0.6220
+
+[loss]    397.5916
+[trn_acc] 0.9000
+[val_acc] 0.6100
+
+[loss]    459.5271
+[trn_acc] 0.8500
+[val_acc] 0.6180
+
+[loss]    439.5382
+[trn_acc] 0.8300
+[val_acc] 0.5780
+
+[loss]    417.7765
+[trn_acc] 0.9100
+[val_acc] 0.6420
+
+[loss]    434.0399
+[trn_acc] 0.9000
+[val_acc] 0.6080
+
+[loss]    429.2106
+[trn_acc] 0.8800
+[val_acc] 0.6320
+
+[loss]    406.9169
+[trn_acc] 0.8700
+[val_acc] 0.6440
+
+[loss]    409.5423
+[trn_acc] 0.8600
+[val_acc] 0.6320
+
+[loss]    395.2865
+[trn_acc] 0.8800
+[val_acc] 0.6180
+
+[loss]    389.1962
+[trn_acc] 0.9200
+[val_acc] 0.6220
+
+[loss]    383.3539
+[trn_acc] 0.9200
+[val_acc] 0.6420
+
+[loss]    381.1094
+[trn_acc] 0.8500
+[val_acc] 0.6180
+
+[loss]    380.2031
+[trn_acc] 0.9200
+[val_acc] 0.6300
+
+[loss]    378.5850
+[trn_acc] 0.8300
+[val_acc] 0.6180
+
+[loss]    373.3209
+[trn_acc] 0.9400
+[val_acc] 0.6460
+
+[loss]    376.2007
+[trn_acc] 0.9100
+[val_acc] 0.6540
+
+[loss]    365.3720
+[trn_acc] 0.9000
+[val_acc] 0.6380
+
+[loss]    369.0242
+[trn_acc] 0.8900
+[val_acc] 0.6380
+
+[loss]    373.1636
+[trn_acc] 0.9500
+[val_acc] 0.6180
+
+[loss]    369.2730
+[trn_acc] 0.8700
+[val_acc] 0.6440
+
+[loss]    369.7960
+[trn_acc] 0.9000
+[val_acc] 0.6440
+
+[loss]    365.1818
+[trn_acc] 0.9200
+[val_acc] 0.6420
+
+[loss]    364.2066
+[trn_acc] 0.9300
+[val_acc] 0.6840
+
+[loss]    364.6043
+[trn_acc] 0.9100
+[val_acc] 0.6740
+
+[loss]    367.6759
+[trn_acc] 0.8400
+[val_acc] 0.6440
+
+[loss]    364.3119
+[trn_acc] 0.9100
+[val_acc] 0.6240
+
+[loss]    367.2011
+[trn_acc] 0.8800
+[val_acc] 0.6360
+
+[loss]    367.4638
+[trn_acc] 0.9400
+[val_acc] 0.6000
+
+[loss]    367.1171
+[trn_acc] 0.8700
+[val_acc] 0.6260
+
+[loss]    366.5068
+[trn_acc] 0.8600
+[val_acc] 0.6200
+
+[loss]    375.6833
+[trn_acc] 0.9400
+[val_acc] 0.6220
+
+[loss]    368.6911
+[trn_acc] 0.9100
+[val_acc] 0.6080
+
+[loss]    379.1548
+[trn_acc] 0.8900
+[val_acc] 0.6060
+
+[loss]    382.6379
+[trn_acc] 0.8900
+[val_acc] 0.6460
+
+[loss]    374.1445
+[trn_acc] 0.8800
+[val_acc] 0.6240
+
+[loss]    373.7756
+[trn_acc] 0.9300
+[val_acc] 0.6640
+
+[loss]    375.3683
+[trn_acc] 0.8900
+[val_acc] 0.6540
+
+[loss]    376.4380
+[trn_acc] 0.9100
+[val_acc] 0.6620
+
+[loss]    371.2085
+[trn_acc] 0.9400
+[val_acc] 0.6680
+
+[loss]    369.7845
+[trn_acc] 0.9500
+[val_acc] 0.6380
+
+[loss]    364.3586
+[trn_acc] 0.9000
+[val_acc] 0.6760
+
+[loss]    370.5443
+[trn_acc] 0.8700
+[val_acc] 0.5540
+
+[loss]    379.6730
+[trn_acc] 0.8800
+[val_acc] 0.6300
+
+[loss]    399.9570
+[trn_acc] 0.9000
+[val_acc] 0.6000
+
+[loss]    414.9147
+[trn_acc] 0.8800
+[val_acc] 0.6300
+
+[loss]    441.2609
+[trn_acc] 0.8400
+[val_acc] 0.6260
+
+[loss]    428.3809
+[trn_acc] 0.8700
+[val_acc] 0.6000
+
+[loss]    417.5346
+[trn_acc] 0.8800
+[val_acc] 0.6320
+
+[loss]    425.0454
+[trn_acc] 0.8000
+[val_acc] 0.6140
+
+[loss]    421.7355
+[trn_acc] 0.8800
+[val_acc] 0.6280
+
+[loss]    416.5344
+[trn_acc] 0.8200
+[val_acc] 0.6120
+
+[loss]    446.4670
+[trn_acc] 0.9200
+[val_acc] 0.6060
+
+[loss]    430.8873
+[trn_acc] 0.8500
+[val_acc] 0.6060
+
+[loss]    439.9067
+[trn_acc] 0.9100
+[val_acc] 0.6020
+
+[loss]    426.2216
+[trn_acc] 0.8300
+[val_acc] 0.6120
+
+[loss]    417.9605
+[trn_acc] 0.8900
+[val_acc] 0.6140
+
+[loss]    403.7955
+[trn_acc] 0.8600
+[val_acc] 0.6160
+
+[loss]    401.2376
+[trn_acc] 0.9100
+[val_acc] 0.6000
+
+[loss]    408.7733
+[trn_acc] 0.9200
+[val_acc] 0.6060
+
+[loss]    395.4487
+[trn_acc] 0.8800
+[val_acc] 0.6300
+
+[loss]    394.9603
+[trn_acc] 0.9100
+[val_acc] 0.6380
+
+[loss]    386.2907
+[trn_acc] 0.8800
+[val_acc] 0.6380
+
+[loss]    383.5455
+[trn_acc] 0.9300
+[val_acc] 0.6260
+
+[loss]    382.8271
+[trn_acc] 0.8600
+[val_acc] 0.6380
+
+[loss]    380.2987
+[trn_acc] 0.9600
+[val_acc] 0.6360
+
+[loss]    382.6127
+[trn_acc] 0.8900
+[val_acc] 0.6440
+
+[loss]    381.6796
+[trn_acc] 0.8800
+[val_acc] 0.6220
+
+[loss]    395.0197
+[trn_acc] 0.8700
+[val_acc] 0.6180
+
+[loss]    387.4988
+[trn_acc] 0.8800
+[val_acc] 0.6340
+
+[loss]    382.2763
+[trn_acc] 0.9100
+[val_acc] 0.6400
+
+[loss]    377.3281
+[trn_acc] 0.9400
+[val_acc] 0.6420
+
+[loss]    378.8244
+[trn_acc] 0.9000
+[val_acc] 0.6280
+
+[loss]    371.9152
+[trn_acc] 0.8800
+[val_acc] 0.6080
+
+[loss]    381.2775
+[trn_acc] 0.8100
+[val_acc] 0.6040
+
+[loss]    377.9868
+[trn_acc] 0.9500
+[val_acc] 0.6420
+
+[loss]    371.8916
+[trn_acc] 0.8900
+[val_acc] 0.6640
+
+[loss]    376.5422
+[trn_acc] 0.8500
+[val_acc] 0.6340
+
+[loss]    368.5928
+[trn_acc] 0.9300
+[val_acc] 0.6240
+
+[loss]    371.7456
+[trn_acc] 0.9500
+[val_acc] 0.6540
+
+[loss]    368.0136
+[trn_acc] 0.9000
+[val_acc] 0.6360
+
+[loss]    373.1100
+[trn_acc] 0.8900
+[val_acc] 0.6200
+
+[FINAL val_acc] 0.6200
+[FINAL tst_acc] 0.5520
