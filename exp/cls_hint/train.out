@@ -1,0 +1,383 @@
+pred, gold
+<s> a green shape is to the right of a cyan shape . </s> <s> a shape is to the left of a yellow cross . </s> *invalid*
+<s> a yellow ellipse is below a semicircle . </s> <s> a white rectangle is above a yellow ellipse . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a cyan shape . </s> <s> a cyan cross is to the right of a cyan shape . </s>
+0.0
+0.0
+
+pred, gold
+<s> a green shape is to the right of a cyan shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a white shape is to the right of a magenta shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a cyan shape . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.0
+0.0
+
+pred, gold
+<s> a green shape is to the right of a cyan shape . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a green shape is to the right of a cyan shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a cyan shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.0
+0.0
+
+[iter]    0
+[loss]    1348.1939
+[trn_acc] 0.5000
+[val_acc] 0.4900
+[val_same_acc] 0.5240
+
+pred, gold
+<s> a green square is to the left of a green shape . </s> <s> a shape is above a red square . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a green shape is to the left of a green shape . </s> <s> a cyan shape is below a rectangle . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a green shape is to the left of a green shape . </s> <s> a white shape is to the right of a white shape . </s>
+0.0
+0.0
+
+pred, gold
+<s> a green square is to the left of a green shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a green rectangle is to the left of a green shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green square is to the left of a green shape . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.0
+0.0
+
+pred, gold
+<s> a white cross is below a cross . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a cross is below a yellow cross . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a green rectangle is to the right of a green shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.0
+0.0
+
+[iter]    1
+[loss]    1025.6978
+[trn_acc] 0.5500
+[val_acc] 0.5640
+[val_same_acc] 0.5420
+
+pred, gold
+<s> a green shape is to the left of a red square . </s> <s> a yellow shape is to the right of a yellow shape . </s>
+<s> a magenta square is to the right of a red square . </s> <s> a shape is below a magenta square . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a blue circle . </s> <s> a shape is above a circle . </s> *invalid* *invalid* *invalid* *invalid* *invalid*
+0.01
+0.01
+
+pred, gold
+<s> a cyan square is to the right of a cyan shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a blue square . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green square is to the right of a magenta shape . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.006
+0.006
+
+pred, gold
+<s> a white semicircle is below a red ellipse . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is to the right of a white shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta triangle is to the right of a magenta shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.008
+0.01
+
+[iter]    2
+[loss]    898.5896
+[trn_acc] 0.6500
+[val_acc] 0.6060
+[val_same_acc] 0.5920
+
+pred, gold
+<s> a square is below a rectangle . </s> <s> a yellow square is below a magenta rectangle . </s> *invalid* *invalid* *invalid*
+<s> a circle is to the left of a red circle . </s> <s> a red shape is to the right of a blue circle . </s>
+<s> a square is to the left of a square . </s> <s> a square is to the right of a blue square . </s> *invalid*
+0.0
+0.0
+
+pred, gold
+<s> a square is to the left of a white square . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue square is to the left of a cyan rectangle . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the left of a magenta pentagon . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.006
+0.006
+
+pred, gold
+<s> a red shape is above a red shape . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is to the left of a white shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta shape is to the left of a red shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.008
+0.01
+
+[iter]    3
+[loss]    780.5088
+[trn_acc] 0.7700
+[val_acc] 0.6760
+[val_same_acc] 0.6520
+
+pred, gold
+<s> a green pentagon is to the left of a green ellipse . </s> <s> a green triangle is to the left of a green cross . </s>
+<s> a blue square is to the right of a cyan shape . </s> <s> a cyan square is to the right of a cyan rectangle . </s>
+<s> a blue cross is to the right of a blue shape . </s> <s> a blue cross is above a blue shape . </s> *invalid* *invalid* *invalid*
+0.0
+0.0
+
+pred, gold
+<s> a cyan square is to the right of a white shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a cyan pentagon . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a blue triangle . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.014
+0.02
+
+pred, gold
+<s> a red semicircle is above a red shape . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is to the right of a red shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta shape is to the right of a red shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.006
+0.01
+
+[iter]    4
+[loss]    717.9020
+[trn_acc] 0.6900
+[val_acc] 0.6580
+[val_same_acc] 0.6520
+
+pred, gold
+<s> a cyan circle is to the right of a white shape . </s> <s> a cyan circle is below a white shape . </s> *invalid* *invalid* *invalid*
+<s> a blue cross is to the right of a blue shape . </s> <s> a blue cross is above a blue shape . </s> *invalid* *invalid* *invalid*
+<s> a blue circle is to the right of a white semicircle . </s> <s> a blue shape is above a white circle . </s> *invalid* *invalid* *invalid*
+0.05
+0.06
+
+pred, gold
+<s> a cyan shape is to the right of a cyan square . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a cyan shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a magenta pentagon . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.01
+0.012
+
+pred, gold
+<s> a red semicircle is to the right of a red shape . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is to the right of a white shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta shape is to the right of a magenta pentagon . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.02
+0.028
+
+[iter]    5
+[loss]    674.6789
+[trn_acc] 0.7400
+[val_acc] 0.6820
+[val_same_acc] 0.6620
+
+pred, gold
+<s> a yellow triangle is to the right of a blue shape . </s> <s> an ellipse is to the right of a triangle . </s> *invalid* *invalid*
+<s> a blue semicircle is below a yellow semicircle . </s> <s> a yellow semicircle is to the right of a semicircle . </s> *invalid*
+<s> a magenta pentagon is to the left of a magenta shape . </s> <s> a magenta shape is below a magenta pentagon . </s> *invalid* *invalid* *invalid*
+0.07
+0.09
+
+pred, gold
+<s> a cyan square is to the right of a cyan shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue square is to the right of a rectangle . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a blue triangle . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.024
+0.026
+
+pred, gold
+<s> a red semicircle is above a red shape . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a semicircle is to the left of a white shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta pentagon is to the left of a red shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.024
+0.026
+
+[iter]    6
+[loss]    626.5175
+[trn_acc] 0.7900
+[val_acc] 0.6820
+[val_same_acc] 0.6540
+
+pred, gold
+<s> a cyan semicircle is above a red ellipse . </s> <s> a green semicircle is to the right of a pentagon . </s> *invalid*
+<s> a blue pentagon is to the left of a pentagon . </s> <s> a blue shape is above a pentagon . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a green cross is above a triangle . </s> <s> a yellow triangle is above a cross . </s> *invalid* *invalid* *invalid* *invalid*
+0.05
+0.08
+
+pred, gold
+<s> a cyan square is to the right of a cyan square . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a cyan shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green triangle is to the right of a green shape . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.006
+0.01
+
+pred, gold
+<s> a red semicircle is above a red shape . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is to the right of a white shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta pentagon is to the left of a magenta triangle . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.026
+0.036
+
+[iter]    7
+[loss]    590.6181
+[trn_acc] 0.7700
+[val_acc] 0.6820
+[val_same_acc] 0.6520
+
+pred, gold
+<s> a cross is to the left of a cross . </s> <s> a shape is below a cross . </s> *invalid* *invalid* *invalid* *invalid* *invalid*
+<s> a shape is to the left of a white square . </s> <s> a white shape is to the left of a square . </s> *invalid*
+<s> a blue circle is to the left of a magenta semicircle . </s> <s> a magenta circle is to the right of a semicircle . </s> *invalid*
+0.09
+0.12
+
+pred, gold
+<s> a cyan square is to the right of a cyan square . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a white shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green rectangle is to the right of a magenta shape . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.014
+0.022
+
+pred, gold
+<s> a red ellipse is above a blue shape . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is above a white shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta pentagon is to the right of a magenta shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.026
+0.032
+
+[iter]    8
+[loss]    555.6511
+[trn_acc] 0.8000
+[val_acc] 0.7100
+[val_same_acc] 0.6600
+
+pred, gold
+<s> a green shape is above a red shape . </s> <s> a green shape is above a red shape . </s> *invalid* *invalid* *invalid*
+<s> a red triangle is above a cross . </s> <s> a red shape is below a blue shape . </s> *invalid* *invalid* *invalid*
+<s> a green cross is to the right of a red shape . </s> <s> a green cross is to the left of a red shape . </s>
+0.14
+0.16
+
+pred, gold
+<s> a cyan square is to the right of a cyan shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a blue square . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green rectangle is to the right of a magenta shape . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.012
+0.016
+
+pred, gold
+<s> a red ellipse is below a red pentagon . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is to the right of a red shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta pentagon is to the left of a magenta triangle . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.038
+0.054
+
+[iter]    9
+[loss]    510.7574
+[trn_acc] 0.8300
+[val_acc] 0.6980
+[val_same_acc] 0.6780
+
+pred, gold
+<s> a white cross is above a cyan shape . </s> <s> a white cross is above a cyan shape . </s> *invalid* *invalid* *invalid*
+<s> a shape is below a magenta shape . </s> <s> a shape is to the right of a magenta shape . </s> *invalid*
+<s> a red shape is above a magenta shape . </s> <s> a red shape is to the left of a magenta shape . </s>
+0.09
+0.12
+
+pred, gold
+<s> a cyan shape is to the right of a cyan square . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a blue shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a magenta triangle . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.012
+0.02
+
+pred, gold
+<s> a red ellipse is above a semicircle . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a semicircle is to the left of a white shape . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta semicircle is to the right of a magenta shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.026
+0.04
+
+[iter]    10
+[loss]    481.7058
+[trn_acc] 0.8300
+[val_acc] 0.6980
+[val_same_acc] 0.6680
+
+pred, gold
+<s> a cyan semicircle is to the left of a cyan shape . </s> <s> a white shape is to the right of a cyan ellipse . </s>
+<s> a magenta shape is below a white circle . </s> <s> a magenta shape is below a white circle . </s> *invalid* *invalid* *invalid*
+<s> a green cross is to the right of a cross . </s> <s> a cross is above a green shape . </s> *invalid* *invalid* *invalid* *invalid*
+0.12
+0.17
+
+pred, gold
+<s> a cyan shape is to the right of a cyan square . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is above a blue shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is above a blue triangle . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.012
+0.012
+
+pred, gold
+<s> a red shape is above a red semicircle . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is to the right of a cyan ellipse . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta semicircle is to the right of a red shape . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.048
+0.068
+
+[iter]    11
+[loss]    437.0489
+[trn_acc] 0.8100
+[val_acc] 0.6800
+[val_same_acc] 0.6640
+
+pred, gold
+<s> a circle is to the right of a blue square . </s> <s> a circle is above a magenta shape . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a red circle is to the right of a cyan shape . </s> <s> a red pentagon is above a cyan circle . </s> *invalid* *invalid* *invalid*
+<s> a circle is to the right of a blue rectangle . </s> <s> a rectangle is above a blue circle . </s> *invalid* *invalid* *invalid* *invalid*
+0.13
+0.17
+
+pred, gold
+<s> a cyan square is to the right of a cyan shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a blue shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a blue triangle . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.018
+0.02
+
+pred, gold
+<s> a red shape is above a red ellipse . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is below a red ellipse . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta semicircle is to the right of a magenta pentagon . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.048
+0.064
+
+[iter]    12
+[loss]    412.1509
+[trn_acc] 0.8800
+[val_acc] 0.6860
+[val_same_acc] 0.6760
+
+pred, gold
+<s> a cyan square is to the right of a cyan shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
+<s> a blue shape is to the right of a blue shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
+<s> a green shape is to the right of a blue triangle . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
+0.018
+0.02
+
+pred, gold
+<s> a red pentagon is above a cyan pentagon . </s> <s> a cyan pentagon is to the right of a red shape . </s>
+<s> a pentagon is to the left of a pentagon . </s> <s> a pentagon is to the left of a pentagon . </s> *invalid* *invalid*
+<s> a circle is above a blue rectangle . </s> <s> a blue square is to the left of a circle . </s> *invalid*
+0.006
+0.01
+
+[FINAL val_acc] 0.6860
+[FINAL tst_acc] 0.7000
+pred, gold
+<s> a red shape is above a red ellipse . </s> <s> a red ellipse is to the right of an ellipse . </s> *invalid*
+<s> a white shape is below a red ellipse . </s> <s> a shape is below a white ellipse . </s> *invalid* *invalid* *invalid* *invalid*
+<s> a magenta semicircle is to the right of a magenta pentagon . </s> <s> a magenta triangle is to the left of a magenta pentagon . </s>
+0.048
+0.064
+
+pred, gold
+<s> a yellow shape is to the right of a blue ellipse . </s> <s> a blue shape is to the left of a yellow shape . </s>
+<s> a cyan circle is to the right of a cyan shape . </s> <s> a cyan shape is to the left of a blue shape . </s>
+<s> a blue shape is to the right of a white shape . </s> <s> a semicircle is above a white shape . </s> *invalid* *invalid* *invalid* *invalid*
+0.04
+0.056
+
+[FINAL val_same_acc] 0.6760
+[FINAL tst_same_acc] 0.6700

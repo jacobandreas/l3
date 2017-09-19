@@ -1,6 +1,7 @@
 from net import _mlp, _embed_dict, _linear
 from misc import util
 
+import scipy.misc
 import gflags
 import numpy as np
 import sys
@@ -24,7 +25,7 @@ N_EMBED = 32
 N_EMBED_WORD = 128
 N_HIDDEN = 512
 N_PBD_EX = 5
-N_CLS_EX = 6
+N_CLS_EX = 4
 
 N_CONV1_SIZE = 5
 N_CONV1_FILTS = 16
@@ -33,7 +34,6 @@ N_CONV2_FILTS = 32
 N_CONV3_SIZE = 3
 N_CONV3_FILTS = 32
 
-random = util.next_random()
 tf.set_random_seed(0)
 
 def _encode(name, t_input, t_len, t_vecs, t_init=None):
@@ -159,23 +159,33 @@ class Decoder(object):
         return scores
 
     def decode(self, init, stop, feed, session, temp=None):
+        # reset random generator to ensure consistency across choice of eval
+        # data
+        random = np.random.RandomState(0) 
         last_hidden, = session.run([self.t_init], feed)
         last = init
         if self.multi:
             out = [[[w] for w in b] for b in init]
+            out_scores = [[0 for w in b] for b in init]
         else:
             out = [[w] for w in init]
+            out_scores = [0 for w in init]
         for t in range(20):
             next_hidden, next_pred = session.run(
                     [self.t_next_hidden, self.t_next_pred],
                     {self.t_last: last, self.t_last_hidden: last_hidden})
             if temp is None:
-                next_out = np.argmax(next_pred, axis=-1)
+                next_out = list(np.argmax(next_pred, axis=-1))
+                lse = scipy.misc.logsumexp(next_pred, axis=-1)
+                next_out_logits = next_pred - lse[:, np.newaxis]
+                next_out = zip(next_out, list(np.max(next_out_logits, axis=-1)))
             else:
                 def sample(logits):
                     probs = np.exp(logits / temp)
                     probs /= np.sum(probs)
-                    return random.choice(len(probs), p=probs)
+                    choice = random.choice(len(probs), p=probs)
+                    return choice, logits[choice]
+
                 if self.multi:
                     next_out = [[sample(logits) for logits in batch] for batch in next_pred]
                 else:
@@ -183,16 +193,24 @@ class Decoder(object):
 
             if self.multi:
                 for batch, batch_so_far in zip(next_out, out):
-                    for w, so_far in zip(batch, batch_so_far):
+                    for (w, _), so_far in zip(batch, batch_so_far):
                         if so_far[-1] != stop:
                             so_far.append(w)
+                for i in range(len(next_out)):
+                    for j in range(len(next_out[i])):
+                        out_scores[i][j] += next_out[i][j][1]
+                next_out_choices = [[w for (w, _) in b]  for b in next_out]
             else:
-                for w, so_far in zip(next_out, out):
+                for (w, _), so_far in zip(next_out, out):
                     if so_far[-1] != stop:
                         so_far.append(w)
+                for i in range(len(next_out)):
+                    out_scores[i] += next_out[i][1]
+                next_out_choices = [w for (w, _) in next_out]
+
             last_hidden = next_hidden
-            last = next_out
-        return out
+            last = next_out_choices
+        return out, out_scores
 
 class ClsModel(object):
     def __init__(self, task):
@@ -216,26 +234,31 @@ class ClsModel(object):
 
         self.t_last_hyp = tf.placeholder(tf.int32, (None,), "last_hyp")
         self.t_last_hyp_hidden = tf.placeholder(tf.float32, (None, N_HIDDEN), "last_hyp_hidden")
-        self.t_dropout = tf.constant(0.2)
+        self.t_dropout = tf.constant(0.1)
 
         t_hint_vecs = tf.get_variable(
-                "hint_vec", shape=(len(task.hint_vocab), N_HIDDEN),
+                "hint_vec", shape=(len(task.hint_vocab), N_HIDDEN), # N_EMBED_WORD
                 initializer=tf.uniform_unit_scaling_initializer())
 
         if USE_IMAGES:
             t_enc_ex_all = _convolve("encode_ex", self.t_ex, self.t_dropout)
         else:
             with tf.variable_scope("encode_ex"):
-                t_enc_ex_all = self.t_ex
-                #t_enc_ex_all = _linear(self.t_ex, N_HIDDEN)
+                #t_enc_ex_all = self.t_ex
+                t_enc_ex_all = _linear(self.t_ex, N_HIDDEN)
+                #t_enc_ex_all = tf.nn.dropout(self.t_ex, keep_prob=1-self.t_dropout)
         with tf.variable_scope("reduce_ex"):
-            reduce_cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
-            _, t_enc_ex = tf.nn.dynamic_rnn(reduce_cell, t_enc_ex_all,
-                    dtype=tf.float32)
-            #t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
+            if True or FLAGS.infer_hyp: 
+                reduce_cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
+                _, t_enc_ex = tf.nn.dynamic_rnn(reduce_cell, t_enc_ex_all,
+                        dtype=tf.float32)
+            else:
+                t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
 
         t_enc_hint = _encode(
                 "encode_hint", self.t_hint, self.t_hint_len, t_hint_vecs)
+        #t_enc_hint = tf.reduce_mean(tf.nn.dropout(_embed_dict(self.t_hint,
+        #    t_hint_vecs), keep_prob=1-self.t_dropout), axis=1)
         #t_enc_hint = tf.reduce_mean(_embed_dict(self.t_hint, t_hint_vecs), axis=1)
 
         if FLAGS.infer_hyp:
@@ -247,7 +270,10 @@ class ClsModel(object):
             t_enc_input = _convolve("encode_input", self.t_input, self.t_dropout)
         else:
             with tf.variable_scope("encode_input"):
+                #t_enc_input = self.t_input
                 t_enc_input = _linear(self.t_input, N_HIDDEN)
+                #t_enc_input = tf.nn.dropout(self.t_input, keep_prob=1-self.t_dropout)
+                #t_enc_input = _mlp(self.t_input, [N_HIDDEN, N_HIDDEN], [tf.nn.relu, None])
 
         self.hyp_decoder = Decoder(
                 "decode_hyp", t_enc_ex, self.t_hint, self.t_last_hyp,
@@ -324,25 +350,27 @@ class ClsModel(object):
     def hypothesize(self, batch):
         hyp_init = [self.task.hint_vocab[self.task.START] for _ in batch]
         hyp_stop = self.task.hint_vocab[self.task.STOP]
-        feed = self.feed(batch)
+        feed = self.feed(batch, dropout=False)
 
         best_score = [-np.inf] * len(batch)
         best_hyps = [None] * len(batch)
         worst_score = [np.inf] * len(batch)
 
+        found_gold = [False] * len(batch)
+
         for i in range(FLAGS.n_sample_hyps):
-            hyps = self.hyp_decoder.decode(
+            hyps, gen_scores = self.hyp_decoder.decode(
                     hyp_init, hyp_stop, feed, self.session,
                     temp=None if i == 0 else 1)
             hyp_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
-            hyp_feed = self.feed(hyp_batch, input_examples=True)
+            hyp_feed = self.feed(hyp_batch, input_examples=True, dropout=False)
 
             scores, = self.session.run([self.t_score], hyp_feed)
             preds = scores > 0
 
             for j in range(len(batch)):
                 if FLAGS.infer_by_likelihood:
-                    score = scores[j, :].sum()
+                    score = scores[j, :].sum()# + gen_scores[j]
                 else:
                     score = preds[j, :].sum()
                 ex_here = hyp_feed[self.t_output][j, ...]
@@ -351,6 +379,7 @@ class ClsModel(object):
                     best_hyps[j] = hyps[j]
                 if score < worst_score[j]:
                     worst_score[j] = score
+                found_gold[j] = found_gold[j] or hyps[j] == batch[j].hint
 
         hyps = best_hyps
 
@@ -365,6 +394,7 @@ class ClsModel(object):
             g = [c for c in feed[self.t_hint][i].tolist() if c]
             agree += (1 if h == g else 0)
         print 1. * agree / len(batch)
+        print 1. * np.mean(found_gold)
         print
 
         return hyps

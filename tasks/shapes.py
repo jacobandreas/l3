@@ -8,7 +8,8 @@ import sys
 import json
 
 USE_IMAGES = False
-N_EX = 6
+#N_EX = 6
+N_EX = 4
 
 sw_path = os.path.join(sys.path[0], "data/shapeworld")
 
@@ -27,21 +28,31 @@ class ShapeworldTask():
         self.START = START
         self.STOP = STOP
 
-        with open(os.path.join(sw_path, "train", "examples.struct.json")) as feature_f:
-            feature_data = json.load(feature_f)
-            for datum in feature_data:
-                for example in datum:
-                    for feature in example:
-                        self.feature_index.index(tuple(feature))
+        #with open(os.path.join(sw_path, "train", "examples.struct.json")) as feature_f:
+        #    feature_data = json.load(feature_f)
+        #    for datum in feature_data:
+        #        for example in datum:
+        #            for feature in example:
+        #                self.feature_index.index(tuple(feature))
 
         data = {}
-        for fold in ("train", "validation", "test"):
+        for fold in ("train", "val", "test", "val_same", "test_same"):
             examples = np.load(os.path.join(sw_path, fold, "examples.npy"))
             inputs = np.load(os.path.join(sw_path, fold, "inputs.npy"))
             labels = np.load(os.path.join(sw_path, fold, "labels.npy"))
 
             with open(os.path.join(sw_path, fold, "hints.json")) as hint_f:
                 hints = json.load(hint_f)
+
+            #new_hints = []
+            #for hint in hints:
+            #    hint = hint.split()
+            #    new_hint = []
+            #    for i in range(len(hint) - 1):
+            #        new_hint.append(hint[i] + "/" + hint[i+1])
+            #    new_hints.append(" ".join(new_hint))
+            #hints = new_hints
+
             indexed_hints = []
             for hint in hints:
                 hint = [START] + hint.split() + [STOP]
@@ -81,11 +92,14 @@ class ShapeworldTask():
             data[fold] = fold_data
 
         self.train_data = data["train"]
-        self.val_data = data["validation"]
+        self.val_data = data["val"]
         self.test_data = data["test"]
-        #self.train_data = data["train"][:1000]
-        #self.val_data = data["train"][1000:2000]
-        #self.test_data = data["train"][2000:3000]
+        self.val_same_data = data["val_same"]
+        self.test_same_data = data["test_same"]
+
+        #self.train_data = data["train"][:8000]
+        #self.val_data = data["train"][8000:8500]
+        #self.test_data = data["train"][8500:9000]
 
         if USE_IMAGES:
             self.width, self.height, self.channels = self.train_data[0].input.shape
@@ -94,34 +108,53 @@ class ShapeworldTask():
             self.n_features = inp_features.shape[1]
 
     def sample_train(self, n_batch):
-        batch = []
         n_train = len(self.train_data)
+        batch = []
+
+        #for _ in range(n_batch):
+        #    datum = self.train_data[random.randint(n_train)]
+        #    batch.append(datum)
+
         for _ in range(n_batch):
             datum = self.train_data[random.randint(n_train)]
-            in_examples = datum.ex_inputs
-            out_examples = []
-            #for i_ex in range(N_EX):
-            #    out_examples.append(
-            #            in_examples[random.randint(in_examples.shape[0]), ...])
-            indices = list(range(in_examples.shape[0]))
-            random.shuffle(indices)
-            indices = indices[:N_EX]
-            out_examples = [in_examples[i, ...] for i in indices]
-            #out_examples = in_examples[:N_EX, ...]
-            datum = datum._replace(ex_inputs=np.asarray(out_examples))
+            if datum.label == 0:
+                batch.append(datum)
+                continue
+            swap = random.randint(N_EX + 1)
+            if swap == N_EX:
+                batch.append(datum)
+                continue
+            examples = datum.ex_inputs.copy()
+            tmp = examples[swap, ...]
+            examples[swap, ...] = datum.input
+            datum = datum._replace(ex_inputs=examples, input=tmp)
             batch.append(datum)
+
+        #for _ in range(n_batch):
+        #    datum = self.train_data[random.randint(n_train)]
+        #    in_examples = datum.ex_inputs
+        #    out_examples = []
+        #    #for i_ex in range(N_EX):
+        #    #    out_examples.append(
+        #    #            in_examples[random.randint(in_examples.shape[0]), ...])
+        #    indices = list(range(in_examples.shape[0]))
+        #    random.shuffle(indices)
+        #    indices = indices[:N_EX]
+        #    out_examples = [in_examples[i, ...] for i in indices]
+        #    #out_examples = in_examples[:N_EX, ...]
+        #    datum = datum._replace(ex_inputs=np.asarray(out_examples))
+        #    batch.append(datum)
+
         return batch
 
-    def sample_val(self):
-        batch = []
-        for datum in self.val_data:
-            datum = datum._replace(ex_inputs=datum.ex_inputs[:N_EX, ...])
-            batch.append(datum)
-        return batch
+    def sample_val(self, same=False):
+        if same:
+            return self.val_same_data
+        else:
+            return self.val_data
 
-    def sample_test(self):
-        batch = []
-        for datum in self.test_data:
-            datum = datum._replace(ex_inputs=datum.ex_inputs[:N_EX, ...])
-            batch.append(datum)
-        return batch
+    def sample_test(self, same=False):
+        if same:
+            return self.test_same_data
+        else:
+            return self.test_data

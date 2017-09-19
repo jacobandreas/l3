@@ -10,7 +10,8 @@ import sys
 
 FLAGS = gflags.FLAGS
 gflags.DEFINE_boolean("train", False, "do a training run")
-gflags.DEFINE_boolean("test", False, "do a testing run")
+gflags.DEFINE_boolean("test", False, "evaluate on held-out concepts")
+gflags.DEFINE_boolean("test_same", False, "evaluate on training concepts")
 gflags.DEFINE_integer("n_epochs", 0, "number of epochs to run for")
 gflags.DEFINE_integer("n_batch", 100, "batch size")
 models._set_flags()
@@ -30,27 +31,41 @@ def main():
             batch = task.sample_train(FLAGS.n_batch)
             e_acc = model.predict(batch)
 
-            v_batch = task.sample_val()
+            v_batch = task.sample_val(same=False)
             e_v_acc = model.predict(v_batch)
+
+            vs_batch = task.sample_val(same=True)
+            e_vs_acc = model.predict(vs_batch)
 
             print("[iter]    %d" % i_epoch)
             print("[loss]    %01.4f" % e_loss)
             print("[trn_acc] %01.4f" % e_acc)
             print("[val_acc] %01.4f" % e_v_acc)
+            print("[val_same_acc] %01.4f" % e_vs_acc)
             print
 
             if i_epoch % 10 == 0:
                 model.save()
 
     if FLAGS.test:
-        v_batch = task.sample_val()
+        v_batch = task.sample_val(same=False)
         e_v_acc = model.predict(v_batch)
 
-        t_batch = task.sample_test()
+        t_batch = task.sample_test(same=False)
         e_t_acc = model.predict(t_batch)
 
         print("[FINAL val_acc] %01.4f" % e_v_acc)
         print("[FINAL tst_acc] %01.4f" % e_t_acc)
+
+    if FLAGS.test_same:
+        v_batch = task.sample_val(same=True)
+        e_v_acc = model.predict(v_batch)
+
+        t_batch = task.sample_test(same=True)
+        e_t_acc = model.predict(t_batch)
+
+        print("[FINAL val_same_acc] %01.4f" % e_v_acc)
+        print("[FINAL tst_same_acc] %01.4f" % e_t_acc)
 
 if __name__ == "__main__":
     argv = FLAGS(sys.argv)
