@@ -2,16 +2,17 @@
 
 export PYTHONPATH=".:../../../shapeworld"
 
+# surprisingly, data augmentation hurts here
+
 python -u ../../cls.py \
-  --learning_rate 0.001 \
+  --learning_rate 0.0001 \
   --predict_hyp=false \
   --infer_hyp=false \
   --train \
-  --n_epochs=20 \
+  --n_epochs=24 \
   --test \
   --test_same \
-  --use_true_hyp=false \
-  --infer_by_likelihood=false \
+  --augment=true \
   > train.out \
   2> train.err
 

@@ -153,15 +153,18 @@ class Decoder(object):
         self.t_next_hidden = t_next_hidden
         self.t_next_pred = t_next_pred
         self.multi = multi
+        self.random = None
 
     def score(self, init, feed, session):
         scores, = session.run([self.t_scores], feed)
         return scores
 
+    def reset_seed(self):
+        self.random = np.random.RandomState(0) 
+
     def decode(self, init, stop, feed, session, temp=None):
         # reset random generator to ensure consistency across choice of eval
         # data
-        random = np.random.RandomState(0) 
         last_hidden, = session.run([self.t_init], feed)
         last = init
         if self.multi:
@@ -183,7 +186,7 @@ class Decoder(object):
                 def sample(logits):
                     probs = np.exp(logits / temp)
                     probs /= np.sum(probs)
-                    choice = random.choice(len(probs), p=probs)
+                    choice = self.random.choice(len(probs), p=probs)
                     return choice, logits[choice]
 
                 if self.multi:
@@ -234,7 +237,7 @@ class ClsModel(object):
 
         self.t_last_hyp = tf.placeholder(tf.int32, (None,), "last_hyp")
         self.t_last_hyp_hidden = tf.placeholder(tf.float32, (None, N_HIDDEN), "last_hyp_hidden")
-        self.t_dropout = tf.constant(0.1)
+        self.t_dropout = tf.constant(0.2)
 
         t_hint_vecs = tf.get_variable(
                 "hint_vec", shape=(len(task.hint_vocab), N_HIDDEN), # N_EMBED_WORD
@@ -245,10 +248,11 @@ class ClsModel(object):
         else:
             with tf.variable_scope("encode_ex"):
                 #t_enc_ex_all = self.t_ex
-                t_enc_ex_all = _linear(self.t_ex, N_HIDDEN)
                 #t_enc_ex_all = tf.nn.dropout(self.t_ex, keep_prob=1-self.t_dropout)
+                t_enc_ex_all = self.t_ex
+                t_enc_ex_all = _linear(t_enc_ex_all, N_HIDDEN)
         with tf.variable_scope("reduce_ex"):
-            if True or FLAGS.infer_hyp: 
+            if False: #FLAGS.infer_hyp: 
                 reduce_cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
                 _, t_enc_ex = tf.nn.dynamic_rnn(reduce_cell, t_enc_ex_all,
                         dtype=tf.float32)
@@ -271,7 +275,9 @@ class ClsModel(object):
         else:
             with tf.variable_scope("encode_input"):
                 #t_enc_input = self.t_input
-                t_enc_input = _linear(self.t_input, N_HIDDEN)
+                #t_enc_input = tf.nn.dropout(self.t_input, keep_prob=1-self.t_dropout)
+                t_enc_input = self.t_input
+                t_enc_input = _linear(t_enc_input, N_HIDDEN)
                 #t_enc_input = tf.nn.dropout(self.t_input, keep_prob=1-self.t_dropout)
                 #t_enc_input = _mlp(self.t_input, [N_HIDDEN, N_HIDDEN], [tf.nn.relu, None])
 
@@ -358,10 +364,14 @@ class ClsModel(object):
 
         found_gold = [False] * len(batch)
 
+        self.hyp_decoder.reset_seed()
         for i in range(FLAGS.n_sample_hyps):
-            hyps, gen_scores = self.hyp_decoder.decode(
-                    hyp_init, hyp_stop, feed, self.session,
-                    temp=None if i == 0 else 1)
+            if False: #i == 0:
+                hyps = [d.hint for d in batch]
+            else:
+                hyps, gen_scores = self.hyp_decoder.decode(
+                        hyp_init, hyp_stop, feed, self.session,
+                        temp=None if i == 0 else 1)
             hyp_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
             hyp_feed = self.feed(hyp_batch, input_examples=True, dropout=False)
 
@@ -383,19 +393,19 @@ class ClsModel(object):
 
         hyps = best_hyps
 
-        print "pred, gold"
-        for i in range(3):
-            print " ".join(self.task.hint_vocab.get(c) for c in hyps[i]),
-            print " ".join(self.task.hint_vocab.get(c) for c in feed[self.t_hint][i])
+        #print "pred, gold"
+        #for i in range(3):
+        #    print " ".join(self.task.hint_vocab.get(c) for c in hyps[i]),
+        #    print " ".join(self.task.hint_vocab.get(c) for c in feed[self.t_hint][i])
 
-        agree = 0
-        for i in range(len(batch)):
-            h = hyps[i]
-            g = [c for c in feed[self.t_hint][i].tolist() if c]
-            agree += (1 if h == g else 0)
-        print 1. * agree / len(batch)
-        print 1. * np.mean(found_gold)
-        print
+        #agree = 0
+        #for i in range(len(batch)):
+        #    h = hyps[i]
+        #    g = [c for c in feed[self.t_hint][i].tolist() if c]
+        #    agree += (1 if h == g else 0)
+        #print 1. * agree / len(batch)
+        #print 1. * np.mean(found_gold)
+        #print
 
         return hyps
 

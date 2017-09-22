@@ -107,7 +107,7 @@ class ShapeworldTask():
             #self.n_features = len(self.feature_index)
             self.n_features = inp_features.shape[1]
 
-    def sample_train(self, n_batch):
+    def sample_train(self, n_batch, augment):
         n_train = len(self.train_data)
         batch = []
 
@@ -117,18 +117,45 @@ class ShapeworldTask():
 
         for _ in range(n_batch):
             datum = self.train_data[random.randint(n_train)]
-            if datum.label == 0:
+            if not augment:
                 batch.append(datum)
                 continue
-            swap = random.randint(N_EX + 1)
-            if swap == N_EX:
-                batch.append(datum)
-                continue
-            examples = datum.ex_inputs.copy()
-            tmp = examples[swap, ...]
-            examples[swap, ...] = datum.input
-            datum = datum._replace(ex_inputs=examples, input=tmp)
+
+            label = random.randint(2)
+            if label == 0:
+                alt_datum = self.train_data[random.randint(n_train)]
+                swap = random.randint(N_EX + 1)
+                if swap == N_EX:
+                    feats = alt_datum.input
+                else:
+                    feats = alt_datum.ex_inputs[swap, ...]
+                datum = datum._replace(input=feats, label=0)
+
+            elif label == 1:
+                swap = random.randint((N_EX + 1 if datum.label == 1 else N_EX))
+                if swap != N_EX:
+                    examples = datum.ex_inputs.copy()
+                    feats = examples[swap, ...]
+                    if datum.label == 1:
+                        examples[swap, ...] = datum.input
+                    else:
+                        examples[swap, ...] = examples[random.randint(N_EX), ...]
+                    datum = datum._replace(input=feats, ex_inputs=examples, label=1)
+
             batch.append(datum)
+
+            #if datum.label == 0:
+            #    batch.append(datum)
+            #    continue
+            #swap = random.randint(N_EX + 1)
+            #if swap == N_EX:
+            #    batch.append(datum)
+            #    continue
+            #examples = datum.ex_inputs.copy()
+            #tmp = examples[swap, ...]
+            #examples[swap, ...] = datum.input
+            #datum = datum._replace(ex_inputs=examples, input=tmp)
+            #batch.append(datum)
 
         #for _ in range(n_batch):
         #    datum = self.train_data[random.randint(n_train)]
