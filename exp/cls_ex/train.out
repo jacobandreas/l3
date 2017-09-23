@@ -1,172 +1,375 @@
 [iter]    0
-[loss]    191.2532
-[trn_acc] 0.6000
-[val_acc] 0.5240
-[val_same_acc] 0.5000
-[val_mean_acc] 0.5120
+[loss]    129.1383
+[trn_acc] 0.5800
+[val_acc] 0.4940
+[val_same_acc] 0.4760
+[val_mean_acc] 0.4850
 
 [iter]    1
-[loss]    71.0266
-[trn_acc] 0.5100
-[val_acc] 0.5140
-[val_same_acc] 0.4900
-[val_mean_acc] 0.5020
+[loss]    71.9788
+[trn_acc] 0.5600
+[val_acc] 0.5340
+[val_same_acc] 0.4920
+[val_mean_acc] 0.5130
 
 [iter]    2
-[loss]    64.1702
-[trn_acc] 0.7300
-[val_acc] 0.5880
-[val_same_acc] 0.5500
-[val_mean_acc] 0.5690
+[loss]    66.4642
+[trn_acc] 0.6600
+[val_acc] 0.5640
+[val_same_acc] 0.5360
+[val_mean_acc] 0.5500
 
 [iter]    3
-[loss]    55.7858
-[trn_acc] 0.7200
-[val_acc] 0.5220
-[val_same_acc] 0.5500
-[val_mean_acc] 0.5360
+[loss]    56.0357
+[trn_acc] 0.7600
+[val_acc] 0.5440
+[val_same_acc] 0.5820
+[val_mean_acc] 0.5630
 
 [iter]    4
-[loss]    51.7593
-[trn_acc] 0.6900
-[val_acc] 0.5340
-[val_same_acc] 0.5440
-[val_mean_acc] 0.5390
+[loss]    50.8504
+[trn_acc] 0.6200
+[val_acc] 0.5360
+[val_same_acc] 0.5600
+[val_mean_acc] 0.5480
 
 [iter]    5
-[loss]    51.8172
+[loss]    48.6963
 [trn_acc] 0.7900
-[val_acc] 0.5540
-[val_same_acc] 0.5500
-[val_mean_acc] 0.5520
+[val_acc] 0.5600
+[val_same_acc] 0.5980
+[val_mean_acc] 0.5790
 
 [iter]    6
-[loss]    46.5414
-[trn_acc] 0.7300
-[val_acc] 0.5920
-[val_same_acc] 0.5400
+[loss]    44.5170
+[trn_acc] 0.7600
+[val_acc] 0.5640
+[val_same_acc] 0.5680
 [val_mean_acc] 0.5660
 
 [iter]    7
-[loss]    45.8053
-[trn_acc] 0.7500
-[val_acc] 0.5860
-[val_same_acc] 0.6020
-[val_mean_acc] 0.5940
+[loss]    42.6294
+[trn_acc] 0.7800
+[val_acc] 0.5500
+[val_same_acc] 0.5920
+[val_mean_acc] 0.5710
 
 [iter]    8
-[loss]    39.9462
-[trn_acc] 0.7800
-[val_acc] 0.5880
-[val_same_acc] 0.5840
-[val_mean_acc] 0.5860
+[loss]    42.3114
+[trn_acc] 0.8200
+[val_acc] 0.5460
+[val_same_acc] 0.5820
+[val_mean_acc] 0.5640
 
 [iter]    9
-[loss]    37.3647
-[trn_acc] 0.8900
-[val_acc] 0.5640
-[val_same_acc] 0.5880
-[val_mean_acc] 0.5760
+[loss]    39.4681
+[trn_acc] 0.8300
+[val_acc] 0.5240
+[val_same_acc] 0.5540
+[val_mean_acc] 0.5390
 
 [iter]    10
-[loss]    36.4357
-[trn_acc] 0.6900
-[val_acc] 0.6260
-[val_same_acc] 0.5780
-[val_mean_acc] 0.6020
+[loss]    36.9068
+[trn_acc] 0.6600
+[val_acc] 0.6060
+[val_same_acc] 0.5860
+[val_mean_acc] 0.5960
 
 [iter]    11
-[loss]    37.1305
-[trn_acc] 0.7700
+[loss]    38.3862
+[trn_acc] 0.7500
+[val_acc] 0.5280
+[val_same_acc] 0.5560
+[val_mean_acc] 0.5420
+
+[iter]    12
+[loss]    35.2492
+[trn_acc] 0.8800
+[val_acc] 0.5620
+[val_same_acc] 0.5860
+[val_mean_acc] 0.5740
+
+[iter]    13
+[loss]    35.4934
+[trn_acc] 0.9000
+[val_acc] 0.5640
+[val_same_acc] 0.5860
+[val_mean_acc] 0.5750
+
+[iter]    14
+[loss]    35.0367
+[trn_acc] 0.8700
+[val_acc] 0.5520
+[val_same_acc] 0.5480
+[val_mean_acc] 0.5500
+
+[iter]    15
+[loss]    33.8650
+[trn_acc] 0.8200
+[val_acc] 0.5800
+[val_same_acc] 0.5820
+[val_mean_acc] 0.5810
+
+[iter]    16
+[loss]    32.7650
+[trn_acc] 0.8600
+[val_acc] 0.5960
+[val_same_acc] 0.5860
+[val_mean_acc] 0.5910
+
+[iter]    17
+[loss]    32.5319
+[trn_acc] 0.8300
+[val_acc] 0.5240
+[val_same_acc] 0.5420
+[val_mean_acc] 0.5330
+
+[iter]    18
+[loss]    31.9664
+[trn_acc] 0.8600
+[val_acc] 0.5780
+[val_same_acc] 0.5900
+[val_mean_acc] 0.5840
+
+[iter]    19
+[loss]    30.6675
+[trn_acc] 0.9000
+[val_acc] 0.5740
+[val_same_acc] 0.5940
+[val_mean_acc] 0.5840
+
+[iter]    20
+[loss]    29.7720
+[trn_acc] 0.8800
+[val_acc] 0.6020
+[val_same_acc] 0.5860
+[val_mean_acc] 0.5940
+
+[iter]    21
+[loss]    28.4020
+[trn_acc] 0.8800
+[val_acc] 0.6160
+[val_same_acc] 0.5920
+[val_mean_acc] 0.6040
+
+[iter]    22
+[loss]    29.1965
+[trn_acc] 0.8700
+[val_acc] 0.5560
+[val_same_acc] 0.5780
+[val_mean_acc] 0.5670
+
+[iter]    23
+[loss]    28.4645
+[trn_acc] 0.8600
+[val_acc] 0.6100
+[val_same_acc] 0.6040
+[val_mean_acc] 0.6070
+
+[iter]    24
+[loss]    27.9859
+[trn_acc] 0.8900
+[val_acc] 0.5720
+[val_same_acc] 0.5760
+[val_mean_acc] 0.5740
+
+[iter]    25
+[loss]    27.8851
+[trn_acc] 0.9000
+[val_acc] 0.5880
+[val_same_acc] 0.5700
+[val_mean_acc] 0.5790
+
+[iter]    26
+[loss]    26.7233
+[trn_acc] 0.9200
+[val_acc] 0.5600
+[val_same_acc] 0.5700
+[val_mean_acc] 0.5650
+
+[iter]    27
+[loss]    25.8744
+[trn_acc] 0.9400
+[val_acc] 0.5520
+[val_same_acc] 0.5700
+[val_mean_acc] 0.5610
+
+[iter]    28
+[loss]    25.6765
+[trn_acc] 0.9600
+[val_acc] 0.5880
+[val_same_acc] 0.6080
+[val_mean_acc] 0.5980
+
+[iter]    29
+[loss]    25.9578
+[trn_acc] 0.9100
+[val_acc] 0.5960
+[val_same_acc] 0.6000
+[val_mean_acc] 0.5980
+
+[iter]    30
+[loss]    25.4068
+[trn_acc] 0.9600
+[val_acc] 0.5880
+[val_same_acc] 0.6080
+[val_mean_acc] 0.5980
+
+[iter]    31
+[loss]    24.6175
+[trn_acc] 0.8700
+[val_acc] 0.5480
+[val_same_acc] 0.5740
+[val_mean_acc] 0.5610
+
+[iter]    32
+[loss]    24.0660
+[trn_acc] 0.8500
+[val_acc] 0.5940
+[val_same_acc] 0.6100
+[val_mean_acc] 0.6020
+
+[iter]    33
+[loss]    24.3847
+[trn_acc] 0.9200
+[val_acc] 0.5720
+[val_same_acc] 0.6160
+[val_mean_acc] 0.5940
+
+[iter]    34
+[loss]    23.2592
+[trn_acc] 0.9100
+[val_acc] 0.5500
+[val_same_acc] 0.5720
+[val_mean_acc] 0.5610
+
+[iter]    35
+[loss]    23.5982
+[trn_acc] 0.9200
+[val_acc] 0.5420
+[val_same_acc] 0.5660
+[val_mean_acc] 0.5540
+
+[iter]    36
+[loss]    24.4046
+[trn_acc] 0.9200
+[val_acc] 0.5980
+[val_same_acc] 0.5780
+[val_mean_acc] 0.5880
+
+[iter]    37
+[loss]    22.9960
+[trn_acc] 0.8800
+[val_acc] 0.6220
+[val_same_acc] 0.6000
+[val_mean_acc] 0.6110
+
+[iter]    38
+[loss]    22.3939
+[trn_acc] 0.9000
+[val_acc] 0.6040
+[val_same_acc] 0.6080
+[val_mean_acc] 0.6060
+
+[iter]    39
+[loss]    23.5954
+[trn_acc] 0.9300
+[val_acc] 0.5720
+[val_same_acc] 0.5940
+[val_mean_acc] 0.5830
+
+[iter]    40
+[loss]    22.5681
+[trn_acc] 0.9100
+[val_acc] 0.5820
+[val_same_acc] 0.6160
+[val_mean_acc] 0.5990
+
+[iter]    41
+[loss]    21.8148
+[trn_acc] 0.8600
+[val_acc] 0.6240
+[val_same_acc] 0.6200
+[val_mean_acc] 0.6220
+
+[iter]    42
+[loss]    22.0357
+[trn_acc] 0.9300
+[val_acc] 0.5560
+[val_same_acc] 0.5720
+[val_mean_acc] 0.5640
+
+[iter]    43
+[loss]    20.9007
+[trn_acc] 0.9300
 [val_acc] 0.5380
 [val_same_acc] 0.5680
 [val_mean_acc] 0.5530
 
-[iter]    12
-[loss]    38.9539
-[trn_acc] 0.8600
-[val_acc] 0.5760
-[val_same_acc] 0.5760
-[val_mean_acc] 0.5760
-
-[iter]    13
-[loss]    33.7855
-[trn_acc] 0.9100
-[val_acc] 0.5560
-[val_same_acc] 0.5480
-[val_mean_acc] 0.5520
-
-[iter]    14
-[loss]    33.1552
-[trn_acc] 0.8900
-[val_acc] 0.6000
-[val_same_acc] 0.5780
-[val_mean_acc] 0.5890
-
-[iter]    15
-[loss]    33.9035
-[trn_acc] 0.8600
-[val_acc] 0.5600
-[val_same_acc] 0.5740
-[val_mean_acc] 0.5670
-
-[iter]    16
-[loss]    32.6498
-[trn_acc] 0.8300
-[val_acc] 0.6120
-[val_same_acc] 0.5980
+[iter]    44
+[loss]    21.3347
+[trn_acc] 0.9200
+[val_acc] 0.6080
+[val_same_acc] 0.6020
 [val_mean_acc] 0.6050
 
-[iter]    17
-[loss]    30.6664
-[trn_acc] 0.8900
-[val_acc] 0.5860
-[val_same_acc] 0.5780
-[val_mean_acc] 0.5820
+[iter]    45
+[loss]    20.2569
+[trn_acc] 0.9100
+[val_acc] 0.6040
+[val_same_acc] 0.5740
+[val_mean_acc] 0.5890
 
-[iter]    18
-[loss]    29.9895
-[trn_acc] 0.8500
-[val_acc] 0.5540
-[val_same_acc] 0.5880
-[val_mean_acc] 0.5710
-
-[iter]    19
-[loss]    29.5509
+[iter]    46
+[loss]    20.5533
 [trn_acc] 0.9300
-[val_acc] 0.5620
+[val_acc] 0.5760
+[val_same_acc] 0.5780
+[val_mean_acc] 0.5770
+
+[iter]    47
+[loss]    22.0645
+[trn_acc] 0.9500
+[val_acc] 0.5700
+[val_same_acc] 0.5680
+[val_mean_acc] 0.5690
+
+[iter]    48
+[loss]    20.5115
+[trn_acc] 0.9100
+[val_acc] 0.5660
 [val_same_acc] 0.5900
-[val_mean_acc] 0.5760
+[val_mean_acc] 0.5780
 
-[iter]    20
-[loss]    27.4285
-[trn_acc] 0.7900
-[val_acc] 0.6360
-[val_same_acc] 0.5920
-[val_mean_acc] 0.6140
+[iter]    49
+[loss]    20.4833
+[trn_acc] 0.8900
+[val_acc] 0.5600
+[val_same_acc] 0.5720
+[val_mean_acc] 0.5660
 
-[iter]    21
-[loss]    28.2027
-[trn_acc] 0.8400
+[iter]    50
+[loss]    20.1416
+[trn_acc] 0.9400
+[val_acc] 0.5840
+[val_same_acc] 0.5980
+[val_mean_acc] 0.5910
+
+[iter]    51
+[loss]    19.7317
+[trn_acc] 0.9400
+[val_acc] 0.5900
+[val_same_acc] 0.5860
+[val_mean_acc] 0.5880
+
+[iter]    52
+[loss]    20.5963
+[trn_acc] 0.9400
 [val_acc] 0.6180
-[val_same_acc] 0.6200
-[val_mean_acc] 0.6190
+[val_same_acc] 0.6300
+[val_mean_acc] 0.6240
 
-[iter]    22
-[loss]    27.9453
-[trn_acc] 0.8200
-[val_acc] 0.5400
-[val_same_acc] 0.5700
-[val_mean_acc] 0.5550
-
-[iter]    23
-[loss]    27.3258
-[trn_acc] 0.8100
-[val_acc] 0.6360
-[val_same_acc] 0.6160
-[val_mean_acc] 0.6260
-
-[FINAL val_acc] 0.6360
-[FINAL tst_acc] 0.6040
-[FINAL val_same_acc] 0.6160
-[FINAL tst_same_acc] 0.6080
+[FINAL val_acc] 0.6180
+[FINAL tst_acc] 0.6400
+[FINAL val_same_acc] 0.6300
+[FINAL tst_same_acc] 0.6320

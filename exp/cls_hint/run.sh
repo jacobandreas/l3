@@ -7,7 +7,7 @@ python -u ../../cls.py \
   --predict_hyp=true \
   --infer_hyp=true \
   --train \
-  --n_epochs=29 \
+  --n_epochs=36 \
   --test \
   --test_same \
   --n_sample_hyps=10 \

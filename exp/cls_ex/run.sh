@@ -9,7 +9,7 @@ python -u ../../cls.py \
   --predict_hyp=false \
   --infer_hyp=false \
   --train \
-  --n_epochs=24 \
+  --n_epochs=53 \
   --test \
   --test_same \
   --augment=true \
