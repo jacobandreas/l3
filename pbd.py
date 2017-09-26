@@ -1,5 +1,6 @@
 #!/usr/bin/env python2
 
+import models
 from models import TransducerModel
 from tasks import regex2
 
@@ -12,6 +13,7 @@ gflags.DEFINE_boolean("train", False, "do a training run")
 gflags.DEFINE_boolean("test", False, "do a testing run")
 gflags.DEFINE_integer("n_epochs", 0, "number of epochs to run for")
 gflags.DEFINE_integer("n_batch", 100, "batch size")
+models._set_flags()
 
 def main():
     task = regex2.RegexTask()
@@ -34,7 +36,7 @@ def main():
             print("[loss]    %01.4f" % e_loss)
             print("[trn_acc] %01.4f" % e_acc)
             print("[val_acc] %01.4f" % e_v_acc)
-            print()
+            print("")
 
             if i_epoch % 10 == 0:
                 model.save()

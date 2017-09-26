@@ -178,10 +178,16 @@ class Decoder(object):
                     [self.t_next_hidden, self.t_next_pred],
                     {self.t_last: last, self.t_last_hidden: last_hidden})
             if temp is None:
-                next_out = list(np.argmax(next_pred, axis=-1))
+                preds = np.argmax(next_pred, axis=-1)
                 lse = scipy.misc.logsumexp(next_pred, axis=-1)
-                next_out_logits = next_pred - lse[:, np.newaxis]
-                next_out = zip(next_out, list(np.max(next_out_logits, axis=-1)))
+                next_out_logits = next_pred - lse[..., np.newaxis]
+                #next_out = zip(next_out, list(np.max(next_out_logits, axis=-1)))
+                if self.multi:
+                    next_out = [
+                            [(preds[i, j], next_out_logits[i, j]) for j in range(preds.shape[1])]
+                            for i in range(preds.shape[0])]
+                else:
+                    next_out = [(preds[i], next_out_logits[i]) for i in range(preds.shape[0])]
             else:
                 def sample(logits):
                     probs = np.exp(logits / temp)
@@ -250,7 +256,8 @@ class ClsModel(object):
                 #t_enc_ex_all = self.t_ex
                 #t_enc_ex_all = tf.nn.dropout(self.t_ex, keep_prob=1-self.t_dropout)
                 t_enc_ex_all = self.t_ex
-                t_enc_ex_all = _linear(t_enc_ex_all, N_HIDDEN)
+                #t_enc_ex_all = _linear(t_enc_ex_all, N_HIDDEN)
+                t_enc_ex_all = _mlp(t_enc_ex_all, (N_HIDDEN, N_HIDDEN), (tf.nn.relu, None))
         with tf.variable_scope("reduce_ex"):
             if False: #FLAGS.infer_hyp: 
                 reduce_cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
@@ -277,7 +284,8 @@ class ClsModel(object):
                 #t_enc_input = self.t_input
                 #t_enc_input = tf.nn.dropout(self.t_input, keep_prob=1-self.t_dropout)
                 t_enc_input = self.t_input
-                t_enc_input = _linear(t_enc_input, N_HIDDEN)
+                #t_enc_input = _linear(t_enc_input, N_HIDDEN)
+                t_enc_input = _mlp(t_enc_input, (N_HIDDEN, N_HIDDEN), (tf.nn.relu, None))
                 #t_enc_input = tf.nn.dropout(self.t_input, keep_prob=1-self.t_dropout)
                 #t_enc_input = _mlp(self.t_input, [N_HIDDEN, N_HIDDEN], [tf.nn.relu, None])
 
@@ -286,8 +294,14 @@ class ClsModel(object):
                 self.t_last_hyp_hidden, t_hint_vecs)
 
         t_bc_concept = tf.expand_dims(t_concept, 1)
+        #t_bc_concept = tf.tile(t_bc_concept, (1, tf.shape(t_enc_input)[1], 1))
+
         # TODO bilinear?
         self.t_score = tf.reduce_sum(t_bc_concept * t_enc_input, axis=2)
+        #t_comb = tf.concat((t_bc_concept, t_enc_input), axis=2)
+        #self.t_score = _mlp(t_comb, (N_HIDDEN, 1), (tf.nn.relu, None))
+        #self.t_score = tf.squeeze(self.t_score, axis=2)
+
         t_err = tf.nn.sigmoid_cross_entropy_with_logits(
                 labels=self.t_output, logits=self.t_score)
         t_pred_loss = tf.reduce_mean(tf.reduce_sum(t_err, axis=1))
@@ -366,12 +380,9 @@ class ClsModel(object):
 
         self.hyp_decoder.reset_seed()
         for i in range(FLAGS.n_sample_hyps):
-            if False: #i == 0:
-                hyps = [d.hint for d in batch]
-            else:
-                hyps, gen_scores = self.hyp_decoder.decode(
-                        hyp_init, hyp_stop, feed, self.session,
-                        temp=None if i == 0 else 1)
+            hyps, gen_scores = self.hyp_decoder.decode(
+                    hyp_init, hyp_stop, feed, self.session,
+                    temp=None if i == 0 else 1)
             hyp_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
             hyp_feed = self.feed(hyp_batch, input_examples=True, dropout=False)
 
@@ -558,8 +569,9 @@ class TransducerModel(object):
         best_hyps = [None] * len(batch)
         worst_score = [np.inf] * len(batch)
 
+        self.hyp_decoder.reset_seed()
         for i in range(FLAGS.n_sample_hyps):
-            hyps = self.hyp_decoder.decode(
+            hyps, _ = self.hyp_decoder.decode(
                     hyp_init, hyp_stop, feed, self.session,
                     temp=None if i == 0 else 1)
             hyp_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
@@ -567,7 +579,7 @@ class TransducerModel(object):
 
             init = self.task.str_vocab[self.task.START] * np.ones(hyp_feed[self.t_ex_len].shape, dtype=np.int32)
             stop = self.task.str_vocab[self.task.STOP]
-            preds = self.out_decoder.decode(init, stop, hyp_feed, self.session)
+            preds, _ = self.out_decoder.decode(init, stop, hyp_feed, self.session)
             scores = self.out_decoder.score(init, hyp_feed, self.session)
 
             for j in range(len(batch)):
@@ -606,7 +618,7 @@ class TransducerModel(object):
         stop = self.task.str_vocab[self.task.STOP]
 
         pred_feed = self.feed(pred_batch)
-        preds = self.out_decoder.decode(init, stop, pred_feed, self.session)
+        preds, _ = self.out_decoder.decode(init, stop, pred_feed, self.session)
         accs = []
         for i, (pred, gold) in enumerate(zip(preds, pred_feed[self.t_output])):
             pred = pred[0]

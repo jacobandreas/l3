@@ -86,7 +86,11 @@ class RegexTask():
             inp, out = pairs.pop()
             ex_inputs, ex_outputs = zip(*pairs)
             assert len(ex_inputs) == N_EX
-            batch.append(Datum([], ex_inputs, ex_outputs, inp, out))
+            if FLAGS.use_true_hyp:
+                hint = full_datum.hints[random.randint(len(full_datum.hints))]
+            else:
+                hint = []
+            batch.append(Datum(hint, ex_inputs, ex_outputs, inp, out))
         return batch
 
     def sample_test(self):

@@ -6,7 +6,7 @@ python -u ../../pbd.py \
   --infer_hyp=false \
   --learning_rate 0.001 \
   --train \
-  --n_epochs=2000 \
+  --n_epochs=720 \
   --test \
   > train.out \
   2> train.err

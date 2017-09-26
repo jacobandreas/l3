@@ -1,7 +1,0 @@
-pred, gold
-<s> a cyan square is to the right of a cyan shape . </s> <s> a cyan triangle is to the left of a cyan square . </s>
-<s> a blue shape is to the right of a blue shape . </s> <s> a yellow rectangle is above a blue square . </s> *invalid* *invalid* *invalid*
-<s> a green rectangle is below a cyan shape . </s> <s> a green rectangle is to the right of a triangle . </s> *invalid*
-0.012
-0.018
-
