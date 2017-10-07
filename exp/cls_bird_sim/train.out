@@ -1,0 +1,72 @@
+[iter]    0
+[loss]    5942.4493
+[trn_acc] 0.6000
+[val_acc] 0.6000
+[val_same_acc] 0.6000
+[val_mean_acc] 0.6000
+
+[iter]    1
+[loss]    5869.8213
+[trn_acc] 0.8300
+[val_acc] 0.8000
+[val_same_acc] 0.8000
+[val_mean_acc] 0.8000
+
+[iter]    2
+[loss]    5834.8512
+[trn_acc] 0.9000
+[val_acc] 0.9000
+[val_same_acc] 0.9000
+[val_mean_acc] 0.9000
+
+[iter]    3
+[loss]    5791.9794
+[trn_acc] 0.9200
+[val_acc] 1.0000
+[val_same_acc] 1.0000
+[val_mean_acc] 1.0000
+
+[iter]    4
+[loss]    5776.5085
+[trn_acc] 0.9300
+[val_acc] 1.0000
+[val_same_acc] 1.0000
+[val_mean_acc] 1.0000
+
+[iter]    5
+[loss]    5767.6663
+[trn_acc] 0.9900
+[val_acc] 1.0000
+[val_same_acc] 1.0000
+[val_mean_acc] 1.0000
+
+[iter]    6
+[loss]    5754.3891
+[trn_acc] 0.9500
+[val_acc] 1.0000
+[val_same_acc] 1.0000
+[val_mean_acc] 1.0000
+
+[iter]    7
+[loss]    5769.9242
+[trn_acc] 0.9600
+[val_acc] 1.0000
+[val_same_acc] 1.0000
+[val_mean_acc] 1.0000
+
+[iter]    8
+[loss]    5756.5457
+[trn_acc] 0.9900
+[val_acc] 1.0000
+[val_same_acc] 1.0000
+[val_mean_acc] 1.0000
+
+[iter]    9
+[loss]    5761.4099
+[trn_acc] 0.9600
+[val_acc] 1.0000
+[val_same_acc] 1.0000
+[val_mean_acc] 1.0000
+
+[FINAL val_acc] 1.0000
+[FINAL tst_acc] 0.9800
