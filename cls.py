@@ -1,8 +1,7 @@
 #!/usr/bin/env python2
 
 import models
-from models import ClsModel
-from tasks import shapes
+from models import ClsModel, SimModel
 
 import gflags
 import os
@@ -15,11 +14,26 @@ gflags.DEFINE_boolean("test_same", False, "evaluate on training concepts")
 gflags.DEFINE_integer("n_epochs", 0, "number of epochs to run for")
 gflags.DEFINE_integer("n_batch", 100, "batch size")
 gflags.DEFINE_boolean("augment", False, "data augmentation")
+gflags.DEFINE_string("task", "shapes", "which task to use")
+gflags.DEFINE_string("model", "cls", "which model to use")
 models._set_flags()
 
 def main():
-    task = shapes.ShapeworldTask()
-    model = ClsModel(task)
+    if FLAGS.task == "shapes":
+        from tasks import shapes
+        task = shapes.ShapeworldTask()
+    elif FLAGS.task == "birds":
+        from tasks import birds
+        task = birds.BirdsTask()
+    else:
+        assert False
+
+    if FLAGS.model == "cls":
+        model = ClsModel(task)
+    elif FLAGS.model == "sim":
+        model = SimModel(task)
+    else:
+        assert False
 
     if FLAGS.train:
         for i_epoch in range(FLAGS.n_epochs):

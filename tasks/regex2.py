@@ -86,7 +86,7 @@ class RegexTask():
             inp, out = pairs.pop()
             ex_inputs, ex_outputs = zip(*pairs)
             assert len(ex_inputs) == N_EX
-            if FLAGS.use_true_hyp:
+            if FLAGS.use_true_hyp or FLAGS.use_true_eval:
                 hint = full_datum.hints[random.randint(len(full_datum.hints))]
             else:
                 hint = []
@@ -102,3 +102,33 @@ class RegexTask():
             assert len(ex_inputs) == N_EX
             batch.append(Datum([], ex_inputs, ex_outputs, inp, out))
         return batch
+
+    def execute(self, hint, inps, outs):
+        if 0 in hint:
+            return [-1 for _ in inps], ["" for _ in inps]
+        hint = "".join(self.hint_vocab.get(t) for t in hint)
+        hint = hint[1:-1]
+        if hint.count("@") != 1:
+            return [-1 for _ in inps], ["" for _ in inps]
+        before, after = hint.split("@")
+        before = before.replace("C", "[^aeiou]").replace("V", "[aeiou]")
+
+        inps = [inp[1:-1] for inp in inps]
+        inps = ["".join(self.str_vocab.get(w) for w in inp) for inp in inps]
+        outs = [out[1:-1] for out in outs]
+        outs = ["".join(self.str_vocab.get(w) for w in out) for out in outs]
+
+        try:
+            predicted_out_strs = [re.sub(before, after, inp) for inp in inps]
+        except Exception as e:
+            return [-1 for _ in inps], ["" for _ in inps]
+        score = [float(p == o) for p, o in zip(outs, predicted_out_strs)]
+
+        predicted_outs = []
+        for s in predicted_out_strs:
+            predicted_outs.append(
+                    [self.str_vocab[START]] 
+                    + [self.str_vocab[w] for w in s]
+                    + [self.str_vocab[STOP]])
+
+        return score, predicted_outs

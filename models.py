@@ -18,6 +18,7 @@ def _set_flags():
     gflags.DEFINE_integer("n_sample_hyps", 5, "number of hypotheses to sample")
     gflags.DEFINE_float("learning_rate", 0.001, "learning rate")
     gflags.DEFINE_string("restore", None, "model to restore")
+    gflags.DEFINE_boolean("use_true_eval", False, "score with true evaluation function")
 
 USE_IMAGES = False
 
@@ -221,6 +222,63 @@ class Decoder(object):
             last = next_out_choices
         return out, out_scores
 
+class SimModel(object):
+    def __init__(self, task):
+        self.task = task
+
+        self.t_ex = tf.placeholder(tf.float32, (None, None, task.n_features))
+        self.t_input = tf.placeholder(tf.float32, (None, task.n_features))
+        self.t_output = tf.placeholder(tf.float32, (None,))
+        t_enc_ex = tf.reduce_mean(self.t_ex, axis=1)
+
+        t_ex_norm = tf.nn.l2_normalize(t_enc_ex, 1)
+        t_input_norm = tf.nn.l2_normalize(self.t_input, 1)
+        t_sim = tf.reduce_sum(t_ex_norm * t_input_norm, axis=1)
+        self.t_score = t_sim + tf.get_variable("bias", shape=(),
+                initializer=tf.constant_initializer(0))
+        t_err = tf.nn.sigmoid_cross_entropy_with_logits(
+                labels=self.t_output, logits=self.t_score)
+        self.t_loss = tf.reduce_mean(tf.reduce_sum(t_err))
+        optimizer = tf.train.AdamOptimizer(FLAGS.learning_rate)
+        self.o_train = optimizer.minimize(self.t_loss)
+        self.session = tf.Session()
+        self.session.run(tf.global_variables_initializer())
+        self.saver = tf.train.Saver()
+
+    def feed(self, batch):
+        inp = np.zeros((len(batch), self.task.n_features))
+        example = np.zeros((len(batch), N_CLS_EX, self.task.n_features))
+        out = np.zeros((len(batch),), dtype=np.int32)
+        for i, datum in enumerate(batch):
+            example[i, ...] = datum.ex_inputs
+            inp[i, :] = datum.input
+            out[i] = datum.label
+        feed_dict = {
+            self.t_ex: example,
+            self.t_input: inp,
+            self.t_output: out
+        }
+        return feed_dict
+
+    def train(self, batch):
+        feed = self.feed(batch)
+        loss, _ = self.session.run([self.t_loss, self.o_train], feed)
+        return loss
+
+    def predict(self, batch):
+        feed = self.feed(batch)
+        scores = self.session.run(self.t_score, feed)
+        preds = scores.ravel() > 0
+        labels = [d.label for d in batch]
+        accs = (preds == labels)
+        return np.mean(accs)
+
+    def save(self):
+        pass
+
+    def restore(self, path):
+        assert False
+
 class ClsModel(object):
     def __init__(self, task):
         self.task = task
@@ -253,24 +311,14 @@ class ClsModel(object):
             t_enc_ex_all = _convolve("encode_ex", self.t_ex, self.t_dropout)
         else:
             with tf.variable_scope("encode_ex"):
-                #t_enc_ex_all = self.t_ex
-                #t_enc_ex_all = tf.nn.dropout(self.t_ex, keep_prob=1-self.t_dropout)
                 t_enc_ex_all = self.t_ex
-                #t_enc_ex_all = _linear(t_enc_ex_all, N_HIDDEN)
                 t_enc_ex_all = _mlp(t_enc_ex_all, (N_HIDDEN, N_HIDDEN), (tf.nn.relu, None))
+
         with tf.variable_scope("reduce_ex"):
-            if False: #FLAGS.infer_hyp: 
-                reduce_cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
-                _, t_enc_ex = tf.nn.dynamic_rnn(reduce_cell, t_enc_ex_all,
-                        dtype=tf.float32)
-            else:
-                t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
+            t_enc_ex = tf.reduce_mean(t_enc_ex_all, axis=1)
 
         t_enc_hint = _encode(
                 "encode_hint", self.t_hint, self.t_hint_len, t_hint_vecs)
-        #t_enc_hint = tf.reduce_mean(tf.nn.dropout(_embed_dict(self.t_hint,
-        #    t_hint_vecs), keep_prob=1-self.t_dropout), axis=1)
-        #t_enc_hint = tf.reduce_mean(_embed_dict(self.t_hint, t_hint_vecs), axis=1)
 
         if FLAGS.infer_hyp:
             t_concept = t_enc_hint
@@ -281,13 +329,8 @@ class ClsModel(object):
             t_enc_input = _convolve("encode_input", self.t_input, self.t_dropout)
         else:
             with tf.variable_scope("encode_input"):
-                #t_enc_input = self.t_input
-                #t_enc_input = tf.nn.dropout(self.t_input, keep_prob=1-self.t_dropout)
                 t_enc_input = self.t_input
-                #t_enc_input = _linear(t_enc_input, N_HIDDEN)
                 t_enc_input = _mlp(t_enc_input, (N_HIDDEN, N_HIDDEN), (tf.nn.relu, None))
-                #t_enc_input = tf.nn.dropout(self.t_input, keep_prob=1-self.t_dropout)
-                #t_enc_input = _mlp(self.t_input, [N_HIDDEN, N_HIDDEN], [tf.nn.relu, None])
 
         self.hyp_decoder = Decoder(
                 "decode_hyp", t_enc_ex, self.t_hint, self.t_last_hyp,
@@ -414,8 +457,9 @@ class ClsModel(object):
         #    h = hyps[i]
         #    g = [c for c in feed[self.t_hint][i].tolist() if c]
         #    agree += (1 if h == g else 0)
-        #print 1. * agree / len(batch)
-        #print 1. * np.mean(found_gold)
+
+        #print "[gold_chosen]", 1. * agree / len(batch)
+        #print "[gold_found] ", 1. * np.mean(found_gold)
         #print
 
         return hyps
@@ -568,6 +612,9 @@ class TransducerModel(object):
         best_score = [-np.inf] * len(batch)
         best_hyps = [None] * len(batch)
         worst_score = [np.inf] * len(batch)
+        found_gold = [False] * len(batch)
+        found_exact = [False] * len(batch)
+        chose_gold = [False] * len(batch)
 
         self.hyp_decoder.reset_seed()
         for i in range(FLAGS.n_sample_hyps):
@@ -579,22 +626,31 @@ class TransducerModel(object):
 
             init = self.task.str_vocab[self.task.START] * np.ones(hyp_feed[self.t_ex_len].shape, dtype=np.int32)
             stop = self.task.str_vocab[self.task.STOP]
-            preds, _ = self.out_decoder.decode(init, stop, hyp_feed, self.session)
-            scores = self.out_decoder.score(init, hyp_feed, self.session)
+            if FLAGS.use_true_eval:
+                scores, preds = self.task_eval(hyp_feed)
+            else:
+                scores = self.out_decoder.score(init, hyp_feed, self.session)
+                preds, _ = self.out_decoder.decode(init, stop, hyp_feed, self.session)
 
             for j in range(len(batch)):
-                if FLAGS.infer_by_likelihood:
-                    score = scores[j, :].sum()
-                else:
-                    ex_here = hyp_feed[self.t_output][j, ...]
-                    score = 0
-                    for ex, pred in zip(ex_here, preds[j]):
-                        if np.all(ex[:len(pred)] == pred):
-                            score += 1
+                l_score = scores[j, :].sum()
+                ex_here = hyp_feed[self.t_output][j, ...]
+                m_score = 0
+                for ex, pred in zip(ex_here, preds[j]):
+                    if np.all(ex[:len(pred)] == pred):
+                        m_score += 1
 
+                if FLAGS.infer_by_likelihood:
+                    score = l_score
+                else:
+                    score = m_score
+
+                found_gold[j] = found_gold[j] or hyps[j] == batch[j].hint
+                found_exact[j] = found_exact[j] or m_score == ex_here.shape[0]
                 if score > best_score[j]:
                     best_score[j] = score
                     best_hyps[j] = hyps[j]
+                    chose_gold[j] = hyps[j] == batch[j].hint
                 if score < worst_score[j]:
                     worst_score[j] = score
 
@@ -604,6 +660,10 @@ class TransducerModel(object):
         print >>sys.stderr, "\n".join(" ".join(self.task.hint_vocab.get(c) for c in hyp) for hyp in hyps[:3])
         print >>sys.stderr, "\n".join(" ".join(self.task.hint_vocab.get(c) for c in hyp if c) for hyp in feed[self.t_hint][:3])
         print >>sys.stderr
+
+        print "[found_gold]  %0.2f" % np.mean(found_gold)
+        print "[chose_gold]  %0.2f" % np.mean(chose_gold)
+        print "[found_exact] %0.2f" % np.mean(found_exact)
 
         return hyps
 
@@ -618,7 +678,10 @@ class TransducerModel(object):
         stop = self.task.str_vocab[self.task.STOP]
 
         pred_feed = self.feed(pred_batch)
-        preds, _ = self.out_decoder.decode(init, stop, pred_feed, self.session)
+        if FLAGS.use_true_eval:
+            _, preds = self.task_eval(pred_feed)
+        else:
+            preds, _ = self.out_decoder.decode(init, stop, pred_feed, self.session)
         accs = []
         for i, (pred, gold) in enumerate(zip(preds, pred_feed[self.t_output])):
             pred = pred[0]
@@ -633,3 +696,26 @@ class TransducerModel(object):
     def restore(self, path):
         self.saver.restore(self.session, path)
 
+    def task_eval(self, hyp_feed):
+        scores = []
+        preds = []
+
+        hints = hyp_feed[self.t_hint]
+        hint_lens = hyp_feed[self.t_hint_len]
+        inputs = hyp_feed[self.t_input]
+        input_lens = hyp_feed[self.t_input_len]
+        outputs = hyp_feed[self.t_output]
+
+        for i in range(hints.shape[0]):
+            hint = list(hints[i, :hint_lens[i]])
+            inps = inputs[i, ...]
+            inp_lens = input_lens[i, :]
+            inps = [list(inp[:ilen]) for inp, ilen in zip(inps, inp_lens)]
+            outs = outputs[i, ...]
+            outs = [list(w for w in out if w != 0) for out in outs]
+
+            score, prds = self.task.execute(hint, inps, outs)
+            scores.append(score)
+            preds.append(prds)
+
+        return np.asarray(scores), preds

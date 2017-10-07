@@ -29,12 +29,11 @@ def main():
 
             batch = task.sample_train(FLAGS.n_batch)
             e_acc = model.predict(batch)
+            print("[loss]    %01.4f" % e_loss)
+            print("[trn_acc] %01.4f" % e_acc)
 
             v_batch = task.sample_val()
             e_v_acc = model.predict(v_batch)
-
-            print("[loss]    %01.4f" % e_loss)
-            print("[trn_acc] %01.4f" % e_acc)
             print("[val_acc] %01.4f" % e_v_acc)
             print("")
 
