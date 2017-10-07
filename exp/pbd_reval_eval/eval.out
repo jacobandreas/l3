@@ -1,0 +1,8 @@
+[found_gold]  0.89
+[chose_gold]  0.68
+[found_exact] 0.93
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.90
+[FINAL val_acc] 0.9220
+[FINAL tst_acc] 0.9040

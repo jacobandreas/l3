@@ -1,0 +1,508 @@
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.00
+[loss]    5142.4078
+[trn_acc] 0.1700
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.00
+[val_acc] 0.1880
+
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.00
+[loss]    3820.1261
+[trn_acc] 0.2300
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.00
+[val_acc] 0.1160
+
+[found_gold]  0.01
+[chose_gold]  0.01
+[found_exact] 0.01
+[loss]    3330.4243
+[trn_acc] 0.1400
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.00
+[val_acc] 0.1160
+
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.01
+[loss]    2887.1456
+[trn_acc] 0.1500
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.00
+[val_acc] 0.1260
+
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.00
+[loss]    2506.8392
+[trn_acc] 0.0900
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.00
+[val_acc] 0.1080
+
+[found_gold]  0.02
+[chose_gold]  0.02
+[found_exact] 0.02
+[loss]    2191.8312
+[trn_acc] 0.1200
+[found_gold]  0.01
+[chose_gold]  0.01
+[found_exact] 0.01
+[val_acc] 0.1360
+
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.01
+[loss]    1932.0898
+[trn_acc] 0.0700
+[found_gold]  0.01
+[chose_gold]  0.01
+[found_exact] 0.01
+[val_acc] 0.1380
+
+[found_gold]  0.01
+[chose_gold]  0.01
+[found_exact] 0.02
+[loss]    1735.1055
+[trn_acc] 0.1100
+[found_gold]  0.04
+[chose_gold]  0.04
+[found_exact] 0.05
+[val_acc] 0.1880
+
+[found_gold]  0.10
+[chose_gold]  0.10
+[found_exact] 0.12
+[loss]    1531.1536
+[trn_acc] 0.2000
+[found_gold]  0.07
+[chose_gold]  0.07
+[found_exact] 0.09
+[val_acc] 0.2380
+
+[found_gold]  0.21
+[chose_gold]  0.20
+[found_exact] 0.30
+[loss]    1312.2244
+[trn_acc] 0.4100
+[found_gold]  0.13
+[chose_gold]  0.12
+[found_exact] 0.19
+[val_acc] 0.3340
+
+[found_gold]  0.28
+[chose_gold]  0.26
+[found_exact] 0.36
+[loss]    1156.9384
+[trn_acc] 0.4600
+[found_gold]  0.22
+[chose_gold]  0.21
+[found_exact] 0.28
+[val_acc] 0.4320
+
+[found_gold]  0.43
+[chose_gold]  0.38
+[found_exact] 0.52
+[loss]    1053.6076
+[trn_acc] 0.6600
+[found_gold]  0.31
+[chose_gold]  0.27
+[found_exact] 0.37
+[val_acc] 0.5220
+
+[found_gold]  0.51
+[chose_gold]  0.44
+[found_exact] 0.58
+[loss]    940.1257
+[trn_acc] 0.6600
+[found_gold]  0.31
+[chose_gold]  0.26
+[found_exact] 0.38
+[val_acc] 0.5400
+
+[found_gold]  0.49
+[chose_gold]  0.45
+[found_exact] 0.52
+[loss]    868.9560
+[trn_acc] 0.7100
+[found_gold]  0.44
+[chose_gold]  0.36
+[found_exact] 0.50
+[val_acc] 0.6200
+
+[found_gold]  0.57
+[chose_gold]  0.49
+[found_exact] 0.65
+[loss]    795.5389
+[trn_acc] 0.6800
+[found_gold]  0.44
+[chose_gold]  0.37
+[found_exact] 0.53
+[val_acc] 0.6400
+
+[found_gold]  0.58
+[chose_gold]  0.53
+[found_exact] 0.66
+[loss]    756.1832
+[trn_acc] 0.6900
+[found_gold]  0.52
+[chose_gold]  0.42
+[found_exact] 0.60
+[val_acc] 0.7000
+
+[found_gold]  0.53
+[chose_gold]  0.47
+[found_exact] 0.61
+[loss]    712.2185
+[trn_acc] 0.7000
+[found_gold]  0.51
+[chose_gold]  0.44
+[found_exact] 0.57
+[val_acc] 0.6680
+
+[found_gold]  0.65
+[chose_gold]  0.55
+[found_exact] 0.76
+[loss]    668.4521
+[trn_acc] 0.8400
+[found_gold]  0.54
+[chose_gold]  0.47
+[found_exact] 0.63
+[val_acc] 0.7180
+
+[found_gold]  0.64
+[chose_gold]  0.55
+[found_exact] 0.74
+[loss]    626.0089
+[trn_acc] 0.7900
+[found_gold]  0.56
+[chose_gold]  0.48
+[found_exact] 0.62
+[val_acc] 0.7180
+
+[found_gold]  0.75
+[chose_gold]  0.64
+[found_exact] 0.80
+[loss]    582.6294
+[trn_acc] 0.8100
+[found_gold]  0.62
+[chose_gold]  0.52
+[found_exact] 0.69
+[val_acc] 0.7520
+
+[found_gold]  0.70
+[chose_gold]  0.59
+[found_exact] 0.80
+[loss]    561.4024
+[trn_acc] 0.8200
+[found_gold]  0.59
+[chose_gold]  0.49
+[found_exact] 0.67
+[val_acc] 0.7440
+
+[found_gold]  0.67
+[chose_gold]  0.55
+[found_exact] 0.75
+[loss]    533.5777
+[trn_acc] 0.8100
+[found_gold]  0.62
+[chose_gold]  0.53
+[found_exact] 0.70
+[val_acc] 0.7640
+
+[found_gold]  0.75
+[chose_gold]  0.64
+[found_exact] 0.80
+[loss]    495.2193
+[trn_acc] 0.8400
+[found_gold]  0.61
+[chose_gold]  0.51
+[found_exact] 0.68
+[val_acc] 0.7460
+
+[found_gold]  0.82
+[chose_gold]  0.69
+[found_exact] 0.88
+[loss]    476.5093
+[trn_acc] 0.9000
+[found_gold]  0.65
+[chose_gold]  0.55
+[found_exact] 0.71
+[val_acc] 0.7940
+
+[found_gold]  0.78
+[chose_gold]  0.72
+[found_exact] 0.83
+[loss]    444.8325
+[trn_acc] 0.8700
+[found_gold]  0.65
+[chose_gold]  0.53
+[found_exact] 0.72
+[val_acc] 0.7820
+
+[found_gold]  0.79
+[chose_gold]  0.71
+[found_exact] 0.88
+[loss]    426.7756
+[trn_acc] 0.9000
+[found_gold]  0.64
+[chose_gold]  0.55
+[found_exact] 0.70
+[val_acc] 0.7600
+
+[found_gold]  0.79
+[chose_gold]  0.74
+[found_exact] 0.79
+[loss]    410.9123
+[trn_acc] 0.8400
+[found_gold]  0.63
+[chose_gold]  0.52
+[found_exact] 0.70
+[val_acc] 0.7600
+
+[found_gold]  0.74
+[chose_gold]  0.65
+[found_exact] 0.81
+[loss]    394.1328
+[trn_acc] 0.8500
+[found_gold]  0.65
+[chose_gold]  0.54
+[found_exact] 0.70
+[val_acc] 0.7780
+
+[found_gold]  0.83
+[chose_gold]  0.75
+[found_exact] 0.85
+[loss]    392.4931
+[trn_acc] 0.8700
+[found_gold]  0.64
+[chose_gold]  0.55
+[found_exact] 0.72
+[val_acc] 0.7820
+
+[found_gold]  0.88
+[chose_gold]  0.82
+[found_exact] 0.90
+[loss]    362.4227
+[trn_acc] 0.9400
+[found_gold]  0.65
+[chose_gold]  0.56
+[found_exact] 0.72
+[val_acc] 0.7880
+
+[found_gold]  0.88
+[chose_gold]  0.77
+[found_exact] 0.93
+[loss]    344.4724
+[trn_acc] 0.9600
+[found_gold]  0.69
+[chose_gold]  0.56
+[found_exact] 0.75
+[val_acc] 0.8060
+
+[found_gold]  0.90
+[chose_gold]  0.73
+[found_exact] 0.93
+[loss]    332.6447
+[trn_acc] 0.9300
+[found_gold]  0.67
+[chose_gold]  0.55
+[found_exact] 0.73
+[val_acc] 0.8060
+
+[found_gold]  0.86
+[chose_gold]  0.73
+[found_exact] 0.90
+[loss]    314.9919
+[trn_acc] 0.9200
+[found_gold]  0.69
+[chose_gold]  0.58
+[found_exact] 0.75
+[val_acc] 0.8000
+
+[found_gold]  0.87
+[chose_gold]  0.81
+[found_exact] 0.92
+[loss]    309.5142
+[trn_acc] 0.9200
+[found_gold]  0.70
+[chose_gold]  0.60
+[found_exact] 0.76
+[val_acc] 0.8240
+
+[found_gold]  0.92
+[chose_gold]  0.82
+[found_exact] 0.94
+[loss]    289.6545
+[trn_acc] 0.9500
+[found_gold]  0.68
+[chose_gold]  0.56
+[found_exact] 0.75
+[val_acc] 0.8040
+
+[found_gold]  0.89
+[chose_gold]  0.83
+[found_exact] 0.91
+[loss]    284.1042
+[trn_acc] 0.9300
+[found_gold]  0.69
+[chose_gold]  0.58
+[found_exact] 0.77
+[val_acc] 0.8240
+
+[found_gold]  0.91
+[chose_gold]  0.85
+[found_exact] 0.93
+[loss]    279.9641
+[trn_acc] 0.9500
+[found_gold]  0.69
+[chose_gold]  0.58
+[found_exact] 0.77
+[val_acc] 0.8200
+
+[found_gold]  0.87
+[chose_gold]  0.77
+[found_exact] 0.88
+[loss]    270.2342
+[trn_acc] 0.9000
+[found_gold]  0.67
+[chose_gold]  0.59
+[found_exact] 0.76
+[val_acc] 0.8200
+
+[found_gold]  0.91
+[chose_gold]  0.84
+[found_exact] 0.93
+[loss]    247.9997
+[trn_acc] 0.9100
+[found_gold]  0.65
+[chose_gold]  0.54
+[found_exact] 0.75
+[val_acc] 0.8200
+
+[found_gold]  0.95
+[chose_gold]  0.88
+[found_exact] 0.97
+[loss]    238.7611
+[trn_acc] 0.9700
+[found_gold]  0.64
+[chose_gold]  0.55
+[found_exact] 0.75
+[val_acc] 0.7960
+
+[found_gold]  0.91
+[chose_gold]  0.81
+[found_exact] 0.94
+[loss]    237.4518
+[trn_acc] 0.9600
+[found_gold]  0.66
+[chose_gold]  0.55
+[found_exact] 0.75
+[val_acc] 0.7880
+
+[found_gold]  0.93
+[chose_gold]  0.87
+[found_exact] 0.96
+[loss]    222.4377
+[trn_acc] 0.9600
+[found_gold]  0.67
+[chose_gold]  0.54
+[found_exact] 0.75
+[val_acc] 0.8100
+
+[found_gold]  0.92
+[chose_gold]  0.85
+[found_exact] 0.94
+[loss]    219.1546
+[trn_acc] 0.9300
+[found_gold]  0.64
+[chose_gold]  0.54
+[found_exact] 0.74
+[val_acc] 0.8060
+
+[found_gold]  0.96
+[chose_gold]  0.88
+[found_exact] 0.98
+[loss]    212.8356
+[trn_acc] 0.9600
+[found_gold]  0.64
+[chose_gold]  0.55
+[found_exact] 0.74
+[val_acc] 0.8320
+
+[found_gold]  0.94
+[chose_gold]  0.88
+[found_exact] 0.95
+[loss]    201.1696
+[trn_acc] 0.9600
+[found_gold]  0.63
+[chose_gold]  0.54
+[found_exact] 0.72
+[val_acc] 0.7780
+
+[found_gold]  0.95
+[chose_gold]  0.84
+[found_exact] 0.97
+[loss]    196.8927
+[trn_acc] 0.9200
+[found_gold]  0.66
+[chose_gold]  0.55
+[found_exact] 0.75
+[val_acc] 0.8100
+
+[found_gold]  0.90
+[chose_gold]  0.83
+[found_exact] 0.95
+[loss]    194.0960
+[trn_acc] 0.9400
+[found_gold]  0.65
+[chose_gold]  0.55
+[found_exact] 0.75
+[val_acc] 0.8080
+
+[found_gold]  0.92
+[chose_gold]  0.85
+[found_exact] 0.95
+[loss]    189.1236
+[trn_acc] 0.9700
+[found_gold]  0.63
+[chose_gold]  0.54
+[found_exact] 0.75
+[val_acc] 0.8220
+
+[found_gold]  0.93
+[chose_gold]  0.88
+[found_exact] 0.97
+[loss]    182.4253
+[trn_acc] 0.9500
+[found_gold]  0.64
+[chose_gold]  0.55
+[found_exact] 0.73
+[val_acc] 0.8000
+
+[found_gold]  0.96
+[chose_gold]  0.92
+[found_exact] 0.98
+[loss]    176.5053
+[trn_acc] 0.9900
+[found_gold]  0.68
+[chose_gold]  0.57
+[found_exact] 0.76
+[val_acc] 0.8140
+
+[found_gold]  0.68
+[chose_gold]  0.57
+[found_exact] 0.76
+[found_gold]  0.00
+[chose_gold]  0.00
+[found_exact] 0.74
+[FINAL val_acc] 0.8140
+[FINAL tst_acc] 0.7860
