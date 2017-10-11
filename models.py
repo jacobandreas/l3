@@ -19,6 +19,7 @@ def _set_flags():
     gflags.DEFINE_float("learning_rate", 0.001, "learning rate")
     gflags.DEFINE_string("restore", None, "model to restore")
     gflags.DEFINE_boolean("use_true_eval", False, "score with true evaluation function")
+    gflags.DEFINE_boolean("use_task_hyp", False, "task as hypothesis")
 
 USE_IMAGES = False
 
@@ -464,7 +465,7 @@ class ClsModel(object):
 
         return hyps
 
-    def predict(self, batch):
+    def predict(self, batch, debug=False):
         if FLAGS.infer_hyp and not FLAGS.use_true_hyp:
             hyps = self.hypothesize(batch)
             pred_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
@@ -476,7 +477,10 @@ class ClsModel(object):
         preds = scores.ravel() > 0
         labels = [d.label for d in batch]
         accs = (preds == labels)
-        return np.mean(accs)
+        if debug:
+            return preds, labels, hyps
+        else:
+            return np.mean(accs)
 
     def save(self):
         self.saver.save(self.session, "model.chk")
@@ -667,7 +671,7 @@ class TransducerModel(object):
 
         return hyps
 
-    def predict(self, batch):
+    def predict(self, batch, debug=False):
         if FLAGS.infer_hyp and not FLAGS.use_true_hyp:
             hyps = self.hypothesize(batch)
             pred_batch = [d._replace(hint=h) for d, h in zip(batch, hyps)]
@@ -688,7 +692,11 @@ class TransducerModel(object):
             gold = gold[0].tolist()
             gold = gold[:gold.index(self.task.str_vocab[self.task.STOP])+1]
             accs.append(pred == gold)
-        return np.mean(accs)
+
+        if debug:
+            return preds, pred_feed[self.t_output], hyps
+        else:
+            return np.mean(accs)
 
     def save(self):
         self.saver.save(self.session, "model.chk")

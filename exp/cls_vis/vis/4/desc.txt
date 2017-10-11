@@ -1,0 +1,4 @@
+gold desc: a cyan pentagon is to the right of a magenta shape .
+pred desc: a blue cross is above a pentagon .
+gold label: True
+pred label: False

@@ -1,0 +1,20 @@
+2017-10-07 12:25:51.699860: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-07 12:25:51.699884: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-07 12:25:51.699887: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-07 12:25:51.699890: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-07 12:25:51.699893: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-07 12:25:53.696778: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-10-07 12:25:53.697181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.745
+pciBusID 0000:04:00.0
+Total memory: 11.17GiB
+Free memory: 11.10GiB
+2017-10-07 12:25:53.697930: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2017-10-07 12:25:53.697938: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2017-10-07 12:25:53.697947: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:04:00.0)
+2017-10-07 12:25:54.303448: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 3367 get requests, put_count=3005 evicted_count=1000 eviction_rate=0.332779 and unsatisfied allocation rate=0.434214
+2017-10-07 12:25:54.303495: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+2017-10-07 12:25:56.506234: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 4623 get requests, put_count=4646 evicted_count=1000 eviction_rate=0.215239 and unsatisfied allocation rate=0.21631
+2017-10-07 12:25:56.506258: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 256 to 281
+2017-10-07 12:27:44.518296: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 1208015 get requests, put_count=1208016 evicted_count=2000 eviction_rate=0.00165561 and unsatisfied allocation rate=0.00169948

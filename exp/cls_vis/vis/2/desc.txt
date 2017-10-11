@@ -1,0 +1,4 @@
+gold desc: a magenta triangle is to the left of a magenta pentagon .
+pred desc: a magenta triangle is to the left of a pentagon .
+gold label: True
+pred label: True

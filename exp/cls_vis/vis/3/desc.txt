@@ -1,0 +1,4 @@
+gold desc: a white shape is to the left of a square .
+pred desc: a cyan cross is to the right of a red shape .
+gold label: False
+pred label: False

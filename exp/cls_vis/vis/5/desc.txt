@@ -1,0 +1,4 @@
+gold desc: a cyan circle is to the left of a rectangle .
+pred desc: a circle is above a yellow circle .
+gold label: False
+pred label: False

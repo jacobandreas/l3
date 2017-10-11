@@ -6,6 +6,10 @@ import os
 from PIL import Image
 import sys
 import json
+import scipy
+import gflags
+
+FLAGS = gflags.FLAGS
 
 USE_IMAGES = False
 #N_EX = 6
@@ -15,6 +19,7 @@ sw_path = os.path.join(sys.path[0], "data/shapeworld")
 
 Fold = namedtuple("Fold", ["hints", "examples", "inputs", "labels"])
 Datum = namedtuple("Datum", ["hint", "ex_inputs", "input", "label"])
+VisDatum = namedtuple("VisDatum", ["hint", "ex_inputs", "input", "label", "vis_ex_inputs", "vis_input"])
 
 START = "<s>"
 STOP = "</s>"
@@ -89,6 +94,12 @@ class ShapeworldTask():
                 else:
                     fold_data.append(Datum(
                         hints[i], ex_features[i, ...], inp_features[i, ...], labels[i]))
+                    if FLAGS.vis:
+                        # TODO this is so dirty!
+                        datum = fold_data[-1]
+                        fold_data[-1] = VisDatum(
+                            datum.hint, datum.ex_inputs, datum.input,
+                            datum.label, examples[i, ...], inputs[i, ...])
             data[fold] = fold_data
 
         self.train_data = data["train"]
@@ -185,3 +196,20 @@ class ShapeworldTask():
             return self.test_same_data
         else:
             return self.test_data
+
+    def visualize(self, datum, hyp, pred, dest):
+        hint = " ".join(self.hint_vocab.get(w) for w in datum.hint[1:-1])
+        hyp = " ".join(self.hint_vocab.get(w) for w in hyp[1:-1])
+        os.mkdir(dest)
+        with open(os.path.join(dest, "desc.txt"), "w") as desc_f:
+            print >>desc_f, "gold desc:", hint
+            print >>desc_f, "pred desc:", hyp
+            print >>desc_f, "gold label:", bool(datum.label)
+            print >>desc_f, "pred label:", bool(pred)
+        for i in range(datum.ex_inputs.shape[0]):
+            scipy.misc.imsave(
+                    os.path.join(dest, "ex_%d.png" % i),
+                    datum.vis_ex_inputs[i, ...])
+        scipy.misc.imsave(
+                os.path.join(dest, "input.png"),
+                datum.vis_input)

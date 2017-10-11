@@ -1,0 +1,143 @@
+[found_gold]  0.43
+[chose_gold]  0.03
+[found_exact] 0.67
+gerunds gerunhds
+reassess reassehss
+divorcing divorcihng
+mummers mummehrs
+marriageable marriageable
+
+gold: if the last 2 letters do nt have a vowel then add h in front of them
+pred: insert a h as the third to last letter
+
+<fuelled>
+gold: <fuelled>
+pred: <fuellhed>
+===
+
+dissociation dissciatsn
+mandibles mandibles
+community smmunity
+buncombe bunsmbe
+enunciated enunciated
+
+gold: replace letter - o pairing with s
+pred: replace the alphabet o and the alphabet preceding it with s
+
+<vacationer>
+gold: <vacatsner>
+pred: <vacationer>
+===
+
+anchorages anchofgges
+clamorous clamofgus
+itinerants itinefgnts
+daub daub
+batsman batsman
+
+gold: replaced li with f g
+pred: if the word has a r change the r and the following letter to a single letter f g
+
+<resistant>
+gold: <fgsistant>
+pred: <fgsistant>
+===
+
+feigns fargns
+ploughshares plarghshares
+ambidextrously ambidextrarsly
+disrobes disrobes
+toilette tarlette
+
+gold: replace pairs of consecutive vowels with a a r
+pred: if there is a pair of two vowels next to each other , replace the vowels with a r
+
+<cameras>
+gold: <cameras>
+pred: <cameras>
+===
+
+rankness rankness
+pilferers pilferers
+doublets donblets
+reimbursed ronmbursed
+supervening supervening
+
+gold: replace a series of 2 vowels with o n
+pred: if two vowels follow one another , replace them with n t
+
+<quickens>
+gold: <qonckens>
+pred: <qntckens>
+===
+
+plummest plummesti
+bereaving bereavinti
+eddied eddieti
+struggles struggleti
+evils evilti
+
+gold: replace the last letter of the word with t i
+pred: change the last letter of the word into t i
+
+<mistrials>
+gold: <mistrialti>
+pred: <mistrialti>
+===
+
+canal ititititit
+unlabeled ititititititititit
+generalities itititititititititititit
+familiarly itititititititititit
+enured itititititit
+
+gold: replace every letter of the word with i t
+pred: repeat pattern i t for the length of the original word
+
+<hyacinths>
+gold: <ititititititititit>
+pred: <ititititititititit>
+===
+
+mapper npnr
+concluding nncnnng
+excuse exnn
+effete efnn
+contracting nntncnng
+
+gold: replace pairs of letters consisting of a consonant followed by a vowel with an n
+pred: replace consonant - vowel pairings with n
+
+<betrayed>
+gold: <ntnnd>
+pred: <ntnynd>
+===
+
+supplicate supplicate
+finals finals
+incinerators intcinerators
+afterthought aftterthought
+theses theses
+
+gold: if the first letter is a vowel and the second letter is a consonant , add an t after them
+pred: add a t to the letter after an n in a word
+
+<ubiquitously>
+gold: <ubtiquitously>
+pred: <ubiquitously>
+===
+
+artefacts ufrtuffufcts
+resourcefully rufsufufrcuffuflly
+regent rufgufnt
+taint tufufnt
+trimesters trufmufstufrs
+
+gold: replace every vowel with u f
+pred: change the each vowel to u f
+
+<terrier>
+gold: <tufrrufufr>
+pred: <tufrrufufr>
+===
+

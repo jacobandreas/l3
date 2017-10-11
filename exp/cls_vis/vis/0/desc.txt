@@ -1,0 +1,4 @@
+gold desc: a red ellipse is to the right of an ellipse .
+pred desc: a red shape is to the right of a red semicircle .
+gold label: True
+pred label: True

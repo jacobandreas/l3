@@ -1,0 +1,4 @@
+gold desc: a red circle is above a magenta semicircle .
+pred desc: a green triangle is above a red circle .
+gold label: False
+pred label: True

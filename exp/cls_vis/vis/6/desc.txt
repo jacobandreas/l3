@@ -1,0 +1,4 @@
+gold desc: a red cross is below a square .
+pred desc: a square is above a red cross .
+gold label: True
+pred label: True

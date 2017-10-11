@@ -1,0 +1,4 @@
+gold desc: a shape is below a white ellipse .
+pred desc: a white shape is to the left of a yellow ellipse .
+gold label: False
+pred label: True

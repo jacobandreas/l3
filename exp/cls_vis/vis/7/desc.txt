@@ -1,0 +1,4 @@
+gold desc: a blue ellipse is to the right of a cyan ellipse .
+pred desc: a cyan ellipse is to the right of a white ellipse .
+gold label: True
+pred label: True

@@ -86,7 +86,7 @@ class RegexTask():
             inp, out = pairs.pop()
             ex_inputs, ex_outputs = zip(*pairs)
             assert len(ex_inputs) == N_EX
-            if FLAGS.use_true_hyp or FLAGS.use_true_eval:
+            if FLAGS.use_true_hyp or FLAGS.use_true_eval or FLAGS.vis:
                 hint = full_datum.hints[random.randint(len(full_datum.hints))]
             else:
                 hint = []
@@ -132,3 +132,17 @@ class RegexTask():
                     + [self.str_vocab[STOP]])
 
         return score, predicted_outs
+
+    def visualize(self, datum, hyp, pred):
+        for i in range(N_EX):
+            print "".join(self.str_vocab.get(w) for w in datum.ex_inputs[i][1:-1]),
+            print "".join(self.str_vocab.get(w) for w in datum.ex_outputs[i][1:-1])
+        print
+        print "gold:", " ".join(self.hint_vocab.get(w) for w in datum.hint[1:-1])
+        print "pred:", " ".join(self.hint_vocab.get(w) for w in hyp[1:-1])
+        print
+        print "".join(self.str_vocab.get(w) for w in datum.input)
+        print "gold:", "".join(self.str_vocab.get(w) for w in datum.output)
+        print "pred:", "".join(self.str_vocab.get(w) for w in pred)
+        print "==="
+        print

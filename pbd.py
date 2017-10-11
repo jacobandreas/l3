@@ -11,6 +11,7 @@ import sys
 FLAGS = gflags.FLAGS
 gflags.DEFINE_boolean("train", False, "do a training run")
 gflags.DEFINE_boolean("test", False, "do a testing run")
+gflags.DEFINE_boolean("vis", False, "generate visualization output")
 gflags.DEFINE_integer("n_epochs", 0, "number of epochs to run for")
 gflags.DEFINE_integer("n_batch", 100, "batch size")
 models._set_flags()
@@ -49,6 +50,12 @@ def main():
 
         print("[FINAL val_acc] %01.4f" % e_v_acc)
         print("[FINAL tst_acc] %01.4f" % e_t_acc)
+
+    if FLAGS.vis:
+        v_batch = task.sample_val()
+        preds, labels, hyps = model.predict(v_batch, debug=True)
+        for i in range(10):
+            task.visualize(v_batch[i], hyps[i], preds[i][0])
 
 if __name__ == "__main__":
     argv = FLAGS(sys.argv)

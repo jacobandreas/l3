@@ -2,8 +2,6 @@
 
 export PYTHONPATH=".:../../../shapeworld"
 
-# surprisingly, data augmentation hurts here
-
 python -u ../../cls.py \
   --learning_rate 0.0001 \
   --predict_hyp=false \

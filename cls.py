@@ -5,12 +5,14 @@ from models import ClsModel, SimModel
 
 import gflags
 import os
+import shutil
 import sys
 
 FLAGS = gflags.FLAGS
 gflags.DEFINE_boolean("train", False, "do a training run")
 gflags.DEFINE_boolean("test", False, "evaluate on held-out concepts")
 gflags.DEFINE_boolean("test_same", False, "evaluate on training concepts")
+gflags.DEFINE_boolean("vis", False, "generate output visualizations")
 gflags.DEFINE_integer("n_epochs", 0, "number of epochs to run for")
 gflags.DEFINE_integer("n_batch", 100, "batch size")
 gflags.DEFINE_boolean("augment", False, "data augmentation")
@@ -82,6 +84,15 @@ def main():
 
         print("[FINAL val_same_acc] %01.4f" % e_v_acc)
         print("[FINAL tst_same_acc] %01.4f" % e_t_acc)
+
+    if FLAGS.vis:
+        v_batch = task.sample_val(same=True)
+        preds, labels, hyps = model.predict(v_batch, debug=True)
+        if os.path.exists("vis"):
+            shutil.rmtree("vis")
+        os.mkdir("vis")
+        for i in range(10):
+            task.visualize(v_batch[i], hyps[i], preds[i], "vis/%d" % i)
 
 if __name__ == "__main__":
     argv = FLAGS(sys.argv)
