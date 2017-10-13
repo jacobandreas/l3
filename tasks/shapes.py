@@ -18,8 +18,8 @@ N_EX = 4
 sw_path = os.path.join(sys.path[0], "data/shapeworld")
 
 Fold = namedtuple("Fold", ["hints", "examples", "inputs", "labels"])
-Datum = namedtuple("Datum", ["hint", "ex_inputs", "input", "label"])
-VisDatum = namedtuple("VisDatum", ["hint", "ex_inputs", "input", "label", "vis_ex_inputs", "vis_input"])
+Datum = namedtuple("Datum", ["hint", "ex_inputs", "input", "label", "task_id"])
+VisDatum = namedtuple("VisDatum", ["hint", "ex_inputs", "input", "label", "vis_ex_inputs", "vis_input", "task_id"])
 
 START = "<s>"
 STOP = "</s>"
@@ -30,6 +30,7 @@ class ShapeworldTask():
     def __init__(self):
         self.hint_vocab = util.Index()
         self.feature_index = util.Index()
+        self.task_index = util.Index()
         self.START = START
         self.STOP = STOP
 
@@ -65,6 +66,10 @@ class ShapeworldTask():
                 indexed_hints.append(indexed_hint)
             hints = indexed_hints
 
+            tasks = []
+            for hint in hints:
+                tasks.append(self.task_index.index(tuple(hint)))
+
             #ex_features = np.zeros((examples.shape[0], examples.shape[1], len(self.feature_index)))
             #inp_features = np.zeros((examples.shape[0], len(self.feature_index)))
             #with open(os.path.join(sw_path, fold, "examples.struct.json")) as ex_struct_f:
@@ -90,16 +95,16 @@ class ShapeworldTask():
             for i in range(len(hints)):
                 if USE_IMAGES:
                     fold_data.append(Datum(
-                        hints[i], examples[i, ...], inputs[i, ...], labels[i]))
+                        hints[i], examples[i, ...], inputs[i, ...], labels[i], tasks[i]))
                 else:
                     fold_data.append(Datum(
-                        hints[i], ex_features[i, ...], inp_features[i, ...], labels[i]))
+                        hints[i], ex_features[i, ...], inp_features[i, ...], labels[i], tasks[i]))
                     if FLAGS.vis:
                         # TODO this is so dirty!
                         datum = fold_data[-1]
                         fold_data[-1] = VisDatum(
                             datum.hint, datum.ex_inputs, datum.input,
-                            datum.label, examples[i, ...], inputs[i, ...])
+                            datum.label, examples[i, ...], inputs[i, ...], tasks[i])
             data[fold] = fold_data
 
         self.train_data = data["train"]
@@ -196,6 +201,23 @@ class ShapeworldTask():
             return self.test_same_data
         else:
             return self.test_data
+
+    def sample_safe(self, data):
+        out = []
+        for datum in data:
+            swap = random.randint(N_EX)
+            swap_with = random.choice([i for i in range(N_EX) if i != swap])
+            examples = datum.ex_inputs.copy()
+            examples[swap, ...] = examples[swap_with, ...]
+            datum = datum._replace(input=swap, label=1, ex_inputs=examples)
+            out.append(datum)
+        return out
+
+    def sample_test_safe(self, same=False):
+        return self.sample_safe(self.test_same_data if same else self.test_data)
+
+    def sample_val_safe(self, same=False):
+        return self.sample_safe(self.val_same_data if same else self.val_data)
 
     def visualize(self, datum, hyp, pred, dest):
         hint = " ".join(self.hint_vocab.get(w) for w in datum.hint[1:-1])

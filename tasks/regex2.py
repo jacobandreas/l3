@@ -15,8 +15,8 @@ START = "<"
 STOP = ">"
 N_EX = 5
 
-FullDatum = namedtuple("FullDatum", ["hints", "pairs"])
-Datum = namedtuple("Datum", ["hint", "ex_inputs", "ex_outputs", "input", "output"])
+FullDatum = namedtuple("FullDatum", ["hints", "pairs", "task_id"])
+Datum = namedtuple("Datum", ["hint", "ex_inputs", "ex_outputs", "input", "output", "task_id"])
 
 random = util.next_random()
 
@@ -35,6 +35,7 @@ class RegexTask():
         self.STOP = STOP
 
         data = {}
+        task_id = 0
         for fold in ["train", "val", "test"]:
             data[fold] = []
             for example in corpus[fold]:
@@ -56,12 +57,14 @@ class RegexTask():
                     out = [self.str_vocab.index(c) for c in out]
                     pairs.append((inp, out))
 
-                datum = FullDatum(hints, pairs)
+                datum = FullDatum(hints, pairs, task_id)
                 data[fold].append(datum)
+                task_id += 1
 
         self.train_data = data["train"]
         self.val_data = data["val"]
         self.test_data = data["test"]
+        self.n_tasks = task_id
 
     def sample_train(self, n_batch):
         batch = []
@@ -75,7 +78,7 @@ class RegexTask():
             pairs = pairs[:N_EX]
             ex_inputs, ex_outputs = zip(*pairs)
             assert len(ex_inputs) == N_EX
-            datum = Datum(hint, ex_inputs, ex_outputs, inp, out)
+            datum = Datum(hint, ex_inputs, ex_outputs, inp, out, full_datum.task_id)
             batch.append(datum)
         return batch
 
@@ -90,7 +93,7 @@ class RegexTask():
                 hint = full_datum.hints[random.randint(len(full_datum.hints))]
             else:
                 hint = []
-            batch.append(Datum(hint, ex_inputs, ex_outputs, inp, out))
+            batch.append(Datum(hint, ex_inputs, ex_outputs, inp, out, full_datum.task_id))
         return batch
 
     def sample_test(self):
@@ -100,8 +103,26 @@ class RegexTask():
             inp, out = pairs.pop()
             ex_inputs, ex_outputs = zip(*pairs)
             assert len(ex_inputs) == N_EX
-            batch.append(Datum([], ex_inputs, ex_outputs, inp, out))
+            batch.append(Datum([], ex_inputs, ex_outputs, inp, out, full_datum.task_id))
         return batch
+
+    def sample_safe(self, data):
+        batch = []
+        for full_datum in data:
+            pairs = list(full_datum.pairs)
+            pairs.pop() # discard real test data
+            inp, out = pairs.pop(random.randint(len(pairs)))
+            pairs.append(pairs[random.randint(len(pairs))])
+            ex_inputs, ex_outputs = zip(*pairs)
+            assert len(ex_inputs) == N_EX
+            batch.append(Datum([], ex_inputs, ex_outputs, inp, out, full_datum.task_id))
+        return batch
+
+    def sample_test_safe(self):
+        return self.sample_safe(self.test_data)
+
+    def sample_val_safe(self):
+        return self.sample_safe(self.val_data)
 
     def execute(self, hint, inps, outs):
         if 0 in hint:

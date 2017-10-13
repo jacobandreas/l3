@@ -285,6 +285,7 @@ class ClsModel(object):
         self.task = task
 
         self.t_hint = tf.placeholder(tf.int32, (None, None), "hint")
+        self.t_task = tf.placeholder(tf.int32, (None,), "task")
         self.t_hint_len = tf.placeholder(tf.int32, (None,), "hint_len")
 
         if USE_IMAGES:
@@ -304,9 +305,14 @@ class ClsModel(object):
         self.t_last_hyp_hidden = tf.placeholder(tf.float32, (None, N_HIDDEN), "last_hyp_hidden")
         self.t_dropout = tf.constant(0.2)
 
-        t_hint_vecs = tf.get_variable(
-                "hint_vec", shape=(len(task.hint_vocab), N_HIDDEN), # N_EMBED_WORD
-                initializer=tf.uniform_unit_scaling_initializer())
+        if FLAGS.use_task_hyp:
+            t_hint_vecs = tf.get_variable(
+                    "hint_vec", shape=(len(task.task_index), N_HIDDEN), # N_EMBED_WORD
+                    initializer=tf.uniform_unit_scaling_initializer())
+        else:
+            t_hint_vecs = tf.get_variable(
+                    "hint_vec", shape=(len(task.hint_vocab), N_HIDDEN), # N_EMBED_WORD
+                    initializer=tf.uniform_unit_scaling_initializer())
 
         if USE_IMAGES:
             t_enc_ex_all = _convolve("encode_ex", self.t_ex, self.t_dropout)
@@ -357,6 +363,7 @@ class ClsModel(object):
 
         optimizer = tf.train.AdamOptimizer(FLAGS.learning_rate)
         self.o_train = optimizer.minimize(self.t_loss)
+        self.o_train_task = optimizer.minimize(self.t_loss, var_list=[t_hint_vecs])
 
         self.session = tf.Session()
         self.session.run(tf.global_variables_initializer())
@@ -385,8 +392,12 @@ class ClsModel(object):
         out = np.zeros((len(batch), n_input))
 
         for i, datum in enumerate(batch):
-            hint[i, :len(datum.hint)] = datum.hint
-            hint_len[i] = len(datum.hint)
+            if FLAGS.use_task_hyp:
+                hint[i, 0] = datum.task_id
+                hint_len[i] = 1
+            else:
+                hint[i, :len(datum.hint)] = datum.hint
+                hint_len[i] = len(datum.hint)
             example[i, ...] = datum.ex_inputs
             if input_examples:
                 inp[i, ...] = datum.ex_inputs
@@ -406,9 +417,12 @@ class ClsModel(object):
             feed_dict[self.t_dropout] = 0
         return feed_dict
 
-    def train(self, batch):
+    def train(self, batch, task_only=False):
+        o_train = self.o_train
+        if task_only:
+            o_train = self.o_train_task
         feed = self.feed(batch)
-        loss, _ = self.session.run([self.t_loss, self.o_train], feed)
+        loss, _ = self.session.run([self.t_loss, o_train], feed)
         return loss
 
     def hypothesize(self, batch):
@@ -488,6 +502,19 @@ class ClsModel(object):
     def restore(self, path):
         self.saver.restore(self.session, path)
 
+class IdentityModel(object):
+    def __init__(self, task):
+        self.task = task
+
+    def train(self):
+        pass
+
+    def predict(self, batch):
+        preds = [d.input for d in batch]
+        outputs = [d.output for d in batch]
+        accs = [p == o for p, o in zip(preds, outputs)]
+        return np.mean(accs)
+
 class TransducerModel(object):
     def __init__(self, task):
         self.task = task
@@ -511,9 +538,14 @@ class TransducerModel(object):
         t_str_vecs = tf.get_variable(
                 "str_vec", shape=(len(task.str_vocab), N_EMBED),
                 initializer=tf.uniform_unit_scaling_initializer())
-        t_hint_vecs = tf.get_variable(
-                "hint_vec", shape=(len(task.hint_vocab), N_EMBED_WORD),
-                initializer=tf.uniform_unit_scaling_initializer())
+        if FLAGS.use_task_hyp:
+            t_hint_vecs = tf.get_variable(
+                    "hint_vec", shape=(task.n_tasks, N_EMBED_WORD),
+                    initializer=tf.uniform_unit_scaling_initializer())
+        else:
+            t_hint_vecs = tf.get_variable(
+                    "hint_vec", shape=(len(task.hint_vocab), N_EMBED_WORD),
+                    initializer=tf.uniform_unit_scaling_initializer())
 
         t_enc_ex_all = _encode(
                 "encode_ex", self.t_ex, self.t_ex_len, t_str_vecs)
@@ -544,6 +576,7 @@ class TransducerModel(object):
 
         optimizer = tf.train.AdamOptimizer(FLAGS.learning_rate)
         self.o_train = optimizer.minimize(self.t_loss)
+        self.o_train_task = optimizer.minimize(self.t_loss, var_list=[t_hint_vecs])
 
         self.session = tf.Session()
         self.session.run(tf.global_variables_initializer())
@@ -552,7 +585,10 @@ class TransducerModel(object):
             self.restore(FLAGS.restore)
 
     def feed(self, batch, input_examples=False):
-        max_hint_len = max(len(d.hint) for d in batch)
+        if FLAGS.use_task_hyp:
+            max_hint_len = 1
+        else:
+            max_hint_len = max(len(d.hint) for d in batch)
         max_einp_len = max(len(e) for d in batch for e in d.ex_inputs)
         max_eout_len = max(len(e) for d in batch for e in d.ex_outputs)
         max_inp_len = max(len(d.input) for d in batch)
@@ -586,8 +622,12 @@ class TransducerModel(object):
                 inp_len[i, 0] = len(target_inp)
                 out[i, 0, :len(target_out)] = target_out
 
-            hint[i, :len(datum.hint)] = datum.hint
-            hint_len[i] = len(datum.hint)
+            if FLAGS.use_task_hyp:
+                hint[i, 0] = datum.task_id
+                hint_len[i] = 1
+            else:
+                hint[i, :len(datum.hint)] = datum.hint
+                hint_len[i] = len(datum.hint)
             for j, (e_inp, e_out) in enumerate(examples):
                 exp = e_inp + [self.task.str_vocab[self.task.SEP]] + e_out
                 example[i, j, :len(exp)] = exp
@@ -603,9 +643,12 @@ class TransducerModel(object):
             self.t_output: out
         }
 
-    def train(self, batch):
+    def train(self, batch, task_only=False):
+        o_train = self.o_train
+        if task_only:
+            o_train = self.o_train_task
         feed = self.feed(batch)
-        loss, _ = self.session.run([self.t_loss, self.o_train], feed)
+        loss, _ = self.session.run([self.t_loss, o_train], feed)
         return loss
 
     def hypothesize(self, batch):
