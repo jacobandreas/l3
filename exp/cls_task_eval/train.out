@@ -1,0 +1,16 @@
+[FT val_acc] 0.4900 (0.0120)
+[FT val_same_acc] 0.6280 (0.1620)
+[FT val_mean_acc] 0.5590
+[FT tst_mean_acc] 0.5900
+[FT val_acc] 0.4920 (0.0180)
+[FT val_same_acc] 0.6300 (0.2020)
+[FT val_mean_acc] 0.5610
+[FT tst_mean_acc] 0.5850
+[FT val_acc] 0.4840 (0.1100)
+[FT val_same_acc] 0.6400 (0.2540)
+[FT val_mean_acc] 0.5620
+[FT tst_mean_acc] 0.5890
+[FT val_acc] 0.4900 (0.3600)
+[FT val_same_acc] 0.6440 (0.3160)
+[FT val_mean_acc] 0.5670
+[FT tst_mean_acc] 0.5910
