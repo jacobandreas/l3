@@ -1,4 +1,4 @@
-~ ShapeWorld data can be downloaded at http://people.eecs.berkeley.edu/~jda/data/shapeworld.tar.gz~
+<s>ShapeWorld data can be downloaded at http://people.eecs.berkeley.edu/~jda/data/shapeworld.tar.gz</s>
 
 Unfortunately, Berkeley seems to have deleted the version of the dataset used in
 the original paper. Jesse Mu created a new version, which can be downloaded
