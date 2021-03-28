@@ -5,8 +5,10 @@ import scipy.misc
 import gflags
 import numpy as np
 import sys
-import tensorflow as tf
 import os
+import tensorflow.compat.v1 as tf
+
+tf.disable_v2_behavior()
 
 FLAGS = gflags.FLAGS
 
@@ -41,7 +43,7 @@ tf.set_random_seed(0)
 def _encode(name, t_input, t_len, t_vecs, t_init=None):
     multi = len(t_input.get_shape()) == 3
     assert multi or len(t_input.get_shape()) == 2
-    cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
+    cell = tf.compat.v1.nn.rnn_cell.GRUCell(N_HIDDEN)
     if multi:
         t_shape = tf.shape(t_input)
         t_n_batch, t_n_multi, t_n_toks = t_shape[0], t_shape[1], t_shape[2]
@@ -108,7 +110,7 @@ class Decoder(object):
         multi = len(t_init.get_shape()) == 3
 
         assert multi or len(t_init.get_shape()) == 2
-        cell = tf.contrib.rnn.GRUCell(N_HIDDEN)
+        cell = tf.compat.v1.nn.rnn_cell.GRUCell(N_HIDDEN)
         if multi:
             t_shape = tf.shape(t_target)
             t_n_batch, t_n_multi, t_n_toks = t_shape[0], t_shape[1], t_shape[2]
