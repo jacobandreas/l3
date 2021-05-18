@@ -42,9 +42,9 @@ class ShapeworldTask():
 
         data = {}
         for fold in ("train", "val", "test", "val_same", "test_same"):
-            examples = np.load(os.path.join(sw_path, fold, "examples.npy"))
-            inputs = np.load(os.path.join(sw_path, fold, "inputs.npy"))
-            labels = np.load(os.path.join(sw_path, fold, "labels.npy"))
+            examples = np.load(os.path.join(sw_path, fold, "examples.npz"))['arr_0']
+            inputs = np.load(os.path.join(sw_path, fold, "inputs.npz"))['arr_0']
+            labels = np.load(os.path.join(sw_path, fold, "labels.npz"))['arr_0']
 
             with open(os.path.join(sw_path, fold, "hints.json")) as hint_f:
                 hints = json.load(hint_f)
@@ -82,8 +82,8 @@ class ShapeworldTask():
             #            i_feat = self.feature_index[tuple(feature)]
             #            if i_feat is not None:
             #                inp_features[i_datum, i_feat] = 1
-            ex_features = np.load(os.path.join(sw_path, fold, "examples.feats.npy"))
-            inp_features = np.load(os.path.join(sw_path, fold, "inputs.feats.npy"))
+            ex_features = np.load(os.path.join(sw_path, fold, "examples.feats.npz"))['arr_0']
+            inp_features = np.load(os.path.join(sw_path, fold, "inputs.feats.npz"))['arr_0']
 
             fold_data = []
 
